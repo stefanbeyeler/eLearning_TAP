@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Typ 1451 LL', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -34,9 +34,15 @@
             text-align: center;
         }
 
+        h1, h2, h3 {
+            font-family: 'DTL Documenta WT', Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+        }
+
         h1 {
             color: #667eea;
-            font-size: 2.5em;
+            font-size: 60px;
+            line-height: 1.2em;
             margin-bottom: 10px;
         }
 
@@ -77,14 +83,15 @@
         }
 
         .nav-btn {
-            padding: 10px 20px;
+            padding: 12px 24px;
             background: #667eea;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s;
             font-size: 0.95em;
+            font-weight: 600;
         }
 
         .nav-btn:hover {
@@ -122,7 +129,8 @@
         h2 {
             color: #667eea;
             margin-bottom: 20px;
-            font-size: 2em;
+            font-size: 36px;
+            line-height: 1.2em;
             border-bottom: 3px solid #667eea;
             padding-bottom: 10px;
         }
@@ -131,7 +139,57 @@
             color: #764ba2;
             margin-top: 25px;
             margin-bottom: 15px;
-            font-size: 1.5em;
+            font-size: 24px;
+            line-height: 1.2em;
+        }
+
+        h4, h5, h6 {
+            font-family: 'Typ 1451 LL', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h4 {
+            font-size: 18px;
+            line-height: 1.4em;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            font-size: 20px;
+            line-height: 1.5em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        h6 {
+            font-size: 14px;
+            line-height: 1.3em;
+            letter-spacing: 2px;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+
+        /* Link-Styling */
+        a {
+            color: #2A64B0;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #282828;
+            text-decoration: underline;
+        }
+
+        h1 a, h2 a, h3 a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        h1 a:hover, h2 a:hover, h3 a:hover {
+            color: #2A64B0;
+            text-decoration: underline;
         }
 
         .image-container {
@@ -393,15 +451,103 @@
             cursor: not-allowed;
         }
 
-        @media (max-width: 768px) {
+        /* Responsive Typography - 4 Breakpoints */
+
+        /* LG: 1025px - 1440px */
+        @media (min-width: 1025px) and (max-width: 1440px) {
             h1 {
-                font-size: 1.8em;
+                font-size: 48px;
             }
-            
+
+            h2 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 16px;
+            }
+
+            h5 {
+                font-size: 18px;
+            }
+
+            h6 {
+                font-size: 14px;
+            }
+        }
+
+        /* SM: 431px - 1024px */
+        @media (min-width: 431px) and (max-width: 1024px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 21px;
+            }
+
+            h4 {
+                font-size: 14px;
+            }
+
+            h5 {
+                font-size: 16px;
+            }
+
+            h6 {
+                font-size: 12px;
+            }
+        }
+
+        /* XS: < 430px */
+        @media (max-width: 430px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+
+            h3 {
+                font-size: 21px;
+            }
+
+            h4 {
+                font-size: 14px;
+            }
+
+            h5 {
+                font-size: 16px;
+            }
+
+            h6 {
+                font-size: 12px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Legacy Tablet/Mobile - 768px */
+        @media (max-width: 768px) {
             .content {
                 padding: 20px;
             }
-            
+
             .nav-buttons {
                 flex-direction: column;
             }
@@ -416,6 +562,9 @@
             <div class="progress-bar">
                 <div class="progress-fill" id="progressBar"></div>
             </div>
+            <button onclick="resetTraining()" style="margin-top: 15px; padding: 8px 16px; background: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9em;">
+                🔄 Schulung zurücksetzen
+            </button>
         </header>
 
         <nav>
@@ -2751,6 +2900,34 @@
         }
 
         // Initialisierung
+        // Reset-Funktion für die gesamte Schulung
+        function resetTraining() {
+            if (confirm('Möchten Sie die Schulung wirklich zurücksetzen? Alle Ihre Antworten gehen verloren.')) {
+                // Alle Radio-Buttons deselektieren
+                document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                    radio.checked = false;
+                });
+
+                // Alle Quiz-Feedbacks ausblenden
+                document.querySelectorAll('.quiz-feedback').forEach(feedback => {
+                    feedback.style.display = 'none';
+                    feedback.className = 'quiz-feedback';
+                });
+
+                // Alle Quiz-Ergebnisse zurücksetzen
+                document.querySelectorAll('.quiz-result').forEach(result => {
+                    result.style.display = 'none';
+                    result.innerHTML = '';
+                });
+
+                // Zurück zu Kapitel 1
+                showChapter(0);
+
+                // Bestätigungsmeldung
+                alert('Die Schulung wurde zurückgesetzt. Sie beginnen nun wieder bei Kapitel 1.');
+            }
+        }
+
         window.onload = function() {
             updateProgress();
         };
