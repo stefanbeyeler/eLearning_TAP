@@ -1,0 +1,2759 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulantes Gesamt-Tarifsystem - Basiswissen für Anwender:innen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.95em;
+        }
+
+        .nav-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.active {
+            background: #764ba2;
+            font-weight: bold;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            min-height: 500px;
+        }
+
+        .chapter {
+            display: none;
+        }
+
+        .chapter.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box.warning {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+
+        .info-box.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+
+        .info-box h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .info-box.warning h4 {
+            color: #856404;
+        }
+
+        .info-box.success h4 {
+            color: #155724;
+        }
+
+        .accordion {
+            margin: 20px 0;
+        }
+
+        .accordion-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: #f8f9fa;
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .accordion-header:hover {
+            background: #e9ecef;
+        }
+
+        .accordion-header::after {
+            content: '▼';
+            transition: transform 0.3s;
+        }
+
+        .accordion-header.active::after {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            background: white;
+        }
+
+        .accordion-content.active {
+            display: block;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .code-example {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        .quiz-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .quiz-question {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .quiz-question h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .quiz-options {
+            margin: 15px 0;
+        }
+
+        .quiz-option {
+            display: block;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .quiz-option:hover {
+            border-color: #667eea;
+            background: #e8f4f8;
+        }
+
+        .quiz-option input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .quiz-feedback {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .quiz-feedback.correct {
+            display: block;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .quiz-feedback.incorrect {
+            display: block;
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .submit-quiz {
+            background: #28a745;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .submit-quiz:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        .quiz-result {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .list-styled {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .list-styled li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .navigation-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        .nav-footer-btn {
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1em;
+        }
+
+        .nav-footer-btn:hover {
+            background: #764ba2;
+        }
+
+        .nav-footer-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ambulantes Gesamt-Tarifsystem</h1>
+            <p class="subtitle">Basiswissen für Anwender:innen</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="nav-buttons">
+                <button class="nav-btn active" onclick="showChapter(0)">Kapitel 1: Einführung</button>
+                <button class="nav-btn" onclick="showChapter(1)">Kapitel 2: Ambulante Behandlung</button>
+                <button class="nav-btn" onclick="showChapter(2)">Kapitel 3: LKAAT</button>
+                <button class="nav-btn" onclick="showChapter(3)">Kapitel 4: TARDOC</button>
+                <button class="nav-btn" onclick="showChapter(4)">Kapitel 5: Ambulante Pauschalen</button>
+                <button class="nav-btn" onclick="showChapter(5)">Kapitel 6: Vergleich</button>
+                <button class="nav-btn" onclick="showChapter(6)">Kapitel 7: Praxisanwendung</button>
+                <button class="nav-btn" onclick="showChapter(7)">Abschlusstest</button>
+            </div>
+        </nav>
+
+        <div class="content">
+            <!-- Kapitel 1: Einführung -->
+            <div class="chapter active" id="chapter0">
+                <h2>Kapitel 1: Einführung in das ambulante Gesamt-Tarifsystem</h2>
+                
+                <div class="image-container">
+                    <img src="data:image/webp;base64,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" alt="TARDOC und Ambulante Pauschale" />
+                    <p style="margin-top: 15px; color: #666; font-style: italic;">
+                        Das ambulante Tarifsystem: Zwischen TARDOC und Ambulanten Pauschalen
+                    </p>
+                </div>
+
+                <h3>Was ist das ambulante Gesamt-Tarifsystem?</h3>
+                <p>
+                    Das ambulante Gesamt-Tarifsystem in der Schweiz regelt die Vergütung von ambulanten medizinischen 
+                    Leistungen. Es besteht aus mehreren Komponenten, die sich ergänzen und gemeinsam ein umfassendes 
+                    Abrechnungssystem bilden:
+                </p>
+
+                <div class="info-box">
+                    <h4>📋 Die Komponenten des Systems</h4>
+                    <ul class="list-styled">
+                        <li><strong>LKAAT:</strong> Leistungskatalog zur Erfassung aller Leistungen</li>
+                        <li><strong>TARDOC:</strong> Einzelleistungstarif für die detaillierte Abrechnung</li>
+                        <li><strong>Ambulante Pauschalen:</strong> Pauschaltarif für komplexe Behandlungen</li>
+                    </ul>
+                </div>
+
+                <h3>Warum verschiedene Komponenten?</h3>
+                <p>
+                    Die Kombination aus Leistungserfassung und unterschiedlichen Abrechnungssystemen ermöglicht eine bedarfsgerechte Vergütung:
+                </p>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Flexibilität in der Abrechnung</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Je nach Art der Behandlung kann das passende Abrechnungssystem gewählt werden. 
+                                Einfache Konsultationen werden über TARDOC einzeln abgerechnet, während komplexe 
+                                Behandlungen pauschal vergütet werden können.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Wirtschaftlichkeit und Transparenz</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Pauschalen schaffen Planungssicherheit für Leistungserbringer und Kostenträger, 
+                                während TARDOC eine detaillierte und transparente Abrechnung ermöglicht.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Anpassung an internationale Standards</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Das System orientiert sich an bewährten internationalen Modellen und ermöglicht 
+                                eine bessere Vergleichbarkeit der Gesundheitskosten.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box warning">
+                    <h4>⚠️ Wichtig zu wissen</h4>
+                    <p>
+                        Als Anwender:in müssen Sie verstehen, wann welches System anzuwenden ist. Eine falsche 
+                        Zuordnung kann zu Abrechnungsfehlern und finanziellen Nachteilen führen.
+                    </p>
+                </div>
+
+                <h3>Lernziele dieses Moduls</h3>
+                <p>Nach Abschluss dieser Schulung können Sie:</p>
+                <ul class="list-styled">
+                    <li>Die Komponenten des Tarifsystems unterscheiden und ihre Funktionen benennen</li>
+                    <li>Den LKAAT für die Leistungserfassung nutzen</li>
+                    <li>Die Struktur von TARDOC erklären und Leistungen korrekt codieren</li>
+                    <li>Ambulante Pauschalen identifizieren und zuordnen</li>
+                    <li>Das richtige System für verschiedene Behandlungssituationen auswählen</li>
+                    <li>Häufige Fehlerquellen in der Praxis vermeiden</li>
+                </ul>
+
+                <div class="quiz-section">
+                    <h3>Verständnisfragen Kapitel 1</h3>
+                    
+                    <div class="quiz-question" data-chapter="1" data-question="1">
+                        <h4>Frage 1: Aus wie vielen Hauptkomponenten besteht das ambulante Gesamt-Tarifsystem?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q1_1" value="a">
+                                Eine Komponente
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1_1" value="b">
+                                Zwei Komponenten
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1_1" value="c">
+                                Drei Komponenten (LKAAT, TARDOC, Ambulante Pauschalen)
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1_1" value="d">
+                                Vier Komponenten
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="1" data-question="2">
+                        <h4>Frage 2: Welche Komponente dient zur Leistungserfassung?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q1_2" value="a">
+                                Ambulante Pauschalen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1_2" value="b">
+                                TARDOC
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1_2" value="c">
+                                LKAAT
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1_2" value="d">
+                                TARMED
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <button class="submit-quiz" onclick="checkChapterQuiz(1)">Antworten überprüfen</button>
+                    <div class="quiz-result" id="result-chapter1"></div>
+                </div>
+
+                <div class="navigation-footer">
+                    <button class="nav-footer-btn" disabled>◄ Vorheriges Kapitel</button>
+                    <button class="nav-footer-btn" onclick="showChapter(1)">Nächstes Kapitel ►</button>
+                </div>
+            </div>
+
+                        <!-- Kapitel 2: Ambulante Behandlung (NEU) -->
+            <div class="chapter" id="chapter1">
+                <h2>Kapitel 2: Ambulante Behandlung</h2>
+
+                <h3>Was ist eine ambulante Behandlung?</h3>
+                <p>
+                    Eine <span class="highlight">ambulante Behandlung</span> ist eine medizinische Leistung, bei der 
+                    Patient:innen die Gesundheitseinrichtung am selben Tag wieder verlassen können, ohne über Nacht 
+                    zu bleiben. Der Begriff "ambulant" leitet sich vom lateinischen "ambulare" ab, was "umhergehen" bedeutet.
+                </p>
+
+                <div class="info-box">
+                    <h4>🏥 Kernmerkmale ambulanter Behandlungen</h4>
+                    <ul class="list-styled">
+                        <li><strong>Keine Übernachtung:</strong> Patient:innen gehen am selben Tag nach Hause</li>
+                        <li><strong>Kurze Behandlungsdauer:</strong> Meist wenige Minuten bis Stunden</li>
+                        <li><strong>Geringere Komplexität:</strong> Behandlungen, die keine intensive Überwachung erfordern</li>
+                        <li><strong>Verschiedene Settings:</strong> Arztpraxis, Ambulatorium, Spitalambulanz</li>
+                    </ul>
+                </div>
+
+                <h3>Abgrenzung: Ambulant vs. Stationär</h3>
+                <p>
+                    Die Unterscheidung zwischen ambulant und stationär ist entscheidend für die Abrechnung und 
+                    die Zuständigkeiten:
+                </p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kriterium</th>
+                            <th>Ambulant</th>
+                            <th>Stationär</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Aufenthaltsdauer</strong></td>
+                            <td>Wenige Stunden, keine Übernachtung</td>
+                            <td>Mindestens eine Übernachtung</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tarifsystem</strong></td>
+                            <td>TARDOC / Ambulante Pauschalen</td>
+                            <td>SwissDRG</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Behandlungsort</strong></td>
+                            <td>Praxis, Ambulatorium, Spitalambulanz</td>
+                            <td>Spital mit Bettenbelegung</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Überwachung</strong></td>
+                            <td>Keine oder kurze Nachbeobachtung</td>
+                            <td>24-Stunden-Überwachung</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Komplexität</strong></td>
+                            <td>Einfach bis mittel</td>
+                            <td>Mittel bis hoch</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kostenträger-Anteil</strong></td>
+                            <td>OKP zahlt ca. 42.6%</td>
+                            <td>OKP zahlt 55%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kantonsanteil</strong></td>
+                            <td>Ca. 55% (variiert je nach Kanton)</td>
+                            <td>45% (fixiert durch KVG)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box warning">
+                    <h4>⚠️ Wichtige Abgrenzungsfälle</h4>
+                    <p>
+                        In der Praxis gibt es Grenzfälle, die eine klare Zuordnung erfordern:
+                    </p>
+                    <ul class="list-styled">
+                        <li><strong>Tagesklinik:</strong> Ambulant, auch wenn mehrere Stunden Aufenthalt</li>
+                        <li><strong>Observation über Nacht:</strong> Gilt bereits als stationär</li>
+                        <li><strong>OP mit Nachbeobachtung:</strong> Ambulant, wenn Entlassung am gleichen Tag</li>
+                        <li><strong>Notfallbehandlung:</strong> Je nach Aufenthaltsdauer ambulant oder stationär</li>
+                    </ul>
+                </div>
+
+                <h3>Typische ambulante Behandlungen</h3>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Konsultationen und Untersuchungen</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="list-styled">
+                                <li>Allgemeine ärztliche Konsultationen</li>
+                                <li>Fachärztliche Untersuchungen</li>
+                                <li>Präventive Check-ups</li>
+                                <li>Nachkontrollen</li>
+                                <li>Hausbesuche</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Diagnostische Verfahren</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="list-styled">
+                                <li>Laboruntersuchungen</li>
+                                <li>Röntgen, CT, MRI</li>
+                                <li>Ultraschall</li>
+                                <li>EKG, Belastungstests</li>
+                                <li>Endoskopien (diagnostisch)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Therapeutische Eingriffe</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="list-styled">
+                                <li>Kleinere chirurgische Eingriffe</li>
+                                <li>Endoskopien mit Intervention</li>
+                                <li>Kataraktoperationen</li>
+                                <li>Arthroskopien</li>
+                                <li>Dialysebehandlungen</li>
+                                <li>Chemotherapie-Sitzungen</li>
+                                <li>Physiotherapie</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Notfallbehandlungen</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="list-styled">
+                                <li>Versorgung akuter Verletzungen</li>
+                                <li>Akute Erkrankungen ohne Hospitalisierung</li>
+                                <li>Wundversorgung</li>
+                                <li>Reposition von Frakturen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Vorteile ambulanter Behandlungen</h3>
+
+                <div class="info-box success">
+                    <h4>✅ Für Patient:innen</h4>
+                    <ul class="list-styled">
+                        <li>Verbleib im gewohnten Umfeld</li>
+                        <li>Geringeres Infektionsrisiko</li>
+                        <li>Schnellere Rückkehr in den Alltag</li>
+                        <li>Weniger Belastung durch Krankenhausaufenthalt</li>
+                        <li>Geringere Selbstbeteiligung</li>
+                    </ul>
+                </div>
+
+                <div class="info-box success">
+                    <h4>✅ Für das Gesundheitssystem</h4>
+                    <ul class="list-styled">
+                        <li>Kosteneinsparungen (ca. 30-50% günstiger als stationär)</li>
+                        <li>Effizientere Ressourcennutzung</li>
+                        <li>Entlastung der Spitalbetten</li>
+                        <li>Flexiblere Terminplanung</li>
+                    </ul>
+                </div>
+
+                <h3>Trend zur Ambulantisierung</h3>
+                <p>
+                    In den letzten Jahren ist ein klarer Trend zur Verlagerung von stationären zu ambulanten 
+                    Behandlungen zu beobachten:
+                </p>
+
+                <div class="info-box">
+                    <h4>📊 Entwicklung und Gründe</h4>
+                    <ul class="list-styled">
+                        <li><strong>Medizinischer Fortschritt:</strong> Minimalinvasive Techniken ermöglichen schonendere Eingriffe</li>
+                        <li><strong>Bessere Anästhesie:</strong> Schnellere Erholung nach Eingriffen</li>
+                        <li><strong>Politischer Wille:</strong> Förderung ambulanter Behandlungen zur Kostensenkung</li>
+                        <li><strong>"Ambulant vor stationär":</strong> Gesetzliche Regelung in vielen Kantonen</li>
+                        <li><strong>Listen mit ambulant durchzuführenden Eingriffen:</strong> Definierte Kataloge je nach Kanton</li>
+                    </ul>
+                </div>
+
+                <h3>Besonderheiten bei der Abrechnung</h3>
+                <p>
+                    Die ambulante Behandlung erfordert besondere Aufmerksamkeit bei der Dokumentation und Abrechnung:
+                </p>
+
+                <ul class="list-styled">
+                    <li>
+                        <strong>Leistungserfassung:</strong> Jede Leistung muss im LKAAT erfasst werden
+                    </li>
+                    <li>
+                        <strong>Systemwahl:</strong> Entscheidung zwischen TARDOC und Pauschalen
+                    </li>
+                    <li>
+                        <strong>Dokumentation:</strong> Lückenlose Dokumentation aller erbrachten Leistungen
+                    </li>
+                    <li>
+                        <strong>Wirtschaftlichkeit:</strong> Beachtung der WZW-Kriterien (wirksam, zweckmäßig, wirtschaftlich)
+                    </li>
+                    <li>
+                        <strong>Kostenträger:</strong> Klärung der Zuständigkeit (Krankenkasse, Unfallversicherung, etc.)
+                    </li>
+                </ul>
+
+                <div class="info-box warning">
+                    <h4>⚠️ Häufige Fehler bei der Zuordnung</h4>
+                    <ul class="list-styled">
+                        <li>Falsche Einschätzung der Aufenthaltsdauer</li>
+                        <li>Unklare Abgrenzung bei Notfällen</li>
+                        <li>Nichtbeachtung kantonaler Regelungen</li>
+                        <li>Fehlende Kostengutsprache bei elektiven Eingriffen</li>
+                        <li>Verwendung des falschen Tarifsystems</li>
+                    </ul>
+                </div>
+
+                <h3>Praktisches Beispiel</h3>
+
+                <div class="info-box">
+                    <h4>💡 Fallbeispiel: Arthroskopie des Kniegelenks</h4>
+                    
+                    <p><strong>Situation:</strong> Patient:in mit Meniskusschaden</p>
+                    
+                    <p><strong>Ablauf ambulant:</strong></p>
+                    <ul class="list-styled">
+                        <li>8:00 Uhr: Ankunft und Vorbereitung</li>
+                        <li>9:00 Uhr: Operation (ca. 45 Minuten)</li>
+                        <li>10:00 Uhr: Aufwachraum (2-3 Stunden Überwachung)</li>
+                        <li>13:00 Uhr: Kontrolle und Entlassung</li>
+                        <li>Abrechnung über Ambulante Pauschale</li>
+                    </ul>
+
+                    <p><strong>Voraussetzungen:</strong></p>
+                    <ul class="list-styled">
+                        <li>Keine schweren Begleiterkrankungen</li>
+                        <li>Betreuung zu Hause gewährleistet</li>
+                        <li>Erreichbarkeit bei Komplikationen</li>
+                        <li>Patient:in ist mobil und ansprechbar</li>
+                    </ul>
+
+                    <p><strong>Abrechnung:</strong> Ambulante Pauschale + ggf. Zusatzentgelte für Implantate</p>
+                </div>
+
+                <div class="quiz-section">
+                    <h3>Verständnisfragen Kapitel 2</h3>
+                    
+                    <div class="quiz-question" data-chapter="2" data-question="1">
+                        <h4>Frage 1: Was ist das Hauptmerkmal einer ambulanten Behandlung?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_1" value="a">
+                                Die Behandlung findet immer in einer Arztpraxis statt
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_1" value="b">
+                                Patient:innen verlassen die Einrichtung am selben Tag ohne Übernachtung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_2" value="c">
+                                Die Behandlung dauert maximal 1 Stunde
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_1" value="d">
+                                Es werden keine chirurgischen Eingriffe durchgeführt
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="2" data-question="2">
+                        <h4>Frage 2: Welches Tarifsystem wird für stationäre Behandlungen verwendet?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_2" value="a">
+                                TARDOC
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_2" value="b">
+                                SwissDRG
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_2" value="c">
+                                Ambulante Pauschalen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_2" value="d">
+                                LKAAT
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="2" data-question="3">
+                        <h4>Frage 3: Was ist ein Vorteil ambulanter Behandlungen für das Gesundheitssystem?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_3" value="a">
+                                Höhere Einnahmen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_3" value="b">
+                                Kosteneinsparungen und effizientere Ressourcennutzung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_3" value="c">
+                                Längere Überwachung der Patient:innen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_3" value="d">
+                                Mehr Spitalbetten werden benötigt
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="2" data-question="4">
+                        <h4>Frage 4: Ab wann gilt eine Behandlung als stationär?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_4" value="a">
+                                Nach 6 Stunden Aufenthalt
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_4" value="b">
+                                Wenn mindestens eine Übernachtung erfolgt
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_4" value="c">
+                                Wenn ein chirurgischer Eingriff durchgeführt wird
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2_4" value="d">
+                                Wenn die Kosten über CHF 5'000.- liegen
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <button class="submit-quiz" onclick="checkChapterQuiz(2)">Antworten überprüfen</button>
+                    <div class="quiz-result" id="result-chapter2"></div>
+                </div>
+
+                <div class="navigation-footer">
+                    <button class="nav-footer-btn" onclick="showChapter(0)">◄ Vorheriges Kapitel</button>
+                    <button class="nav-footer-btn" onclick="showChapter(2)">Nächstes Kapitel ►</button>
+                </div>
+            </div>
+
+<!-- Kapitel 3: LKAAT -->
+            <div class="chapter" id="chapter2">
+                <h2>Kapitel 3: LKAAT - Der Leistungskatalog</h2>
+
+                <h3>Was ist der LKAAT?</h3>
+                <p>
+                    <span class="highlight">LKAAT</span> steht für "Leistungskatalog ambulante Arzttarife" und ist das 
+                    zentrale Werkzeug zur Erfassung aller medizinischen Leistungen im ambulanten Gesamt-Tarifsystem. 
+                    Der LKAAT ist die Schnittstelle zwischen der erbrachten medizinischen Leistung und dem 
+                    Abrechnungssystem.
+                </p>
+
+                <div class="info-box">
+                    <h4>🎯 Hauptfunktion des LKAAT</h4>
+                    <p><strong>Der LKAAT dient ausschliesslich der Leistungserfassung, NICHT der Abrechnung!</strong></p>
+                    <ul class="list-styled">
+                        <li>Enthält alle medizinischen Leistungen, die erfasst werden können</li>
+                        <li>Definiert für jede Leistung, ob TARDOC oder Ambulante Pauschalen zur Anwendung kommen</li>
+                        <li>Bildet die Grundlage für die spätere Abrechnung</li>
+                    </ul>
+                </div>
+
+                <h3>Struktur und Aufbau des LKAAT</h3>
+                <p>Der LKAAT kategorisiert jede Leistung nach ihrem Typ:</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Typ</th>
+                            <th>Bedeutung</th>
+                            <th>Beispiel</th>
+                            <th>LKN-Nummer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>E</strong></td>
+                            <td>Einzelleistungstarif-Position</td>
+                            <td>Ärztliche Konsultation, erste 5 Min.</td>
+                            <td>AA.00.0010<br>(8-stellig)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EZ</strong></td>
+                            <td>Zusatzleistung für Einzelleistungs-Position</td>
+                            <td>+ Ärztliche Konsultation, jede weitere 1 Min.</td>
+                            <td>AA.00.0020<br>(8-stellig)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>P</strong></td>
+                            <td>Pauschalen-Position (Triggerposition)</td>
+                            <td>Stripping der Stammvene</td>
+                            <td>C05.GB.0080<br>(9-stellig)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PZ</strong></td>
+                            <td>Zusatzleistung für Pauschalen-Position</td>
+                            <td>Rechtsherzkatheter unter Belastung</td>
+                            <td>C05.KC.Z001<br>(9-stellig)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Wie funktioniert die Entscheidung TARDOC vs. Pauschale?</h3>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Schritt 1: Leistung erfassen</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Bei jeder ambulanten Behandlung werden alle erbrachten Leistungen im LKAAT erfasst. 
+                                Jede Leistung hat eine eindeutige LKN-Nummer (Leistungskatalognummer).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Schritt 2: Typ prüfen</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Das System prüft automatisch den Typ der erfassten Leistung:
+                            </p>
+                            <ul class="list-styled">
+                                <li><strong>E oder EZ:</strong> Einzelleistungsposition → Abrechnung über TARDOC</li>
+                                <li><strong>P oder PZ:</strong> Pauschalen-Position (Triggerposition) → Abrechnung über Ambulante Pauschalen</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Schritt 3: Abrechnungssystem wird bestimmt</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Sobald eine Triggerposition (P) erfasst wird, erfolgt die Abrechnung über Ambulante Pauschalen. 
+                                Wurde keine Triggerposition erfasst, wird über TARDOC abgerechnet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>LKN-Nummern verstehen</h3>
+
+                <div class="info-box success">
+                    <h4>✅ So erkennen Sie den Unterschied</h4>
+                    
+                    <p><strong>TARDOC-Positionen (8-stellig):</strong></p>
+                    <div class="code-example">
+                        AA.00.0010 - Ärztliche Konsultation, erste 5 Min.<br>
+                        AA.00.0020 - + Ärztliche Konsultation, jede weitere 1 Min.<br>
+                        AA.25.0010 - Bericht an Arzt, pro 1 Min.
+                    </div>
+
+                    <p><strong>Pauschalen-Positionen (9-stellig):</strong></p>
+                    <div class="code-example">
+                        C05.GB.0080 - Stripping der Stammvene<br>
+                        C05.KC.0100 - Implantation eines flussreduzierenden Stents<br>
+                        C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
+                    </div>
+
+                    <p style="margin-top: 15px;">
+                        <strong>Merkhilfe:</strong> Die ersten drei Stellen bei Pauschalen-Positionen (z.B. C05) 
+                        geben an, welchem Capitulum (Kapitel) die Pauschale zugeordnet ist.
+                    </p>
+                </div>
+
+                <h3>Triggerpositionen - Das Herzstück des Systems</h3>
+                <p>
+                    Triggerpositionen sind spezielle Leistungen, die automatisch eine Pauschalen-Abrechnung auslösen:
+                </p>
+
+                <ul class="list-styled">
+                    <li>
+                        <strong>Was löst eine Pauschale aus?</strong><br>
+                        Sobald eine Triggerposition (Typ P) erfasst wird, wird die gesamte Behandlung über Ambulante 
+                        Pauschalen abgerechnet, nicht mehr über TARDOC
+                    </li>
+                    <li>
+                        <strong>Beispiele für Triggerpositionen:</strong><br>
+                        Chirurgische Eingriffe, Endoskopien mit Intervention, komplexe diagnostische Verfahren
+                    </li>
+                    <li>
+                        <strong>Wichtig:</strong><br>
+                        Eine Behandlung kann entweder über TARDOC ODER über Pauschalen abgerechnet werden, 
+                        nie beides gemischt (ausser definierte Zusatzentgelte)
+                    </li>
+                </ul>
+
+                <h3>Praktisches Beispiel</h3>
+
+                <div class="info-box">
+                    <h4>💡 Fallbeispiel: Zwei Behandlungen am gleichen Tag</h4>
+                    
+                    <p><strong>Situation:</strong> Patient:in kommt zweimal am gleichen Tag:</p>
+                    
+                    <p><strong>Behandlung 1 (Vormittag):</strong></p>
+                    <ul class="list-styled">
+                        <li>Erfasste Leistung: AA.00.0010 (Typ E) - Konsultation</li>
+                        <li>→ Keine Triggerposition</li>
+                        <li>→ Abrechnung über TARDOC</li>
+                    </ul>
+
+                    <p><strong>Behandlung 2 (Nachmittag - anderer Grund):</strong></p>
+                    <ul class="list-styled">
+                        <li>Erfasste Leistung: C05.GB.0080 (Typ P) - Stripping der Stammvene</li>
+                        <li>→ Triggerposition!</li>
+                        <li>→ Abrechnung über Ambulante Pauschalen</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;"><strong>Ergebnis:</strong> 
+                    Da beide Behandlungen unterschiedliche Gründe haben und in verschiedenen Capitulum 
+                    aufgeführt sind, sind zwei ambulante Behandlungen möglich.</p>
+                </div>
+
+                <h3>Tools für die Arbeit mit dem LKAAT</h3>
+                <p>
+                    Für die praktische Arbeit stehen verschiedene Hilfsmittel zur Verfügung:
+                </p>
+
+                <div class="info-box">
+                    <h4>🔧 LKAAT plus Browser</h4>
+                    <ul class="list-styled">
+                        <li>Online-Tarifbrowser der Ärztekasse und der FMH</li>
+                        <li>Umfangreiche Suchfunktionen</li>
+                        <li>Zeigt an, welche LKAAT-Leistungen Pauschalen auslösen</li>
+                        <li>Vergleich mit TARMED-Leistungen möglich</li>
+                        <li>ICD-10 Zuordnung der Diagnosen zu den Capitulum</li>
+                    </ul>
+                </div>
+
+                <div class="info-box warning">
+                    <h4>⚠️ Häufige Fehler beim LKAAT</h4>
+                    <ul class="list-styled">
+                        <li>Verwechslung von Leistungserfassung (LKAAT) und Abrechnung (TARDOC/Pauschalen)</li>
+                        <li>Übersehen einer Triggerposition → falsche Abrechnung über TARDOC</li>
+                        <li>Falsche Annahme, dass 8-stellige Nummern immer TARDOC bedeuten</li>
+                        <li>Nichtbeachtung der Capitulum-Zuordnung bei Pauschalen</li>
+                    </ul>
+                </div>
+
+                <div class="quiz-section">
+                    <h3>Verständnisfragen Kapitel 2</h3>
+                    
+                    <div class="quiz-question" data-chapter="3" data-question="1">
+                        <h4>Frage 1: Wofür steht die Abkürzung LKAAT?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_1" value="a">
+                                Leistungskatalog aller ambulanten Tarife
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_1" value="b">
+                                Leistungskatalog ambulante Arzttarife
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_1" value="c">
+                                Leistungskosten ambulanter Arzt-Behandlungen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_1" value="d">
+                                Leistungsverzeichnis klinischer ambulanter Tarife
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="3" data-question="2">
+                        <h4>Frage 2: Was bedeutet eine Position mit dem Typ "P" im LKAAT?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_2" value="a">
+                                Private Leistung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_2" value="b">
+                                Pauschalen-Position (Triggerposition)
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_2" value="c">
+                                Präventive Leistung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_2" value="d">
+                                Priorisierte Leistung
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="3" data-question="3">
+                        <h4>Frage 3: Wie viele Stellen hat eine LKN-Nummer für TARDOC-Positionen?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_3" value="a">
+                                6 Stellen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_3" value="b">
+                                7 Stellen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_3" value="c">
+                                8 Stellen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_3" value="d">
+                                9 Stellen
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="3" data-question="4">
+                        <h4>Frage 4: Was löst eine Triggerposition aus?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_4" value="a">
+                                Eine doppelte Abrechnung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_4" value="b">
+                                Die Abrechnung über Ambulante Pauschalen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_4" value="c">
+                                Eine Kostengutsprache
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3_4" value="d">
+                                Eine Warnung im System
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <button class="submit-quiz" onclick="checkChapterQuiz(3)">Antworten überprüfen</button>
+                    <div class="quiz-result" id="result-chapter3"></div>
+                </div>
+
+                <div class="navigation-footer">
+                    <button class="nav-footer-btn" onclick="showChapter(1)">◄ Vorheriges Kapitel</button>
+                    <button class="nav-footer-btn" onclick="showChapter(3)">Nächstes Kapitel ►</button>
+                </div>
+            </div>
+
+            <!-- Kapitel 4: TARDOC -->
+            <div class="chapter" id="chapter3">
+                <h2>Kapitel 4: TARDOC - Der Einzelleistungstarif</h2>
+
+                <h3>Was ist TARDOC?</h3>
+                <p>
+                    <span class="highlight">TARDOC</span> steht für "Tarif ambulanter Arztleistungen in Arztpraxis und 
+                    ambulantem Spitalbereich" und ist der Nachfolger des TARMED-Tarifs. TARDOC ist ein 
+                    Einzelleistungstarif, der jede erbrachte medizinische Leistung einzeln erfasst und abrechnet.
+                </p>
+
+                <div class="info-box">
+                    <h4>🎯 Hauptmerkmale von TARDOC</h4>
+                    <ul class="list-styled">
+                        <li><strong>Einzelleistungsbasiert:</strong> Jede Leistung wird separat codiert</li>
+                        <li><strong>Tarifpunkte:</strong> Leistungen werden in Taxpunkten bewertet</li>
+                        <li><strong>Taxpunktwert:</strong> Variable Umrechnung in Franken je nach Kanton</li>
+                        <li><strong>Limitationen:</strong> Mengenbegrenzungen bei bestimmten Leistungen</li>
+                        <li><strong>11 Hauptkapitel:</strong> 55 Kapitel, 176 Unterkapitel, 1388 Tarifpositionen</li>
+                    </ul>
+                </div>
+
+                <h3>Struktur des TARDOC-Tarifs</h3>
+                <p>TARDOC ist hierarchisch in verschiedene Kapitel und Leistungsgruppen gegliedert:</p>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Kapitel A: Ärztliche Grundleistungen</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Beinhaltet Grundkonsultationen, Notfallleistungen, Hausbesuche, administrative 
+                                Leistungen und telemedizinische Leistungen. Dies ist die Basis für die meisten 
+                                ambulanten Behandlungen.
+                            </p>
+                            <p><strong>Beispiele:</strong></p>
+                            <ul class="list-styled">
+                                <li>AA.00.0010: Ärztliche Konsultation, erste 5 Min.</li>
+                                <li>AA.10.0010: Telemedizinische Konsultation, erste 5 Min.</li>
+                                <li>AA.25.0010: Bericht an Arzt, pro 1 Min.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Weitere Kapitel: Diagnostik und Therapie</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Umfasst bildgebende Verfahren, Laborleistungen, therapeutische Massnahmen 
+                                wie EKG, Ultraschall, Röntgenuntersuchungen, chirurgische Eingriffe und 
+                                fachspezifische Leistungen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Berechnung der Vergütung</h3>
+                <p>Die Vergütung nach TARDOC erfolgt nach folgender Formel:</p>
+
+                <div class="info-box success">
+                    <h4>💰 Berechnungsformel</h4>
+                    <p style="font-size: 1.2em; text-align: center; margin: 15px 0;">
+                        <strong>Vergütung = Taxpunkte × Taxpunktwert</strong>
+                    </p>
+                    <p><strong>Beispiel:</strong></p>
+                    <ul class="list-styled">
+                        <li>Leistung: Grundkonsultation (150 Taxpunkte)</li>
+                        <li>Taxpunktwert: CHF 0.90</li>
+                        <li>Vergütung: 150 × 0.90 = CHF 135.00</li>
+                    </ul>
+                </div>
+
+                <h3>Wichtige Regelungen</h3>
+                <ul class="list-styled">
+                    <li>
+                        <strong>Kumulation:</strong> Bestimmte Leistungen können nicht zusammen am gleichen Tag 
+                        abgerechnet werden
+                    </li>
+                    <li>
+                        <strong>Zuschläge:</strong> Für Notfälle, Nacht-/Wochenendarbeit oder besondere Umstände
+                    </li>
+                    <li>
+                        <strong>Limitationen:</strong> Mengenbeschränkungen pro Quartal oder Jahr bei bestimmten Leistungen
+                    </li>
+                    <li>
+                        <strong>Dignität:</strong> Nicht alle Ärzte dürfen alle Leistungen abrechnen (Facharzttitel erforderlich)
+                    </li>
+                </ul>
+
+                <div class="info-box warning">
+                    <h4>⚠️ Häufige Fehlerquellen</h4>
+                    <ul class="list-styled">
+                        <li>Falsche Zuordnung von Leistungscodes</li>
+                        <li>Nichtbeachtung von Kumulationseinschränkungen</li>
+                        <li>Überschreitung von Limitationen</li>
+                        <li>Abrechnung ohne entsprechende Dignität</li>
+                    </ul>
+                </div>
+
+                <div class="quiz-section">
+                    <h3>Verständnisfragen Kapitel 3</h3>
+                    
+                    <div class="quiz-question" data-chapter="4" data-question="1">
+                        <h4>Frage 1: Wofür steht die Abkürzung TARDOC?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_1" value="a">
+                                Tarif für Doktoren
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_1" value="b">
+                                Tarif ambulanter Arztleistungen in Arztpraxis und ambulantem Spitalbereich
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_1" value="c">
+                                Tarifvertrag der Schweizer Ärzte
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_1" value="d">
+                                Tarif für Dokumentation
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="4" data-question="2">
+                        <h4>Frage 2: Eine Grundkonsultation kostet 180 Taxpunkte. Bei einem Taxpunktwert von CHF 0.95, wie hoch ist die Vergütung?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_2" value="a">
+                                CHF 150.00
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_2" value="b">
+                                CHF 171.00
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_2" value="c">
+                                CHF 189.50
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_2" value="d">
+                                CHF 180.00
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="4" data-question="3">
+                        <h4>Frage 3: Was bedeutet "Dignität" im Kontext von TARDOC?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_3" value="a">
+                                Die Würde des Patienten
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_3" value="b">
+                                Die Berechtigung zur Abrechnung bestimmter Leistungen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_3" value="c">
+                                Die Qualität der Behandlung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_3" value="d">
+                                Der Schwierigkeitsgrad einer Leistung
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <button class="submit-quiz" onclick="checkChapterQuiz(4)">Antworten überprüfen</button>
+                    <div class="quiz-result" id="result-chapter4"></div>
+                </div>
+
+                <div class="navigation-footer">
+                    <button class="nav-footer-btn" onclick="showChapter(2)">◄ Vorheriges Kapitel</button>
+                    <button class="nav-footer-btn" onclick="showChapter(4)">Nächstes Kapitel ►</button>
+                </div>
+            </div>
+
+            <!-- Kapitel 5: Ambulante Pauschalen -->
+            <div class="chapter" id="chapter4">
+                <h2>Kapitel 5: Ambulante Pauschalen (AP)</h2>
+
+                <h3>Was sind Ambulante Pauschalen?</h3>
+                <p>
+                    Ambulante Pauschalen sind <span class="highlight">fallbasierte Vergütungssysteme</span>, bei denen 
+                    komplexe ambulante Behandlungen nicht nach Einzelleistungen, sondern als Gesamtpaket abgerechnet werden.
+                </p>
+
+                <div class="info-box">
+                    <h4>🎯 Kernprinzip der Pauschalen</h4>
+                    <p>
+                        Eine Pauschale deckt alle Leistungen ab, die typischerweise für eine bestimmte Behandlung oder 
+                        einen bestimmten Eingriff notwendig sind – von der Vorbereitung über die Durchführung bis zur 
+                        Nachsorge. Das System orientiert sich am stationären SwissDRG-Modell und umfasst 19 Kapitel 
+                        mit 314 Pauschalen.
+                    </p>
+                </div>
+
+                <h3>Anwendungsbereiche</h3>
+                <p>Ambulante Pauschalen kommen hauptsächlich zum Einsatz bei:</p>
+
+                <ul class="list-styled">
+                    <li><strong>Chirurgischen Eingriffen:</strong> z.B. Kataraktoperationen, Arthroskopien, kleine Tumorresektionen</li>
+                    <li><strong>Endoskopischen Untersuchungen:</strong> Gastroskopie, Koloskopie mit Polypektomie</li>
+                    <li><strong>Komplexen diagnostischen Verfahren:</strong> PET-CT, spezielle MRI-Untersuchungen</li>
+                    <li><strong>Onkologischen Behandlungen:</strong> Chemotherapie-Zyklen, Strahlentherapie-Serien</li>
+                    <li><strong>Dialysebehandlungen:</strong> Standardisierte Hämodialyse-Sitzungen</li>
+                </ul>
+
+                <h3>Struktur der Ambulanten Pauschalen</h3>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>AP-Gruppen und Klassifikation</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Ambulante Pauschalen sind in 19 Kapitel (Capitulum) eingeteilt, die nach medizinischen 
+                                Kriterien und Behandlungskomplexität kategorisiert sind. Jede Gruppe hat einen 
+                                eindeutigen Code und eine festgelegte Vergütungshöhe.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Inkludierte Leistungen</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Eine Pauschale beinhaltet typischerweise:
+                            </p>
+                            <ul class="list-styled">
+                                <li>Präoperative Voruntersuchungen</li>
+                                <li>Der Eingriff/die Behandlung selbst</li>
+                                <li>Anästhesieleistungen</li>
+                                <li>Verbrauchsmaterialien</li>
+                                <li>Postoperative Nachkontrollen (innerhalb definierter Zeiträume)</li>
+                                <li>Standard-Medikamente</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Zusatzentgelte</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Bestimmte kostenintensive Leistungen können zusätzlich zur Pauschale abgerechnet werden:
+                            </p>
+                            <ul class="list-styled">
+                                <li>Teure Implantate und Prothesen</li>
+                                <li>Spezielle Medikamente (z.B. Biologika)</li>
+                                <li>Nicht-standardmässige Diagnostik</li>
+                                <li>Komplikationsbehandlungen ausserhalb der Norm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Vorteile der Pauschalen</h3>
+
+                <div class="info-box success">
+                    <h4>✅ Für Leistungserbringer</h4>
+                    <ul class="list-styled">
+                        <li>Planungssicherheit bei der Kalkulation</li>
+                        <li>Reduktion des administrativen Aufwands</li>
+                        <li>Anreiz zur effizienten Behandlung</li>
+                        <li>Geringerer Dokumentationsaufwand</li>
+                    </ul>
+                </div>
+
+                <div class="info-box success">
+                    <h4>✅ Für Kostenträger und Patienten</h4>
+                    <ul class="list-styled">
+                        <li>Transparente und vorhersehbare Kosten</li>
+                        <li>Bessere Vergleichbarkeit zwischen Anbietern</li>
+                        <li>Vereinfachte Rechnungsprüfung</li>
+                        <li>Anreiz zur Qualitätssicherung</li>
+                    </ul>
+                </div>
+
+                <h3>Praktisches Beispiel: Kataraktoperation</h3>
+
+                <div class="info-box">
+                    <h4>👁️ Fallbeispiel</h4>
+                    <p><strong>Situation:</strong> Patient:in benötigt eine Kataraktoperation (Grauer Star)</p>
+                    
+                    <p><strong>Abrechnung über Pauschale:</strong></p>
+                    <ul class="list-styled">
+                        <li>Ein AP-Code für "Kataraktoperation mit Linsenimplantation"</li>
+                        <li>Pauschalbetrag: z.B. CHF 2'500.-</li>
+                        <li>Inkludiert: Voruntersuchung, OP, Standardlinse, Anästhesie, 2 Nachkontrollen</li>
+                        <li>Zusatzentgelt: Premium-Linse (falls gewünscht): + CHF 800.-</li>
+                    </ul>
+
+                    <p><strong>Ohne Pauschale (TARDOC):</strong></p>
+                    <p>Müsste jede Einzelleistung separat codiert werden (ca. 15-20 verschiedene Positionen)</p>
+                </div>
+
+                <div class="info-box warning">
+                    <h4>⚠️ Wichtige Abgrenzungen</h4>
+                    <ul class="list-styled">
+                        <li>Nicht alle ambulanten Behandlungen können pauschal abgerechnet werden</li>
+                        <li>Bei Komplikationen kann eine Umstellung auf TARDOC notwendig sein</li>
+                        <li>Pauschalen und TARDOC dürfen nicht beliebig gemischt werden</li>
+                        <li>Klare Dokumentation ist essentiell für die Rechtfertigung der Pauschale</li>
+                    </ul>
+                </div>
+
+                <div class="quiz-section">
+                    <h3>Verständnisfragen Kapitel 4</h3>
+                    
+                    <div class="quiz-question" data-chapter="5" data-question="1">
+                        <h4>Frage 1: Was ist das Kernprinzip einer Ambulanten Pauschale?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_1" value="a">
+                                Jede Leistung wird einzeln abgerechnet
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_1" value="b">
+                                Alle Leistungen einer Behandlung werden als Gesamtpaket abgerechnet
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_1" value="c">
+                                Nur Medikamente werden pauschal abgerechnet
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_1" value="d">
+                                Nur die ärztliche Leistung wird pauschal abgerechnet
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="5" data-question="2">
+                        <h4>Frage 2: Welche Leistungen sind typischerweise in einer Pauschale NICHT inkludiert?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_2" value="a">
+                                Standard-Nachkontrollen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_2" value="b">
+                                Teure Spezialimplantate
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_2" value="c">
+                                Anästhesieleistungen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_2" value="d">
+                                Verbrauchsmaterialien
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="5" data-question="3">
+                        <h4>Frage 3: Was ist ein Vorteil der Pauschalen für Leistungserbringer?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_3" value="a">
+                                Höhere Vergütung als bei TARDOC
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_3" value="b">
+                                Reduktion des administrativen Aufwands
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_3" value="c">
+                                Keine Dokumentationspflicht
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5_3" value="d">
+                                Unbegrenzte Abrechnung aller Leistungen
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <button class="submit-quiz" onclick="checkChapterQuiz(5)">Antworten überprüfen</button>
+                    <div class="quiz-result" id="result-chapter5"></div>
+                </div>
+
+                <div class="navigation-footer">
+                    <button class="nav-footer-btn" onclick="showChapter(3)">◄ Vorheriges Kapitel</button>
+                    <button class="nav-footer-btn" onclick="showChapter(5)">Nächstes Kapitel ►</button>
+                </div>
+            </div>
+
+            <!-- Kapitel 6: Vergleich -->
+            <div class="chapter" id="chapter5">
+                <h2>Kapitel 6: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich</h2>
+
+                <h3>Gegenüberstellung der Systeme</h3>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kriterium</th>
+                            <th>TARDOC</th>
+                            <th>Ambulante Pauschalen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Abrechnungsprinzip</strong></td>
+                            <td>Einzelleistung</td>
+                            <td>Fallpauschale</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vergütungseinheit</strong></td>
+                            <td>Taxpunkte pro Leistung</td>
+                            <td>Pauschalbetrag pro Fall</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Typische Anwendung</strong></td>
+                            <td>Konsultationen, einfache Behandlungen</td>
+                            <td>Komplexe Eingriffe, Behandlungsserien</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Infrastruktur</strong></td>
+                            <td>Einfach (Sprechzimmer, Ultraschall, Röntgen)</td>
+                            <td>Aufwändig (OP, Nuklearmedizin, Endoskopien)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dokumentationsaufwand</strong></td>
+                            <td>Hoch (jede Leistung)</td>
+                            <td>Moderat (Gesamtbehandlung)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Planbarkeit</strong></td>
+                            <td>Variable Kosten</td>
+                            <td>Fixe Kosten</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Flexibilität</strong></td>
+                            <td>Sehr hoch</td>
+                            <td>Begrenzt</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transparenz</strong></td>
+                            <td>Detailliert</td>
+                            <td>Pauschal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Effizienzanreiz</strong></td>
+                            <td>Gering</td>
+                            <td>Hoch</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tariftyp</strong></td>
+                            <td>007</td>
+                            <td>005</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Wann welches System?</h3>
+
+                <div class="info-box">
+                    <h4>📋 Entscheidungshilfe</h4>
+                    
+                    <p><strong>TARDOC verwenden bei:</strong></p>
+                    <ul class="list-styled">
+                        <li>Routinekonsultationen</li>
+                        <li>Einfachen diagnostischen Verfahren</li>
+                        <li>Einzelnen therapeutischen Massnahmen</li>
+                        <li>Hausbesuchen</li>
+                        <li>Notfallbehandlungen ohne nachfolgende OP</li>
+                        <li>Präventionsleistungen (Impfungen, Check-ups)</li>
+                    </ul>
+
+                    <p><strong>Ambulante Pauschalen verwenden bei:</strong></p>
+                    <ul class="list-styled">
+                        <li>Chirurgischen Eingriffen (auch kleinere)</li>
+                        <li>Endoskopischen Interventionen</li>
+                        <li>Komplexen bildgebenden Verfahren mit mehreren Sequenzen</li>
+                        <li>Behandlungsserien (Chemotherapie, Dialyse)</li>
+                        <li>Standardisierten ambulanten Operationen</li>
+                    </ul>
+                </div>
+
+                <h3>Kombinationsmöglichkeiten</h3>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Grundsätzlich: Keine Mischung im selben Fall</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Innerhalb desselben Behandlungsfalls sollten TARDOC und Pauschalen grundsätzlich 
+                                nicht gemischt werden. Die Entscheidung für ein System muss zu Beginn der Behandlung 
+                                getroffen werden. Eine Mischform ist nicht möglich.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Ausnahme: Zwei Behandlungen am gleichen Tag</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Zwei ambulante Behandlungen am gleichen Tag bei gleichem Patienten sind möglich, wenn:
+                            </p>
+                            <ul class="list-styled">
+                                <li>Anderer Garant (z.B. Krankheit/Unfall)</li>
+                                <li>Diagnose in einem anderen Capitulum aufgeführt ist</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Ausnahme: Zusatzentgelte</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Bei Pauschalen können definierte Zusatzentgelte (z.B. teure Implantate, Spezialmedikamente) 
+                                zusätzlich abgerechnet werden. Diese sind aber klar definiert und nicht beliebig.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Ausnahme: Komplikationen</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Bei schweren Komplikationen, die nicht durch die Pauschale abgedeckt sind, kann 
+                                eine Umstellung auf TARDOC erfolgen. Dies erfordert jedoch eine klare Dokumentation 
+                                und Begründung.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Praktische Fallbeispiele</h3>
+
+                <div class="info-box success">
+                    <h4>✅ Fall 1: Arthroskopische Meniskusoperation</h4>
+                    <p><strong>Richtig:</strong> Abrechnung über Ambulante Pauschale</p>
+                    <ul class="list-styled">
+                        <li>Standardisierter Eingriff</li>
+                        <li>Klarer Behandlungspfad</li>
+                        <li>Alle Leistungen im Paket</li>
+                        <li>Pauschale: ca. CHF 3'200.-</li>
+                    </ul>
+                </div>
+
+                <div class="info-box success">
+                    <h4>✅ Fall 2: Behandlung einer akuten Bronchitis</h4>
+                    <p><strong>Richtig:</strong> Abrechnung über TARDOC</p>
+                    <ul class="list-styled">
+                        <li>Konsultation (150 TP)</li>
+                        <li>Auskultation (30 TP)</li>
+                        <li>Verschreibung (20 TP)</li>
+                        <li>Gesamt: ca. 200 TP = CHF 180.- (bei TP-Wert 0.90)</li>
+                    </ul>
+                </div>
+
+                <div class="info-box warning">
+                    <h4>⚠ Fall 3: Fehlentscheidung vermeiden</h4>
+                    <p><strong>Situation:</strong> Geplante Koloskopie mit möglicher Polypektomie</p>
+                    <p><strong>Falsch:</strong> Start mit TARDOC, dann Wechsel zu Pauschale während Eingriff</p>
+                    <p><strong>Richtig:</strong> Von Anfang an Pauschale wählen, da Eingriff möglich</p>
+                </div>
+
+                <div class="quiz-section">
+                    <h3>Verständnisfragen Kapitel 5</h3>
+                    
+                    <div class="quiz-question" data-chapter="6" data-question="1">
+                        <h4>Frage 1: Welches System bietet höhere Flexibilität in der Abrechnung?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_1" value="a">
+                                Ambulante Pauschalen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_1" value="b">
+                                TARDOC
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_1" value="c">
+                                Beide gleich flexibel
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_1" value="d">
+                                Keines der Systeme ist flexibel
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="6" data-question="2">
+                        <h4>Frage 2: Für welche Situation ist TARDOC die richtige Wahl?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_2" value="a">
+                                Kataraktoperation
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_2" value="b">
+                                Routinekonsultation bei Erkältung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_2" value="c">
+                                Koloskopie mit Polypektomie
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_2" value="d">
+                                Arthroskopische Operation
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="6" data-question="3">
+                        <h4>Frage 3: Dürfen TARDOC und Pauschalen grundsätzlich im selben Behandlungsfall gemischt werden?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_3" value="a">
+                                Ja, jederzeit
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_3" value="b">
+                                Nein, grundsätzlich nicht (ausser definierte Ausnahmen)
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_3" value="c">
+                                Ja, aber nur bei Notfällen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q6_3" value="d">
+                                Nur mit Genehmigung der Krankenkasse
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <button class="submit-quiz" onclick="checkChapterQuiz(6)">Antworten überprüfen</button>
+                    <div class="quiz-result" id="result-chapter6"></div>
+                </div>
+
+                <div class="navigation-footer">
+                    <button class="nav-footer-btn" onclick="showChapter(4)">◄ Vorheriges Kapitel</button>
+                    <button class="nav-footer-btn" onclick="showChapter(6)">Nächstes Kapitel ►</button>
+                </div>
+            </div>
+
+            <!-- Kapitel 7: Praxisanwendung -->
+            <div class="chapter" id="chapter6">
+                <h2>Kapitel 7: Praxisanwendung und Best Practices</h2>
+
+                <h3>Der Workflow in der Praxis</h3>
+                <p>
+                    Die korrekte Anwendung des Tarifsystems beginnt bereits bei der Patientenanmeldung und 
+                    durchzieht den gesamten Behandlungsprozess.
+                </p>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Schritt 1: Patientenanmeldung und Vorabklärung</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p><strong>Zu prüfen:</strong></p>
+                            <ul class="list-styled">
+                                <li>Versicherungsstatus des Patienten</li>
+                                <li>Art der geplanten Behandlung</li>
+                                <li>Ist eine Pauschale verfügbar?</li>
+                                <li>Kostenübernahmegarantie bei elektiven Eingriffen</li>
+                            </ul>
+                            <p><strong>Best Practice:</strong> Bei geplanten Eingriffen immer vorab mit der 
+                            Krankenversicherung klären, welches Abrechnungssystem akzeptiert wird.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Schritt 2: Behandlung und Dokumentation</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p><strong>Bei TARDOC:</strong></p>
+                            <ul class="list-styled">
+                                <li>Jede erbrachte Leistung zeitnah im LKAAT erfassen</li>
+                                <li>Korrekte Leistungscodes verwenden</li>
+                                <li>Zeitaufwand und Material festhalten</li>
+                                <li>Kumulationsregeln beachten</li>
+                            </ul>
+                            <p><strong>Bei Pauschalen:</strong></p>
+                            <ul class="list-styled">
+                                <li>Triggerposition im LKAAT erfassen</li>
+                                <li>Behandlungsverlauf als Ganzes dokumentieren</li>
+                                <li>Besonderheiten und Abweichungen vermerken</li>
+                                <li>Zusatzentgelte separat erfassen</li>
+                                <li>Komplikationen genau beschreiben</li>
+                                <li>ICD-10-Diagnose und Capitulum zuordnen</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Schritt 3: Codierung und Rechnungsstellung</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p><strong>Qualitätssicherung:</strong></p>
+                            <ul class="list-styled">
+                                <li>Vollständigkeit der Dokumentation prüfen</li>
+                                <li>Codes mit medizinischer Dokumentation abgleichen</li>
+                                <li>Plausibilitätsprüfung durchführen</li>
+                                <li>Vier-Augen-Prinzip bei komplexen Fällen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Häufige Fehlerquellen und deren Vermeidung</h3>
+
+                <div class="info-box warning">
+                    <h4>⚠️ Top 5 Fehler und Lösungen</h4>
+                    
+                    <p><strong>1. Falsche Systemwahl</strong></p>
+                    <ul class="list-styled">
+                        <li>Problem: TARDOC für pauschalfähigen Eingriff gewählt</li>
+                        <li>Lösung: LKAAT-Katalog vorab konsultieren, Triggerposition erkennen</li>
+                    </ul>
+
+                    <p><strong>2. Unvollständige Dokumentation</strong></p>
+                    <ul class="list-styled">
+                        <li>Problem: Fehlende Angaben führen zu Rückfragen und Zahlungsverzögerungen</li>
+                        <li>Lösung: Checklisten verwenden, zeitnahe Dokumentation</li>
+                    </ul>
+
+                    <p><strong>3. Kumulationsfehler bei TARDOC</strong></p>
+                    <ul class="list-styled">
+                        <li>Problem: Nicht kombinierbare Leistungen gleichzeitig abgerechnet</li>
+                        <li>Lösung: Software mit Kumulationsprüfung nutzen</li>
+                    </ul>
+
+                    <p><strong>4. Übersehen von Zusatzentgelten</strong></p>
+                    <ul class="list-styled">
+                        <li>Problem: Anspruchsberechtigte Zusatzentgelte nicht geltend gemacht</li>
+                        <li>Lösung: Materialverbrauch systematisch erfassen</li>
+                    </ul>
+
+                    <p><strong>5. Fehlende Kostengutsprache</strong></p>
+                    <ul class="list-styled">
+                        <li>Problem: Elektiver Eingriff ohne vorherige Genehmigung</li>
+                        <li>Lösung: Standardprozess für Kostengutsprachen etablieren</li>
+                    </ul>
+                </div>
+
+                <h3>Tipps für effizientes Arbeiten</h3>
+
+                <div class="info-box success">
+                    <h4>✅ Effizienz-Tipps</h4>
+                    
+                    <p><strong>Für LKAAT:</strong></p>
+                    <ul class="list-styled">
+                        <li>LKAAT plus Browser nutzen für schnelle Suche</li>
+                        <li>Triggerpositionen markieren und kennen</li>
+                        <li>Regelmässige Updates zu neuen Leistungen beachten</li>
+                    </ul>
+                    
+                    <p><strong>Für TARDOC:</strong></p>
+                    <ul class="list-styled">
+                        <li>Häufig verwendete Leistungskombinationen als Vorlagen speichern</li>
+                        <li>Codier-Software mit Plausibilitätsprüfung nutzen</li>
+                        <li>Regelmässige Schulungen für Mitarbeitende</li>
+                        <li>Aktuelle Tarifversionen verwenden</li>
+                    </ul>
+
+                    <p><strong>Für Pauschalen:</strong></p>
+                    <ul class="list-styled">
+                        <li>Standardisierte Behandlungspfade etablieren</li>
+                        <li>Material-Sets für typische Eingriffe vorbereiten</li>
+                        <li>Klare Prozesse für Zusatzentgelte definieren</li>
+                        <li>Regelmässiger Austausch mit Kostenträgern</li>
+                    </ul>
+                </div>
+
+                <h3>Rechtliche und ethische Aspekte</h3>
+
+                <div class="info-box">
+                    <h4>⚖️ Was ist zu beachten?</h4>
+                    
+                    <p><strong>Tarifautonomie:</strong></p>
+                    <p>
+                        Tarifsystem und Tarife werden von den Sozialpartnern (Leistungserbringer und 
+                        Kostenträger) gemeinsam vereinbart. Einseitige Abweichungen sind nicht zulässig.
+                    </p>
+
+                    <p><strong>Wirtschaftlichkeitsgebot:</strong></p>
+                    <p>
+                        Alle Leistungen müssen wirksam, zweckmässig und wirtschaftlich sein (WZW-Kriterien). 
+                        Dies gilt für beide Systeme gleichermassen.
+                    </p>
+
+                    <p><strong>Dokumentationspflicht:</strong></p>
+                    <p>
+                        Jede abgerechnete Leistung muss durch die Krankengeschichte belegt sein. Bei 
+                        Kontrollen durch Krankenversicherer oder Trustcenter muss die Dokumentation 
+                        nachvollziehbar sein.
+                    </p>
+
+                    <p><strong>Datenschutz:</strong></p>
+                    <p>
+                        Bei der Übermittlung von Rechnungsdaten sind die datenschutzrechtlichen 
+                        Bestimmungen strikt einzuhalten.
+                    </p>
+                </div>
+
+                <h3>Zukunftsperspektiven</h3>
+                <p>
+                    Das ambulante Tarifsystem entwickelt sich kontinuierlich weiter. Aktuelle Trends sind:
+                </p>
+                <ul class="list-styled">
+                    <li><strong>Ausweitung der Pauschalen:</strong> Mehr Behandlungen werden künftig pauschal abrechenbar sein</li>
+                    <li><strong>Digitalisierung:</strong> Automatisierte Codierung und elektronische Rechnungsstellung</li>
+                    <li><strong>Qualitätsindikatoren:</strong> Vergütung zunehmend an Qualitätsparameter gekoppelt</li>
+                    <li><strong>Integrierte Versorgung:</strong> Sektorenübergreifende Pauschalen für komplexe Behandlungspfade</li>
+                </ul>
+
+                <div class="quiz-section">
+                    <h3>Verständnisfragen Kapitel 6</h3>
+                    
+                    <div class="quiz-question" data-chapter="7" data-question="1">
+                        <h4>Frage 1: Was sollte bereits bei der Patientenanmeldung für geplante Eingriffe geklärt werden?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_1" value="a">
+                                Nur der Versicherungsstatus
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_1" value="b">
+                                Welches Abrechnungssystem verwendet wird und ob eine Kostenübernahmegarantie vorliegt
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_1" value="c">
+                                Nur das OP-Datum
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_1" value="d">
+                                Die Krankengeschichte
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="7" data-question="2">
+                        <h4>Frage 2: Was ist ein häufiger Fehler bei der TARDOC-Abrechnung?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_2" value="a">
+                                Zu viele Leistungen abrechnen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_2" value="b">
+                                Nicht kombinierbare Leistungen gleichzeitig abrechnen (Kumulationsfehler)
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_2" value="c">
+                                Zu hohe Taxpunktwerte verwenden
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_2" value="d">
+                                Rechnungen zu spät stellen
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="7" data-question="3">
+                        <h4>Frage 3: Was bedeutet das WZW-Gebot?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_3" value="a">
+                                Wöchentliche Zeiterfassung und Weitergabe
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_3" value="b">
+                                Wirtschaftlich, zweckmässig und wirksam
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_3" value="c">
+                                Wahl zwischen zwei Werktagen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q7_3" value="d">
+                                Weltweite Zulassung und Werbung
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <button class="submit-quiz" onclick="checkChapterQuiz(7)">Antworten überprüfen</button>
+                    <div class="quiz-result" id="result-chapter7"></div>
+                </div>
+
+                <div class="navigation-footer">
+                    <button class="nav-footer-btn" onclick="showChapter(5)">◄ Vorheriges Kapitel</button>
+                    <button class="nav-footer-btn" onclick="showChapter(7)">Zum Abschlusstest ►</button>
+                </div>
+            </div>
+
+            <!-- Abschlusstest -->
+            <div class="chapter" id="chapter7">
+                <h2>Abschlusstest: Ambulantes Gesamt-Tarifsystem</h2>
+
+                <div class="info-box">
+                    <h4>📝 Hinweise zum Abschlusstest</h4>
+                    <p>
+                        Dieser Test umfasst 12 Fragen zu allen Kapiteln. Sie benötigen mindestens 10 von 12 
+                        richtigen Antworten, um die Schulung erfolgreich abzuschliessen. Viel Erfolg!
+                    </p>
+                </div>
+
+                <div class="quiz-section">
+                    <div class="quiz-question" data-chapter="final" data-question="1">
+                        <h4>Frage 1: Welche Hauptkomponenten umfasst das ambulante Gesamt-Tarifsystem?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_1" value="a">
+                                TARMED und DRG
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_1" value="b">
+                                LKAAT, TARDOC und Ambulante Pauschalen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_1" value="c">
+                                SwissDRG und TARDOC
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_1" value="d">
+                                Nur TARDOC
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="2">
+                        <h4>Frage 2: Wofür steht LKAAT?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_2" value="a">
+                                Leistungskatalog aller ambulanten Tarife
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_2" value="b">
+                                Leistungskatalog ambulante Arzttarife
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_2" value="c">
+                                Leistungskosten ambulanter Arzt-Behandlungen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_2" value="d">
+                                Leistungsverzeichnis klinischer ambulanter Tarife
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="3">
+                        <h4>Frage 3: Was ist die Hauptfunktion des LKAAT?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_3" value="a">
+                                Abrechnung der Leistungen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_3" value="b">
+                                Leistungserfassung und Bestimmung des Abrechnungssystems
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_3" value="c">
+                                Kostenkontrolle
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_3" value="d">
+                                Qualitätssicherung
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="4">
+                        <h4>Frage 4: Wie viele Stellen hat eine LKN-Nummer für Pauschalen-Positionen?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_4" value="a">
+                                7 Stellen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_4" value="b">
+                                8 Stellen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_4" value="c">
+                                9 Stellen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_4" value="d">
+                                10 Stellen
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="5">
+                        <h4>Frage 5: Wie wird die Vergütung bei TARDOC berechnet?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_5" value="a">
+                                Pauschalbetrag pro Fall
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_5" value="b">
+                                Taxpunkte × Taxpunktwert
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_5" value="c">
+                                Zeitaufwand × Stundensatz
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_5" value="d">
+                                Nach Anzahl der Patienten
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="6">
+                        <h4>Frage 6: Was ist der Hauptvorteil von Ambulanten Pauschalen für Leistungserbringer?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_6" value="a">
+                                Höhere Gesamtvergütung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_6" value="b">
+                                Planungssicherheit und reduzierter administrativer Aufwand
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_6" value="c">
+                                Keine Dokumentationspflicht
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_6" value="d">
+                                Freie Preisgestaltung
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="7">
+                        <h4>Frage 7: Bei welcher Behandlung sollte TARDOC angewendet werden?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_7" value="a">
+                                Kataraktoperation
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_7" value="b">
+                                Arthroskopie
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_7" value="c">
+                                Routinekonsultation bei Bluthochdruck
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_7" value="d">
+                                Koloskopie mit Polypektomie
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="8">
+                        <h4>Frage 8: Was beinhaltet eine Ambulante Pauschale typischerweise NICHT?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_8" value="a">
+                                Anästhesieleistungen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_8" value="b">
+                                Teure Spezialimplantate (als Zusatzentgelt separat)
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_8" value="c">
+                                Standard-Verbrauchsmaterialien
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_8" value="d">
+                                Nachkontrollen
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="9">
+                        <h4>Frage 9: 200 Taxpunkte × Taxpunktwert CHF 0.95 = ?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_9" value="a">
+                                CHF 185.00
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_9" value="b">
+                                CHF 190.00
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_9" value="c">
+                                CHF 195.00
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_9" value="d">
+                                CHF 200.00
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="10">
+                        <h4>Frage 10: Dürfen TARDOC und Pauschalen im gleichen Behandlungsfall beliebig kombiniert werden?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_10" value="a">
+                                Ja, ohne Einschränkungen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_10" value="b">
+                                Nein, grundsätzlich nicht (ausser definierte Ausnahmen wie Zusatzentgelte)
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_10" value="c">
+                                Ja, aber nur mit Zustimmung des Patienten
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_10" value="d">
+                                Nur bei Komplikationen jeder Art
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="11">
+                        <h4>Frage 11: Was bedeutet "Dignität" im TARDOC-Kontext?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_11" value="a">
+                                Der Respekt gegenüber dem Patienten
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_11" value="b">
+                                Die Berechtigung zur Abrechnung bestimmter Leistungen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_11" value="c">
+                                Die Qualifikation des Pflegepersonals
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_11" value="d">
+                                Die Höhe der Vergütung
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="final" data-question="12">
+                        <h4>Frage 12: Was sollte bei geplanten elektiven Eingriffen vorab eingeholt werden?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="final_12" value="a">
+                                Nur die Zustimmung des Patienten
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_12" value="b">
+                                Eine Kostengutsprache der Krankenkasse
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_12" value="c">
+                                Eine ärztliche Zweitmeinung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="final_12" value="d">
+                                Nur der OP-Termin
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <button class="submit-quiz" onclick="checkFinalQuiz()">Test abschliessen</button>
+                    <div class="quiz-result" id="result-final"></div>
+                </div>
+
+                <div class="navigation-footer">
+                    <button class="nav-footer-btn" onclick="showChapter(6)">◄ Vorheriges Kapitel</button>
+                    <button class="nav-footer-btn" onclick="resetTraining()">Schulung neu starten</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Globale Variablen
+        let currentChapter = 0;
+        const totalChapters = 8;
+
+        // Quiz-Antworten (richtige Antworten)
+        const answers = {
+            1: { 1: 'c', 2: 'c' },
+            2: { 1: 'b', 2: 'b', 3: 'b', 4: 'b' },
+            3: { 1: 'b', 2: 'b', 3: 'c', 4: 'b' },
+            4: { 1: 'b', 2: 'b', 3: 'b' },
+            5: { 1: 'b', 2: 'b', 3: 'b' },
+            6: { 1: 'b', 2: 'b', 3: 'b' },
+            7: { 1: 'b', 2: 'b', 3: 'b' },
+            final: {
+                1: 'b', 2: 'b', 3: 'b', 4: 'c', 5: 'b', 6: 'b',
+                7: 'c', 8: 'b', 9: 'b', 10: 'b', 11: 'b', 12: 'b'
+            }
+        };
+
+        // Feedback-Texte
+        const feedbackTexts = {
+            1: {
+                1: {
+                    correct: "Richtig! Das System besteht aus drei Komponenten: LKAAT, TARDOC und Ambulanten Pauschalen.",
+                    incorrect: "Falsch. Das System besteht aus drei Komponenten: LKAAT (Leistungserfassung), TARDOC und Ambulante Pauschalen (Abrechnung)."
+                },
+                2: {
+                    correct: "Richtig! Der LKAAT dient der Leistungserfassung.",
+                    incorrect: "Falsch. Der LKAAT (Leistungskatalog ambulante Arzttarife) dient zur Leistungserfassung."
+                }
+            },
+            2: {
+                1: {
+                    correct: "Richtig! Ambulante Behandlungen erfolgen ohne Übernachtung.",
+                    incorrect: "Falsch. Das Hauptmerkmal ist, dass Patient:innen die Einrichtung am selben Tag ohne Übernachtung verlassen."
+                },
+                2: {
+                    correct: "Richtig! SwissDRG wird für stationäre Behandlungen verwendet.",
+                    incorrect: "Falsch. SwissDRG ist das Tarifsystem für stationäre Behandlungen."
+                },
+                3: {
+                    correct: "Richtig! Ambulante Behandlungen führen zu Kosteneinsparungen.",
+                    incorrect: "Falsch. Ein Hauptvorteil ist die Kosteneinsparung und effizientere Ressourcennutzung."
+                },
+                4: {
+                    correct: "Richtig! Mindestens eine Übernachtung kennzeichnet eine stationäre Behandlung.",
+                    incorrect: "Falsch. Eine Behandlung gilt als stationär, wenn mindestens eine Übernachtung erfolgt."
+                }
+            },
+            3: {
+                1: {
+                    correct: "Richtig! LKAAT steht für Leistungskatalog ambulante Arzttarife.",
+                    incorrect: "Falsch. LKAAT steht für Leistungskatalog ambulante Arzttarife."
+                },
+                2: {
+                    correct: "Richtig! Typ P bezeichnet eine Pauschalen-Position (Triggerposition).",
+                    incorrect: "Falsch. Typ P bedeutet Pauschalen-Position, die eine Abrechnung über Ambulante Pauschalen auslöst."
+                },
+                3: {
+                    correct: "Richtig! TARDOC-Positionen haben 8-stellige LKN-Nummern.",
+                    incorrect: "Falsch. TARDOC-Positionen haben 8-stellige LKN-Nummern (z.B. AA.00.0010)."
+                },
+                4: {
+                    correct: "Richtig! Eine Triggerposition löst die Abrechnung über Ambulante Pauschalen aus.",
+                    incorrect: "Falsch. Triggerpositionen lösen automatisch die Abrechnung über Ambulante Pauschalen aus."
+                }
+            },
+            3: {
+                1: {
+                    correct: "Richtig! TARDOC steht für Tarif ambulanter Arztleistungen in Arztpraxis und ambulantem Spitalbereich.",
+                    incorrect: "Falsch. TARDOC steht für Tarif ambulanter Arztleistungen in Arztpraxis und ambulantem Spitalbereich."
+                },
+                2: {
+                    correct: "Richtig! 180 × 0.95 = CHF 171.00",
+                    incorrect: "Falsch. Die Rechnung lautet: 180 Taxpunkte × CHF 0.95 = CHF 171.00"
+                },
+                3: {
+                    correct: "Richtig! Dignität bezeichnet die Berechtigung zur Abrechnung bestimmter Leistungen.",
+                    incorrect: "Falsch. Dignität bedeutet die Berechtigung zur Abrechnung bestimmter Leistungen."
+                }
+            },
+            4: {
+                1: {
+                    correct: "Richtig! Pauschalen rechnen alle Leistungen als Gesamtpaket ab.",
+                    incorrect: "Falsch. Das Kernprinzip ist die Abrechnung aller Leistungen als Gesamtpaket."
+                },
+                2: {
+                    correct: "Richtig! Teure Spezialimplantate werden als Zusatzentgelte separat abgerechnet.",
+                    incorrect: "Falsch. Teure Spezialimplantate sind typischerweise nicht inkludiert und werden als Zusatzentgelte abgerechnet."
+                },
+                3: {
+                    correct: "Richtig! Ein Hauptvorteil ist die Reduktion des administrativen Aufwands.",
+                    incorrect: "Falsch. Der Hauptvorteil für Leistungserbringer ist die Reduktion des administrativen Aufwands und die Planungssicherheit."
+                }
+            },
+            5: {
+                1: {
+                    correct: "Richtig! TARDOC bietet sehr hohe Flexibilität in der Abrechnung.",
+                    incorrect: "Falsch. TARDOC bietet höhere Flexibilität als Pauschalen."
+                },
+                2: {
+                    correct: "Richtig! Routinekonsultationen werden über TARDOC abgerechnet.",
+                    incorrect: "Falsch. Für Routinekonsultationen ist TARDOC die richtige Wahl."
+                },
+                3: {
+                    correct: "Richtig! TARDOC und Pauschalen dürfen grundsätzlich nicht gemischt werden.",
+                    incorrect: "Falsch. Grundsätzlich dürfen die Systeme nicht gemischt werden (ausser definierte Ausnahmen)."
+                }
+            },
+            6: {
+                1: {
+                    correct: "Richtig! Das Abrechnungssystem und die Kostenübernahme sollten vorab geklärt werden.",
+                    incorrect: "Falsch. Es sollte geklärt werden, welches Abrechnungssystem verwendet wird und ob eine Kostenübernahmegarantie vorliegt."
+                },
+                2: {
+                    correct: "Richtig! Ein häufiger Fehler sind Kumulationsfehler.",
+                    incorrect: "Falsch. Ein häufiger Fehler ist das gleichzeitige Abrechnen nicht kombinierbarer Leistungen (Kumulationsfehler)."
+                },
+                3: {
+                    correct: "Richtig! WZW steht für wirtschaftlich, zweckmässig und wirksam.",
+                    incorrect: "Falsch. WZW bedeutet: wirtschaftlich, zweckmässig und wirksam."
+                }
+            }
+        };
+
+        // Kapitel wechseln
+        function showChapter(index) {
+            currentChapter = index;
+            
+            // Alle Kapitel ausblenden
+            document.querySelectorAll('.chapter').forEach(ch => {
+                ch.classList.remove('active');
+            });
+            
+            // Gewähltes Kapitel anzeigen
+            document.getElementById('chapter' + index).classList.add('active');
+            
+            // Navigation aktualisieren
+            document.querySelectorAll('.nav-btn').forEach((btn, i) => {
+                if (i === index) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Fortschrittsbalken aktualisieren
+            updateProgress();
+            
+            // Nach oben scrollen
+            window.scrollTo(0, 0);
+        }
+
+        // Fortschrittsbalken aktualisieren
+        function updateProgress() {
+            const progress = ((currentChapter + 1) / totalChapters) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        // Accordion Toggle
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const item = header.parentElement;
+            
+            // Toggle active class
+            header.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+
+        // Kapitel-Quiz überprüfen
+        function checkChapterQuiz(chapter) {
+            const questions = document.querySelectorAll(`[data-chapter="${chapter}"]`);
+            let correctCount = 0;
+            let totalQuestions = 0;
+
+            questions.forEach(question => {
+                totalQuestions++;
+                const questionNum = question.dataset.question;
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                const feedback = question.querySelector('.quiz-feedback');
+                
+                if (!selectedAnswer) {
+                    feedback.className = 'quiz-feedback incorrect';
+                    feedback.textContent = 'Bitte wählen Sie eine Antwort aus.';
+                    return;
+                }
+
+                const correctAnswer = answers[chapter][questionNum];
+                const isCorrect = selectedAnswer.value === correctAnswer;
+
+                if (isCorrect) {
+                    correctCount++;
+                    feedback.className = 'quiz-feedback correct';
+                    feedback.textContent = '✓ ' + feedbackTexts[chapter][questionNum].correct;
+                } else {
+                    feedback.className = 'quiz-feedback incorrect';
+                    feedback.textContent = '✗ ' + feedbackTexts[chapter][questionNum].incorrect;
+                }
+            });
+
+            // Ergebnis anzeigen
+            const resultDiv = document.getElementById('result-chapter' + chapter);
+            resultDiv.style.display = 'block';
+            
+            const percentage = (correctCount / totalQuestions) * 100;
+            if (percentage >= 66) {
+                resultDiv.style.background = '#d4edda';
+                resultDiv.style.color = '#155724';
+                resultDiv.innerHTML = `✅ <strong>Sehr gut!</strong> Sie haben ${correctCount} von ${totalQuestions} Fragen richtig beantwortet (${percentage.toFixed(0)}%).`;
+            } else {
+                resultDiv.style.background = '#fff3cd';
+                resultDiv.style.color = '#856404';
+                resultDiv.innerHTML = `⚠️ Sie haben ${correctCount} von ${totalQuestions} Fragen richtig beantwortet (${percentage.toFixed(0)}%). Bitte wiederholen Sie das Kapitel.`;
+            }
+        }
+
+        // Abschlusstest überprüfen
+        function checkFinalQuiz() {
+            const questions = document.querySelectorAll('[data-chapter="final"]');
+            let correctCount = 0;
+            let totalQuestions = 12;
+
+            questions.forEach(question => {
+                const questionNum = question.dataset.question;
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                const feedback = question.querySelector('.quiz-feedback');
+                
+                if (!selectedAnswer) {
+                    feedback.className = 'quiz-feedback incorrect';
+                    feedback.textContent = 'Bitte wählen Sie eine Antwort aus.';
+                    return;
+                }
+
+                const correctAnswer = answers.final[questionNum];
+                const isCorrect = selectedAnswer.value === correctAnswer;
+
+                if (isCorrect) {
+                    correctCount++;
+                    feedback.className = 'quiz-feedback correct';
+                    feedback.textContent = '✓ Richtig!';
+                } else {
+                    feedback.className = 'quiz-feedback incorrect';
+                    feedback.textContent = '✗ Falsch. Die richtige Antwort ist: ' + correctAnswer.toUpperCase();
+                }
+            });
+
+            // Abschlussergebnis anzeigen
+            const resultDiv = document.getElementById('result-final');
+            resultDiv.style.display = 'block';
+            
+            const percentage = (correctCount / totalQuestions) * 100;
+            if (correctCount >= 10) {
+                resultDiv.style.background = '#d4edda';
+                resultDiv.style.color = '#155724';
+                resultDiv.innerHTML = `
+                    🎉 <strong>Herzlichen Glückwunsch!</strong><br>
+                    Sie haben den Test mit ${correctCount} von ${totalQuestions} richtigen Antworten (${percentage.toFixed(0)}%) bestanden!<br>
+                    Sie verfügen nun über das notwendige Basiswissen zum ambulanten Gesamt-Tarifsystem.
+                `;
+            } else {
+                resultDiv.style.background = '#f8d7da';
+                resultDiv.style.color = '#721c24';
+                resultDiv.innerHTML = `
+                    ⚠️ <strong>Leider nicht bestanden</strong><br>
+                    Sie haben ${correctCount} von ${totalQuestions} Fragen richtig beantwortet (${percentage.toFixed(0)}%).<br>
+                    Bitte wiederholen Sie die Schulung. Zum Bestehen benötigen Sie mindestens 10 richtige Antworten.
+                `;
+            }
+
+            // Nach oben zum Ergebnis scrollen
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Training neu starten
+        function resetTraining() {
+            if (confirm('Möchten Sie die Schulung wirklich neu starten? Alle bisherigen Antworten werden zurückgesetzt.')) {
+                location.reload();
+            }
+        }
+
+        // Initialisierung
+        window.onload = function() {
+            updateProgress();
+        };
+    </script>
+</body>
+</html>
