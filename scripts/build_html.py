@@ -616,14 +616,16 @@ def parse_content_md(content):
         content_title = None
         content_start_idx = 1
 
-        for i in range(1, min(5, len(lines))):  # Check first 4 lines after header
+        for i in range(1, min(10, len(lines))):  # Check first lines after header
             line = lines[i].strip()
             if line.startswith('BUTTON:'):
                 button_title = line[7:].strip()
+                content_start_idx = i + 1  # Content starts after this line
             elif line.startswith('TITEL:'):
                 content_title = line[6:].strip()
-            elif line and not line.startswith('BUTTON:') and not line.startswith('TITEL:'):
-                content_start_idx = i
+                content_start_idx = i + 1  # Content starts after this line
+            elif line:  # Non-empty line that is not a prefix
+                # This is the start of actual content, stop looking for prefixes
                 break
 
         # Determine chapter number and titles (with fallback to old logic)
@@ -639,8 +641,13 @@ def parse_content_md(content):
             if match:
                 ch_num = int(match.group(1))
                 fallback_title = match.group(2)
-                if not content_title:
+
+                # Clean up content_title: remove "KAPITEL X:" prefix if present
+                if content_title:
+                    content_title = re.sub(r'^KAPITEL \d+:\s*', '', content_title)
+                else:
                     content_title = fallback_title
+
                 if not button_title:
                     button_title = f'Kapitel {ch_num}: {fallback_title[:20]}...' if len(fallback_title) > 20 else f'Kapitel {ch_num}: {fallback_title}'
             else:
@@ -912,6 +919,11 @@ def process_markdown_content(md_text, chapter_num):
             html += f'    <li>{item}</li>\n'
             i += 1
             continue
+
+        # Close list when we hit a bold heading (e.g., **TARDOC verwenden bei:**)
+        if in_list and line.startswith('**') and line.endswith('**') and ':' in line:
+            html += '</ul>\n'
+            in_list = False
 
         # Close list
         if in_list and line and not line.startswith('*') and not line.startswith('-') and not line.strip() == '':
