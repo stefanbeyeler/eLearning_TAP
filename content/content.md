@@ -36,21 +36,21 @@ Herzlich willkommen zu dieser umfassenden Schulung zum ambulanten Gesamt-Tarifsy
 
 ### Aufbau und Struktur
 
-Diese Schulung ist in 8 Kapitel gegliedert, die aufeinander aufbauen und Sie Schritt für Schritt durch das Tarifsystem führen:
+Diese Schulung ist in 9 Kapitel gegliedert, die aufeinander aufbauen und Sie Schritt für Schritt durch das Tarifsystem führen:
 
-**Grundlagen (Kapitel 1-2)**
+**Grundlagen (Kapitel 1-3)**
 
-Sie lernen zunächst die Komponenten des Systems kennen und verstehen was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.
+Sie lernen zunächst die Komponenten des Systems kennen, verstehen was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.
 
-**Leistungserfassung und Abrechnungssysteme (Kapitel 3-6)**
+**Diagnosen und Abrechnungssysteme (Kapitel 4-6)**
 
-Hier vertiefen Sie Ihr Wissen über den LKAAT als zentrales Erfassungsinstrument, die Diagnosecodierung mit ICD-10-GM, den TARDOC-Einzelleistungstarif und die Ambulanten Pauschalen.
+Hier vertiefen Sie Ihr Wissen über die Diagnosecodierung mit ICD-10-GM, den TARDOC-Einzelleistungstarif und die Ambulanten Pauschalen.
 
 **Vergleich und Praxis (Kapitel 7-8)**
 
 Sie lernen die Unterschiede zwischen TARDOC und Pauschalen kennen und erhalten praxisnahe Anleitungen für den Arbeitsalltag.
 
-**Abschlusstest**
+**Abschlusstest (Kapitel 9)**
 
 Ein umfassender Test überprüft Ihr erworbenes Wissen über alle Kapitel hinweg.
 
@@ -97,7 +97,7 @@ Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stu
 *   Kapitel 6 (Ambulante Pauschalen): 5-10 Minuten
 *   Kapitel 7 (Vergleich): 5-10 Minuten
 *   Kapitel 8 (Praxisanwendung): 5-10 Minuten
-*   Abschlusstest: 10 Minuten
+*   Kapitel 9 (Abschlusstest): 10 Minuten
 *   FAQ: 5-10 Minuten
 
 ### Lernziele der Gesamtschulung
@@ -195,7 +195,30 @@ Nach Abschluss dieser Schulung können Sie:
 
 ---
 
-## KAPITEL 2: Ambulante Behandlung
+## KAPITEL 2: Diagnosen als ICD-10 Code
+
+### Was ist ICD-10-GM?
+
+Die **ICD-10-GM** (Internationale statistische Klassifikation der Krankheiten und verwandter Gesundheitsprobleme, 10. Revision, German Modification) ist ein weltweit anerkanntes System zur Kodierung von Diagnosen im Gesundheitswesen. Im ambulanten Tarifsystem der Schweiz spielt die korrekte Diagnosecodierung eine zentrale Rolle für die Abrechnung und Dokumentation.
+
+**INFO-BOX: Definition ICD-10-GM**
+
+*   Standardisiertes Klassifikationssystem für medizinische Diagnosen
+*   Wird jährlich vom Bundesamt für Statistik (BfS) aktualisiert
+*   Verpflichtend für die Abrechnung ambulanter Pauschalen
+*   Ermöglicht einheitliche statistische Auswertungen
+
+---
+
+## KAPITEL 3: Dignitäten und Besitzstände
+
+### Was sind Dignitäten?
+
+**Dignitäten** bezeichnen im Schweizer Gesundheitswesen die Berechtigung von Ärztinnen und Ärzten, bestimmte medizinische Leistungen abzurechnen.
+
+---
+
+## KAPITEL 4: Ambulante Behandlung
 
 ### Was ist eine ambulante Behandlung?
 
