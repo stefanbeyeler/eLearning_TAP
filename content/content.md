@@ -50,9 +50,13 @@ Hier vertiefen Sie Ihr Wissen über die Diagnosecodierung mit ICD-10-GM, den TAR
 
 Sie lernen die Unterschiede zwischen TARDOC und Pauschalen kennen und erhalten praxisnahe Anleitungen für den Arbeitsalltag.
 
-**Abschlusstest**
+**Abschlusstest (Kapitel 9)**
 
 Ein umfassender Test überprüft Ihr erworbenes Wissen über alle Kapitel hinweg.
+
+**FAQ - Häufig gestellte Fragen**
+
+Antworten auf die wichtigsten Fragen zu LKAAT, TARDOC, Ambulanten Pauschalen, ICD-10-GM, Praxisanwendung und Übergangsregelungen.
 
 ### Wie Sie diese Schulung nutzen
 
@@ -93,7 +97,8 @@ Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stu
 *   Kapitel 6 (Ambulante Pauschalen): 5-10 Minuten
 *   Kapitel 7 (Vergleich): 5-10 Minuten
 *   Kapitel 8 (Praxisanwendung): 5-10 Minuten
-*   Abschlusstest: 10 Minuten
+*   Kapitel 9 (Abschlusstest): 10 Minuten
+*   FAQ: 5-10 Minuten
 
 ### Lernziele der Gesamtschulung
 
@@ -1301,7 +1306,7 @@ Dieser Test umfasst 12 Fragen zu allen Kapiteln. Sie benötigen mindestens 10 vo
 
 ---
 
-## KAPITEL 10: FAQ - Häufig gestellte Fragen
+## FAQ - Häufig gestellte Fragen
 
 ### Allgemeine Fragen zum System
 
