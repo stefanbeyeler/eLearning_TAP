@@ -1,8 +1,8 @@
 # Richtlinien für eLearning TAP - Schulungsunterlagen
 
 **Projekt:** eLearning für TARDOC und ambulante Pauschalen
-**Version:** 2.0
-**Letzte Aktualisierung:** 2025-10-21
+**Version:** 2.1
+**Letzte Aktualisierung:** 2025-10-25
 
 > Diese Datei konsolidiert alle Design-, Entwicklungs- und Inhaltsvorgaben für die interaktiven HTML-Schulungsunterlagen zum ambulanten Tarifsystem.
 
@@ -578,11 +578,12 @@ const chapters = [
     { id: 0, title: "Kapitel 1: Einführung" },
     { id: 1, title: "Kapitel 2: Ambulante Behandlung" },
     { id: 2, title: "Kapitel 3: LKAAT" },
-    { id: 3, title: "Kapitel 4: TARDOC" },
-    { id: 4, title: "Kapitel 5: Ambulante Pauschalen" },
-    { id: 5, title: "Kapitel 6: Vergleich" },
-    { id: 6, title: "Kapitel 7: Praxisanwendung" },
-    { id: 7, title: "Abschlusstest" }
+    { id: 3, title: "Kapitel 4: Diagnosen als ICD-10 Code" },
+    { id: 4, title: "Kapitel 5: TARDOC" },
+    { id: 5, title: "Kapitel 6: Ambulante Pauschalen" },
+    { id: 6, title: "Kapitel 7: Vergleich" },
+    { id: 7, title: "Kapitel 8: Praxisanwendung" },
+    { id: 8, title: "Abschlusstest" }
 ];
 ```
 
@@ -730,7 +731,39 @@ const chapters = [
 
 ---
 
-#### Kapitel 4: TARDOC
+#### Kapitel 4: Diagnosen als ICD-10 Code
+**Lernziele:**
+- ICD-10-GM System verstehen
+- Korrekte Diagnosecodierung durchführen
+- Verwendungsregeln kennen
+- Besondere Situationen meistern
+
+**Inhalte:**
+1. Was ist ICD-10-GM? (Definition und Bedeutung)
+2. Warum ist Diagnosecodierung wichtig? (Abrechnung, Qualitätssicherung, Dokumentation)
+3. Wann wird ICD-10-GM verwendet? (Verpflichtende Verwendung, Alternative Tessinercode)
+4. Aufbau eines ICD-10-Codes (Hierarchie-Gliederung, Beispiele)
+5. Richtlinien für die Diagnoseerfassung (Zeitpunkt, Hauptanlass, häufige Fehler)
+6. Besondere Situationen (Akkordeon):
+   - Mehrere Leistungen in einer Sitzung
+   - Verdachtsdiagnosen
+   - Symptomcodes
+   - Akut vs. Chronisch
+   - Erkrankungen nach medizinischen Massnahmen
+7. Diagnosen und Rechnungsstellung (TARDOC vs. Ambulante Pauschalen, Datenschutz)
+8. Praktische Übung (2 Fallbeispiele: Kniearthroskopie, COPD)
+9. Zusammenfassung und Checkliste (8 Punkte)
+
+**Quiz:** 4 Fragen
+
+**Quellendokumente:**
+- Anhang C: Richtlinien für die ambulante Leistungserfassung
+- Anhang H: Rechnungsstellung und Datenaustausch
+- FAQ ambulantes Gesamt-Tarifsystem
+
+---
+
+#### Kapitel 5: TARDOC
 **Lernziele:**
 - TARDOC als Einzelleistungstarif verstehen
 - Berechnungsformel anwenden können
@@ -748,7 +781,7 @@ const chapters = [
 
 ---
 
-#### Kapitel 5: Ambulante Pauschalen
+#### Kapitel 6: Ambulante Pauschalen
 **Lernziele:**
 - Prinzip der Pauschalen verstehen
 - Anwendungsbereiche kennen
@@ -767,7 +800,7 @@ const chapters = [
 
 ---
 
-#### Kapitel 6: Vergleich
+#### Kapitel 7: Vergleich
 **Lernziele:**
 - TARDOC und Pauschalen gegenüberstellen
 - Entscheidungskriterien anwenden
@@ -783,7 +816,7 @@ const chapters = [
 
 ---
 
-#### Kapitel 7: Praxisanwendung
+#### Kapitel 8: Praxisanwendung
 **Lernziele:**
 - Workflow in der Praxis kennen
 - Fehlerquellen vermeiden
@@ -800,7 +833,7 @@ const chapters = [
 
 ---
 
-#### Kapitel 8: Abschlusstest
+#### Kapitel 9: Abschlusstest
 **Format:** 12 Multiple-Choice-Fragen aus allen Kapiteln
 **Bestehensgrenze:** 10 von 12 richtigen Antworten (83%)
 **Feedback:** Detailliertes Ergebnis mit Bestanden/Nicht bestanden
@@ -1666,9 +1699,23 @@ git checkout HEAD -- datei.html
 
 ---
 
-**Version:** 2.0
+**Version:** 2.1
 **Erstellt:** 2025-10-21
+**Letzte Aktualisierung:** 2025-10-25
 **Nächste Review:** 2026-01-21
+
+### Changelog
+
+**Version 2.1 (2025-10-25):**
+- ✅ Kapitel 4 "Diagnosen als ICD-10 Code" hinzugefügt
+- ✅ Alle nachfolgenden Kapitel neu nummeriert (TARDOC: 4→5, Ambulante Pauschalen: 5→6, etc.)
+- ✅ Content-Struktur erweitert mit ICD-10-GM Richtlinien und Codierungsregeln
+- ✅ Gesamtzahl der Kapitel: 9 (inkl. Abschlusstest)
+
+**Version 2.0 (2025-10-21):**
+- ✅ Konsolidierung aller Vorgabedokumente
+- ✅ Vollständige Typography- und Design-System-Dokumentation
+- ✅ Entwicklungsworkflow und Testing-Guidelines
 
 ---
 

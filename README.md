@@ -8,6 +8,7 @@ Dieses Projekt enthält Single-File HTML-Schulungsunterlagen für medizinisches 
 
 ### Hauptkomponenten
 - **LKAAT** - Leistungskatalog ambulanter Behandlungen und Abklärungen
+- **ICD-10-GM** - Diagnosecodierung (Internationale Klassifikation der Krankheiten)
 - **TARDOC** - Einzelleistungstarif für ambulante ärztliche Behandlungen
 - **Ambulante Pauschalen** - Pauschaliertes Abrechnungssystem
 
@@ -17,10 +18,16 @@ Dieses Projekt enthält Single-File HTML-Schulungsunterlagen für medizinisches 
 eLearning_TAP/
 ├── README.md                                      # Diese Datei
 ├── GUIDELINES.md                                  # ⭐ Haupt-Vorgabedatei (Design, Entwicklung, Content)
-├── DEVELOPMENT.md                                 # Entwicklungsdokumentation (veraltet, siehe GUIDELINES.md)
+├── DEVELOPMENT.md                                 # Entwicklungsdokumentation
+├── eLearning.html                                 # Hauptschulungsunterlage (aktive Version)
+├── ambulantes-tarifsystem-schulung-komplett.html # Legacy-Version (deprecated)
 ├── PROMPT-Schulungsunterlage-Vorgaben.md         # KI-Prompt-Vorgaben (veraltet, siehe GUIDELINES.md)
-├── ambulantes-tarifsystem-schulung-komplett.html # Hauptschulungsunterlage
-└── Vorgaben/                                      # Referenzmaterialien
+├── specification_documents/                       # Offizielle OAAT-Tarifdokumente
+│   ├── 250430_AnhangC_Richtlinien_fuer_die_ambulante_Leistungserfassung.pdf
+│   ├── 250430_AnhangH_Rechnungsstellung.pdf
+│   ├── 20250214_FAQ_Gesamtsystem_final.pdf
+│   └── *.pdf (weitere Vorgabedokumente)
+└── Vorgaben/                                      # Design-Referenzmaterialien
     ├── Typography-Fonts.pdf
     ├── Typography-Headings.pdf
     ├── Typography-Hyperlinks.pdf
@@ -34,7 +41,7 @@ eLearning_TAP/
 1. **Neue Inhalte hinzufügen:**
    - Öffne [GUIDELINES.md](GUIDELINES.md)
    - Folge dem Abschnitt "Entwicklungsworkflow"
-   - Bearbeite `ambulantes-tarifsystem-schulung-komplett.html`
+   - Bearbeite [eLearning.html](eLearning.html)
 
 2. **Design-Anpassungen:**
    - Siehe [GUIDELINES.md](GUIDELINES.md) → "Typography-System" und "Design-System"
@@ -91,7 +98,7 @@ Details: [GUIDELINES.md](GUIDELINES.md) → "Typography-System" und "Design-Syst
 Vor Deployment:
 ```bash
 # HTML-Datei im Browser öffnen
-open ambulantes-tarifsystem-schulung-komplett.html
+open eLearning.html
 
 # Test-Checkliste durchgehen (siehe GUIDELINES.md)
 ```
@@ -100,8 +107,8 @@ open ambulantes-tarifsystem-schulung-komplett.html
 
 ```bash
 # Version erstellen
-cp ambulantes-tarifsystem-schulung-komplett.html \
-   ambulantes-tarifsystem-schulung-v1.0.html
+cp eLearning.html \
+   eLearning-v1.1.html
 
 # Upload zu Intranet-Server
 # Details: GUIDELINES.md → "Deployment & Wartung"
@@ -115,9 +122,21 @@ cp ambulantes-tarifsystem-schulung-komplett.html \
 
 ## 📝 Version
 
-- **Aktuelle Version:** 1.0
-- **Letzte Aktualisierung:** 2025-10-21
+- **Aktuelle Version:** 1.1
+- **Letzte Aktualisierung:** 2025-10-25
 - **Versionierung:** MAJOR.MINOR.PATCH
+
+### Changelog
+
+**Version 1.1 (2025-10-25):**
+- ✅ Kapitel 4 "Diagnosen als ICD-10 Code" vollständig entwickelt
+- ✅ Basiert auf offiziellen OAAT-Dokumenten (Anhang C, H, FAQ)
+- ✅ 4 neue Quiz-Fragen zu ICD-10-GM Codierung
+- ✅ Gesamtzahl der Kapitel: 9 (8 Inhaltskapitel + Abschlusstest)
+
+**Version 1.0 (2025-10-21):**
+- ✅ Initiale Version mit 3 vollständigen Kapiteln
+- ✅ LKAAT, Ambulante Behandlung, Ambulante Pauschalen
 
 ## 📄 Lizenz
 

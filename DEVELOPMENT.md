@@ -1,8 +1,8 @@
 # Entwicklungsdokumentation - eLearning TAP
 
 **Projekt:** eLearning für TARDOC und ambulante Pauschalen
-**Version:** 1.0
-**Letzte Aktualisierung:** 2025-10-21
+**Version:** 1.1
+**Letzte Aktualisierung:** 2025-10-25
 
 ---
 
@@ -33,6 +33,36 @@ Interaktive HTML-basierte Schulungsunterlagen für das ambulante Tarifsystem der
 ### Zielgruppe
 Medizinisches Personal, Verwaltungsmitarbeitende, Codierer/innen in Schweizer Spitälern
 
+### Aktueller Entwicklungsstand (Version 1.1)
+
+**Implementierte Kapitel:**
+
+| Kapitel | Titel | Status | Inhalt | Quiz |
+|---------|-------|--------|--------|------|
+| 1 | Einführung in das ambulante Tarifsystem | ✅ Komplett | Grundlagen, 3 Komponenten | 2 Fragen |
+| 2 | Ambulante Behandlung | ✅ Komplett | Definition, Vorteile, Abgrenzung | 4 Fragen |
+| 3 | LKAAT | ✅ Komplett | Leistungskatalog, Struktur, Triggerpositionen | 4 Fragen |
+| 4 | Diagnosen als ICD-10 Code | ✅ **NEU** | ICD-10-GM, Codierung, Richtlinien | 4 Fragen |
+| 5 | TARDOC | ✅ Komplett | Einzelleistungstarif, Berechnung, Dignität | 3 Fragen |
+| 6 | Ambulante Pauschalen | ✅ Komplett | Pauschalensystem, Grouper, Zusatzentgelte | 3 Fragen |
+| 7 | Vergleich & Anwendung | ✅ Komplett | TARDOC vs. Pauschalen, Entscheidkriterien | 3 Fragen |
+| 8 | Praxisanwendung | ✅ Komplett | Fallbeispiele, Best Practices | 3 Fragen |
+| 9 | Abschlusstest | ✅ Komplett | Umfassender Test über alle Kapitel | 12 Fragen |
+
+**Gesamtumfang:**
+- 9 Kapitel
+- 38 Quiz-Fragen
+- ~3.800 Zeilen HTML/CSS/JavaScript
+- Dateigröße: ~100 KB
+
+**Letzte Änderungen (Version 1.1 - 2025-10-25):**
+- ✅ Kapitel 4 "Diagnosen als ICD-10 Code" vollständig entwickelt
+- ✅ Basiert auf offiziellen OAAT-Dokumenten (Anhang C, H, FAQ)
+- ✅ 7 Hauptabschnitte mit praktischen Beispielen
+- ✅ Interaktive Akkordeon-Elemente für Spezialfälle
+- ✅ 4 Quiz-Fragen mit detailliertem Feedback
+- ✅ JavaScript-Integration für Quiz-Auswertung
+
 ---
 
 ## 🛠 Technologie-Stack
@@ -62,13 +92,16 @@ eLearning_TAP/
 ├── README.md                                      # Projekt-Beschreibung
 ├── DEVELOPMENT.md                                 # Diese Datei
 ├── PROMPT-Schulungsunterlage-Vorgaben.md         # Inhaltliche Vorgaben für AI-Generierung
-├── ambulantes-tarifsystem-schulung-komplett.html # Hauptdatei (Schulungsunterlage)
-├── Vorgaben/                                      # Referenzmaterialien
+├── eLearning.html                                 # Hauptdatei (Schulungsunterlage) - NEU
+├── ambulantes-tarifsystem-schulung-komplett.html # Legacy-Version (wird nicht mehr verwendet)
+├── specification_documents/                       # Offizielle Tarifdokumente (OAAT)
+│   ├── 250430_AnhangH_Rechnungsstellung.pdf
+│   ├── 250430_AnhangC_Richtlinien_fuer_die_ambulante_Leistungserfassung.pdf
+│   ├── 20250214_FAQ_Gesamtsystem_final.pdf
 │   ├── Anwenderschulung_Basis_H__final.pdf
 │   ├── Schulungsunterlagen.pdf
 │   ├── Webinar Schulungsfolien_09.09.2025.pdf
-│   ├── preview.webp
-│   └── preview (1).webp
+│   └── [weitere Anhänge A-I]
 └── .git/                                          # Git-Repository
 ```
 
@@ -76,10 +109,11 @@ eLearning_TAP/
 
 | Datei | Zweck | Bearbeitung |
 |-------|-------|-------------|
-| `ambulantes-tarifsystem-schulung-komplett.html` | Hauptschulungsunterlage | Bei Content-Updates |
+| `eLearning.html` | **Aktuelle Hauptschulungsunterlage** | Bei Content-Updates |
+| `ambulantes-tarifsystem-schulung-komplett.html` | Legacy-Version (deprecated) | Nur für Referenz |
 | `PROMPT-Schulungsunterlage-Vorgaben.md` | Vorgaben für KI-generierte Inhalte | Bei strukturellen Änderungen |
 | `DEVELOPMENT.md` | Entwicklungsdokumentation | Bei Prozess-Änderungen |
-| `Vorgaben/*` | Referenzmaterialien | Read-only |
+| `specification_documents/*` | Offizielle OAAT-Dokumente | Read-only, Basis für Inhalte |
 
 ---
 
@@ -98,7 +132,7 @@ git status
 # -> HTML-Datei im Browser öffnen
 
 # Änderungen committen
-git add ambulantes-tarifsystem-schulung-komplett.html
+git add eLearning.html
 git commit -m "feat: Beschreibung der Änderung"
 
 # Optional: Push zu Remote
@@ -562,19 +596,46 @@ In HTML-Header kommentieren:
 <!--
 CHANGELOG
 
-Version 1.1.0 - 2025-11-15
-- [Neu] Praktisches Beispiel in Kapitel 5 ergänzt
-- [Geändert] Quiz Kapitel 3, Frage 2 präzisiert
-- [Behoben] Akkordeon in Kapitel 4 öffnet korrekt
-
-Version 1.0.1 - 2025-10-25
-- [Behoben] Tippfehler in Kapitel 3, Absatz 2
-- [Behoben] Quiz-Feedback Kapitel 7, Frage 1
+Version 1.1.0 - 2025-10-25
+- [Neu] Kapitel 4 "Diagnosen als ICD-10 Code" vollständig entwickelt
+- [Neu] 7 Hauptabschnitte: Was ist ICD-10-GM, Wichtigkeit, Verwendung, Aufbau, Richtlinien, Besondere Situationen, Rechnungsstellung
+- [Neu] 2 praktische Fallbeispiele (Kniearthroskopie, COPD)
+- [Neu] Interaktive Akkordeon-Elemente für Spezialfälle
+- [Neu] 4 Quiz-Fragen mit detailliertem Feedback
+- [Neu] Checkliste für Diagnosecodierung (8 Punkte)
+- [Geändert] Hauptdatei umbenannt von ambulantes-tarifsystem-schulung-komplett.html zu eLearning.html
+- [Geändert] Quiz-Antworten für Kapitel 4 hinzugefügt (answers und feedbackTexts)
+- [Basis] Anhang C: Richtlinien für die ambulante Leistungserfassung
+- [Basis] Anhang H: Rechnungsstellung und Datenaustausch
+- [Basis] FAQ ambulantes Gesamt-Tarifsystem
 
 Version 1.0.0 - 2025-10-21
 - Initial Release
+- 8 Kapitel + Abschlusstest
+- LKAAT, TARDOC, Ambulante Pauschalen
 -->
 ```
+
+### Quellendokumente für Kapitel-Entwicklung
+
+**Offizielle OAAT-Dokumente (specification_documents/):**
+
+| Dokument | Verwendung für Kapitel | Relevante Abschnitte |
+|----------|------------------------|----------------------|
+| `250430_AnhangC_Richtlinien_fuer_die_ambulante_Leistungserfassung.pdf` | Kapitel 3 (LKAAT), Kapitel 4 (Diagnosen) | Kapitel 2: Diagnoseerfassung, Kapitel 1: Instrumente |
+| `250430_AnhangH_Rechnungsstellung.pdf` | Kapitel 4 (Diagnosen), Kapitel 7 (Anwendung) | Kapitel 3: Zu übermittelnde Datenfelder |
+| `20250214_FAQ_Gesamtsystem_final.pdf` | Alle Kapitel | Abschnitt 2.3: Ambulante Leistungserfassung |
+| `Anwenderschulung_Basis_H__final.pdf` | Kapitel 1-8 | Grundlegende Schulungsfolien |
+| `Schulungsunterlagen.pdf` | Kapitel 1-8 | Detaillierte Schulungsinhalte |
+| `250430_AnhangB_Anwendungsmodalitaeten.pdf` | Kapitel 3, 6, 7 | Triggerpositionen, Fallgruppen |
+| `250430_AnhangF_Dignitaeten.pdf` | Kapitel 5 (TARDOC) | Dignitätsregelungen |
+
+**Best Practices für neue Kapitel:**
+1. Relevante PDF-Dokumente identifizieren
+2. Offizielle Definitionen und Regelungen übernehmen
+3. Praktische Beispiele aus FAQ und Schulungsunterlagen verwenden
+4. Konsistente Terminologie aus OAAT-Dokumenten sicherstellen
+5. Bei Unsicherheiten: Originaldokumente zitieren
 
 ### Update-Workflow
 
@@ -789,6 +850,60 @@ function showChapter(index) {
 
 ## 📝 Anhang
 
+### Fallstudie: Entwicklung von Kapitel 4 "Diagnosen als ICD-10 Code"
+
+**Ausgangslage:**
+- Kapitel 4 war nur als Platzhalter vorhanden
+- Bedarf für umfassendes ICD-10-GM Kapitel identifiziert
+- Offizielle OAAT-Dokumente als Basis verfügbar
+
+**Entwicklungsprozess:**
+
+1. **Recherche und Analyse (30 Min)**
+   - Anhang C: Richtlinien für ambulante Leistungserfassung gelesen
+   - Anhang H: Rechnungsstellung (ICD-10 Übermittlung) analysiert
+   - FAQ Gesamtsystem durchsucht
+   - Kernthemen identifiziert: Definition, Verwendung, Aufbau, Richtlinien
+
+2. **Konzeption (15 Min)**
+   - Kapitelstruktur erstellt (7 Hauptabschnitte)
+   - Lernziele definiert
+   - Quiz-Fragen konzipiert (4 Fragen)
+   - Praktische Beispiele geplant
+
+3. **Implementierung (45 Min)**
+   - HTML-Struktur aufgebaut
+   - Inhalte aus Originaldokumenten übertragen
+   - Info-Boxen, Akkordeons, Beispiele eingefügt
+   - Quiz-Fragen erstellt
+
+4. **JavaScript-Integration (15 Min)**
+   - Quiz-Antworten definiert (answers[4])
+   - Feedback-Texte erstellt (feedbackTexts[4])
+   - Testing der Quiz-Logik
+
+5. **Testing & Qualitätssicherung (20 Min)**
+   - Alle Akkordeons getestet
+   - Quiz-Fragen durchgespielt
+   - Navigation geprüft
+   - Browser-Kompatibilität gecheckt
+
+**Ergebnis:**
+- 400+ Zeilen neuer HTML-Code
+- 7 Hauptabschnitte
+- 5 Akkordeon-Elemente
+- 2 Fallbeispiele
+- 4 Quiz-Fragen mit detailliertem Feedback
+- 1 Checkliste mit 8 Punkten
+
+**Lessons Learned:**
+- Direkte Verwendung offizieller OAAT-Formulierungen erhöht Qualität
+- Praktische Beispiele verbessern Verständlichkeit
+- Akkordeon-Elemente eignen sich gut für Spezialfälle
+- Strukturierte Kapitel-Entwicklung spart Zeit
+
+---
+
 ### Schnellreferenz: Wichtige Code-Snippets
 
 **Neue Info-Box:**
@@ -873,9 +988,14 @@ git restore datei.html
 
 ---
 
-**Version:** 1.0
+**Version:** 1.1
 **Erstellt:** 2025-10-21
-**Nächste Review:** 2025-11-21
+**Letzte Aktualisierung:** 2025-10-25
+**Nächste Review:** 2025-11-25
+
+**Änderungshistorie:**
+- **v1.1** (2025-10-25): Aktualisierung nach Kapitel 4 Integration, neue Dateistruktur, Quellendokumente ergänzt
+- **v1.0** (2025-10-21): Initial Release
 
 ---
 
