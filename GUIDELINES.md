@@ -1,7 +1,7 @@
 # Richtlinien für eLearning TAP - Schulungsunterlagen
 
-**Projekt:** eLearning für TARDOC und ambulante Pauschalen
-**Version:** 2.1
+**Projekt:** eLearning für TARDOC und ambulante Pauschalen  
+**Version:** 2.1  
 **Letzte Aktualisierung:** 2025-10-25
 
 > Diese Datei konsolidiert alle Design-, Entwicklungs- und Inhaltsvorgaben für die interaktiven HTML-Schulungsunterlagen zum ambulanten Tarifsystem.
@@ -10,37 +10,40 @@
 
 ## 📋 Inhaltsverzeichnis
 
-1. [Projekt-Übersicht](#projekt-übersicht)
-2. [Typography-System](#typography-system)
-3. [Design-System](#design-system)
-4. [Technische Architektur](#technische-architektur)
-5. [Content-Struktur](#content-struktur)
-6. [Interaktive Komponenten](#interaktive-komponenten)
-7. [Entwicklungsworkflow](#entwicklungsworkflow)
-8. [Testing & Qualitätssicherung](#testing--qualitätssicherung)
-9. [Deployment & Wartung](#deployment--wartung)
+1.  [Projekt-Übersicht](#projekt-%C3%BCbersicht)
+2.  [Typography-System](#typography-system)
+3.  [Design-System](#design-system)
+4.  [Technische Architektur](#technische-architektur)
+5.  [Content-Struktur](#content-struktur)
+6.  [Interaktive Komponenten](#interaktive-komponenten)
+7.  [Entwicklungsworkflow](#entwicklungsworkflow)
+8.  [Testing & Qualitätssicherung](#testing--qualit%C3%A4tssicherung)
+9.  [Deployment & Wartung](#deployment--wartung)
 
 ---
 
 ## 🎯 Projekt-Übersicht
 
 ### Zweck
+
 Interaktive HTML-basierte Schulungsunterlagen für das ambulante Tarifsystem der Schweiz (LKAAT, TARDOC, Ambulante Pauschalen), die im Intranet bereitgestellt werden.
 
 ### Hauptziele
-- ✅ Vermittlung von Basiswissen zum ambulanten Tarifsystem
-- ✅ Interaktive Lernelemente mit sofortigem Feedback
-- ✅ Professionelles, konsistentes Design
-- ✅ Single-File HTML (keine externen Abhängigkeiten)
-- ✅ Mobile-responsive Darstellung
-- ✅ Intuitive Navigation zwischen Kapiteln
-- ✅ Integrierte Wissensüberprüfung
+
+*   ✅ Vermittlung von Basiswissen zum ambulanten Tarifsystem
+*   ✅ Interaktive Lernelemente mit sofortigem Feedback
+*   ✅ Professionelles, konsistentes Design
+*   ✅ Single-File HTML (keine externen Abhängigkeiten)
+*   ✅ Mobile-responsive Darstellung
+*   ✅ Intuitive Navigation zwischen Kapiteln
+*   ✅ Integrierte Wissensüberprüfung
 
 ### Zielgruppe
-- Medizinisches Personal
-- Verwaltungsmitarbeitende
-- Codierer/innen in Schweizer Spitälern
-- Alle Anwender:innen des ambulanten Tarifsystems
+
+*   Medizinisches Personal
+*   Verwaltungsmitarbeitende
+*   Codierer/innen in Schweizer Spitälern
+*   Alle Anwender:innen des ambulanten Tarifsystems
 
 ---
 
@@ -49,6 +52,7 @@ Interaktive HTML-basierte Schulungsunterlagen für das ambulante Tarifsystem der
 ### Schriftarten
 
 #### Überschriften (h1-h3)
+
 **Font-Family:** DTL Documenta WT Bold
 
 ```css
@@ -61,6 +65,7 @@ h1, h2, h3 {
 **Fallback-Schriften:** Georgia, Times New Roman, serif
 
 #### Body-Text & Kleinere Überschriften (h4-h6)
+
 **Font-Family:** Typ 1451 LL
 
 ```css
@@ -76,14 +81,22 @@ body, p, h4, h5, h6, li, td, th {
 
 #### Responsive Heading-Größen
 
-| Element | XL (>1440px) | LG (1025-1440px) | SM (431-1024px) | XS (<430px) |
-|---------|--------------|------------------|-----------------|-------------|
+| Element | XL (>1440px) | LG (1025-1440px) | SM (431-1024px) | XS (\<430px) |
+| --- | --- | --- | --- | --- |
 | **h1** | 60px / 1.2em | 48px / 1.2em | 36px / 1.2em | 28px / 1.2em |
 | **h2** | 36px / 1.2em | 28px / 1.2em | 24px / 1.2em | 21px / 1.2em |
 | **h3** | 24px / 1.2em | 24px / 1.2em | 21px / 1.2em | 21px / 1.2em |
-| **h4** | 18px / 1.4em<br>Tracking: 2px | 16px / 1.4em<br>Tracking: 2px | 14px / 1.4em<br>Tracking: 2px | 14px / 1.4em<br>Tracking: 2px |
+| **h4** | 18px / 1.4em  
+Tracking: 2px | 16px / 1.4em  
+Tracking: 2px | 14px / 1.4em  
+Tracking: 2px | 14px / 1.4em  
+Tracking: 2px |
 | **h5** | 20px / 1.5em | 18px / 1.5em | 16px / 1.5em | 16px / 1.5em |
-| **h6** | 14px / 1.3em<br>Tracking: 2px | 14px / 1.3em<br>Tracking: 2px | 12px / 1.3em<br>Tracking: 2px | 12px / 1.3em<br>Tracking: 2px |
+| **h6** | 14px / 1.3em  
+Tracking: 2px | 14px / 1.3em  
+Tracking: 2px | 12px / 1.3em  
+Tracking: 2px | 12px / 1.3em  
+Tracking: 2px |
 
 #### Body-Text
 
@@ -106,6 +119,7 @@ p {
 #### Überschriften-Links (h1-h3)
 
 **Standard-State:**
+
 ```css
 h1 a, h2 a, h3 a {
     color: inherit; /* Erbt Farbe von Überschrift */
@@ -115,6 +129,7 @@ h1 a, h2 a, h3 a {
 ```
 
 **Hover-State:**
+
 ```css
 h1 a:hover, h2 a:hover, h3 a:hover {
     color: #2A64B0; /* Blauton */
@@ -125,6 +140,7 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 #### Body-Links
 
 **Standard-State:**
+
 ```css
 a {
     color: #2A64B0; /* Primärer Link-Blauton */
@@ -134,6 +150,7 @@ a {
 ```
 
 **Hover-State:**
+
 ```css
 a:hover {
     color: #282828; /* Dunkelgrau */
@@ -143,11 +160,11 @@ a:hover {
 
 ### Typografische Best Practices
 
-1. **Hierarchie einhalten**: H1 > H2 > H3 > H4 > H5 > H6 (nicht überspringen)
-2. **Line-Height**: Mindestens 1.2em für Überschriften, 1.6 für Body-Text
-3. **Letter-Spacing (Tracking)**: Nur bei H4 und H6 (2px)
-4. **Konsistenz**: Immer dieselben Font-Families verwenden
-5. **Responsive Anpassung**: Schriftgrößen bei kleineren Viewports reduzieren
+1.  **Hierarchie einhalten**: H1 > H2 > H3 > H4 > H5 > H6 (nicht überspringen)
+2.  **Line-Height**: Mindestens 1.2em für Überschriften, 1.6 für Body-Text
+3.  **Letter-Spacing (Tracking)**: Nur bei H4 und H6 (2px)
+4.  **Konsistenz**: Immer dieselben Font-Families verwenden
+5.  **Responsive Anpassung**: Schriftgrößen bei kleineren Viewports reduzieren
 
 ---
 
@@ -156,6 +173,7 @@ a:hover {
 ### Farbpalette
 
 #### Primärfarben
+
 ```css
 /* Hauptfarben für Branding */
 --primary-blue: #667eea;
@@ -164,6 +182,7 @@ a:hover {
 ```
 
 #### UI-Farben
+
 ```css
 /* Content & Hintergrund */
 --background-white: #ffffff;
@@ -179,6 +198,7 @@ a:hover {
 ```
 
 #### Interaktive Elemente
+
 ```css
 /* Links */
 --link-default: #2A64B0;
@@ -244,6 +264,7 @@ a:hover {
 ### Komponenten-Styling
 
 #### Header
+
 ```css
 header {
     background: #ffffff;
@@ -256,6 +277,7 @@ header {
 ```
 
 #### Navigation
+
 ```css
 nav {
     background: #ffffff;
@@ -305,6 +327,7 @@ nav {
 ```
 
 #### Content-Bereiche
+
 ```css
 .content {
     background: #ffffff;
@@ -323,6 +346,7 @@ nav {
 ```
 
 #### Info-Boxen
+
 ```css
 /* Standard Info-Box (Blau) */
 .info-box {
@@ -360,6 +384,7 @@ nav {
 ```
 
 #### Tabellen
+
 ```css
 .comparison-table {
     width: 100%;
@@ -397,6 +422,7 @@ nav {
 ```
 
 #### Listen
+
 ```css
 .list-styled {
     list-style: none;
@@ -540,32 +566,34 @@ button:disabled, .btn:disabled {
 ### Browser-Kompatibilität
 
 **Unterstützte Browser:**
-- Chrome (neueste Version)
-- Firefox (neueste Version)
-- Safari (neueste Version)
-- Edge (neueste Version)
+
+*   Chrome (neueste Version)
+*   Firefox (neueste Version)
+*   Safari (neueste Version)
+*   Edge (neueste Version)
 
 **Nicht unterstützt:** Internet Explorer
 
 ### Technologie-Stack
 
 | Komponente | Technologie | Version |
-|------------|-------------|---------|
-| Markup | HTML5 | - |
-| Styling | CSS3 | - |
+| --- | --- | --- |
+| Markup | HTML5 | \- |
+| Styling | CSS3 | \- |
 | Scripting | JavaScript | ES6+ |
-| Encoding | UTF-8 | - |
+| Encoding | UTF-8 | \- |
 
 ### Keine externen Abhängigkeiten
 
 **Wichtig:** Alle Ressourcen müssen inline/embedded sein:
-- ❌ KEINE CDN-Links (jQuery, Bootstrap, etc.)
-- ❌ KEINE externen CSS-Dateien
-- ❌ KEINE externen JavaScript-Dateien
-- ❌ KEINE externen Schriftarten (Web Fonts von Google, etc.)
-- ✅ Alle Styles im `<style>`-Tag
-- ✅ Alle Scripts im `<script>`-Tag
-- ✅ Bilder als Base64-encoded Data-URLs (falls benötigt)
+
+*   ❌ KEINE CDN-Links (jQuery, Bootstrap, etc.)
+*   ❌ KEINE externen CSS-Dateien
+*   ❌ KEINE externen JavaScript-Dateien
+*   ❌ KEINE externen Schriftarten (Web Fonts von Google, etc.)
+*   ✅ Alle Styles im `<style>`\-Tag
+*   ✅ Alle Scripts im `<script>`\-Tag
+*   ✅ Bilder als Base64-encoded Data-URLs (falls benötigt)
 
 ---
 
@@ -678,21 +706,23 @@ const chapters = [
 **Wichtig:** Die detaillierten inhaltlichen Vorgaben für alle Kapitel sind jetzt zentral in [content.md](content.md) definiert.
 
 **Kapitelübersicht:**
-- Kapitel 0: Vorwort (NEU - einführende Informationen zur Schulung)
-- Kapitel 1: Einführung in das ambulante Gesamt-Tarifsystem
-- Kapitel 2: Ambulante Behandlung
-- Kapitel 3: LKAAT - Der Leistungskatalog
-- Kapitel 4: Diagnosen als ICD-10 Code
-- Kapitel 5: TARDOC - Der Einzelleistungstarif
-- Kapitel 6: Ambulante Pauschalen (AP)
-- Kapitel 7: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
-- Kapitel 8: Praxisanwendung und Best Practices
-- Kapitel 9: Abschlusstest
+
+*   Vorwort (einführende Informationen zur Schulung)
+*   Kapitel 1: Einführung in das ambulante Gesamt-Tarifsystem
+*   Kapitel 2: Ambulante Behandlung
+*   Kapitel 3: LKAAT - Der Leistungskatalog
+*   Kapitel 4: Diagnosen als ICD-10 Code
+*   Kapitel 5: TARDOC - Der Einzelleistungstarif
+*   Kapitel 6: Ambulante Pauschalen (AP)
+*   Kapitel 7: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
+*   Kapitel 8: Praxisanwendung und Best Practices
+*   Abschlusstest
 
 **Für inhaltliche Änderungen:**
-1. Bearbeiten Sie [content.md](content.md) in Markdown
-2. Beauftragen Sie Claude, die Änderungen nach [eLearning.html](eLearning.html) zu übertragen
-3. Siehe [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md) für Details
+
+1.  Bearbeiten Sie [content.md](content.md) in Markdown
+2.  Beauftragen Sie Claude, die Änderungen nach [eLearning.html](eLearning.html) zu übertragen
+3.  Siehe [CONTENT\_WORKFLOW.md](CONTENT_WORKFLOW.md) für Details
 
 **Content-Quelle:** [content.md](content.md)
 
@@ -703,6 +733,7 @@ const chapters = [
 ### Akkordeon
 
 **HTML-Struktur:**
+
 ```html
 <div class="accordion">
     <div class="accordion-item">
@@ -722,6 +753,7 @@ const chapters = [
 ```
 
 **CSS:**
+
 ```css
 .accordion {
     margin: 20px 0;
@@ -771,6 +803,7 @@ const chapters = [
 ```
 
 **JavaScript:**
+
 ```javascript
 function toggleAccordion(header) {
     const accordionItem = header.parentElement;
@@ -781,6 +814,7 @@ function toggleAccordion(header) {
 ### Quiz-System
 
 **HTML-Struktur:**
+
 ```html
 <div class="quiz-section">
     <h3>Verständnisfragen Kapitel X</h3>
@@ -816,6 +850,7 @@ function toggleAccordion(header) {
 ```
 
 **CSS:**
+
 ```css
 .quiz-section {
     background: #f8f9fa;
@@ -908,6 +943,7 @@ function toggleAccordion(header) {
 ```
 
 **JavaScript:**
+
 ```javascript
 // Antworten-Objekt
 const answers = {
@@ -992,6 +1028,7 @@ function checkChapterQuiz(chapter) {
 ### Navigation-System
 
 **JavaScript:**
+
 ```javascript
 // Globale Variablen
 let currentChapter = 0;
@@ -1084,63 +1121,63 @@ function resetTraining() {
 **⭐ NEU: Content-Workflow (empfohlen für Inhaltsänderungen)**
 
 Seit Version 1.2 gibt es einen vereinfachten Content-Workflow:
-- Inhalte werden in [content.md](content.md) in Markdown bearbeitet
-- Claude konvertiert Markdown automatisch zu HTML
-- Keine HTML-Kenntnisse erforderlich
 
-**Detaillierte Anleitung:** Siehe [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md)
+*   Inhalte werden in [content.md](content.md) in Markdown bearbeitet
+*   Claude konvertiert Markdown automatisch zu HTML
+*   Keine HTML-Kenntnisse erforderlich
+
+**Detaillierte Anleitung:** Siehe [CONTENT\_WORKFLOW.md](CONTENT_WORKFLOW.md)
 
 **Direkter HTML-Workflow (für technische Änderungen)**
 
 Für Design-Anpassungen, JavaScript-Funktionen und strukturelle Änderungen:
-- Direkte Bearbeitung von [eLearning.html](eLearning.html)
-- CSS und JavaScript anpassen
-- Volle Kontrolle über das HTML
+
+*   Direkte Bearbeitung von [eLearning.html](eLearning.html)
+*   CSS und JavaScript anpassen
+*   Volle Kontrolle über das HTML
 
 ---
 
-### 1. Content-Workflow: Neues Kapitel hinzufügen (empfohlen)
+### 1\. Content-Workflow: Neues Kapitel hinzufügen (empfohlen)
 
 **Workflow:**
 
-1. **In [content.md](content.md):**
-   - Neues Kapitel im Markdown-Format erstellen
-   - Siehe [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md) für Syntax
+**In** [**content.md**](content.md)**:**
 
-2. **Claude beauftragen:**
-   ```
-   Neues Kapitel 10 wurde in @content.md erstellt.
-   Bitte füge es in @eLearning.html ein und aktualisiere:
-   - Navigation
-   - Kapitelnummerierung
-   - Quiz-System
-   ```
+*   Neues Kapitel im Markdown-Format erstellen
+*   Siehe [CONTENT\_WORKFLOW.md](CONTENT_WORKFLOW.md) für Syntax
 
-3. **Testen:**
-   - [eLearning.html](eLearning.html) im Browser öffnen
-   - Alle Funktionen prüfen
+**Claude beauftragen:**
+
+**Testen:**
+
+*   [eLearning.html](eLearning.html) im Browser öffnen
+*   Alle Funktionen prüfen
 
 **Vorteile:**
-- ✅ Einfache Markdown-Syntax
-- ✅ Schnelle Content-Updates
-- ✅ Automatische Konvertierung
-- ✅ Keine HTML-Kenntnisse nötig
+
+*   ✅ Einfache Markdown-Syntax
+*   ✅ Schnelle Content-Updates
+*   ✅ Automatische Konvertierung
+*   ✅ Keine HTML-Kenntnisse nötig
 
 ---
 
-### 2. Direkter HTML-Workflow: Neues Kapitel hinzufügen
+### 2\. Direkter HTML-Workflow: Neues Kapitel hinzufügen
 
 **Schritt-für-Schritt-Anleitung:**
 
 #### A. Planung (5-10 Minuten)
-1. Lernziele definieren (3-5 Ziele)
-2. Inhaltsstruktur skizzieren
-3. Quiz-Fragen vorbereiten (2-4 Fragen)
-4. Praktische Beispiele überlegen
+
+1.  Lernziele definieren (3-5 Ziele)
+2.  Inhaltsstruktur skizzieren
+3.  Quiz-Fragen vorbereiten (2-4 Fragen)
+4.  Praktische Beispiele überlegen
 
 #### B. HTML-Struktur erstellen (15-20 Minuten)
 
-**1. Navigation erweitern:**
+**1\. Navigation erweitern:**
+
 ```html
 <!-- In der <nav>-Sektion -->
 <button class="nav-btn" onclick="showChapter(X)">
@@ -1148,7 +1185,8 @@ Für Design-Anpassungen, JavaScript-Funktionen und strukturelle Änderungen:
 </button>
 ```
 
-**2. Kapitel-Inhalt erstellen:**
+**2\. Kapitel-Inhalt erstellen:**
+
 ```html
 <!-- Im Content-Bereich -->
 <div class="chapter" id="chapterX" style="display: none;">
@@ -1158,12 +1196,14 @@ Für Design-Anpassungen, JavaScript-Funktionen und strukturelle Änderungen:
 
 #### C. JavaScript anpassen (5-10 Minuten)
 
-**1. totalChapters erhöhen:**
+**1\. totalChapters erhöhen:**
+
 ```javascript
 const totalChapters = X + 1;  // Neue Anzahl
 ```
 
-**2. Quiz-Antworten hinzufügen:**
+**2\. Quiz-Antworten hinzufügen:**
+
 ```javascript
 const answers = {
     // ... bestehende
@@ -1175,7 +1215,8 @@ const answers = {
 };
 ```
 
-**3. Feedback-Texte hinzufügen:**
+**3\. Feedback-Texte hinzufügen:**
+
 ```javascript
 const feedbackTexts = {
     // ... bestehende
@@ -1190,52 +1231,57 @@ const feedbackTexts = {
 ```
 
 #### D. Testing (10-15 Minuten)
-- [ ] Kapitel über Navigation erreichbar
-- [ ] Vor/Zurück-Buttons funktionieren
-- [ ] Quiz-Fragen auswählbar
-- [ ] Quiz-Auswertung korrekt
-- [ ] Fortschrittsbalken aktualisiert sich
-- [ ] Responsive auf Mobile
+
+*   Kapitel über Navigation erreichbar
+*   Vor/Zurück-Buttons funktionieren
+*   Quiz-Fragen auswählbar
+*   Quiz-Auswertung korrekt
+*   Fortschrittsbalken aktualisiert sich
+*   Responsive auf Mobile
 
 #### E. Git-Commit
-```bash
+
+```
 git add ambulantes-tarifsystem-schulung-komplett.html
 git commit -m "feat: Kapitel X - [Titel] hinzugefügt"
 git push
 ```
 
-### 3. Content-Update durchführen
+### 3\. Content-Update durchführen
 
 **⭐ Empfohlen: Content-Workflow**
 
-1. [content.md](content.md) öffnen und bearbeiten
-2. Claude beauftragen: "Kapitel X in @content.md wurde geändert, bitte aktualisiere @eLearning.html"
-3. Testing und Git-Commit
+1.  [content.md](content.md) öffnen und bearbeiten
+2.  Claude beauftragen: "Kapitel X in @content.md wurde geändert, bitte aktualisiere @eLearning.html"
+3.  Testing und Git-Commit
 
-**Detailliert:** Siehe [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md)
+**Detailliert:** Siehe [CONTENT\_WORKFLOW.md](CONTENT_WORKFLOW.md)
 
 ---
 
 **Alternativ: Direkter HTML-Workflow**
 
 **Für Textänderungen:**
-1. Entsprechendes Kapitel-`<div>` in [eLearning.html](eLearning.html) lokalisieren
-2. Text anpassen
-3. Speichern und im Browser testen
-4. [content.md](content.md) manuell synchronisieren (wichtig!)
-5. Committen mit: `content: Kapitel X - [Beschreibung] aktualisiert`
+
+1.  Entsprechendes Kapitel-`<div>` in [eLearning.html](eLearning.html) lokalisieren
+2.  Text anpassen
+3.  Speichern und im Browser testen
+4.  [content.md](content.md) manuell synchronisieren (wichtig!)
+5.  Committen mit: `content: Kapitel X - [Beschreibung] aktualisiert`
 
 **Für Quiz-Änderungen:**
-1. HTML-Fragentext in [eLearning.html](eLearning.html) anpassen
-2. JavaScript `answers` Objekt aktualisieren
-3. JavaScript `feedbackTexts` aktualisieren
-4. Quiz in [content.md](content.md) aktualisieren (wichtig!)
-5. Testen (alle Antwortoptionen durchgehen)
-6. Committen mit: `fix: Kapitel X Quiz korrigiert`
 
-### 4. Design-Anpassungen
+1.  HTML-Fragentext in [eLearning.html](eLearning.html) anpassen
+2.  JavaScript `answers` Objekt aktualisieren
+3.  JavaScript `feedbackTexts` aktualisieren
+4.  Quiz in [content.md](content.md) aktualisieren (wichtig!)
+5.  Testen (alle Antwortoptionen durchgehen)
+6.  Committen mit: `fix: Kapitel X Quiz korrigiert`
+
+### 4\. Design-Anpassungen
 
 **Farben ändern:**
+
 ```css
 /* Im <style>-Bereich */
 :root {
@@ -1246,6 +1292,7 @@ git push
 ```
 
 **Schriftarten anpassen:**
+
 ```css
 /* Überschriften */
 h1, h2, h3 {
@@ -1258,9 +1305,9 @@ body, p, h4, h5, h6 {
 }
 ```
 
-### 5. Git-Workflow
+### 5\. Git-Workflow
 
-```bash
+```
 # Status prüfen
 git status
 
@@ -1278,12 +1325,13 @@ git push origin main
 ```
 
 **Commit-Typen:**
-- `feat:` - Neues Feature/Kapitel
-- `fix:` - Bugfix
-- `content:` - Inhaltliche Änderung
-- `style:` - Design-Anpassung
-- `refactor:` - Code-Umstrukturierung
-- `docs:` - Dokumentation
+
+*   `feat:` - Neues Feature/Kapitel
+*   `fix:` - Bugfix
+*   `content:` - Inhaltliche Änderung
+*   `style:` - Design-Anpassung
+*   `refactor:` - Code-Umstrukturierung
+*   `docs:` - Dokumentation
 
 ---
 
@@ -1292,46 +1340,52 @@ git push origin main
 ### Test-Checkliste vor Deployment
 
 #### Funktionalität
-- [ ] Alle Kapitel über Navigation erreichbar
-- [ ] Vor/Zurück-Navigation funktioniert
-- [ ] Fortschrittsbalken aktualisiert sich
-- [ ] Quiz-Antworten auswählbar
-- [ ] Quiz-Auswertung korrekt
-- [ ] Feedback-Texte korrekt angezeigt
-- [ ] Akkordeons öffnen/schließen
-- [ ] Reset-Funktion funktioniert
+
+*   Alle Kapitel über Navigation erreichbar
+*   Vor/Zurück-Navigation funktioniert
+*   Fortschrittsbalken aktualisiert sich
+*   Quiz-Antworten auswählbar
+*   Quiz-Auswertung korrekt
+*   Feedback-Texte korrekt angezeigt
+*   Akkordeons öffnen/schließen
+*   Reset-Funktion funktioniert
 
 #### Content
-- [ ] Keine Rechtschreibfehler
-- [ ] Alle Fachbegriffe korrekt
-- [ ] Beispiele nachvollziehbar
-- [ ] Tabellen vollständig
-- [ ] Links funktionieren (falls vorhanden)
+
+*   Keine Rechtschreibfehler
+*   Alle Fachbegriffe korrekt
+*   Beispiele nachvollziehbar
+*   Tabellen vollständig
+*   Links funktionieren (falls vorhanden)
 
 #### Design
-- [ ] Layout korrekt auf Desktop (>1200px)
-- [ ] Layout korrekt auf Tablet (768-1199px)
-- [ ] Layout korrekt auf Mobile (375-767px)
-- [ ] Alle Farben gemäß Design-System
-- [ ] Schriftgrößen responsive
-- [ ] Buttons gut klickbar
-- [ ] Ausreichende Kontraste
+
+*   Layout korrekt auf Desktop (>1200px)
+*   Layout korrekt auf Tablet (768-1199px)
+*   Layout korrekt auf Mobile (375-767px)
+*   Alle Farben gemäß Design-System
+*   Schriftgrößen responsive
+*   Buttons gut klickbar
+*   Ausreichende Kontraste
 
 #### Browser-Kompatibilität
-- [ ] Chrome (neueste Version)
-- [ ] Firefox (neueste Version)
-- [ ] Safari (neueste Version)
-- [ ] Edge (neueste Version)
+
+*   Chrome (neueste Version)
+*   Firefox (neueste Version)
+*   Safari (neueste Version)
+*   Edge (neueste Version)
 
 #### Performance
-- [ ] Ladezeit < 2 Sekunden
-- [ ] Keine Verzögerungen bei Navigation
-- [ ] Keine JavaScript-Fehler in Console (F12)
-- [ ] Smooth Transitions/Animationen
+
+*   Ladezeit \< 2 Sekunden
+*   Keine Verzögerungen bei Navigation
+*   Keine JavaScript-Fehler in Console (F12)
+*   Smooth Transitions/Animationen
 
 ### Debugging-Strategien
 
-**1. Browser DevTools nutzen:**
+**1\. Browser DevTools nutzen:**
+
 ```javascript
 // Console öffnen (F12)
 // Fehler suchen im "Console"-Tab
@@ -1346,17 +1400,18 @@ console.log(currentChapter);
 console.log(feedbackTexts[1][1]);
 ```
 
-**2. Häufige Fehlerquellen:**
+**2\. Häufige Fehlerquellen:**
 
 | Problem | Ursache | Lösung |
-|---------|---------|--------|
+| --- | --- | --- |
 | Quiz zeigt immer "falsch" | `answers` Objekt falsch | Groß-/Kleinschreibung prüfen |
 | Kapitel nicht sichtbar | `display: none` nicht geändert | `showChapter()` debuggen |
 | Navigation funktioniert nicht | `onclick` fehlt/falsch | Attribut und Index prüfen |
 | Akkordeon klappt nicht | `this` fehlt bei `onclick` | `toggleAccordion(this)` |
 | Fortschrittsbalken falsch | `totalChapters` nicht aktualisiert | Wert erhöhen |
 
-**3. Debug-Modus aktivieren:**
+**3\. Debug-Modus aktivieren:**
+
 ```javascript
 const DEBUG = true;
 
@@ -1374,17 +1429,20 @@ function showChapter(index) {
 ### Validierung
 
 **HTML-Validierung:**
-- Online: https://validator.w3.org/
-- Datei hochladen und prüfen
+
+*   Online: https://validator.w3.org/
+*   Datei hochladen und prüfen
 
 **CSS-Validierung:**
-- Online: https://jigsaw.w3.org/css-validator/
-- Embedded CSS extrahieren und prüfen
+
+*   Online: https://jigsaw.w3.org/css-validator/
+*   Embedded CSS extrahieren und prüfen
 
 **Accessibility-Check:**
-- Keyboard-Navigation testen (Tab-Taste)
-- Screen-Reader-kompatibel (ARIA-Labels)
-- Farbkontraste ausreichend (WCAG 2.1 Level AA)
+
+*   Keyboard-Navigation testen (Tab-Taste)
+*   Screen-Reader-kompatibel (ARIA-Labels)
+*   Farbkontraste ausreichend (WCAG 2.1 Level AA)
 
 ---
 
@@ -1392,8 +1450,9 @@ function showChapter(index) {
 
 ### Deployment-Prozess
 
-#### 1. Pre-Deployment
-```bash
+#### 1\. Pre-Deployment
+
+```
 # Version in Dateinamen
 cp ambulantes-tarifsystem-schulung-komplett.html \
    ambulantes-tarifsystem-schulung-v1.0.html
@@ -1402,38 +1461,44 @@ cp ambulantes-tarifsystem-schulung-komplett.html \
 # (siehe Testing-Sektion)
 ```
 
-#### 2. Intranet-Upload
+#### 2\. Intranet-Upload
+
 ```
 Zielort: /intranet/schulungen/
 URL: https://intranet.example.ch/schulungen/ambulantes-tarifsystem-schulung-v1.0.html
 ```
 
-#### 3. Zugriffsmöglichkeiten
+#### 3\. Zugriffsmöglichkeiten
 
 **Option 1: Webserver**
-- Apache, Nginx, IIS
-- Direkte URL
+
+*   Apache, Nginx, IIS
+*   Direkte URL
 
 **Option 2: File-Share**
+
 ```
 \\server\schulungen\ambulantes-tarifsystem-schulung-v1.0.html
 ```
 
 **Option 3: E-Mail-Versand**
-- Als Anhang (nur bei <2 MB)
+
+*   Als Anhang (nur bei \<2 MB)
 
 **Option 4: Offline/USB**
-- Für externe Nutzung
+
+*   Für externe Nutzung
 
 ### Versionierung
 
 **Schema:** `MAJOR.MINOR.PATCH`
 
-- **MAJOR (1.0.0)**: Neue Kapitel, große Strukturänderungen
-- **MINOR (1.1.0)**: Neue Inhalte, erweiterte Quiz
-- **PATCH (1.0.1)**: Bugfixes, Tippfehler
+*   **MAJOR (1.0.0)**: Neue Kapitel, große Strukturänderungen
+*   **MINOR (1.1.0)**: Neue Inhalte, erweiterte Quiz
+*   **PATCH (1.0.1)**: Bugfixes, Tippfehler
 
 **Changelog pflegen:**
+
 ```html
 <!--
 CHANGELOG
@@ -1455,30 +1520,35 @@ Version 1.0.0 - 2025-10-21
 ### Wartungsplan
 
 **Monatlich:**
-- Feedback von Nutzern sammeln
-- Kleine Verbesserungen umsetzen
-- Content auf Aktualität prüfen
+
+*   Feedback von Nutzern sammeln
+*   Kleine Verbesserungen umsetzen
+*   Content auf Aktualität prüfen
 
 **Quartalsweise:**
-- Tarif-Änderungen einpflegen
-- Browser-Kompatibilität testen
-- Neue Features evaluieren
+
+*   Tarif-Änderungen einpflegen
+*   Browser-Kompatibilität testen
+*   Neue Features evaluieren
 
 **Jährlich:**
-- Komplette Inhaltsprüfung
-- Design-Refresh erwägen
-- Technologie-Update
+
+*   Komplette Inhaltsprüfung
+*   Design-Refresh erwägen
+*   Technologie-Update
 
 ### Backup-Strategie
 
 **Git-Repository (täglich):**
-```bash
+
+```
 git commit -m "Beschreibung"
 git push origin main
 ```
 
 **Lokale Backups (vor Major-Updates):**
-```bash
+
+```
 mkdir -p backups
 cp ambulantes-tarifsystem-schulung-komplett.html \
    backups/backup-$(date +%Y%m%d).html
@@ -1489,20 +1559,23 @@ cp ambulantes-tarifsystem-schulung-komplett.html \
 ## 📞 Support & Ressourcen
 
 ### Dokumentation
-- [GUIDELINES.md](GUIDELINES.md) - Diese Datei
-- [PROMPT-Schulungsunterlage-Vorgaben.md](PROMPT-Schulungsunterlage-Vorgaben.md) - KI-Prompts
-- [README.md](README.md) - Projekt-Übersicht
+
+*   [GUIDELINES.md](GUIDELINES.md) - Diese Datei
+*   [PROMPT-Schulungsunterlage-Vorgaben.md](PROMPT-Schulungsunterlage-Vorgaben.md) - KI-Prompts
+*   [README.md](README.md) - Projekt-Übersicht
 
 ### Externe Ressourcen
-- **HTML/CSS/JS:** [MDN Web Docs](https://developer.mozilla.org)
-- **Browser-Kompatibilität:** [Can I Use](https://caniuse.com)
-- **Validator:** [W3C](https://validator.w3.org)
+
+*   **HTML/CSS/JS:** [MDN Web Docs](https://developer.mozilla.org)
+*   **Browser-Kompatibilität:** [Can I Use](https://caniuse.com)
+*   **Validator:** [W3C](https://validator.w3.org)
 
 ### Fachliche Quellen
-- Offizielle TARDOC-Dokumentation
-- LKAAT-Katalog (Ärztekasse/FMH)
-- Ambulante Pauschalen-Handbuch
-- SwissDRG-Dokumentation
+
+*   Offizielle TARDOC-Dokumentation
+*   LKAAT-Katalog (Ärztekasse/FMH)
+*   Ambulante Pauschalen-Handbuch
+*   SwissDRG-Dokumentation
 
 ---
 
@@ -1511,6 +1584,7 @@ cp ambulantes-tarifsystem-schulung-komplett.html \
 ### Schnellreferenz: Code-Snippets
 
 **Neue Info-Box:**
+
 ```html
 <div class="info-box">
     <h4>📋 Titel</h4>
@@ -1519,6 +1593,7 @@ cp ambulantes-tarifsystem-schulung-komplett.html \
 ```
 
 **Neue Warning-Box:**
+
 ```html
 <div class="warning-box">
     <h4>⚠ Wichtig</h4>
@@ -1527,6 +1602,7 @@ cp ambulantes-tarifsystem-schulung-komplett.html \
 ```
 
 **Neue Success-Box:**
+
 ```html
 <div class="success-box">
     <h4>✓ Erfolg</h4>
@@ -1535,6 +1611,7 @@ cp ambulantes-tarifsystem-schulung-komplett.html \
 ```
 
 **Neue Tabelle:**
+
 ```html
 <table class="comparison-table">
     <thead>
@@ -1553,6 +1630,7 @@ cp ambulantes-tarifsystem-schulung-komplett.html \
 ```
 
 **Neues Akkordeon:**
+
 ```html
 <div class="accordion">
     <div class="accordion-item">
@@ -1595,7 +1673,7 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 
 ### Git-Befehle Cheat Sheet
 
-```bash
+```
 # Status
 git status
 
@@ -1620,31 +1698,42 @@ git checkout HEAD -- datei.html
 
 ---
 
-**Version:** 2.2
-**Erstellt:** 2025-10-21
-**Letzte Aktualisierung:** 2025-10-25
+**Version:** 2.2  
+**Erstellt:** 2025-10-21  
+**Letzte Aktualisierung:** 2025-10-25  
 **Nächste Review:** 2026-01-21
 
 ### Changelog
 
 **Version 2.2 (2025-10-25):**
-- ✅ **NEU:** Content-Workflow dokumentiert (Verweis auf CONTENT_WORKFLOW.md)
-- ✅ **NEU:** Unterscheidung zwischen Content-Workflow und direktem HTML-Workflow
-- ✅ Entwicklungsworkflow-Sektion erweitert und neu strukturiert
-- ✅ Projekt-Struktur nicht aktualisiert (bleibt bei alter Struktur ohne content.md)
-- ✅ Hinweise auf [content.md](content.md) und [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md) ergänzt
+
+*   ✅ **NEU:** Content-Workflow dokumentiert (Verweis auf CONTENT\_WORKFLOW.md)
+*   ✅ **NEU:** Unterscheidung zwischen Content-Workflow und direktem HTML-Workflow
+*   ✅ Entwicklungsworkflow-Sektion erweitert und neu strukturiert
+*   ✅ Projekt-Struktur nicht aktualisiert (bleibt bei alter Struktur ohne content.md)
+*   ✅ Hinweise auf [content.md](content.md) und [CONTENT\_WORKFLOW.md](CONTENT_WORKFLOW.md) ergänzt
 
 **Version 2.1 (2025-10-25):**
-- ✅ Kapitel 4 "Diagnosen als ICD-10 Code" hinzugefügt
-- ✅ Alle nachfolgenden Kapitel neu nummeriert (TARDOC: 4→5, Ambulante Pauschalen: 5→6, etc.)
-- ✅ Content-Struktur erweitert mit ICD-10-GM Richtlinien und Codierungsregeln
-- ✅ Gesamtzahl der Kapitel: 9 (inkl. Abschlusstest)
+
+*   ✅ Kapitel 4 "Diagnosen als ICD-10 Code" hinzugefügt
+*   ✅ Alle nachfolgenden Kapitel neu nummeriert (TARDOC: 4→5, Ambulante Pauschalen: 5→6, etc.)
+*   ✅ Content-Struktur erweitert mit ICD-10-GM Richtlinien und Codierungsregeln
+*   ✅ Gesamtzahl der Kapitel: 9 (inkl. Abschlusstest)
 
 **Version 2.0 (2025-10-21):**
-- ✅ Konsolidierung aller Vorgabedokumente
-- ✅ Vollständige Typography- und Design-System-Dokumentation
-- ✅ Entwicklungsworkflow und Testing-Guidelines
+
+*   ✅ Konsolidierung aller Vorgabedokumente
+*   ✅ Vollständige Typography- und Design-System-Dokumentation
+*   ✅ Entwicklungsworkflow und Testing-Guidelines
 
 ---
 
-*Dieses Dokument konsolidiert alle Vorgaben für Design, Entwicklung und Inhalt. Bei Änderungen bitte Versionsnummer erhöhen und Changelog aktualisieren.*
+_Dieses Dokument konsolidiert alle Vorgaben für Design, Entwicklung und Inhalt. Bei Änderungen bitte Versionsnummer erhöhen und Changelog aktualisieren._
+
+```
+Neues Kapitel 10 wurde in @content.md erstellt.
+Bitte füge es in @eLearning.html ein und aktualisiere:
+- Navigation
+- Kapitelnummerierung
+- Quiz-System
+```

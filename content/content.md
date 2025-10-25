@@ -21,7 +21,7 @@ Diese Markdown-Datei enthält alle Inhalte der eLearning-Schulung in strukturier
 
 ---
 
-## KAPITEL 0: Vorwort
+## Vorwort
 
 ### Willkommen zur eLearning-Schulung
 
@@ -52,7 +52,7 @@ Hier vertiefen Sie Ihr Wissen über die Diagnosecodierung mit ICD-10-GM, den TAR
 
 Sie lernen die Unterschiede zwischen TARDOC und Pauschalen kennen und erhalten praxisnahe Anleitungen für den Arbeitsalltag.
 
-**Abschlusstest (Kapitel 9)**
+**Abschlusstest**
 
 Ein umfassender Test überprüft Ihr erworbenes Wissen über alle Kapitel hinweg.
 
@@ -86,7 +86,7 @@ Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **3-4 Stun
 
 **INFO-BOX: Geschätzter Zeitaufwand pro Kapitel**
 
-*   Kapitel 0 (Vorwort): 5 Minuten
+*   Vorwort: 5 Minuten
 *   Kapitel 1 (Einführung): 20 Minuten
 *   Kapitel 2 (Ambulante Behandlung): 25 Minuten
 *   Kapitel 3 (LKAAT): 25 Minuten
@@ -95,7 +95,7 @@ Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **3-4 Stun
 *   Kapitel 6 (Ambulante Pauschalen): 20 Minuten
 *   Kapitel 7 (Vergleich): 20 Minuten
 *   Kapitel 8 (Praxisanwendung): 25 Minuten
-*   Kapitel 9 (Abschlusstest): 15 Minuten
+*   Abschlusstest: 15 Minuten
 
 ### Lernziele der Gesamtschulung
 
@@ -1209,7 +1209,7 @@ Das ambulante Tarifsystem entwickelt sich kontinuierlich weiter. Aktuelle Trends
 
 ---
 
-## KAPITEL 9: Abschlusstest
+## Abschlusstest
 
 **INFO-BOX: Hinweise zum Abschlusstest**
 

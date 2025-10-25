@@ -811,12 +811,10 @@
 <div class="info-box warning">
     <h4>Wichtige Abgrenzungsfälle</h4>
     <p>In der Praxis gibt es Grenzfälle, die eine klare Zuordnung erfordern:</p>
-    <ul>
-        <li><strong>Tagesklinik:</strong> Ambulant, auch wenn mehrere Stunden Aufenthalt</li>
-        <li><strong>Observation über Nacht:</strong> Gilt bereits als stationär</li>
-        <li><strong>OP mit Nachbeobachtung:</strong> Ambulant, wenn Entlassung am gleichen Tag</li>
-        <li><strong>Notfallbehandlung:</strong> Je nach Aufenthaltsdauer ambulant oder stationär</li>
-    </ul>
+    <p>*   <strong>Tagesklinik:</strong> Ambulant, auch wenn mehrere Stunden Aufenthalt</p>
+    <p>*   <strong>Observation über Nacht:</strong> Gilt bereits als stationär</p>
+    <p>*   <strong>OP mit Nachbeobachtung:</strong> Ambulant, wenn Entlassung am gleichen Tag</p>
+    <p>*   <strong>Notfallbehandlung:</strong> Je nach Aufenthaltsdauer ambulant oder stationär</p>
 </div>
 <h3>Typische ambulante Behandlungen</h3>
 <div class="accordion" onclick="toggleAccordion(this)">
@@ -999,11 +997,9 @@
 <div class="info-box">
     <h4>Hauptfunktion des LKAAT</h4>
     <p>Der LKAAT dient ausschließlich der Leistungserfassung, NICHT der Abrechnung!</p>
-    <ul>
-        <li>Enthält alle medizinischen Leistungen, die erfasst werden können</li>
-        <li>Definiert für jede Leistung, ob TARDOC oder Ambulante Pauschalen zur Anwendung kommen</li>
-        <li>Bildet die Grundlage für die spätere Abrechnung</li>
-    </ul>
+    <p>*   Enthält alle medizinischen Leistungen, die erfasst werden können</p>
+    <p>*   Definiert für jede Leistung, ob TARDOC oder Ambulante Pauschalen zur Anwendung kommen</p>
+    <p>*   Bildet die Grundlage für die spätere Abrechnung</p>
 </div>
 <h3>Struktur und Aufbau des LKAAT</h3>
 <p><strong>TABELLE: Leistungstypen im LKAAT</strong></p>
@@ -1255,11 +1251,9 @@
 <div class="info-box">
     <h4>Welche Diagnose erfassen?</h4>
     <p>Die Diagnose erfasst denjenigen Zustand, der:</p>
-    <ul>
-        <li>Hauptanlass für die Sitzung war</li>
-        <li>Den größten Aufwand an medizinischen Mitteln verursachte (ärztliche & pflegerische Leistungen, Operationen, medizinische Produkte)</li>
-        <li>Der erfolgten Behandlung in Organbezogenheit bzw. Körperregion am nächsten steht</li>
-    </ul>
+    <p>*   Hauptanlass für die Sitzung war</p>
+    <p>*   Den größten Aufwand an medizinischen Mitteln verursachte (ärztliche & pflegerische Leistungen, Operationen, medizinische Produkte)</p>
+    <p>*   Der erfolgten Behandlung in Organbezogenheit bzw. Körperregion am nächsten steht</p>
 </div>
 <div class="info-box warning">
     <h4>Häufige Fehler vermeiden</h4>
@@ -2007,152 +2001,156 @@
     <button class="check-btn" onclick="checkAnswer(8, 2, 'b')">Antwort prüfen</button>
     <div class="feedback" id="feedback8_2"></div>
 </div>
+<h2>Abschlusstest</h2>
 
                 <div class="navigation-footer">
                     <button class="nav-footer-btn" onclick="showChapter(7)">◄ Vorheriges Kapitel</button>
                     <button class="nav-footer-btn" onclick="showChapter(9)">Zum Abschlusstest ►</button>
                 </div>
             </div>
+        </div>
+    </div>
 
             <!-- Abschlusstest -->
             <div class="chapter" id="chapter9"><h2>Abschlusstest</h2>
 
                 <div class="info-box">
-                <h4>Hinweise zum Abschlusstest</h4>
-                    <p>Dieser Test umfasst 12 Fragen zu allen Kapiteln. Sie benötigen mindestens 10 von 12 richtigen Antworten, um die Schulung erfolgreich abzuschließen. Viel Erfolg!</p>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 1: Welche Hauptkomponenten umfasst das ambulante Gesamt-Tarifsystem?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_0" value="a"> a) TARMED und DRG</label>
-                        <label><input type="radio" name="q9_0" value="b"> b) LKAAT, TARDOC und Ambulante Pauschalen</label>
-                        <label><input type="radio" name="q9_0" value="c"> c) SwissDRG und TARDOC</label>
-                        <label><input type="radio" name="q9_0" value="d"> d) Nur TARDOC</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 0, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_0"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 2: Wofür steht LKAAT?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_1" value="a"> a) Leistungskatalog aller ambulanten Tarife</label>
-                        <label><input type="radio" name="q9_1" value="b"> b) Leistungskatalog ambulante Arzttarife</label>
-                        <label><input type="radio" name="q9_1" value="c"> c) Leistungskosten ambulanter Arzt-Behandlungen</label>
-                        <label><input type="radio" name="q9_1" value="d"> d) Leistungsverzeichnis klinischer ambulanter Tarife</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 1, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_1"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 3: Was ist die Hauptfunktion des LKAAT?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_2" value="a"> a) Abrechnung der Leistungen</label>
-                        <label><input type="radio" name="q9_2" value="b"> b) Leistungserfassung und Bestimmung des Abrechnungssystems</label>
-                        <label><input type="radio" name="q9_2" value="c"> c) Kostenkontrolle</label>
-                        <label><input type="radio" name="q9_2" value="d"> d) Qualitätssicherung</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 2, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_2"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 4: Wie viele Stellen hat eine LKN-Nummer für Pauschalen-Positionen?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_3" value="a"> a) 7 Stellen</label>
-                        <label><input type="radio" name="q9_3" value="b"> b) 8 Stellen</label>
-                        <label><input type="radio" name="q9_3" value="c"> c) 9 Stellen</label>
-                        <label><input type="radio" name="q9_3" value="d"> d) 10 Stellen</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 3, 'c')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_3"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 5: Wie wird die Vergütung bei TARDOC berechnet?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_4" value="a"> a) Pauschalbetrag pro Fall</label>
-                        <label><input type="radio" name="q9_4" value="b"> b) Taxpunkte × Taxpunktwert</label>
-                        <label><input type="radio" name="q9_4" value="c"> c) Zeitaufwand × Stundensatz</label>
-                        <label><input type="radio" name="q9_4" value="d"> d) Nach Anzahl der Patienten</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 4, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_4"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 6: Was ist der Hauptvorteil von Ambulanten Pauschalen für Leistungserbringer?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_5" value="a"> a) Höhere Gesamtvergütung</label>
-                        <label><input type="radio" name="q9_5" value="b"> b) Planungssicherheit und reduzierter administrativer Aufwand</label>
-                        <label><input type="radio" name="q9_5" value="c"> c) Keine Dokumentationspflicht</label>
-                        <label><input type="radio" name="q9_5" value="d"> d) Freie Preisgestaltung</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 5, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_5"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 7: Bei welcher Behandlung sollte TARDOC angewendet werden?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_6" value="a"> a) Kataraktoperation</label>
-                        <label><input type="radio" name="q9_6" value="b"> b) Arthroskopie</label>
-                        <label><input type="radio" name="q9_6" value="c"> c) Routinekonsultation bei Bluthochdruck</label>
-                        <label><input type="radio" name="q9_6" value="d"> d) Koloskopie mit Polypektomie</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 6, 'c')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_6"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 8: Was beinhaltet eine Ambulante Pauschale typischerweise NICHT?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_7" value="a"> a) Anästhesieleistungen</label>
-                        <label><input type="radio" name="q9_7" value="b"> b) Teure Spezialimplantate (als Zusatzentgelt separat)</label>
-                        <label><input type="radio" name="q9_7" value="c"> c) Standard-Verbrauchsmaterialien</label>
-                        <label><input type="radio" name="q9_7" value="d"> d) Nachkontrollen</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 7, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_7"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 9: 200 Taxpunkte × Taxpunktwert CHF 0.95 = ?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_8" value="a"> a) CHF 185.00</label>
-                        <label><input type="radio" name="q9_8" value="b"> b) CHF 190.00</label>
-                        <label><input type="radio" name="q9_8" value="c"> c) CHF 195.00</label>
-                        <label><input type="radio" name="q9_8" value="d"> d) CHF 200.00</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 8, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_8"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 10: Dürfen TARDOC und Pauschalen im gleichen Behandlungsfall beliebig kombiniert werden?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_9" value="a"> a) Ja, ohne Einschränkungen</label>
-                        <label><input type="radio" name="q9_9" value="b"> b) Nein, grundsätzlich nicht (außer definierte Ausnahmen wie Zusatzentgelte)</label>
-                        <label><input type="radio" name="q9_9" value="c"> c) Ja, aber nur mit Zustimmung des Patienten</label>
-                        <label><input type="radio" name="q9_9" value="d"> d) Nur bei Komplikationen jeder Art</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 9, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_9"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 11: Was bedeutet "Dignität" im TARDOC-Kontext?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_10" value="a"> a) Der Respekt gegenüber dem Patienten</label>
-                        <label><input type="radio" name="q9_10" value="b"> b) Die Berechtigung zur Abrechnung bestimmter Leistungen</label>
-                        <label><input type="radio" name="q9_10" value="c"> c) Die Qualifikation des Pflegepersonals</label>
-                        <label><input type="radio" name="q9_10" value="d"> d) Die Höhe der Vergütung</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 10, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_10"></div>
-                </div>
-                <div class="quiz-question">
-                    <p class="question-text">Frage 12: Was sollte bei geplanten elektiven Eingriffen vorab eingeholt werden?</p>
-                    <div class="answers">
-                        <label><input type="radio" name="q9_11" value="a"> a) Nur die Zustimmung des Patienten</label>
-                        <label><input type="radio" name="q9_11" value="b"> b) Eine Kostengutsprache der Krankenkasse</label>
-                        <label><input type="radio" name="q9_11" value="c"> c) Eine ärztliche Zweitmeinung</label>
-                        <label><input type="radio" name="q9_11" value="d"> d) Nur der OP-Termin</label>
-                    </div>
-                    <button class="check-btn" onclick="checkAnswer(9, 11, 'b')">Antwort prüfen</button>
-                    <div class="feedback" id="feedback9_11"></div>
-                </div>
+    <h4>Hinweise zum Abschlusstest</h4>
+    <p>Dieser Test umfasst 12 Fragen zu allen Kapiteln. Sie benötigen mindestens 10 von 12 richtigen Antworten, um die Schulung erfolgreich abzuschließen. Viel Erfolg!</p>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 1: Welche Hauptkomponenten umfasst das ambulante Gesamt-Tarifsystem?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_0" value="a"> a) TARMED und DRG</label>
+        <label><input type="radio" name="q9_0" value="b"> b) LKAAT, TARDOC und Ambulante Pauschalen</label>
+        <label><input type="radio" name="q9_0" value="c"> c) SwissDRG und TARDOC</label>
+        <label><input type="radio" name="q9_0" value="d"> d) Nur TARDOC</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 0, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_0"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 2: Wofür steht LKAAT?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_1" value="a"> a) Leistungskatalog aller ambulanten Tarife</label>
+        <label><input type="radio" name="q9_1" value="b"> b) Leistungskatalog ambulante Arzttarife</label>
+        <label><input type="radio" name="q9_1" value="c"> c) Leistungskosten ambulanter Arzt-Behandlungen</label>
+        <label><input type="radio" name="q9_1" value="d"> d) Leistungsverzeichnis klinischer ambulanter Tarife</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 1, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_1"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 3: Was ist die Hauptfunktion des LKAAT?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_2" value="a"> a) Abrechnung der Leistungen</label>
+        <label><input type="radio" name="q9_2" value="b"> b) Leistungserfassung und Bestimmung des Abrechnungssystems</label>
+        <label><input type="radio" name="q9_2" value="c"> c) Kostenkontrolle</label>
+        <label><input type="radio" name="q9_2" value="d"> d) Qualitätssicherung</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 2, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_2"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 4: Wie viele Stellen hat eine LKN-Nummer für Pauschalen-Positionen?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_3" value="a"> a) 7 Stellen</label>
+        <label><input type="radio" name="q9_3" value="b"> b) 8 Stellen</label>
+        <label><input type="radio" name="q9_3" value="c"> c) 9 Stellen</label>
+        <label><input type="radio" name="q9_3" value="d"> d) 10 Stellen</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 3, 'c')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_3"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 5: Wie wird die Vergütung bei TARDOC berechnet?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_4" value="a"> a) Pauschalbetrag pro Fall</label>
+        <label><input type="radio" name="q9_4" value="b"> b) Taxpunkte × Taxpunktwert</label>
+        <label><input type="radio" name="q9_4" value="c"> c) Zeitaufwand × Stundensatz</label>
+        <label><input type="radio" name="q9_4" value="d"> d) Nach Anzahl der Patienten</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 4, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_4"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 6: Was ist der Hauptvorteil von Ambulanten Pauschalen für Leistungserbringer?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_5" value="a"> a) Höhere Gesamtvergütung</label>
+        <label><input type="radio" name="q9_5" value="b"> b) Planungssicherheit und reduzierter administrativer Aufwand</label>
+        <label><input type="radio" name="q9_5" value="c"> c) Keine Dokumentationspflicht</label>
+        <label><input type="radio" name="q9_5" value="d"> d) Freie Preisgestaltung</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 5, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_5"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 7: Bei welcher Behandlung sollte TARDOC angewendet werden?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_6" value="a"> a) Kataraktoperation</label>
+        <label><input type="radio" name="q9_6" value="b"> b) Arthroskopie</label>
+        <label><input type="radio" name="q9_6" value="c"> c) Routinekonsultation bei Bluthochdruck</label>
+        <label><input type="radio" name="q9_6" value="d"> d) Koloskopie mit Polypektomie</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 6, 'c')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_6"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 8: Was beinhaltet eine Ambulante Pauschale typischerweise NICHT?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_7" value="a"> a) Anästhesieleistungen</label>
+        <label><input type="radio" name="q9_7" value="b"> b) Teure Spezialimplantate (als Zusatzentgelt separat)</label>
+        <label><input type="radio" name="q9_7" value="c"> c) Standard-Verbrauchsmaterialien</label>
+        <label><input type="radio" name="q9_7" value="d"> d) Nachkontrollen</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 7, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_7"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 9: 200 Taxpunkte × Taxpunktwert CHF 0.95 = ?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_8" value="a"> a) CHF 185.00</label>
+        <label><input type="radio" name="q9_8" value="b"> b) CHF 190.00</label>
+        <label><input type="radio" name="q9_8" value="c"> c) CHF 195.00</label>
+        <label><input type="radio" name="q9_8" value="d"> d) CHF 200.00</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 8, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_8"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 10: Dürfen TARDOC und Pauschalen im gleichen Behandlungsfall beliebig kombiniert werden?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_9" value="a"> a) Ja, ohne Einschränkungen</label>
+        <label><input type="radio" name="q9_9" value="b"> b) Nein, grundsätzlich nicht (außer definierte Ausnahmen wie Zusatzentgelte)</label>
+        <label><input type="radio" name="q9_9" value="c"> c) Ja, aber nur mit Zustimmung des Patienten</label>
+        <label><input type="radio" name="q9_9" value="d"> d) Nur bei Komplikationen jeder Art</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 9, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_9"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 11: Was bedeutet "Dignität" im TARDOC-Kontext?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_10" value="a"> a) Der Respekt gegenüber dem Patienten</label>
+        <label><input type="radio" name="q9_10" value="b"> b) Die Berechtigung zur Abrechnung bestimmter Leistungen</label>
+        <label><input type="radio" name="q9_10" value="c"> c) Die Qualifikation des Pflegepersonals</label>
+        <label><input type="radio" name="q9_10" value="d"> d) Die Höhe der Vergütung</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 10, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_10"></div>
+</div>
+<div class="quiz-question">
+    <p class="question-text">Frage 12: Was sollte bei geplanten elektiven Eingriffen vorab eingeholt werden?</p>
+    <div class="answers">
+        <label><input type="radio" name="q9_11" value="a"> a) Nur die Zustimmung des Patienten</label>
+        <label><input type="radio" name="q9_11" value="b"> b) Eine Kostengutsprache der Krankenkasse</label>
+        <label><input type="radio" name="q9_11" value="c"> c) Eine ärztliche Zweitmeinung</label>
+        <label><input type="radio" name="q9_11" value="d"> d) Nur der OP-Termin</label>
+    </div>
+    <button class="check-btn" onclick="checkAnswer(9, 11, 'b')">Antwort prüfen</button>
+    <div class="feedback" id="feedback9_11"></div>
+</div>
+<h2>Ende der Content-Datei</h2>
 
                 <div class="navigation-footer">
                     <button class="nav-footer-btn" onclick="showChapter(8)">◄ Vorheriges Kapitel</button>
@@ -2160,7 +2158,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <script>
         // Globale Variablen
