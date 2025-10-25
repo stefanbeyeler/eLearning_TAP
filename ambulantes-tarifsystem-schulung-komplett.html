@@ -14,8 +14,8 @@
         body {
             font-family: 'Typ 1451 LL', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #666;
+            background: #fff;
             min-height: 100vh;
         }
 
@@ -84,24 +84,28 @@
 
         .nav-btn {
             padding: 12px 24px;
-            background: #667eea;
-            color: white;
-            border: none;
+            background: #f5f5f5;
+            color: #666;
+            border: 1px solid #ccc;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s;
             font-size: 0.95em;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .nav-btn:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
+            background: #eaeaea;
+            color: #444;
+            border-color: #bbb;
+            transform: none;
         }
 
         .nav-btn.active {
-            background: #764ba2;
-            font-weight: bold;
+            background: #e0e0e0;
+            color: #222;
+            border-color: #aaa;
+            font-weight: 600;
         }
 
         .content {
@@ -577,6 +581,7 @@
                 <button class="nav-btn" onclick="showChapter(5)">Kapitel 6: Vergleich</button>
                 <button class="nav-btn" onclick="showChapter(6)">Kapitel 7: Praxisanwendung</button>
                 <button class="nav-btn" onclick="showChapter(7)">Abschlusstest</button>
+                <button class="nav-btn" onclick="showChapter(8)">Kapitel 8: Diagnosen als ICD-10 Code</button>
             </div>
         </nav>
 
