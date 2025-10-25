@@ -738,6 +738,7 @@ def process_markdown_content(md_text, chapter_num):
             # Check if this looks like an accordion header (not a sub-heading within content)
             # Accordion headers typically are standalone concepts, not formatting within text
             is_accordion_header = (
+                chapter_num == 12 or  # In FAQ chapter, all bold items are accordion headers
                 header_title.startswith('Schritt ') or
                 header_title in ['Konsultationen und Untersuchungen', 'Diagnostische Verfahren',
                                'Therapeutische Eingriffe', 'Notfallbehandlungen',
@@ -765,6 +766,7 @@ def process_markdown_content(md_text, chapter_num):
                     if next_line.startswith('**') and next_line.endswith('**') and len(next_line) > 4:
                         next_title = next_line.strip('*').strip()
                         next_is_header = (
+                            chapter_num == 12 or  # In FAQ chapter, all bold items are accordion headers
                             next_title.startswith('Schritt ') or
                             next_title in ['Konsultationen und Untersuchungen', 'Diagnostische Verfahren',
                                          'Therapeutische Eingriffe', 'Notfallbehandlungen',

@@ -2700,41 +2700,25 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
 <h3>Allgemeine Fragen zum System</h3>
 
 
-<div class="accordion">
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was ist der Unterschied zwischen LKAAT, TARDOC und Ambulanten Pauschalen?</div>
-        <div class="accordion-content">
 
 <ul>
     <li><strong>LKAAT</strong> ist der Leistungskatalog zur <strong>Erfassung</strong> aller ambulanten Leistungen</li>
     <li><strong>TARDOC</strong> ist das Tarifsystem zur <strong>Abrechnung</strong> von Einzelleistungen</li>
     <li><strong>Ambulante Pauschalen</strong> sind das Tarifsystem zur <strong>Abrechnung</strong> komplexer Behandlungen als Gesamtpaket</li>
-</ul>
 
+</ul>
 <p>Merkhilfe: LKAAT = Was wurde gemacht? TARDOC/Pauschalen = Wie wird abgerechnet?</p>
 
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Wann wird welches Abrechnungssystem verwendet?</div>
-        <div class="accordion-content">
 
 <p>Das System wird durch die erfasste Leistung im LKAAT bestimmt:</p>
 
 <ul>
     <li>Wurde eine <strong>Triggerposition (Typ P)</strong> erfasst → Abrechnung über <strong>Ambulante Pauschalen</strong></li>
     <li>Wurden <strong>nur Einzelleistungen (Typ E/EZ)</strong> erfasst → Abrechnung über <strong>TARDOC</strong></li>
-</ul>
 
+</ul>
 <p>Die Entscheidung wird automatisch durch das System getroffen, sobald Sie die Leistung im LKAAT erfassen.</p>
 
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Kann ich zwischen TARDOC und Pauschalen frei wählen?</div>
-        <div class="accordion-content">
 
 <p>Nein. Die Wahl des Abrechnungssystems ist nicht beliebig:</p>
 
@@ -2742,37 +2726,22 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li>Jede Leistung im LKAAT ist entweder als TARDOC-Position (E/EZ) oder als Pauschalen-Position (P/PZ) definiert</li>
     <li>Diese Zuordnung können Sie nicht ändern</li>
     <li>Das System bestimmt automatisch das korrekte Abrechnungssystem</li>
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was passiert, wenn ich eine Triggerposition übersehe?</div>
-        <div class="accordion-content">
-
 <p>Dies führt zu einem Abrechnungsfehler:</p>
 
 <ul>
     <li>Sie rechnen fälschlicherweise über TARDOC ab, obwohl eine Pauschale anwendbar wäre</li>
     <li>Die Rechnung kann von der Krankenkasse zurückgewiesen werden</li>
     <li>Finanzielle Nachteile für Ihre Praxis/Ihr Spital</li>
-</ul>
 
 <p><strong>Tipp:</strong> Nutzen Sie den LKAAT plus Browser, der Triggerpositionen deutlich markiert.</p>
 
-
-        </div>
-    </div>
-</div>
-
+</ul>
 <h3>Fragen zu TARDOC</h3>
 
 
-<div class="accordion">
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Wie erkenne ich, ob eine Leistung über TARDOC abrechenbar ist?</div>
-        <div class="accordion-content">
 
 <p>TARDOC-Leistungen haben im LKAAT:</p>
 
@@ -2780,29 +2749,15 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li>Eine <strong>8-stellige LKN-Nummer</strong> (z.B. AA.00.0010)</li>
     <li>Den <strong>Typ E</strong> (Einzelleistung) oder <strong>EZ</strong> (Zusatzleistung)</li>
     <li>Eine Bewertung in <strong>Taxpunkten</strong></li>
-</ul>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was sind Taxpunkte und wie werden sie in Franken umgerechnet?</div>
-        <div class="accordion-content">
-
-<ul>
     <li>Taxpunkte (TP) sind die Bewertungseinheit im TARDOC</li>
     <li>Die Umrechnung erfolgt über den Taxpunktwert, der kantonal unterschiedlich ist</li>
     <li><strong>Formel:</strong> Vergütung = Taxpunkte × Taxpunktwert</li>
     <li><strong>Beispiel:</strong> 200 TP × CHF 0.95 = CHF 190.00</li>
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was bedeutet "Kumulation" bei TARDOC?</div>
-        <div class="accordion-content">
-
 <p>Kumulation beschreibt, ob Leistungen zusammen am gleichen Tag abgerechnet werden können:</p>
 
 <ul>
@@ -2810,15 +2765,9 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li>Andere können <strong>zusammen abgerechnet</strong> werden (kumulierbar)</li>
     <li>Die Kumulationsregeln sind im TARDOC definiert</li>
     <li>Moderne Abrechnungssoftware prüft dies automatisch</li>
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Muss ich bei TARDOC jede einzelne Minute dokumentieren?</div>
-        <div class="accordion-content">
-
 <p>Ja und Nein:</p>
 
 <ul>
@@ -2826,15 +2775,9 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li>Zeitbasierte Leistungen (z.B. Konsultationen) erfordern Zeitangaben</li>
     <li>Bei nicht-zeitbasierten Leistungen (z.B. EKG) genügt die Dokumentation der Durchführung</li>
     <li><strong>Best Practice:</strong> Zeitaufwand immer notieren für Nachvollziehbarkeit</li>
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was ist "Dignität" und betrifft sie mich?</div>
-        <div class="accordion-content">
-
 <p>Dignität bezeichnet die <strong>Berechtigung zur Abrechnung</strong> bestimmter Leistungen:</p>
 
 <ul>
@@ -2842,20 +2785,11 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li>Manche Leistungen erfordern einen <strong>Facharzttitel</strong> oder <strong>spezielle Qualifikation</strong></li>
     <li>Prüfen Sie im TARDOC, welche Dignität für eine Leistung erforderlich ist</li>
     <li>Bei unberechtigter Abrechnung droht Rückforderung</li>
+
 </ul>
-
-
-        </div>
-    </div>
-</div>
-
 <h3>Fragen zu Ambulanten Pauschalen</h3>
 
 
-<div class="accordion">
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Wie erkenne ich, dass eine Pauschale anwendbar ist?</div>
-        <div class="accordion-content">
 
 <p>Pauschalen werden durch <strong>Triggerpositionen</strong> ausgelöst:</p>
 
@@ -2863,16 +2797,10 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li><strong>9-stellige LKN-Nummer</strong> (z.B. C05.GB.0080)</li>
     <li><strong>Typ P</strong> (Pauschalen-Position) im LKAAT</li>
     <li>Meist <strong>chirurgische Eingriffe</strong>, Endoskopien oder komplexe Diagnostik</li>
-</ul>
 
+</ul>
 <p>Sobald Sie eine solche Position erfassen, rechnet das System automatisch über Pauschalen ab.</p>
 
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was ist alles in einer Pauschale inkludiert?</div>
-        <div class="accordion-content">
 
 <p>Eine Pauschale deckt typischerweise ab:</p>
 
@@ -2883,23 +2811,15 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li>Standard-Verbrauchsmaterialien</li>
     <li>Postoperative Nachkontrollen (definierter Zeitraum)</li>
     <li>Standard-Medikamente</li>
-</ul>
 
 <p><strong>Nicht inkludiert</strong> (separat abrechenbar als Zusatzentgelte):</p>
 
-<ul>
     <li>Teure Spezialimplantate</li>
     <li>Spezielle Medikamente (z.B. Biologika)</li>
     <li>Nicht-standardmäßige Diagnostik</li>
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was sind Zusatzentgelte und wie rechne ich sie ab?</div>
-        <div class="accordion-content">
-
 <p>Zusatzentgelte sind <strong>definierte Zusatzkosten</strong> zur Pauschale:</p>
 
 <ul>
@@ -2907,92 +2827,51 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li>Spezielle Medikamente</li>
     <li>Nur die im LKAAT definierten Zusatzentgelte sind abrechenbar</li>
     <li>Werden <strong>zusätzlich zur Pauschale</strong> in Rechnung gestellt</li>
-</ul>
 
 <p><strong>Wichtig:</strong> Sie können nicht beliebig Leistungen zusätzlich abrechnen!</p>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was passiert bei Komplikationen während/nach dem Eingriff?</div>
-        <div class="accordion-content">
-
+</ul>
 <p>Bei <strong>erwartbaren Komplikationen:</strong></p>
 
 <ul>
     <li>Diese sind durch die Pauschale abgedeckt</li>
     <li>Keine zusätzliche Abrechnung möglich</li>
-</ul>
 
+</ul>
 <p>Bei <strong>schweren, unerwarteten Komplikationen:</strong></p>
 
 <ul>
     <li>Dokumentieren Sie den Sachverhalt genau</li>
     <li>Kontaktieren Sie ggf. den Kostenträger</li>
     <li>In Ausnahmefällen kann eine Zusatzvergütung möglich sein</li>
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Kann ich bei Pauschalen auch TARDOC-Leistungen zusätzlich abrechnen?</div>
-        <div class="accordion-content">
-
 <p>Grundsätzlich <strong>nein</strong>:</p>
 
 <ul>
     <li>Innerhalb desselben Behandlungsfalls keine Mischung</li>
     <li>Ausnahme: Definierte Zusatzentgelte (keine TARDOC-Positionen!)</li>
     <li>Bei separater Behandlung am gleichen Tag (anderes Capitulum, anderer Grund): Ja, dann ist eine zweite ambulante Behandlung möglich</li>
+
 </ul>
-
-
-        </div>
-    </div>
-</div>
-
 <h3>Fragen zu ICD-10-GM und Diagnosen</h3>
 
 
-<div class="accordion">
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Wann muss ich ICD-10-GM verwenden?</div>
-        <div class="accordion-content">
 
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Verpflichtend:</div>
-        <div class="accordion-content">
 
 <ul>
     <li>Bei allen Sitzungen mit <strong>Triggerposition</strong> (Ambulante Pauschalen)</li>
     <li>Bei mehreren Sitzungen am gleichen Tag, wenn mindestens eine eine Triggerposition enthält</li>
-</ul>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Optional, aber empfohlen:</div>
-        <div class="accordion-content">
-
-<ul>
     <li>Bei TARDOC-Abrechnung (alternativ: Tessinercode)</li>
-</ul>
 
 <p><strong>Best Practice:</strong> Verwenden Sie konsequent ICD-10-GM für alle Sitzungen.</p>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Wie finde ich den richtigen ICD-10-Code?</div>
-        <div class="accordion-content">
-
+</ul>
 <p>Schrittweise Vorgehen:</p>
 
 <p>1.  <strong>Identifizieren</strong> Sie die Hauptdiagnose (größter Behandlungsaufwand)</p>
@@ -3003,84 +2882,33 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
 <p><strong>Hilfsmittel:</strong> ICD-10-Browser, Suchfunktion in Ihrer Praxissoftware</p>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was ist der Unterschied zwischen endständig und nicht-endständig?</div>
-        <div class="accordion-content">
-
 <ul>
     <li><strong>Endständig:</strong> Detaillierteste Ebene der Klassifikation (z.B. J45.0)</li>
     <li><strong>Nicht-endständig:</strong> Übergeordnete Kategorie (z.B. J45)</li>
-</ul>
 
 <p><strong>Ziel:</strong> Immer den endständigen Code verwenden, soweit möglich. Nur in begründeten Ausnahmefällen nicht-endständige Codes.</p>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Wann erfasse ich Symptomcodes und wann Organdiagnosen?</div>
-        <div class="accordion-content">
 
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Organdiagnose bevorzugen:</div>
-        <div class="accordion-content">
-
-<ul>
     <li>Immer wenn zum Zeitpunkt der Behandlung eine Organdiagnose bekannt ist</li>
     <li><strong>Beispiel:</strong> J45.0 (Allergisches Asthma) statt R06.0 (Dyspnoe)</li>
-</ul>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Symptomcode nur wenn:</div>
-        <div class="accordion-content">
-
-<ul>
     <li>Keine organbezogene Diagnose zum Zeitpunkt der Leistungserbringung verfügbar</li>
     <li><strong>Beispiel:</strong> Akute Bauchschmerzen ohne klare Ursache → R10.x</li>
-</ul>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was mache ich bei Verdachtsdiagnosen?</div>
-        <div class="accordion-content">
-
-<ul>
     <li><strong>Verdacht bestätigt sich:</strong> Diagnose wird entsprechend dem aktuellen Wissensstand erfasst</li>
     <li><strong>Verdacht wird ausgeschlossen:</strong> Erfassen Sie die Verdachtsdiagnose, da diese Anlass für die Untersuchung war</li>
     <li><strong>Beispiel:</strong> V.a. Appendizitis → nach Untersuchung ausgeschlossen → Dennoch K35.- erfassen</li>
-</ul>
 
 <p><strong>Wichtig:</strong> Sie erfassen den Wissensstand <strong>zum Zeitpunkt der Behandlung</strong>, nicht Laborresultate von drei Tagen später!</p>
 
-
-        </div>
-    </div>
-</div>
-
+</ul>
 <h3>Fragen zur Praxisanwendung</h3>
 
 
-<div class="accordion">
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Wie organisiere ich meinen Workflow am besten?</div>
-        <div class="accordion-content">
 
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Empfohlener Workflow:</div>
-        <div class="accordion-content">
 
 <p>1.  <strong>Bei Anmeldung:</strong> Versicherungsstatus prüfen, Art der Behandlung klären</p>
 <p>2.  <strong>Vor Behandlung:</strong> Ist eine Pauschale verfügbar? Kostengutsprache nötig?</p>
@@ -3089,33 +2917,15 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
 <p>5.  <strong>Vor Rechnungsstellung:</strong> Plausibilitätsprüfung durchführen</p>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was mache ich, wenn die Krankenkasse die Rechnung zurückweist?</div>
-        <div class="accordion-content">
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Typische Gründe für Rückweisungen:</div>
-        <div class="accordion-content">
 
 <ul>
     <li>Fehlende oder unvollständige Dokumentation</li>
     <li>Falsches Abrechnungssystem verwendet</li>
     <li>Kumulationsfehler bei TARDOC</li>
     <li>Fehlende Kostengutsprache</li>
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Vorgehen:</div>
-        <div class="accordion-content">
-
 <p>1.  Rückweisungsgrund genau prüfen</p>
 <p>2.  Fehlende Informationen ergänzen</p>
 <p>3.  Dokumentation nachreichen</p>
@@ -3123,18 +2933,6 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
 <p>5.  Rechnung korrigiert neu einreichen</p>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Wie halte ich mich über Änderungen auf dem Laufenden?</div>
-        <div class="accordion-content">
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Informationsquellen:</div>
-        <div class="accordion-content">
 
 <ul>
     <li><strong>FMH (Verbindung der Schweizer Ärztinnen und Ärzte):</strong> Offizielle Informationen</li>
@@ -3142,80 +2940,35 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li><strong>Ärztekasse:</strong> Schulungen, Newsletter, LKAAT plus Browser</li>
     <li><strong>Fachverbände:</strong> Spezifische Informationen für Ihre Fachrichtung</li>
     <li><strong>Praxissoftware-Anbieter:</strong> Software-Updates mit neuen Tarifversionen</li>
-</ul>
 
 <p><strong>Empfehlung:</strong> Regelmäßige Schulungen für Mitarbeitende (mind. 1x jährlich)</p>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Benötige ich spezielle Software?</div>
-        <div class="accordion-content">
 
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Mindestanforderungen:</div>
-        <div class="accordion-content">
-
-<ul>
     <li>Abrechnungssoftware mit aktuellem LKAAT</li>
     <li>Zugriff auf TARDOC- und Pauschalen-Katalog</li>
     <li>ICD-10-GM Browser</li>
-</ul>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Empfehlenswert:</div>
-        <div class="accordion-content">
-
-<ul>
     <li>Software mit automatischer Kumulationsprüfung</li>
     <li>Plausibilitätschecks</li>
     <li>LKAAT plus Browser für Recherchen</li>
     <li>Elektronische Rechnungsstellung</li>
-</ul>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was mache ich bei Unsicherheiten?</div>
-        <div class="accordion-content">
 
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Anlaufstellen:</div>
-        <div class="accordion-content">
-
-<ul>
     <li><strong>Trustcenter:</strong> Neutrale Beratung zu Abrechnungsfragen</li>
     <li><strong>Ärztekasse:</strong> Tarifberatung für Mitglieder</li>
     <li><strong>Fachverband:</strong> Spezifische Fragen für Ihre Fachrichtung</li>
     <li><strong>Kollegium:</strong> Erfahrungsaustausch</li>
     <li><strong>Kostenträger:</strong> Bei Unklarheiten zur Kostenübernahme</li>
-</ul>
 
 <p><strong>Grundsatz:</strong> Lieber einmal zu viel nachfragen als eine falsche Rechnung stellen!</p>
 
-
-        </div>
-    </div>
-</div>
-
+</ul>
 <h3>Technische Fragen</h3>
 
 
-<div class="accordion">
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was ist der LKAAT plus Browser?</div>
-        <div class="accordion-content">
 
 <p>Der LKAAT plus Browser ist ein <strong>Online-Tool</strong> zur Tarifrecherche:</p>
 
@@ -3225,22 +2978,10 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li>Vergleich mit TARMED-Leistungen</li>
     <li>ICD-10-Zuordnung zu Capitulum</li>
     <li>Kostenlos verfügbar (Anbieter: Ärztekasse, FMH)</li>
+
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Wie funktioniert die elektronische Rechnungsstellung?</div>
-        <div class="accordion-content">
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Prozess:</div>
-        <div class="accordion-content">
-
 <p>1.  Rechnung in Ihrer Praxissoftware erstellen</p>
 <p>2.  Daten im standardisierten Format (XML) exportieren</p>
 <p>3.  Übermittlung via gesichertem Kanal an Trustcenter oder Krankenkasse</p>
@@ -3250,53 +2991,26 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
 <p><strong>Vorteile:</strong> Schneller, weniger Fehler, automatisierte Prozesse</p>
 
 
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Welche Datenschutzbestimmungen muss ich beachten?</div>
-        <div class="accordion-content">
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Bei der Rechnungsstellung:</div>
-        <div class="accordion-content">
 
 <ul>
     <li>Übermittlung über verschlüsselte Kanäle</li>
     <li>Bei Datenschutzbedenken: Verkürzte ICD-10-Codes möglich (mind. 1. Buchstabe)</li>
     <li>Keine Weitergabe an Dritte ohne Einwilligung</li>
     <li>Aufbewahrungspflicht: 10 Jahre</li>
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Muss ich alte Rechnungen aufbewahren?</div>
-        <div class="accordion-content">
-
 <p>Ja, die <strong>Aufbewahrungspflicht</strong> beträgt:</p>
 
 <ul>
     <li><strong>10 Jahre</strong> für Rechnungen und Behandlungsdokumentationen</li>
     <li>Elektronisch oder in Papierform</li>
     <li>Zugriff muss jederzeit möglich sein (bei Kontrollen)</li>
+
 </ul>
-
-
-        </div>
-    </div>
-</div>
-
 <h3>FAQ zu Übergangsregelungen</h3>
 
 
-<div class="accordion">
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Was ist mit meinen alten TARMED-Abrechnungen?</div>
-        <div class="accordion-content">
 
 <ul>
     <li>TARDOC ist der <strong>Nachfolger von TARMED</strong></li>
@@ -3304,30 +3018,19 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
     <li>Neue Rechnungen erfolgen über TARDOC</li>
     <li>Viele TARDOC-Codes entsprechen TARMED-Codes (aber nicht alle!)</li>
     <li>Nutzen Sie den LKAAT plus Browser für Vergleiche</li>
+
+
 </ul>
-
-
-        </div>
-    </div>
-    <div class="accordion-item" onclick="toggleAccordion(this)">
-        <div class="accordion-header">Gibt es noch Übergangsfristen?</div>
-        <div class="accordion-content">
-
 <p>Die Übergangsfrist ist abgelaufen:</p>
 
 <ul>
     <li>TARDOC und Ambulante Pauschalen sind seit 2025 vollständig in Kraft</li>
     <li>Schulungen und Anlaufstellen stehen weiterhin zur Verfügung</li>
     <li>Bei Fragen: Fachverbände und Trustcenter kontaktieren</li>
+
+
+
 </ul>
-
-
-        </div>
-    </div>
-</div>
-
-
-
 
                 <div class="navigation-footer">
                     <button class="nav-footer-btn" onclick="showChapter(11)">◄ Vorheriges Kapitel</button>

@@ -90,9 +90,9 @@ Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stu
 
 *   Vorwort: 5 Minuten
 *   Kapitel 1 (Einführung in das ambulante Gesamt-Tarifsystem): 5 Minuten
-*   Kapitel 2 (Dignitäten und Besitzstände): 2 Minuten
-*   Kapitel 3 (LKAAT - Der Leistungskatalog): 10-15 Minuten
-*   Kapitel 4 (Diagnosen als ICD-10 Code): 2 Minuten
+*   Kapitel 2 (Dignitäten und Besitzstände): 5 Minuten
+*   Kapitel 3 (Diagnosen als ICD-10 Code): 5 Minuten
+*   Kapitel 4 (LKAAT - Der Leistungskatalog): 10-15 Minuten
 *   Kapitel 5 (Ambulante Behandlung): 10-15 Minuten
 *   Kapitel 6 (TARDOC - Der Einzelleistungstarif): 5-10 Minuten
 *   Kapitel 7 (Ambulante Pauschalen): 5-10 Minuten
@@ -196,22 +196,7 @@ Nach Abschluss dieser Schulung können Sie:
 
 ---
 
-## KAPITEL 2: Diagnosen als ICD-10 Code
-
-### Was ist ICD-10-GM?
-
-Die **ICD-10-GM** (Internationale statistische Klassifikation der Krankheiten und verwandter Gesundheitsprobleme, 10. Revision, German Modification) ist ein weltweit anerkanntes System zur Kodierung von Diagnosen im Gesundheitswesen. Im ambulanten Tarifsystem der Schweiz spielt die korrekte Diagnosecodierung eine zentrale Rolle für die Abrechnung und Dokumentation.
-
-**INFO-BOX: Definition ICD-10-GM**
-
-*   Standardisiertes Klassifikationssystem für medizinische Diagnosen
-*   Wird jährlich vom Bundesamt für Statistik (BfS) aktualisiert
-*   Verpflichtend für die Abrechnung ambulanter Pauschalen
-*   Ermöglicht einheitliche statistische Auswertungen
-
----
-
-## KAPITEL 3: Dignitäten und Besitzstände
+## KAPITEL 2: Dignitäten und Besitzstände
 
 ### Was sind Dignitäten?
 
@@ -219,325 +204,7 @@ Die **ICD-10-GM** (Internationale statistische Klassifikation der Krankheiten un
 
 ---
 
-## KAPITEL 4: Ambulante Behandlung
-
-### Was ist eine ambulante Behandlung?
-
-Eine **ambulante Behandlung** ist eine medizinische Leistung, bei der Patient:innen die Gesundheitseinrichtung am selben Tag wieder verlassen können, ohne über Nacht zu bleiben. Der Begriff "ambulant" leitet sich vom lateinischen "ambulare" ab, was "umhergehen" bedeutet.
-
-**INFO-BOX: Kernmerkmale ambulanter Behandlungen**
-
-*   **Keine Übernachtung:** Patient:innen gehen am selben Tag nach Hause
-*   **Kurze Behandlungsdauer:** Meist wenige Minuten bis Stunden
-*   **Geringere Komplexität:** Behandlungen, die keine intensive Überwachung erfordern
-*   **Verschiedene Settings:** Arztpraxis, Ambulatorium, Spitalambulanz
-
-### Abgrenzung: Ambulant vs. Stationär
-
-Die Unterscheidung zwischen ambulant und stationär ist entscheidend für die Abrechnung und die Zuständigkeiten:
-
-**TABELLE: Vergleich Ambulant vs. Stationär**
-
-| Kriterium | Ambulant | Stationär |
-| --- | --- | --- |
-| Aufenthaltsdauer | Wenige Stunden, keine Übernachtung | Mindestens eine Übernachtung |
-| Tarifsystem | TARDOC / Ambulante Pauschalen | SwissDRG |
-| Behandlungsort | Praxis, Ambulatorium, Spitalambulanz | Spital mit Bettenbelegung |
-| Überwachung | Keine oder kurze Nachbeobachtung | 24-Stunden-Überwachung |
-| Komplexität | Einfach bis mittel | Mittel bis hoch |
-| Kostenträger-Anteil | OKP zahlt ca. 42.6% | OKP zahlt 55% |
-| Kantonsanteil | Ca. 55% (variiert je nach Kanton) | 45% (fixiert durch KVG) |
-
-**INFO-BOX WARNUNG: Wichtige Abgrenzungsfälle**
-
-In der Praxis gibt es Grenzfälle, die eine klare Zuordnung erfordern:
-
-*   **Tagesklinik:** Ambulant, auch wenn mehrere Stunden Aufenthalt
-*   **Observation über Nacht:** Gilt bereits als stationär
-*   **OP mit Nachbeobachtung:** Ambulant, wenn Entlassung am gleichen Tag
-*   **Notfallbehandlung:** Je nach Aufenthaltsdauer ambulant oder stationär
-
-### Typische ambulante Behandlungen
-
-**ACCORDION:**
-
-**Konsultationen und Untersuchungen**
-
-*   Allgemeine ärztliche Konsultationen
-*   Fachärztliche Untersuchungen
-*   Präventive Check-ups
-*   Nachkontrollen
-*   Hausbesuche
-
-**Diagnostische Verfahren**
-
-*   Laboruntersuchungen
-*   Röntgen, CT, MRI
-*   Ultraschall
-*   EKG, Belastungstests
-*   Endoskopien (diagnostisch)
-
-**Therapeutische Eingriffe**
-
-*   Kleinere chirurgische Eingriffe
-*   Endoskopien mit Intervention
-*   Kataraktoperationen
-*   Arthroskopien
-*   Dialysebehandlungen
-*   Chemotherapie-Sitzungen
-*   Physiotherapie
-
-**Notfallbehandlungen**
-
-*   Versorgung akuter Verletzungen
-*   Akute Erkrankungen ohne Hospitalisierung
-*   Wundversorgung
-*   Reposition von Frakturen
-
-### Vorteile ambulanter Behandlungen
-
-**INFO-BOX SUCCESS: Für Patient:innen**
-
-*   Verbleib im gewohnten Umfeld
-*   Geringeres Infektionsrisiko
-*   Schnellere Rückkehr in den Alltag
-*   Weniger Belastung durch Krankenhausaufenthalt
-*   Geringere Selbstbeteiligung
-
-**INFO-BOX SUCCESS: Für das Gesundheitssystem**
-
-*   Kosteneinsparungen (ca. 30-50% günstiger als stationär)
-*   Effizientere Ressourcennutzung
-*   Entlastung der Spitalbetten
-*   Flexiblere Terminplanung
-
-### Trend zur Ambulantisierung
-
-In den letzten Jahren ist ein klarer Trend zur Verlagerung von stationären zu ambulanten Behandlungen zu beobachten:
-
-**INFO-BOX: Entwicklung und Gründe**
-
-*   **Medizinischer Fortschritt:** Minimalinvasive Techniken ermöglichen schonendere Eingriffe
-*   **Bessere Anästhesie:** Schnellere Erholung nach Eingriffen
-*   **Politischer Wille:** Förderung ambulanter Behandlungen zur Kostensenkung
-*   **"Ambulant vor stationär":** Gesetzliche Regelung in vielen Kantonen
-*   **Listen mit ambulant durchzuführenden Eingriffen:** Definierte Kataloge je nach Kanton
-
-### Besonderheiten bei der Abrechnung
-
-Die ambulante Behandlung erfordert besondere Aufmerksamkeit bei der Dokumentation und Abrechnung:
-
-*   **Leistungserfassung:** Jede Leistung muss im LKAAT erfasst werden
-*   **Systemwahl:** Entscheidung zwischen TARDOC und Pauschalen
-*   **Dokumentation:** Lückenlose Dokumentation aller erbrachten Leistungen
-*   **Wirtschaftlichkeit:** Beachtung der WZW-Kriterien (wirksam, zweckmäßig, wirtschaftlich)
-*   **Kostenträger:** Klärung der Zuständigkeit (Krankenkasse, Unfallversicherung, etc.)
-
-**INFO-BOX WARNUNG: Häufige Fehler bei der Zuordnung**
-
-*   Falsche Einschätzung der Aufenthaltsdauer
-*   Unklare Abgrenzung bei Notfällen
-*   Nichtbeachtung kantonaler Regelungen
-*   Fehlende Kostengutsprache bei elektiven Eingriffen
-*   Verwendung des falschen Tarifsystems
-
-### Praktisches Beispiel
-
-**INFO-BOX: Fallbeispiel - Arthroskopie des Kniegelenks**
-
-**Situation:** Patient:in mit Meniskusschaden
-
-**Ablauf ambulant:**
-
-*   8:00 Uhr: Ankunft und Vorbereitung
-*   9:00 Uhr: Operation (ca. 45 Minuten)
-*   10:00 Uhr: Aufwachraum (2-3 Stunden Überwachung)
-*   13:00 Uhr: Kontrolle und Entlassung
-*   Abrechnung über Ambulante Pauschale
-
-**Voraussetzungen:**
-
-*   Keine schweren Begleiterkrankungen
-*   Betreuung zu Hause gewährleistet
-*   Erreichbarkeit bei Komplikationen
-*   Patient:in ist mobil und ansprechbar
-
-**Abrechnung:** Ambulante Pauschale + ggf. Zusatzentgelte für Implantate
-
-### QUIZ
-
-**Frage 1: Was ist das Hauptmerkmal einer ambulanten Behandlung?**
-
-*   a) Die Behandlung findet immer in einer Arztpraxis statt
-*   b) Patient:innen verlassen die Einrichtung am selben Tag ohne Übernachtung ✓
-*   c) Die Behandlung dauert maximal 1 Stunde
-*   d) Es werden keine chirurgischen Eingriffe durchgeführt
-
-**Frage 2: Welches Tarifsystem wird für stationäre Behandlungen verwendet?**
-
-*   a) TARDOC
-*   b) SwissDRG ✓
-*   c) Ambulante Pauschalen
-*   d) LKAAT
-
-**Frage 3: Was ist ein Vorteil ambulanter Behandlungen für das Gesundheitssystem?**
-
-*   a) Höhere Einnahmen
-*   b) Kosteneinsparungen und effizientere Ressourcennutzung ✓
-*   c) Längere Überwachung der Patient:innen
-*   d) Mehr Spitalbetten werden benötigt
-
-**Frage 4: Ab wann gilt eine Behandlung als stationär?**
-
-*   a) Nach 6 Stunden Aufenthalt
-*   b) Wenn mindestens eine Übernachtung erfolgt ✓
-*   c) Wenn ein chirurgischer Eingriff durchgeführt wird
-*   d) Wenn die Kosten über CHF 5'000.- liegen
-
----
-
-## KAPITEL 3: LKAAT - Der Leistungskatalog
-
-### Was ist der LKAAT?
-
-LKAAT steht für "Leistungskatalog ambulante Arzttarife" und ist das zentrale Werkzeug zur Erfassung aller medizinischen Leistungen im ambulanten Gesamt-Tarifsystem. Der LKAAT ist die Schnittstelle zwischen der erbrachten medizinischen Leistung und dem Abrechnungssystem.
-
-**INFO-BOX: Hauptfunktion des LKAAT**
-
-Der LKAAT dient ausschließlich der Leistungserfassung, NICHT der Abrechnung!
-
-*   Enthält alle medizinischen Leistungen, die erfasst werden können
-*   Definiert für jede Leistung, ob TARDOC oder Ambulante Pauschalen zur Anwendung kommen
-*   Bildet die Grundlage für die spätere Abrechnung
-
-### Struktur und Aufbau des LKAAT
-
-**TABELLE: Leistungstypen im LKAAT**
-
-| Typ | Bedeutung | Beispiel | LKN-Nummer |
-| --- | --- | --- | --- |
-| E | Einzelleistungstarif-Position | Ärztliche Konsultation, erste 5 Min. | AA.00.0010 (8-stellig) |
-| EZ | Zusatzleistung für Einzelleistungs-Position | \+ Ärztliche Konsultation, jede weitere 1 Min. | AA.00.0020 (8-stellig) |
-| P | Pauschalen-Position (Triggerposition) | Stripping der Stammvene | C05.GB.0080 (9-stellig) |
-| PZ | Zusatzleistung für Pauschalen-Position | Rechtsherzkatheter unter Belastung | C05.KC.Z001 (9-stellig) |
-
-### Wie funktioniert die Entscheidung TARDOC vs. Pauschale?
-
-**ACCORDION:**
-
-**Schritt 1: Leistung erfassen**
-
-Bei jeder ambulanten Behandlung werden alle erbrachten Leistungen im LKAAT erfasst. Jede Leistung hat eine eindeutige LKN-Nummer (Leistungskatalognummer).
-
-**Schritt 2: Typ prüfen**
-
-Das System prüft automatisch den Typ der erfassten Leistung:
-
-*   E oder EZ: Einzelleistungsposition → Abrechnung über TARDOC
-*   P oder PZ: Pauschalen-Position (Triggerposition) → Abrechnung über Ambulante Pauschalen
-
-**Schritt 3: Abrechnungssystem wird bestimmt**
-
-Sobald eine Triggerposition (P) erfasst wird, erfolgt die Abrechnung über Ambulante Pauschalen. Wurde keine Triggerposition erfasst, wird über TARDOC abgerechnet.
-
-### LKN-Nummern verstehen
-
-**INFO-BOX SUCCESS: So erkennen Sie den Unterschied**
-
-**TARDOC-Positionen (8-stellig):**
-
-```
-AA.00.0010 - Ärztliche Konsultation, erste 5 Min.
-AA.00.0020 - + Ärztliche Konsultation, jede weitere 1 Min.
-AA.25.0010 - Bericht an Arzt, pro 1 Min.
-```
-
-**Pauschalen-Positionen (9-stellig):**
-
-```
-C05.GB.0080 - Stripping der Stammvene
-C05.KC.0100 - Implantation eines flussreduzierenden Stents
-C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
-```
-
-**Merkhilfe:** Die ersten drei Stellen bei Pauschalen-Positionen (z.B. C05) geben an, welchem Capitulum (Kapitel) die Pauschale zugeordnet ist.
-
-### Triggerpositionen - Das Herzstück des Systems
-
-*   **Was löst eine Pauschale aus?** Sobald eine Triggerposition (Typ P) erfasst wird, wird die gesamte Behandlung über Ambulante Pauschalen abgerechnet, nicht mehr über TARDOC
-*   **Beispiele für Triggerpositionen:** Chirurgische Eingriffe, Endoskopien mit Intervention, komplexe diagnostische Verfahren
-*   **Wichtig:** Eine Behandlung kann entweder über TARDOC ODER über Pauschalen abgerechnet werden, nie beides gemischt (außer definierte Zusatzentgelte)
-
-### Praktisches Beispiel
-
-**INFO-BOX: Fallbeispiel - Zwei Behandlungen am gleichen Tag**
-
-**Situation:** Patient:in kommt zweimal am gleichen Tag
-
-**Behandlung 1 (Vormittag):**
-
-*   Erfasste Leistung: AA.00.0010 (Typ E) - Konsultation
-*   → Keine Triggerposition
-*   → Abrechnung über TARDOC
-
-**Behandlung 2 (Nachmittag - anderer Grund):**
-
-*   Erfasste Leistung: C05.GB.0080 (Typ P) - Stripping der Stammvene
-*   → Triggerposition!
-*   → Abrechnung über Ambulante Pauschalen
-
-**Ergebnis:** Da beide Behandlungen unterschiedliche Gründe haben und in verschiedenen Capitulum aufgeführt sind, sind zwei ambulante Behandlungen möglich.
-
-### Tools für die Arbeit mit dem LKAAT
-
-**INFO-BOX: LKAAT plus Browser**
-
-*   Online-Tarifbrowser der Ärztekasse und der FMH
-*   Umfangreiche Suchfunktionen
-*   Zeigt an, welche LKAAT-Leistungen Pauschalen auslösen
-*   Vergleich mit TARMED-Leistungen möglich
-*   ICD-10 Zuordnung der Diagnosen zu den Capitulum
-
-**INFO-BOX WARNUNG: Häufige Fehler beim LKAAT**
-
-*   Verwechslung von Leistungserfassung (LKAAT) und Abrechnung (TARDOC/Pauschalen)
-*   Übersehen einer Triggerposition → falsche Abrechnung über TARDOC
-*   Falsche Annahme, dass 8-stellige Nummern immer TARDOC bedeuten
-*   Nichtbeachtung der Capitulum-Zuordnung bei Pauschalen
-
-### QUIZ
-
-**Frage 1: Wofür steht die Abkürzung LKAAT?**
-
-*   a) Leistungskatalog aller ambulanten Tarife
-*   b) Leistungskatalog ambulante Arzttarife ✓
-*   c) Leistungskosten ambulanter Arzt-Behandlungen
-*   d) Leistungsverzeichnis klinischer ambulanter Tarife
-
-**Frage 2: Was bedeutet eine Position mit dem Typ "P" im LKAAT?**
-
-*   a) Private Leistung
-*   b) Pauschalen-Position (Triggerposition) ✓
-*   c) Präventive Leistung
-*   d) Priorisierte Leistung
-
-**Frage 3: Wie viele Stellen hat eine LKN-Nummer für TARDOC-Positionen?**
-
-*   a) 6 Stellen
-*   b) 7 Stellen
-*   c) 8 Stellen ✓
-*   d) 9 Stellen
-
-**Frage 4: Was löst eine Triggerposition aus?**
-
-*   a) Eine doppelte Abrechnung
-*   b) Die Abrechnung über Ambulante Pauschalen ✓
-*   c) Eine Kostengutsprache
-*   d) Eine Warnung im System
-
----
-
-## KAPITEL 4: Diagnosen als ICD-10 Code
+## KAPITEL 3: Diagnosen als ICD-10 Code
 
 ### Was ist ICD-10-GM?
 
@@ -763,7 +430,325 @@ Die Übermittlung erfolgt über gesicherte und verschlüsselte Kanäle. Bei Date
 
 ---
 
-## KAPITEL 5: TARDOC - Der Einzelleistungstarif
+## KAPITEL 4: LKAAT - Der Leistungskatalog
+
+### Was ist der LKAAT?
+
+LKAAT steht für "Leistungskatalog ambulante Arzttarife" und ist das zentrale Werkzeug zur Erfassung aller medizinischen Leistungen im ambulanten Gesamt-Tarifsystem. Der LKAAT ist die Schnittstelle zwischen der erbrachten medizinischen Leistung und dem Abrechnungssystem.
+
+**INFO-BOX: Hauptfunktion des LKAAT**
+
+Der LKAAT dient ausschließlich der Leistungserfassung, NICHT der Abrechnung!
+
+*   Enthält alle medizinischen Leistungen, die erfasst werden können
+*   Definiert für jede Leistung, ob TARDOC oder Ambulante Pauschalen zur Anwendung kommen
+*   Bildet die Grundlage für die spätere Abrechnung
+
+### Struktur und Aufbau des LKAAT
+
+**TABELLE: Leistungstypen im LKAAT**
+
+| Typ | Bedeutung | Beispiel | LKN-Nummer |
+| --- | --- | --- | --- |
+| E | Einzelleistungstarif-Position | Ärztliche Konsultation, erste 5 Min. | AA.00.0010 (8-stellig) |
+| EZ | Zusatzleistung für Einzelleistungs-Position | \+ Ärztliche Konsultation, jede weitere 1 Min. | AA.00.0020 (8-stellig) |
+| P | Pauschalen-Position (Triggerposition) | Stripping der Stammvene | C05.GB.0080 (9-stellig) |
+| PZ | Zusatzleistung für Pauschalen-Position | Rechtsherzkatheter unter Belastung | C05.KC.Z001 (9-stellig) |
+
+### Wie funktioniert die Entscheidung TARDOC vs. Pauschale?
+
+**ACCORDION:**
+
+**Schritt 1: Leistung erfassen**
+
+Bei jeder ambulanten Behandlung werden alle erbrachten Leistungen im LKAAT erfasst. Jede Leistung hat eine eindeutige LKN-Nummer (Leistungskatalognummer).
+
+**Schritt 2: Typ prüfen**
+
+Das System prüft automatisch den Typ der erfassten Leistung:
+
+*   E oder EZ: Einzelleistungsposition → Abrechnung über TARDOC
+*   P oder PZ: Pauschalen-Position (Triggerposition) → Abrechnung über Ambulante Pauschalen
+
+**Schritt 3: Abrechnungssystem wird bestimmt**
+
+Sobald eine Triggerposition (P) erfasst wird, erfolgt die Abrechnung über Ambulante Pauschalen. Wurde keine Triggerposition erfasst, wird über TARDOC abgerechnet.
+
+### LKN-Nummern verstehen
+
+**INFO-BOX SUCCESS: So erkennen Sie den Unterschied**
+
+**TARDOC-Positionen (8-stellig):**
+
+```
+AA.00.0010 - Ärztliche Konsultation, erste 5 Min.
+AA.00.0020 - + Ärztliche Konsultation, jede weitere 1 Min.
+AA.25.0010 - Bericht an Arzt, pro 1 Min.
+```
+
+**Pauschalen-Positionen (9-stellig):**
+
+```
+C05.GB.0080 - Stripping der Stammvene
+C05.KC.0100 - Implantation eines flussreduzierenden Stents
+C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
+```
+
+**Merkhilfe:** Die ersten drei Stellen bei Pauschalen-Positionen (z.B. C05) geben an, welchem Capitulum (Kapitel) die Pauschale zugeordnet ist.
+
+### Triggerpositionen - Das Herzstück des Systems
+
+*   **Was löst eine Pauschale aus?** Sobald eine Triggerposition (Typ P) erfasst wird, wird die gesamte Behandlung über Ambulante Pauschalen abgerechnet, nicht mehr über TARDOC
+*   **Beispiele für Triggerpositionen:** Chirurgische Eingriffe, Endoskopien mit Intervention, komplexe diagnostische Verfahren
+*   **Wichtig:** Eine Behandlung kann entweder über TARDOC ODER über Pauschalen abgerechnet werden, nie beides gemischt (außer definierte Zusatzentgelte)
+
+### Praktisches Beispiel
+
+**INFO-BOX: Fallbeispiel - Zwei Behandlungen am gleichen Tag**
+
+**Situation:** Patient:in kommt zweimal am gleichen Tag
+
+**Behandlung 1 (Vormittag):**
+
+*   Erfasste Leistung: AA.00.0010 (Typ E) - Konsultation
+*   → Keine Triggerposition
+*   → Abrechnung über TARDOC
+
+**Behandlung 2 (Nachmittag - anderer Grund):**
+
+*   Erfasste Leistung: C05.GB.0080 (Typ P) - Stripping der Stammvene
+*   → Triggerposition!
+*   → Abrechnung über Ambulante Pauschalen
+
+**Ergebnis:** Da beide Behandlungen unterschiedliche Gründe haben und in verschiedenen Capitulum aufgeführt sind, sind zwei ambulante Behandlungen möglich.
+
+### Tools für die Arbeit mit dem LKAAT
+
+**INFO-BOX: LKAAT plus Browser**
+
+*   Online-Tarifbrowser der Ärztekasse und der FMH
+*   Umfangreiche Suchfunktionen
+*   Zeigt an, welche LKAAT-Leistungen Pauschalen auslösen
+*   Vergleich mit TARMED-Leistungen möglich
+*   ICD-10 Zuordnung der Diagnosen zu den Capitulum
+
+**INFO-BOX WARNUNG: Häufige Fehler beim LKAAT**
+
+*   Verwechslung von Leistungserfassung (LKAAT) und Abrechnung (TARDOC/Pauschalen)
+*   Übersehen einer Triggerposition → falsche Abrechnung über TARDOC
+*   Falsche Annahme, dass 8-stellige Nummern immer TARDOC bedeuten
+*   Nichtbeachtung der Capitulum-Zuordnung bei Pauschalen
+
+### QUIZ
+
+**Frage 1: Wofür steht die Abkürzung LKAAT?**
+
+*   a) Leistungskatalog aller ambulanten Tarife
+*   b) Leistungskatalog ambulante Arzttarife ✓
+*   c) Leistungskosten ambulanter Arzt-Behandlungen
+*   d) Leistungsverzeichnis klinischer ambulanter Tarife
+
+**Frage 2: Was bedeutet eine Position mit dem Typ "P" im LKAAT?**
+
+*   a) Private Leistung
+*   b) Pauschalen-Position (Triggerposition) ✓
+*   c) Präventive Leistung
+*   d) Priorisierte Leistung
+
+**Frage 3: Wie viele Stellen hat eine LKN-Nummer für TARDOC-Positionen?**
+
+*   a) 6 Stellen
+*   b) 7 Stellen
+*   c) 8 Stellen ✓
+*   d) 9 Stellen
+
+**Frage 4: Was löst eine Triggerposition aus?**
+
+*   a) Eine doppelte Abrechnung
+*   b) Die Abrechnung über Ambulante Pauschalen ✓
+*   c) Eine Kostengutsprache
+*   d) Eine Warnung im System
+
+---
+
+## KAPITEL 5: Ambulante Behandlung
+
+### Was ist eine ambulante Behandlung?
+
+Eine **ambulante Behandlung** ist eine medizinische Leistung, bei der Patient:innen die Gesundheitseinrichtung am selben Tag wieder verlassen können, ohne über Nacht zu bleiben. Der Begriff "ambulant" leitet sich vom lateinischen "ambulare" ab, was "umhergehen" bedeutet.
+
+**INFO-BOX: Kernmerkmale ambulanter Behandlungen**
+
+*   **Keine Übernachtung:** Patient:innen gehen am selben Tag nach Hause
+*   **Kurze Behandlungsdauer:** Meist wenige Minuten bis Stunden
+*   **Geringere Komplexität:** Behandlungen, die keine intensive Überwachung erfordern
+*   **Verschiedene Settings:** Arztpraxis, Ambulatorium, Spitalambulanz
+
+### Abgrenzung: Ambulant vs. Stationär
+
+Die Unterscheidung zwischen ambulant und stationär ist entscheidend für die Abrechnung und die Zuständigkeiten:
+
+**TABELLE: Vergleich Ambulant vs. Stationär**
+
+| Kriterium | Ambulant | Stationär |
+| --- | --- | --- |
+| Aufenthaltsdauer | Wenige Stunden, keine Übernachtung | Mindestens eine Übernachtung |
+| Tarifsystem | TARDOC / Ambulante Pauschalen | SwissDRG |
+| Behandlungsort | Praxis, Ambulatorium, Spitalambulanz | Spital mit Bettenbelegung |
+| Überwachung | Keine oder kurze Nachbeobachtung | 24-Stunden-Überwachung |
+| Komplexität | Einfach bis mittel | Mittel bis hoch |
+| Kostenträger-Anteil | OKP zahlt ca. 42.6% | OKP zahlt 55% |
+| Kantonsanteil | Ca. 55% (variiert je nach Kanton) | 45% (fixiert durch KVG) |
+
+**INFO-BOX WARNUNG: Wichtige Abgrenzungsfälle**
+
+In der Praxis gibt es Grenzfälle, die eine klare Zuordnung erfordern:
+
+*   **Tagesklinik:** Ambulant, auch wenn mehrere Stunden Aufenthalt
+*   **Observation über Nacht:** Gilt bereits als stationär
+*   **OP mit Nachbeobachtung:** Ambulant, wenn Entlassung am gleichen Tag
+*   **Notfallbehandlung:** Je nach Aufenthaltsdauer ambulant oder stationär
+
+### Typische ambulante Behandlungen
+
+**ACCORDION:**
+
+**Konsultationen und Untersuchungen**
+
+*   Allgemeine ärztliche Konsultationen
+*   Fachärztliche Untersuchungen
+*   Präventive Check-ups
+*   Nachkontrollen
+*   Hausbesuche
+
+**Diagnostische Verfahren**
+
+*   Laboruntersuchungen
+*   Röntgen, CT, MRI
+*   Ultraschall
+*   EKG, Belastungstests
+*   Endoskopien (diagnostisch)
+
+**Therapeutische Eingriffe**
+
+*   Kleinere chirurgische Eingriffe
+*   Endoskopien mit Intervention
+*   Kataraktoperationen
+*   Arthroskopien
+*   Dialysebehandlungen
+*   Chemotherapie-Sitzungen
+*   Physiotherapie
+
+**Notfallbehandlungen**
+
+*   Versorgung akuter Verletzungen
+*   Akute Erkrankungen ohne Hospitalisierung
+*   Wundversorgung
+*   Reposition von Frakturen
+
+### Vorteile ambulanter Behandlungen
+
+**INFO-BOX SUCCESS: Für Patient:innen**
+
+*   Verbleib im gewohnten Umfeld
+*   Geringeres Infektionsrisiko
+*   Schnellere Rückkehr in den Alltag
+*   Weniger Belastung durch Krankenhausaufenthalt
+*   Geringere Selbstbeteiligung
+
+**INFO-BOX SUCCESS: Für das Gesundheitssystem**
+
+*   Kosteneinsparungen (ca. 30-50% günstiger als stationär)
+*   Effizientere Ressourcennutzung
+*   Entlastung der Spitalbetten
+*   Flexiblere Terminplanung
+
+### Trend zur Ambulantisierung
+
+In den letzten Jahren ist ein klarer Trend zur Verlagerung von stationären zu ambulanten Behandlungen zu beobachten:
+
+**INFO-BOX: Entwicklung und Gründe**
+
+*   **Medizinischer Fortschritt:** Minimalinvasive Techniken ermöglichen schonendere Eingriffe
+*   **Bessere Anästhesie:** Schnellere Erholung nach Eingriffen
+*   **Politischer Wille:** Förderung ambulanter Behandlungen zur Kostensenkung
+*   **"Ambulant vor stationär":** Gesetzliche Regelung in vielen Kantonen
+*   **Listen mit ambulant durchzuführenden Eingriffen:** Definierte Kataloge je nach Kanton
+
+### Besonderheiten bei der Abrechnung
+
+Die ambulante Behandlung erfordert besondere Aufmerksamkeit bei der Dokumentation und Abrechnung:
+
+*   **Leistungserfassung:** Jede Leistung muss im LKAAT erfasst werden
+*   **Systemwahl:** Entscheidung zwischen TARDOC und Pauschalen
+*   **Dokumentation:** Lückenlose Dokumentation aller erbrachten Leistungen
+*   **Wirtschaftlichkeit:** Beachtung der WZW-Kriterien (wirksam, zweckmäßig, wirtschaftlich)
+*   **Kostenträger:** Klärung der Zuständigkeit (Krankenkasse, Unfallversicherung, etc.)
+
+**INFO-BOX WARNUNG: Häufige Fehler bei der Zuordnung**
+
+*   Falsche Einschätzung der Aufenthaltsdauer
+*   Unklare Abgrenzung bei Notfällen
+*   Nichtbeachtung kantonaler Regelungen
+*   Fehlende Kostengutsprache bei elektiven Eingriffen
+*   Verwendung des falschen Tarifsystems
+
+### Praktisches Beispiel
+
+**INFO-BOX: Fallbeispiel - Arthroskopie des Kniegelenks**
+
+**Situation:** Patient:in mit Meniskusschaden
+
+**Ablauf ambulant:**
+
+*   8:00 Uhr: Ankunft und Vorbereitung
+*   9:00 Uhr: Operation (ca. 45 Minuten)
+*   10:00 Uhr: Aufwachraum (2-3 Stunden Überwachung)
+*   13:00 Uhr: Kontrolle und Entlassung
+*   Abrechnung über Ambulante Pauschale
+
+**Voraussetzungen:**
+
+*   Keine schweren Begleiterkrankungen
+*   Betreuung zu Hause gewährleistet
+*   Erreichbarkeit bei Komplikationen
+*   Patient:in ist mobil und ansprechbar
+
+**Abrechnung:** Ambulante Pauschale + ggf. Zusatzentgelte für Implantate
+
+### QUIZ
+
+**Frage 1: Was ist das Hauptmerkmal einer ambulanten Behandlung?**
+
+*   a) Die Behandlung findet immer in einer Arztpraxis statt
+*   b) Patient:innen verlassen die Einrichtung am selben Tag ohne Übernachtung ✓
+*   c) Die Behandlung dauert maximal 1 Stunde
+*   d) Es werden keine chirurgischen Eingriffe durchgeführt
+
+**Frage 2: Welches Tarifsystem wird für stationäre Behandlungen verwendet?**
+
+*   a) TARDOC
+*   b) SwissDRG ✓
+*   c) Ambulante Pauschalen
+*   d) LKAAT
+
+**Frage 3: Was ist ein Vorteil ambulanter Behandlungen für das Gesundheitssystem?**
+
+*   a) Höhere Einnahmen
+*   b) Kosteneinsparungen und effizientere Ressourcennutzung ✓
+*   c) Längere Überwachung der Patient:innen
+*   d) Mehr Spitalbetten werden benötigt
+
+**Frage 4: Ab wann gilt eine Behandlung als stationär?**
+
+*   a) Nach 6 Stunden Aufenthalt
+*   b) Wenn mindestens eine Übernachtung erfolgt ✓
+*   c) Wenn ein chirurgischer Eingriff durchgeführt wird
+*   d) Wenn die Kosten über CHF 5'000.- liegen
+
+---
+
+## KAPITEL 6: TARDOC - Der Einzelleistungstarif
 
 ### Was ist TARDOC?
 
@@ -846,7 +831,7 @@ Umfasst bildgebende Verfahren, Laborleistungen, therapeutische Maßnahmen, EKG, 
 
 ---
 
-## KAPITEL 6: Ambulante Pauschalen (AP)
+## KAPITEL 7: Ambulante Pauschalen (AP)
 
 ### Was sind Ambulante Pauschalen?
 
@@ -961,7 +946,7 @@ Bestimmte kostenintensive Leistungen können zusätzlich zur Pauschale abgerechn
 
 ---
 
-## KAPITEL 7: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
+## KAPITEL 8: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
 
 ### Gegenüberstellung der Systeme
 
@@ -1080,7 +1065,7 @@ Zwei ambulante Behandlungen am gleichen Tag bei gleichem Patienten sind möglich
 
 ---
 
-## KAPITEL 8: Praxisanwendung und Best Practices
+## KAPITEL 9: Praxisanwendung und Best Practices
 
 ### Der Workflow in der Praxis
 
