@@ -17,7 +17,25 @@ Diese Markdown-Datei enthält alle Inhalte der eLearning-Schulung in strukturier
 *   **INFO-BOX SUCCESS**: Wird zu `<div class="info-box success">` konvertiert
 *   **ACCORDION**: Wird zu `<div class="accordion">` konvertiert
 *   **TABELLE**: Markdown-Tabellen werden zu HTML `<table>` konvertiert
+*   **BILD**: Bilder mit optionaler Bildunterschrift einfügen
 *   **QUIZ**: Quiz-Fragen mit Antwortoptionen (✓ markiert die korrekte Antwort)
+
+### Bilder einfügen:
+
+```
+**BILD: pfad/bild.jpg**
+Optional: Bildunterschrift hier einfügen
+
+**BILD: images/beispiel.png**
+Diese Bildunterschrift erscheint unter dem Bild in kursiv.
+```
+
+**Hinweise:**
+
+*   Relative Pfade vom Standort der HTML-Datei
+*   Unterstützte Formate: JPG, PNG, GIF, SVG, WebP
+*   Bilder werden zentriert und responsiv dargestellt
+*   Bildunterschrift ist optional (nächste Zeile nach BILD:)
 
 ---
 
@@ -28,7 +46,10 @@ TITEL: Vorwort
 
 ### Willkommen zur eLearning-Schulung
 
-Herzlich willkommen zu dieser umfassenden Schulung zum ambulanten Gesamt-Tarifsystem der Schweiz. Diese Schulung wurde entwickelt, um dir ein fundiertes Verständnis der komplexen Strukturen und Prozesse der ambulanten Abrechnung zu vermitteln.
+Herzlich willkommen zu dieser umfassenden Schulung zum ambulanten Gesamt-Tarifsystem der Schweiz. Diese Schulung wurde entwickelt, um dir ein fundiertes Verständnis der komplexen Strukturen und Prozesse des neuen ambulanten Tarifsystems zu vermitteln, welches per 1. Januar 2026 eingeführt wird.
+
+**BILD: pictures/stairs.webp**  
+Einzelleistung (TARDOC) oder ambulante Pauschale?
 
 **INFO-BOX: Zielgruppe dieser Schulung**
 

@@ -192,9 +192,7 @@ HTML_HEADER = '''<!DOCTYPE html>
         .image-container {
             text-align: center;
             margin: 30px 0;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
+            padding: 10px 0;
         }
 
         .image-container img {
@@ -702,6 +700,32 @@ def process_markdown_content(md_text, chapter_num):
             i += 1
             continue
 
+        # Handle BILD (Image)
+        if line.startswith('**BILD:'):
+            if in_list:
+                html += '</ul>\n'
+                in_list = False
+            if in_info_box:
+                html += '</div>\n\n'
+                in_info_box = False
+
+            # Extract image path
+            img_match = re.search(r'\*\*BILD:\s*(.+?)\*\*', line)
+            if img_match:
+                img_path = img_match.group(1).strip()
+                html += '<div class="image-container">\n'
+                html += f'    <img src="{img_path}" alt="Bild">\n'
+
+                # Check next line for caption
+                if i + 1 < len(lines) and lines[i + 1].strip() and not lines[i + 1].startswith('**'):
+                    i += 1
+                    caption = convert_inline_md(lines[i].strip())
+                    html += f'    <p style="margin-top: 15px; color: #666; font-style: italic;">{caption}</p>\n'
+
+                html += '</div>\n\n'
+            i += 1
+            continue
+
         # Handle INFO-BOX
         if line.startswith('**INFO-BOX'):
             if in_list:
@@ -728,6 +752,7 @@ def process_markdown_content(md_text, chapter_num):
         # Close info box when we hit certain markers
         if in_info_box and (line.startswith('###') or line.startswith('**INFO-BOX') or
                            line.startswith('**ACCORDION') or line.startswith('**TABELLE') or
+                           line.startswith('**BILD:') or
                            line == '---' or line.startswith('### QUIZ')):
             if in_list:
                 html += '</ul>\n'
