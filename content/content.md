@@ -90,15 +90,14 @@ Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stu
 
 *   Vorwort: 5 Minuten
 *   Kapitel 1 (Einführung in das ambulante Gesamt-Tarifsystem): 5 Minuten
-*   Kapitel 2 (Diagnosen als ICD-10 Code): 2 Minuten
-*   Kapitel 3 (Dignitäten und Besitzstände): 2 Minuten
-*   Kapitel 4 (Ambulante Behandlung): 10-15 Minuten
-*   Kapitel 5 (LKAAT - Der Leistungskatalog): 10-15 Minuten
-*   Kapitel 6 (ICD-10-GM Diagnosecodierung): 10-15 Minuten
-*   Kapitel 7 (TARDOC): 5-10 Minuten
-*   Kapitel 8 (Ambulante Pauschalen): 5-10 Minuten
-*   Kapitel 9 (TARDOC vs. Ambulante Pauschalen): 5-10 Minuten
-*   Kapitel 10 (Praxisanwendung): 10-15 Minuten
+*   Kapitel 2 (Dignitäten und Besitzstände): 2 Minuten
+*   Kapitel 3 (LKAAT - Der Leistungskatalog): 10-15 Minuten
+*   Kapitel 4 (Diagnosen als ICD-10 Code): 2 Minuten
+*   Kapitel 5 (Ambulante Behandlung): 10-15 Minuten
+*   Kapitel 6 (TARDOC - Der Einzelleistungstarif): 5-10 Minuten
+*   Kapitel 7 (Ambulante Pauschalen): 5-10 Minuten
+*   Kapitel 8 (TARDOC vs. Ambulante Pauschalen): 5-10 Minuten
+*   Kapitel 9 (Praxisanwendung und Best Practices): 10-15 Minuten
 *   Abschlusstest: 10-15 Minuten
 *   FAQ: individuell
 
