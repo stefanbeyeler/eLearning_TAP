@@ -87,15 +87,15 @@ Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stu
 **INFO-BOX: Geschätzter Zeitaufwand pro Kapitel**
 
 *   Vorwort: 5 Minuten
-*   Kapitel 1 (Einführung): 20 Minuten
-*   Kapitel 2 (Ambulante Behandlung): 25 Minuten
-*   Kapitel 3 (LKAAT): 25 Minuten
-*   Kapitel 4 (ICD-10 Diagnosen): 30 Minuten
-*   Kapitel 5 (TARDOC): 20 Minuten
-*   Kapitel 6 (Ambulante Pauschalen): 20 Minuten
-*   Kapitel 7 (Vergleich): 20 Minuten
-*   Kapitel 8 (Praxisanwendung): 25 Minuten
-*   Abschlusstest: 15 Minuten
+*   Kapitel 1 (Einführung): 5 Minuten
+*   Kapitel 2 (Ambulante Behandlung): 5-10 Minuten
+*   Kapitel 3 (LKAAT): 5-10 Minuten
+*   Kapitel 4 (ICD-10 Diagnosen): 5-10 Minuten
+*   Kapitel 5 (TARDOC): 5-10 Minuten
+*   Kapitel 6 (Ambulante Pauschalen): 5-10 Minuten
+*   Kapitel 7 (Vergleich): 5-10 Minuten
+*   Kapitel 8 (Praxisanwendung): 5-10 Minuten
+*   Abschlusstest: 10 Minuten
 
 ### Lernziele der Gesamtschulung
 

@@ -348,6 +348,43 @@ body {
 }
 ```
 
+**Aktuelle CSS-Vorgaben (Stand: v1.2):**
+
+```css
+/* Info-Box Titel - Kein Abstand oben */
+.info-box h4 {
+    color: #667eea;
+    margin-top: 0;           /* Reduziert Abstand zum oberen Rand */
+    margin-bottom: 10px;
+}
+
+/* Listen-Einrückung */
+ul, ol {
+    margin-left: 20px;       /* Einrückung der gesamten Liste */
+    padding-left: 20px;      /* Zusätzlicher Abstand für Aufzählungszeichen */
+}
+
+li {
+    margin-bottom: 8px;      /* Abstand zwischen Listenpunkten */
+}
+```
+
+**Wichtige JavaScript-Korrekturen:**
+
+```javascript
+// Accordion Toggle - Korrigierte Version
+// Das accordion-div wird übergeben, nicht der Header
+function toggleAccordion(element) {
+    const header = element.querySelector('.accordion-header');
+    const content = element.querySelector('.accordion-content');
+
+    if (header && content) {
+        header.classList.toggle('active');
+        content.classList.toggle('active');
+    }
+}
+```
+
 ### 5. Akkordeon hinzufügen
 
 ```html
@@ -1070,7 +1107,19 @@ git restore datei.html
 **Nächste Review:** 2025-11-25
 
 **Änderungshistorie:**
-- **v1.2** (2025-10-25): Neuer Content-Workflow eingeführt (content.md + CONTENT_WORKFLOW.md), Projekt-Struktur aktualisiert
+- **v1.2** (2025-10-25):
+  - Neuer Content-Workflow eingeführt (content.md + CONTENT_WORKFLOW.md)
+  - Projekt-Struktur aktualisiert
+  - **Grafische Anpassungen:**
+    - Info-Box Titel: margin-top: 0 (reduzierter Abstand zum oberen Rand)
+    - Listen-Einrückung: margin-left und padding-left jeweils 20px
+    - Listenpunkte: margin-bottom 8px für bessere Lesbarkeit
+    - Accordion-Funktion korrigiert (toggleAccordion nimmt jetzt das accordion-div als Parameter)
+  - **Bugfixes:**
+    - Kapitel 9 (Abschlusstest) Einrückung korrigiert
+    - Div-Balance korrigiert (309 opening/closing divs)
+    - Horizontale Linie (---) in Info-Boxen entfernt
+    - Listen in Info-Boxen und Accordions korrekt als <ul>/<li> formatiert
 - **v1.1** (2025-10-25): Aktualisierung nach Kapitel 4 Integration, neue Dateistruktur, Quellendokumente ergänzt
 - **v1.0** (2025-10-21): Initial Release
 
