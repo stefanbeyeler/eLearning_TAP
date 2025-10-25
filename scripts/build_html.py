@@ -431,6 +431,7 @@ HTML_HEADER = '''<!DOCTYPE html>
         ul, ol {
             margin-left: 20px;
             padding-left: 20px;
+            margin-bottom: 20px;
         }
 
         li {
