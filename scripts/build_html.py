@@ -594,7 +594,7 @@ def convert_inline_md(text):
 
 
 def parse_content_md(content):
-    """Parse content.md and extract chapters"""
+    """Parse content.md and extract chapters with BUTTON: and TITEL: prefixes"""
     chapters = []
 
     # Split by ## headers
@@ -611,51 +611,57 @@ def parse_content_md(content):
         if 'Hinweise zur Nutzung' in title or 'Ende der Content' in title:
             continue
 
-        # Determine chapter number and clean title
+        # Look for BUTTON: and TITEL: prefixes in the following lines
+        button_title = None
+        content_title = None
+        content_start_idx = 1
+
+        for i in range(1, min(5, len(lines))):  # Check first 4 lines after header
+            line = lines[i].strip()
+            if line.startswith('BUTTON:'):
+                button_title = line[7:].strip()
+            elif line.startswith('TITEL:'):
+                content_title = line[6:].strip()
+            elif line and not line.startswith('BUTTON:') and not line.startswith('TITEL:'):
+                content_start_idx = i
+                break
+
+        # Determine chapter number and titles (with fallback to old logic)
         if title == 'Vorwort':
             ch_num = 0
-            ch_title = 'Vorwort'
+            if not button_title:
+                button_title = 'Vorwort'
+            if not content_title:
+                content_title = 'Vorwort'
         elif title.startswith('KAPITEL'):
             # Parse chapter number and title
-            match = re.match(r'KAPITEL \d+:\s*(.+)', title)
+            match = re.match(r'KAPITEL (\d+):\s*(.+)', title)
             if match:
-                ch_title = match.group(1)
-                # Determine actual chapter number based on content
-                if 'Einführung' in ch_title:
-                    ch_num = 1
-                elif ch_title == 'Diagnosen als ICD-10 Code' and 'Warum ist' not in '\n'.join(lines):
-                    ch_num = 2  # Short version
-                elif 'Dignitäten' in ch_title:
-                    ch_num = 3
-                elif 'Ambulante Behandlung' in ch_title:
-                    ch_num = 4
-                elif 'LKAAT' in ch_title:
-                    ch_num = 5
-                elif 'ICD-10-GM' in ch_title or ('Diagnosen' in ch_title and 'Warum ist' in '\n'.join(lines)):
-                    ch_num = 6  # Full version
-                elif 'TARDOC' in ch_title and 'vs' not in ch_title:
-                    ch_num = 7
-                elif 'Ambulante Pauschalen' in ch_title and 'vs' not in ch_title:
-                    ch_num = 8
-                elif 'TARDOC vs' in ch_title or 'Vergleich' in ch_title:
-                    ch_num = 9
-                elif 'Praxisanwendung' in ch_title:
-                    ch_num = 10
-                else:
-                    continue
+                ch_num = int(match.group(1))
+                fallback_title = match.group(2)
+                if not content_title:
+                    content_title = fallback_title
+                if not button_title:
+                    button_title = f'Kapitel {ch_num}: {fallback_title[:20]}...' if len(fallback_title) > 20 else f'Kapitel {ch_num}: {fallback_title}'
             else:
                 continue
         elif title == 'Abschlusstest':
             ch_num = 11
-            ch_title = 'Abschlusstest'
+            if not button_title:
+                button_title = 'Abschlusstest'
+            if not content_title:
+                content_title = 'Abschlusstest'
         elif title.startswith('FAQ'):
             ch_num = 12
-            ch_title = 'FAQ'
+            if not button_title:
+                button_title = 'FAQ'
+            if not content_title:
+                content_title = 'FAQ - Häufig gestellte Fragen'
         else:
             continue
 
-        content_text = '\n'.join(lines[1:])
-        chapters.append((ch_num, ch_title, content_text))
+        content_text = '\n'.join(lines[content_start_idx:])
+        chapters.append((ch_num, content_title, button_title, content_text))
 
     # Sort by chapter number
     chapters.sort(key=lambda x: x[0])
@@ -1040,15 +1046,34 @@ def process_table(lines):
     return html
 
 
-def generate_html(chapters):
-    """Generate complete HTML file"""
-    html = HTML_HEADER
+def generate_navigation(chapters):
+    """Generate navigation buttons from chapter data"""
+    nav_html = '        <nav>\n            <div class="nav-buttons">\n'
+    for ch_num, content_title, button_title, ch_content in chapters:
+        active_class = ' active' if ch_num == 0 else ''
+        nav_html += f'                <button class="nav-btn{active_class}" onclick="showChapter({ch_num})">{button_title}</button>\n'
+    nav_html += '            </div>\n        </nav>\n\n        <div class="content">\n'
+    return nav_html
 
-    for ch_num, ch_title, ch_content in chapters:
+
+def generate_html(chapters):
+    """Generate complete HTML file with dynamic navigation"""
+    # Split HTML_HEADER at navigation insertion point
+    header_parts = HTML_HEADER.split('<nav>')
+    if len(header_parts) == 2:
+        # Remove old hardcoded navigation and content div opening
+        header_before_nav = header_parts[0]
+        # Generate new navigation
+        navigation = generate_navigation(chapters)
+        html = header_before_nav + navigation
+    else:
+        html = HTML_HEADER
+
+    for ch_num, content_title, button_title, ch_content in chapters:
         active = ' active' if ch_num == 0 else ''
         html += f'            <!-- {"VORWORT" if ch_num == 0 else ("KAPITEL " + str(ch_num) if ch_num <= 10 else ("Abschlusstest" if ch_num == 11 else "FAQ"))} -->\n'
         html += f'            <div class="chapter{active}" id="chapter{ch_num}">\n'
-        html += f'                <h2>{ch_title}</h2>\n\n'
+        html += f'                <h2>{content_title}</h2>\n\n'
         html += process_markdown_content(ch_content, ch_num)
 
         # Navigation footer

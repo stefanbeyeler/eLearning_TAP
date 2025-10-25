@@ -8,7 +8,7 @@
 
 ## Hinweise zur Nutzung
 
-Diese Markdown-Datei enthält alle Inhalte der eLearning-Schulung in strukturierter Form. Sie können diese Datei manuell bearbeiten, um Inhalte zu erweitern oder anzupassen. Claude kann dann die `eLearning.html` Datei basierend auf Ihren Änderungen aktualisieren.
+Diese Markdown-Datei enthält alle Inhalte der eLearning-Schulung in strukturierter Form. Du kannst diese Datei manuell bearbeiten, um Inhalte zu erweitern oder anzupassen. Claude kann dann die `eLearning.html` Datei basierend auf deinen Änderungen aktualisieren.
 
 ### Struktur-Konventionen:
 
@@ -23,68 +23,71 @@ Diese Markdown-Datei enthält alle Inhalte der eLearning-Schulung in strukturier
 
 ## Vorwort
 
+BUTTON: Vorwort  
+TITEL: Vorwort
+
 ### Willkommen zur eLearning-Schulung
 
-Herzlich willkommen zu dieser umfassenden Schulung zum ambulanten Gesamt-Tarifsystem der Schweiz. Diese Schulung wurde entwickelt, um Ihnen ein fundiertes Verständnis der komplexen Strukturen und Prozesse der ambulanten Abrechnung zu vermitteln.
+Herzlich willkommen zu dieser umfassenden Schulung zum ambulanten Gesamt-Tarifsystem der Schweiz. Diese Schulung wurde entwickelt, um dir ein fundiertes Verständnis der komplexen Strukturen und Prozesse der ambulanten Abrechnung zu vermitteln.
 
 **INFO-BOX: Zielgruppe dieser Schulung**
 
 *   Medizinisches Fachpersonal
-*   Mitarbeitende in der Abrechnung und Kodierung
-*   Zentrumsmanager:innen und Verwaltungspersonal
+*   Zentrums- und Klinikmanager:innen
+*   Mitarbeitende im Leistungsmanagement, der Abrechnung und der Kodierung
 *   Alle, die mit der ambulanten Leistungserfassung und -abrechnung befasst sind
 
 ### Aufbau und Struktur
 
-Diese Schulung ist in 9 Kapitel gegliedert, die aufeinander aufbauen und Sie Schritt für Schritt durch das Tarifsystem führen:
+Diese Schulung ist in 10 Kapitel gegliedert, die aufeinander aufbauen und dich Schritt für Schritt durch das Tarifsystem führen:
 
 **Grundlagen (Kapitel 1-3)**
 
-Sie lernen zunächst die Komponenten des Systems kennen, verstehen was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.
+Du lernst zunächst die Komponenten des Systems kennen, verstest was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.
 
 **Diagnosen und Abrechnungssysteme (Kapitel 4-6)**
 
-Hier vertiefen Sie Ihr Wissen über die Diagnosecodierung mit ICD-10-GM, den TARDOC-Einzelleistungstarif und die Ambulanten Pauschalen.
+Hier vertiefst du dein Wissen über die Diagnosecodierung mit ICD-10-GM, den TARDOC-Einzelleistungstarif und die Ambulanten Pauschalen.
 
 **Vergleich und Praxis (Kapitel 7-8)**
 
-Sie lernen die Unterschiede zwischen TARDOC und Pauschalen kennen und erhalten praxisnahe Anleitungen für den Arbeitsalltag.
+Du lernst die Unterschiede zwischen TARDOC und Pauschalen kennen und erhälst praxisnahe Anleitungen für den Arbeitsalltag.
 
 **Abschlusstest (Kapitel 9)**
 
-Ein umfassender Test überprüft Ihr erworbenes Wissen über alle Kapitel hinweg.
+Ein umfassender Test überprüft dein erworbenes Wissen über alle Kapitel hinweg.
 
 **FAQ - Häufig gestellte Fragen**
 
-Antworten auf die wichtigsten Fragen zu LKAAT, TARDOC, Ambulanten Pauschalen, ICD-10-GM, Praxisanwendung und Übergangsregelungen.
+Antworten auf die wichtigsten Fragen zu LKAAT, TARDOC, Ambulanten Pauschalen, ICD-10-GM, Praxisanwendung und Übergangsregelungen findest du hier.
 
-### Wie Sie diese Schulung nutzen
+### Wie du diese Schulung nutzen kannst
 
 **INFO-BOX SUCCESS: Lernempfehlungen**
 
-*   Arbeiten Sie die Kapitel nacheinander durch
-*   Nutzen Sie die INFO-Boxen für wichtige Hinweise
-*   Öffnen Sie die Accordion-Bereiche für zusätzliche Details
-*   Bearbeiten Sie die Quiz-Fragen am Ende jedes Kapitels
-*   Machen Sie sich Notizen zu Unklarheiten
-*   Nehmen Sie sich Zeit für den Abschlusstest
+*   Arbeite die Kapitel nacheinander durch
+*   Nutze die INFO-Boxen für wichtige Hinweise
+*   Öffne die Accordion-Bereiche für zusätzliche Details
+*   Bearbeite die Quiz-Fragen am Ende jedes Kapitels
+*   Mache dir Notizen zu Unklarheiten
+*   Nimm dir Zeit für den Abschlusstest
 
 ### Interaktive Elemente
 
-In dieser Schulung finden Sie verschiedene didaktische Elemente:
+In dieser Schulung findest du verschiedene didaktische Elemente:
 
 **INFO-BOX: Verwendete Elemente**
 
 *   **INFO-BOX:** Wichtige Informationen und Zusammenfassungen
 *   **INFO-BOX WARNUNG:** Hinweise auf häufige Fehler und kritische Punkte
 *   **INFO-BOX SUCCESS:** Best Practices und Erfolgstipps
-*   **ACCORDION:** Zusätzliche Details, die Sie bei Bedarf ausklappen können
+*   **ACCORDION:** Zusätzliche Details, die du bei Bedarf ausklappen kannst
 *   **TABELLE:** Übersichtliche Gegenüberstellungen
 *   **QUIZ:** Wissensfragen zur Selbstkontrolle
 
 ### Zeitaufwand und Lernziele
 
-Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stunde**. Sie können die Schulung jederzeit unterbrechen und später fortsetzen. Ihr Fortschritt wird automatisch gespeichert.
+Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stunde**. Du kannst die Schulung jederzeit unterbrechen und später fortsetzen. Dein Fortschritt wird automatisch festgehalten solange du die Seite nicht schliesst oder aktualisierst.
 
 **INFO-BOX: Geschätzter Zeitaufwand pro Kapitel**
 
@@ -103,7 +106,7 @@ Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stu
 
 ### Lernziele der Gesamtschulung
 
-Nach erfolgreichem Abschluss dieser Schulung sind Sie in der Lage:
+Nach erfolgreichem Abschluss dieser Schulung bist du in der Lage:
 
 *   Die Struktur und Komponenten des ambulanten Gesamt-Tarifsystems zu erklären
 *   Ambulante von stationären Behandlungen abzugrenzen
@@ -116,7 +119,7 @@ Nach erfolgreichem Abschluss dieser Schulung sind Sie in der Lage:
 
 ### Technische Voraussetzungen
 
-**INFO-BOX: Was Sie benötigen**
+**INFO-BOX: Was du benötigst**
 
 *   Einen modernen Webbrowser (Chrome, Firefox, Safari, Edge)
 *   Eine stabile Internetverbindung
@@ -125,15 +128,18 @@ Nach erfolgreichem Abschluss dieser Schulung sind Sie in der Lage:
 
 ### Support und Fragen
 
-Bei Fragen oder technischen Problemen wenden Sie sich bitte an Ihre Schulungsverantwortlichen oder nutzen Sie die bereitgestellten Support-Kanäle.
+Bei Fragen oder technischen Problemen wende dich bitte an deine Schulungsverantwortlichen oder nutze die bereitgestellten Support-Kanäle.
 
 **INFO-BOX SUCCESS: Bereit zu starten?**
 
-Klicken Sie auf "Weiter", um mit Kapitel 1 zu beginnen. Wir wünschen Ihnen viel Erfolg beim Lernen!
+Klicke auf "Weiter", um mit Kapitel 1 zu beginnen. Wir wünschen dir viel Erfolg beim Lernen!
 
 ---
 
 ## KAPITEL 1: Einführung in das ambulante Gesamt-Tarifsystem
+
+BUTTON: Kapitel 1: Einführung  
+TITEL: Einführung in das ambulante Gesamt-Tarifsystem
 
 ### Was ist das ambulante Gesamt-Tarifsystem?
 
@@ -165,11 +171,11 @@ Das System orientiert sich an bewährten internationalen Modellen und ermöglich
 
 **INFO-BOX WARNUNG: Wichtig zu wissen**
 
-Als Anwender:in müssen Sie verstehen, wann welches System anzuwenden ist. Eine falsche Zuordnung kann zu Abrechnungsfehlern und finanziellen Nachteilen führen.
+Als Anwender:in musst du verstehen, wann welches System anzuwenden ist. Eine falsche Zuordnung kann zu Abrechnungsfehlern und finanziellen Nachteilen führen.
 
 ### Lernziele dieses Moduls
 
-Nach Abschluss dieser Schulung können Sie:
+Nach Abschluss dieser Schulung kannst du:
 
 *   Die Komponenten des Tarifsystems unterscheiden und ihre Funktionen benennen
 *   Den LKAAT für die Leistungserfassung nutzen
@@ -198,6 +204,9 @@ Nach Abschluss dieser Schulung können Sie:
 
 ## KAPITEL 2: Dignitäten und Besitzstände
 
+BUTTON: Kapitel 2: Dignitäten  
+TITEL: Dignitäten und Besitzstände
+
 ### Was sind Dignitäten?
 
 **Dignitäten** bezeichnen im Schweizer Gesundheitswesen die Berechtigung von Ärztinnen und Ärzten, bestimmte medizinische Leistungen abzurechnen.
@@ -205,6 +214,9 @@ Nach Abschluss dieser Schulung können Sie:
 ---
 
 ## KAPITEL 3: Diagnosen als ICD-10 Code
+
+BUTTON: Kapitel 3: Diagnosen ICD-10  
+TITEL: Diagnosen als ICD-10 Code
 
 ### Was ist ICD-10-GM?
 
@@ -432,6 +444,9 @@ Die Übermittlung erfolgt über gesicherte und verschlüsselte Kanäle. Bei Date
 
 ## KAPITEL 4: LKAAT - Der Leistungskatalog
 
+BUTTON: Kapitel 4: LKAAT  
+TITEL: LKAAT - Der Leistungskatalog
+
 ### Was ist der LKAAT?
 
 LKAAT steht für "Leistungskatalog ambulante Arzttarife" und ist das zentrale Werkzeug zur Erfassung aller medizinischen Leistungen im ambulanten Gesamt-Tarifsystem. Der LKAAT ist die Schnittstelle zwischen der erbrachten medizinischen Leistung und dem Abrechnungssystem.
@@ -476,7 +491,7 @@ Sobald eine Triggerposition (P) erfasst wird, erfolgt die Abrechnung über Ambul
 
 ### LKN-Nummern verstehen
 
-**INFO-BOX SUCCESS: So erkennen Sie den Unterschied**
+**INFO-BOX SUCCESS: So erkennst du den Unterschied**
 
 **TARDOC-Positionen (8-stellig):**
 
@@ -572,6 +587,9 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
 ---
 
 ## KAPITEL 5: Ambulante Behandlung
+
+BUTTON: Kapitel 5: Ambulante Behandlung  
+TITEL: Ambulante Behandlung
 
 ### Was ist eine ambulante Behandlung?
 
@@ -750,6 +768,9 @@ Die ambulante Behandlung erfordert besondere Aufmerksamkeit bei der Dokumentatio
 
 ## KAPITEL 6: TARDOC - Der Einzelleistungstarif
 
+BUTTON: Kapitel 6: TARDOC  
+TITEL: TARDOC - Der Einzelleistungstarif
+
 ### Was ist TARDOC?
 
 TARDOC steht für "Tarif ambulanter Arztleistungen in Arztpraxis und ambulantem Spitalbereich" und ist der Nachfolger des TARMED-Tarifs. TARDOC ist ein Einzelleistungstarif, der jede erbrachte medizinische Leistung einzeln erfasst und abrechnet.
@@ -832,6 +853,9 @@ Umfasst bildgebende Verfahren, Laborleistungen, therapeutische Maßnahmen, EKG, 
 ---
 
 ## KAPITEL 7: Ambulante Pauschalen (AP)
+
+BUTTON: Kapitel 7: Ambulante Pauschalen  
+TITEL: Ambulante Pauschalen (AP)
 
 ### Was sind Ambulante Pauschalen?
 
@@ -947,6 +971,9 @@ Bestimmte kostenintensive Leistungen können zusätzlich zur Pauschale abgerechn
 ---
 
 ## KAPITEL 8: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
+
+BUTTON: Kapitel 8: Vergleich  
+TITEL: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
 
 ### Gegenüberstellung der Systeme
 
@@ -1066,6 +1093,9 @@ Zwei ambulante Behandlungen am gleichen Tag bei gleichem Patienten sind möglich
 ---
 
 ## KAPITEL 9: Praxisanwendung und Best Practices
+
+BUTTON: Kapitel 9: Praxisanwendung  
+TITEL: Praxisanwendung und Best Practices
 
 ### Der Workflow in der Praxis
 
@@ -1223,9 +1253,12 @@ Das ambulante Tarifsystem entwickelt sich kontinuierlich weiter. Aktuelle Trends
 
 ## Abschlusstest
 
+BUTTON: Abschlusstest  
+TITEL: Abschlusstest
+
 **INFO-BOX: Hinweise zum Abschlusstest**
 
-Dieser Test umfasst 12 Fragen zu allen Kapiteln. Sie benötigen mindestens 10 von 12 richtigen Antworten, um die Schulung erfolgreich abzuschließen. Viel Erfolg!
+Dieser Test umfasst 12 Fragen zu allen Kapiteln. Du benötigst mindestens 10 von 12 richtigen Antworten, um die Schulung erfolgreich abzuschließen. Viel Erfolg!
 
 ### QUIZ - ABSCHLUSSTEST
 
@@ -1317,6 +1350,9 @@ Dieser Test umfasst 12 Fragen zu allen Kapiteln. Sie benötigen mindestens 10 vo
 
 ## FAQ - Häufig gestellte Fragen
 
+BUTTON: FAQ  
+TITEL: FAQ - Häufig gestellte Fragen
+
 ### Allgemeine Fragen zum System
 
 **ACCORDION:**
@@ -1336,25 +1372,25 @@ Das System wird durch die erfasste Leistung im LKAAT bestimmt:
 *   Wurde eine **Triggerposition (Typ P)** erfasst → Abrechnung über **Ambulante Pauschalen**
 *   Wurden **nur Einzelleistungen (Typ E/EZ)** erfasst → Abrechnung über **TARDOC**
 
-Die Entscheidung wird automatisch durch das System getroffen, sobald Sie die Leistung im LKAAT erfassen.
+Die Entscheidung wird automatisch durch das System getroffen, sobald du die Leistung im LKAAT erfasst.
 
 **Kann ich zwischen TARDOC und Pauschalen frei wählen?**
 
 Nein. Die Wahl des Abrechnungssystems ist nicht beliebig:
 
 *   Jede Leistung im LKAAT ist entweder als TARDOC-Position (E/EZ) oder als Pauschalen-Position (P/PZ) definiert
-*   Diese Zuordnung können Sie nicht ändern
+*   Diese Zuordnung kannst du nicht ändern
 *   Das System bestimmt automatisch das korrekte Abrechnungssystem
 
 **Was passiert, wenn ich eine Triggerposition übersehe?**
 
 Dies führt zu einem Abrechnungsfehler:
 
-*   Sie rechnen fälschlicherweise über TARDOC ab, obwohl eine Pauschale anwendbar wäre
+*   Du rechnest fälschlicherweise über TARDOC ab, obwohl eine Pauschale anwendbar wäre
 *   Die Rechnung kann von der Krankenkasse zurückgewiesen werden
-*   Finanzielle Nachteile für Ihre Praxis/Ihr Spital
+*   Finanzielle Nachteile für deine Praxis/dein Spital
 
-**Tipp:** Nutzen Sie den LKAAT plus Browser, der Triggerpositionen deutlich markiert.
+**Tipp:** Nutze den LKAAT plus Browser, der Triggerpositionen deutlich markiert.
 
 ### Fragen zu TARDOC
 
@@ -1388,7 +1424,7 @@ Kumulation beschreibt, ob Leistungen zusammen am gleichen Tag abgerechnet werden
 
 Ja und Nein:
 
-*   Sie müssen die **erbrachten Leistungen** dokumentieren
+*   Du musst die **erbrachten Leistungen** dokumentieren
 *   Zeitbasierte Leistungen (z.B. Konsultationen) erfordern Zeitangaben
 *   Bei nicht-zeitbasierten Leistungen (z.B. EKG) genügt die Dokumentation der Durchführung
 *   **Best Practice:** Zeitaufwand immer notieren für Nachvollziehbarkeit
@@ -1399,7 +1435,7 @@ Dignität bezeichnet die **Berechtigung zur Abrechnung** bestimmter Leistungen:
 
 *   Nicht alle Ärzte dürfen alle TARDOC-Leistungen abrechnen
 *   Manche Leistungen erfordern einen **Facharzttitel** oder **spezielle Qualifikation**
-*   Prüfen Sie im TARDOC, welche Dignität für eine Leistung erforderlich ist
+*   Prüfe im TARDOC, welche Dignität für eine Leistung erforderlich ist
 *   Bei unberechtigter Abrechnung droht Rückforderung
 
 ### Fragen zu Ambulanten Pauschalen
@@ -1414,7 +1450,7 @@ Pauschalen werden durch **Triggerpositionen** ausgelöst:
 *   **Typ P** (Pauschalen-Position) im LKAAT
 *   Meist **chirurgische Eingriffe**, Endoskopien oder komplexe Diagnostik
 
-Sobald Sie eine solche Position erfassen, rechnet das System automatisch über Pauschalen ab.
+Sobald du eine solche Position erfasst, rechnet das System automatisch über Pauschalen ab.
 
 **Was ist alles in einer Pauschale inkludiert?**
 
@@ -1442,7 +1478,7 @@ Zusatzentgelte sind **definierte Zusatzkosten** zur Pauschale:
 *   Nur die im LKAAT definierten Zusatzentgelte sind abrechenbar
 *   Werden **zusätzlich zur Pauschale** in Rechnung gestellt
 
-**Wichtig:** Sie können nicht beliebig Leistungen zusätzlich abrechnen!
+**Wichtig:** Du kannst nicht beliebig Leistungen zusätzlich abrechnen!
 
 **Was passiert bei Komplikationen während/nach dem Eingriff?**
 
@@ -1453,8 +1489,8 @@ Bei **erwartbaren Komplikationen:**
 
 Bei **schweren, unerwarteten Komplikationen:**
 
-*   Dokumentieren Sie den Sachverhalt genau
-*   Kontaktieren Sie ggf. den Kostenträger
+*   Dokumentiere den Sachverhalt genau
+*   Kontaktiere ggf. den Kostenträger
 *   In Ausnahmefällen kann eine Zusatzvergütung möglich sein
 
 **Kann ich bei Pauschalen auch TARDOC-Leistungen zusätzlich abrechnen?**
@@ -1480,18 +1516,18 @@ Grundsätzlich **nein**:
 
 *   Bei TARDOC-Abrechnung (alternativ: Tessinercode)
 
-**Best Practice:** Verwenden Sie konsequent ICD-10-GM für alle Sitzungen.
+**Best Practice:** Verwende konsequent ICD-10-GM für alle Sitzungen.
 
 **Wie finde ich den richtigen ICD-10-Code?**
 
 Schrittweise Vorgehen:
 
-1.  **Identifizieren** Sie die Hauptdiagnose (größter Behandlungsaufwand)
-2.  **Suchen** Sie im ICD-10-Katalog nach dem Organsystem (Kapitel A-Z)
-3.  **Wählen** Sie die spezifischste Kategorie
-4.  **Erfassen** Sie den endständigen Code (so detailliert wie möglich)
+1.  **Identifiziere** die Hauptdiagnose (größter Behandlungsaufwand)
+2.  **Suche** im ICD-10-Katalog nach dem Organsystem (Kapitel A-Z)
+3.  **Wähle** die spezifischste Kategorie
+4.  **Erfasse** den endständigen Code (so detailliert wie möglich)
 
-**Hilfsmittel:** ICD-10-Browser, Suchfunktion in Ihrer Praxissoftware
+**Hilfsmittel:** ICD-10-Browser, Suchfunktion in deiner Praxissoftware
 
 **Was ist der Unterschied zwischen endständig und nicht-endständig?**
 
@@ -1515,10 +1551,10 @@ Schrittweise Vorgehen:
 **Was mache ich bei Verdachtsdiagnosen?**
 
 *   **Verdacht bestätigt sich:** Diagnose wird entsprechend dem aktuellen Wissensstand erfasst
-*   **Verdacht wird ausgeschlossen:** Erfassen Sie die Verdachtsdiagnose, da diese Anlass für die Untersuchung war
+*   **Verdacht wird ausgeschlossen:** Erfasse die Verdachtsdiagnose, da diese Anlass für die Untersuchung war
 *   **Beispiel:** V.a. Appendizitis → nach Untersuchung ausgeschlossen → Dennoch K35.- erfassen
 
-**Wichtig:** Sie erfassen den Wissensstand **zum Zeitpunkt der Behandlung**, nicht Laborresultate von drei Tagen später!
+**Wichtig:** Du erfasst den Wissensstand **zum Zeitpunkt der Behandlung**, nicht Laborresultate von drei Tagen später!
 
 ### Fragen zur Praxisanwendung
 
@@ -1558,7 +1594,7 @@ Schrittweise Vorgehen:
 *   **FMH (Verbindung der Schweizer Ärztinnen und Ärzte):** Offizielle Informationen
 *   **OAAT (Organisation ambulante Arzttarife):** Tarifupdates, Dokumentationen
 *   **Ärztekasse:** Schulungen, Newsletter, LKAAT plus Browser
-*   **Fachverbände:** Spezifische Informationen für Ihre Fachrichtung
+*   **Fachverbände:** Spezifische Informationen für deine Fachrichtung
 *   **Praxissoftware-Anbieter:** Software-Updates mit neuen Tarifversionen
 
 **Empfehlung:** Regelmäßige Schulungen für Mitarbeitende (mind. 1x jährlich)
@@ -1584,7 +1620,7 @@ Schrittweise Vorgehen:
 
 *   **Trustcenter:** Neutrale Beratung zu Abrechnungsfragen
 *   **Ärztekasse:** Tarifberatung für Mitglieder
-*   **Fachverband:** Spezifische Fragen für Ihre Fachrichtung
+*   **Fachverband:** Spezifische Fragen für deine Fachrichtung
 *   **Kollegium:** Erfahrungsaustausch
 *   **Kostenträger:** Bei Unklarheiten zur Kostenübernahme
 
@@ -1608,11 +1644,11 @@ Der LKAAT plus Browser ist ein **Online-Tool** zur Tarifrecherche:
 
 **Prozess:**
 
-1.  Rechnung in Ihrer Praxissoftware erstellen
+1.  Rechnung in deiner Praxissoftware erstellen
 2.  Daten im standardisierten Format (XML) exportieren
 3.  Übermittlung via gesichertem Kanal an Trustcenter oder Krankenkasse
 4.  Automatische Plausibilitätsprüfung
-5.  Zahlung auf Ihr Konto
+5.  Zahlung auf dein Konto
 
 **Vorteile:** Schneller, weniger Fehler, automatisierte Prozesse
 
@@ -1643,7 +1679,7 @@ Ja, die **Aufbewahrungspflicht** beträgt:
 *   Alte TARMED-Rechnungen bleiben gültig
 *   Neue Rechnungen erfolgen über TARDOC
 *   Viele TARDOC-Codes entsprechen TARMED-Codes (aber nicht alle!)
-*   Nutzen Sie den LKAAT plus Browser für Vergleiche
+*   Nutze den LKAAT plus Browser für Vergleiche
 
 **Gibt es noch Übergangsfristen?**
 
