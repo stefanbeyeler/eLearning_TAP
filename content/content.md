@@ -21,8 +21,9 @@ Diese Markdown-Datei enthält alle Inhalte der eLearning-Schulung in strukturier
 
 ---
 
-## BUTTON: Vorwort
+## Vorwort
 
+BUTTON: Vorwort  
 TITEL: Vorwort
 
 ### Willkommen zur eLearning-Schulung
@@ -135,9 +136,10 @@ Klicke auf "Weiter", um mit Kapitel 1 zu beginnen. Wir wünschen dir viel Erfolg
 
 ---
 
-## BUTTON: Kapitel 1: Einführung
+## KAPITEL 1: Einführung in das ambulante Gesamt-Tarifsystem
 
-TITEL: Kapitel 1: Einführung in das ambulante Gesamt-Tarifsystem
+BUTTON: Kapitel 1: Einführung  
+TITEL: Einführung in das ambulante Gesamt-Tarifsystem
 
 ### Was ist das ambulante Gesamt-Tarifsystem?
 
@@ -200,9 +202,10 @@ Nach Abschluss dieser Schulung kannst du:
 
 ---
 
-## BUTTON: Kapitel 2: Dignitäten
+## KAPITEL 2: Dignitäten und Besitzstände
 
-TITEL: KAPITEL 2: Dignitäten und Besitzstände
+BUTTON: Kapitel 2: Dignitäten  
+TITEL: Dignitäten und Besitzstände
 
 ### Was sind Dignitäten?
 
@@ -210,9 +213,10 @@ TITEL: KAPITEL 2: Dignitäten und Besitzstände
 
 ---
 
-## BUTTON: Kapitel 3: Diagnosen ICD-10
+## KAPITEL 3: Diagnosen als ICD-10 Code
 
-TITEL: KAPITEL 3: Diagnosen als ICD-10 Code
+BUTTON: Kapitel 3: Diagnosen ICD-10  
+TITEL: Diagnosen als ICD-10 Code
 
 ### Was ist ICD-10-GM?
 
@@ -438,9 +442,10 @@ Die Übermittlung erfolgt über gesicherte und verschlüsselte Kanäle. Bei Date
 
 ---
 
-## BUTTON: Kapitel 4: LKAAT
+## KAPITEL 4: LKAAT - Der Leistungskatalog
 
-TITEL: KAPITEL 4: LKAAT - Der Leistungskatalog
+BUTTON: Kapitel 4: LKAAT  
+TITEL: LKAAT - Der Leistungskatalog
 
 ### Was ist der LKAAT?
 
@@ -581,9 +586,10 @@ C05.KC.Z001 - Rechtsherzkatheter unter Belastung (Zusatz)
 
 ---
 
-## BUTTON: Kapitel 5: Ambulante Behandlung
+## KAPITEL 5: Ambulante Behandlung
 
-TITEL: KAPITEL 5: Ambulante Behandlung
+BUTTON: Kapitel 5: Ambulante Behandlung  
+TITEL: Ambulante Behandlung
 
 ### Was ist eine ambulante Behandlung?
 
@@ -760,9 +766,10 @@ Die ambulante Behandlung erfordert besondere Aufmerksamkeit bei der Dokumentatio
 
 ---
 
-## BUTTON: Kapitel 6: TARDOC
+## KAPITEL 6: TARDOC - Der Einzelleistungstarif
 
-TITEL: KAPITEL 6: TARDOC - Der Einzelleistungstarif
+BUTTON: Kapitel 6: TARDOC  
+TITEL: TARDOC - Der Einzelleistungstarif
 
 ### Was ist TARDOC?
 
@@ -845,9 +852,10 @@ Umfasst bildgebende Verfahren, Laborleistungen, therapeutische Maßnahmen, EKG, 
 
 ---
 
-## BUTTON: Kapitel 7: Ambulante Pauschalen
+## KAPITEL 7: Ambulante Pauschalen (AP)
 
-TITEL: KAPITEL 7: Ambulante Pauschalen (AP)
+BUTTON: Kapitel 7: Ambulante Pauschalen  
+TITEL: Ambulante Pauschalen (AP)
 
 ### Was sind Ambulante Pauschalen?
 
@@ -962,9 +970,10 @@ Bestimmte kostenintensive Leistungen können zusätzlich zur Pauschale abgerechn
 
 ---
 
-## BUTTON: Kapitel 8: Vergleich
+## KAPITEL 8: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
 
-TITEL: KAPITEL 8: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
+BUTTON: Kapitel 8: Vergleich  
+TITEL: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
 
 ### Gegenüberstellung der Systeme
 
@@ -1083,9 +1092,10 @@ Zwei ambulante Behandlungen am gleichen Tag bei gleichem Patienten sind möglich
 
 ---
 
-## BUTTON: Kapitel 9: Praxisanwendung
+## KAPITEL 9: Praxisanwendung und Best Practices
 
-TITEL: KAPITEL 9: Praxisanwendung und Best Practices
+BUTTON: Kapitel 9: Praxisanwendung  
+TITEL: Praxisanwendung und Best Practices
 
 ### Der Workflow in der Praxis
 
@@ -1241,8 +1251,9 @@ Das ambulante Tarifsystem entwickelt sich kontinuierlich weiter. Aktuelle Trends
 
 ---
 
-## BUTTON: Abschlusstest
+## Abschlusstest
 
+BUTTON: Abschlusstest  
 TITEL: Abschlusstest
 
 **INFO-BOX: Hinweise zum Abschlusstest**
@@ -1337,8 +1348,9 @@ Dieser Test umfasst 12 Fragen zu allen Kapiteln. Du benötigst mindestens 10 von
 
 ---
 
-## BUTTON: FAQ - Häufig gestellte Fragen
+## FAQ - Häufig gestellte Fragen
 
+BUTTON: FAQ  
 TITEL: FAQ - Häufig gestellte Fragen
 
 ### Allgemeine Fragen zum System
