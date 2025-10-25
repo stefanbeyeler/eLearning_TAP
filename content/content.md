@@ -1303,4 +1303,344 @@ Dieser Test umfasst 12 Fragen zu allen Kapiteln. Sie benötigen mindestens 10 vo
 
 ---
 
+## KAPITEL 10: FAQ - Häufig gestellte Fragen
+
+### Allgemeine Fragen zum System
+
+**ACCORDION:**
+
+**Was ist der Unterschied zwischen LKAAT, TARDOC und Ambulanten Pauschalen?**
+
+*   **LKAAT** ist der Leistungskatalog zur **Erfassung** aller ambulanten Leistungen
+*   **TARDOC** ist das Tarifsystem zur **Abrechnung** von Einzelleistungen
+*   **Ambulante Pauschalen** sind das Tarifsystem zur **Abrechnung** komplexer Behandlungen als Gesamtpaket
+
+Merkhilfe: LKAAT = Was wurde gemacht? TARDOC/Pauschalen = Wie wird abgerechnet?
+
+**Wann wird welches Abrechnungssystem verwendet?**
+
+Das System wird durch die erfasste Leistung im LKAAT bestimmt:
+
+*   Wurde eine **Triggerposition (Typ P)** erfasst → Abrechnung über **Ambulante Pauschalen**
+*   Wurden **nur Einzelleistungen (Typ E/EZ)** erfasst → Abrechnung über **TARDOC**
+
+Die Entscheidung wird automatisch durch das System getroffen, sobald Sie die Leistung im LKAAT erfassen.
+
+**Kann ich zwischen TARDOC und Pauschalen frei wählen?**
+
+Nein. Die Wahl des Abrechnungssystems ist nicht beliebig:
+
+*   Jede Leistung im LKAAT ist entweder als TARDOC-Position (E/EZ) oder als Pauschalen-Position (P/PZ) definiert
+*   Diese Zuordnung können Sie nicht ändern
+*   Das System bestimmt automatisch das korrekte Abrechnungssystem
+
+**Was passiert, wenn ich eine Triggerposition übersehe?**
+
+Dies führt zu einem Abrechnungsfehler:
+
+*   Sie rechnen fälschlicherweise über TARDOC ab, obwohl eine Pauschale anwendbar wäre
+*   Die Rechnung kann von der Krankenkasse zurückgewiesen werden
+*   Finanzielle Nachteile für Ihre Praxis/Ihr Spital
+
+**Tipp:** Nutzen Sie den LKAAT plus Browser, der Triggerpositionen deutlich markiert.
+
+### Fragen zu TARDOC
+
+**ACCORDION:**
+
+**Wie erkenne ich, ob eine Leistung über TARDOC abrechenbar ist?**
+
+TARDOC-Leistungen haben im LKAAT:
+
+*   Eine **8-stellige LKN-Nummer** (z.B. AA.00.0010)
+*   Den **Typ E** (Einzelleistung) oder **EZ** (Zusatzleistung)
+*   Eine Bewertung in **Taxpunkten**
+
+**Was sind Taxpunkte und wie werden sie in Franken umgerechnet?**
+
+*   Taxpunkte (TP) sind die Bewertungseinheit im TARDOC
+*   Die Umrechnung erfolgt über den Taxpunktwert, der kantonal unterschiedlich ist
+*   **Formel:** Vergütung = Taxpunkte × Taxpunktwert
+*   **Beispiel:** 200 TP × CHF 0.95 = CHF 190.00
+
+**Was bedeutet "Kumulation" bei TARDOC?**
+
+Kumulation beschreibt, ob Leistungen zusammen am gleichen Tag abgerechnet werden können:
+
+*   Manche Leistungen **schließen sich gegenseitig aus** (nicht kumulierbar)
+*   Andere können **zusammen abgerechnet** werden (kumulierbar)
+*   Die Kumulationsregeln sind im TARDOC definiert
+*   Moderne Abrechnungssoftware prüft dies automatisch
+
+**Muss ich bei TARDOC jede einzelne Minute dokumentieren?**
+
+Ja und Nein:
+
+*   Sie müssen die **erbrachten Leistungen** dokumentieren
+*   Zeitbasierte Leistungen (z.B. Konsultationen) erfordern Zeitangaben
+*   Bei nicht-zeitbasierten Leistungen (z.B. EKG) genügt die Dokumentation der Durchführung
+*   **Best Practice:** Zeitaufwand immer notieren für Nachvollziehbarkeit
+
+**Was ist "Dignität" und betrifft sie mich?**
+
+Dignität bezeichnet die **Berechtigung zur Abrechnung** bestimmter Leistungen:
+
+*   Nicht alle Ärzte dürfen alle TARDOC-Leistungen abrechnen
+*   Manche Leistungen erfordern einen **Facharzttitel** oder **spezielle Qualifikation**
+*   Prüfen Sie im TARDOC, welche Dignität für eine Leistung erforderlich ist
+*   Bei unberechtigter Abrechnung droht Rückforderung
+
+### Fragen zu Ambulanten Pauschalen
+
+**ACCORDION:**
+
+**Wie erkenne ich, dass eine Pauschale anwendbar ist?**
+
+Pauschalen werden durch **Triggerpositionen** ausgelöst:
+
+*   **9-stellige LKN-Nummer** (z.B. C05.GB.0080)
+*   **Typ P** (Pauschalen-Position) im LKAAT
+*   Meist **chirurgische Eingriffe**, Endoskopien oder komplexe Diagnostik
+
+Sobald Sie eine solche Position erfassen, rechnet das System automatisch über Pauschalen ab.
+
+**Was ist alles in einer Pauschale inkludiert?**
+
+Eine Pauschale deckt typischerweise ab:
+
+*   Präoperative Voruntersuchungen
+*   Der Eingriff/die Behandlung selbst
+*   Anästhesieleistungen
+*   Standard-Verbrauchsmaterialien
+*   Postoperative Nachkontrollen (definierter Zeitraum)
+*   Standard-Medikamente
+
+**Nicht inkludiert** (separat abrechenbar als Zusatzentgelte):
+
+*   Teure Spezialimplantate
+*   Spezielle Medikamente (z.B. Biologika)
+*   Nicht-standardmäßige Diagnostik
+
+**Was sind Zusatzentgelte und wie rechne ich sie ab?**
+
+Zusatzentgelte sind **definierte Zusatzkosten** zur Pauschale:
+
+*   Teure Implantate (z.B. Premium-Linsen bei Katarakt-OP)
+*   Spezielle Medikamente
+*   Nur die im LKAAT definierten Zusatzentgelte sind abrechenbar
+*   Werden **zusätzlich zur Pauschale** in Rechnung gestellt
+
+**Wichtig:** Sie können nicht beliebig Leistungen zusätzlich abrechnen!
+
+**Was passiert bei Komplikationen während/nach dem Eingriff?**
+
+Bei **erwartbaren Komplikationen:**
+
+*   Diese sind durch die Pauschale abgedeckt
+*   Keine zusätzliche Abrechnung möglich
+
+Bei **schweren, unerwarteten Komplikationen:**
+
+*   Dokumentieren Sie den Sachverhalt genau
+*   Kontaktieren Sie ggf. den Kostenträger
+*   In Ausnahmefällen kann eine Zusatzvergütung möglich sein
+
+**Kann ich bei Pauschalen auch TARDOC-Leistungen zusätzlich abrechnen?**
+
+Grundsätzlich **nein**:
+
+*   Innerhalb desselben Behandlungsfalls keine Mischung
+*   Ausnahme: Definierte Zusatzentgelte (keine TARDOC-Positionen!)
+*   Bei separater Behandlung am gleichen Tag (anderes Capitulum, anderer Grund): Ja, dann ist eine zweite ambulante Behandlung möglich
+
+### Fragen zu ICD-10-GM und Diagnosen
+
+**ACCORDION:**
+
+**Wann muss ich ICD-10-GM verwenden?**
+
+**Verpflichtend:**
+
+*   Bei allen Sitzungen mit **Triggerposition** (Ambulante Pauschalen)
+*   Bei mehreren Sitzungen am gleichen Tag, wenn mindestens eine eine Triggerposition enthält
+
+**Optional, aber empfohlen:**
+
+*   Bei TARDOC-Abrechnung (alternativ: Tessinercode)
+
+**Best Practice:** Verwenden Sie konsequent ICD-10-GM für alle Sitzungen.
+
+**Wie finde ich den richtigen ICD-10-Code?**
+
+Schrittweise Vorgehen:
+
+1.  **Identifizieren** Sie die Hauptdiagnose (größter Behandlungsaufwand)
+2.  **Suchen** Sie im ICD-10-Katalog nach dem Organsystem (Kapitel A-Z)
+3.  **Wählen** Sie die spezifischste Kategorie
+4.  **Erfassen** Sie den endständigen Code (so detailliert wie möglich)
+
+**Hilfsmittel:** ICD-10-Browser, Suchfunktion in Ihrer Praxissoftware
+
+**Was ist der Unterschied zwischen endständig und nicht-endständig?**
+
+*   **Endständig:** Detaillierteste Ebene der Klassifikation (z.B. J45.0)
+*   **Nicht-endständig:** Übergeordnete Kategorie (z.B. J45)
+
+**Ziel:** Immer den endständigen Code verwenden, soweit möglich. Nur in begründeten Ausnahmefällen nicht-endständige Codes.
+
+**Wann erfasse ich Symptomcodes und wann Organdiagnosen?**
+
+**Organdiagnose bevorzugen:**
+
+*   Immer wenn zum Zeitpunkt der Behandlung eine Organdiagnose bekannt ist
+*   **Beispiel:** J45.0 (Allergisches Asthma) statt R06.0 (Dyspnoe)
+
+**Symptomcode nur wenn:**
+
+*   Keine organbezogene Diagnose zum Zeitpunkt der Leistungserbringung verfügbar
+*   **Beispiel:** Akute Bauchschmerzen ohne klare Ursache → R10.x
+
+**Was mache ich bei Verdachtsdiagnosen?**
+
+*   **Verdacht bestätigt sich:** Diagnose wird entsprechend dem aktuellen Wissensstand erfasst
+*   **Verdacht wird ausgeschlossen:** Erfassen Sie die Verdachtsdiagnose, da diese Anlass für die Untersuchung war
+*   **Beispiel:** V.a. Appendizitis → nach Untersuchung ausgeschlossen → Dennoch K35.- erfassen
+
+**Wichtig:** Sie erfassen den Wissensstand **zum Zeitpunkt der Behandlung**, nicht Laborresultate von drei Tagen später!
+
+### Fragen zur Praxisanwendung
+
+**ACCORDION:**
+
+**Wie organisiere ich meinen Workflow am besten?**
+
+**Empfohlener Workflow:**
+
+1.  **Bei Anmeldung:** Versicherungsstatus prüfen, Art der Behandlung klären
+2.  **Vor Behandlung:** Ist eine Pauschale verfügbar? Kostengutsprache nötig?
+3.  **Während Behandlung:** Leistungen zeitnah im LKAAT erfassen
+4.  **Nach Behandlung:** Dokumentation vervollständigen, Diagnose erfassen
+5.  **Vor Rechnungsstellung:** Plausibilitätsprüfung durchführen
+
+**Was mache ich, wenn die Krankenkasse die Rechnung zurückweist?**
+
+**Typische Gründe für Rückweisungen:**
+
+*   Fehlende oder unvollständige Dokumentation
+*   Falsches Abrechnungssystem verwendet
+*   Kumulationsfehler bei TARDOC
+*   Fehlende Kostengutsprache
+
+**Vorgehen:**
+
+1.  Rückweisungsgrund genau prüfen
+2.  Fehlende Informationen ergänzen
+3.  Dokumentation nachreichen
+4.  Bei Unklarheiten: Kontakt mit Krankenkasse aufnehmen
+5.  Rechnung korrigiert neu einreichen
+
+**Wie halte ich mich über Änderungen auf dem Laufenden?**
+
+**Informationsquellen:**
+
+*   **FMH (Verbindung der Schweizer Ärztinnen und Ärzte):** Offizielle Informationen
+*   **OAAT (Organisation ambulante Arzttarife):** Tarifupdates, Dokumentationen
+*   **Ärztekasse:** Schulungen, Newsletter, LKAAT plus Browser
+*   **Fachverbände:** Spezifische Informationen für Ihre Fachrichtung
+*   **Praxissoftware-Anbieter:** Software-Updates mit neuen Tarifversionen
+
+**Empfehlung:** Regelmäßige Schulungen für Mitarbeitende (mind. 1x jährlich)
+
+**Benötige ich spezielle Software?**
+
+**Mindestanforderungen:**
+
+*   Abrechnungssoftware mit aktuellem LKAAT
+*   Zugriff auf TARDOC- und Pauschalen-Katalog
+*   ICD-10-GM Browser
+
+**Empfehlenswert:**
+
+*   Software mit automatischer Kumulationsprüfung
+*   Plausibilitätschecks
+*   LKAAT plus Browser für Recherchen
+*   Elektronische Rechnungsstellung
+
+**Was mache ich bei Unsicherheiten?**
+
+**Anlaufstellen:**
+
+*   **Trustcenter:** Neutrale Beratung zu Abrechnungsfragen
+*   **Ärztekasse:** Tarifberatung für Mitglieder
+*   **Fachverband:** Spezifische Fragen für Ihre Fachrichtung
+*   **Kollegium:** Erfahrungsaustausch
+*   **Kostenträger:** Bei Unklarheiten zur Kostenübernahme
+
+**Grundsatz:** Lieber einmal zu viel nachfragen als eine falsche Rechnung stellen!
+
+### Technische Fragen
+
+**ACCORDION:**
+
+**Was ist der LKAAT plus Browser?**
+
+Der LKAAT plus Browser ist ein **Online-Tool** zur Tarifrecherche:
+
+*   Umfassende Suchfunktionen für LKAAT-Leistungen
+*   Zeigt an, welche Leistungen Pauschalen auslösen
+*   Vergleich mit TARMED-Leistungen
+*   ICD-10-Zuordnung zu Capitulum
+*   Kostenlos verfügbar (Anbieter: Ärztekasse, FMH)
+
+**Wie funktioniert die elektronische Rechnungsstellung?**
+
+**Prozess:**
+
+1.  Rechnung in Ihrer Praxissoftware erstellen
+2.  Daten im standardisierten Format (XML) exportieren
+3.  Übermittlung via gesichertem Kanal an Trustcenter oder Krankenkasse
+4.  Automatische Plausibilitätsprüfung
+5.  Zahlung auf Ihr Konto
+
+**Vorteile:** Schneller, weniger Fehler, automatisierte Prozesse
+
+**Welche Datenschutzbestimmungen muss ich beachten?**
+
+**Bei der Rechnungsstellung:**
+
+*   Übermittlung über verschlüsselte Kanäle
+*   Bei Datenschutzbedenken: Verkürzte ICD-10-Codes möglich (mind. 1. Buchstabe)
+*   Keine Weitergabe an Dritte ohne Einwilligung
+*   Aufbewahrungspflicht: 10 Jahre
+
+**Muss ich alte Rechnungen aufbewahren?**
+
+Ja, die **Aufbewahrungspflicht** beträgt:
+
+*   **10 Jahre** für Rechnungen und Behandlungsdokumentationen
+*   Elektronisch oder in Papierform
+*   Zugriff muss jederzeit möglich sein (bei Kontrollen)
+
+### FAQ zu Übergangsregelungen
+
+**ACCORDION:**
+
+**Was ist mit meinen alten TARMED-Abrechnungen?**
+
+*   TARDOC ist der **Nachfolger von TARMED**
+*   Alte TARMED-Rechnungen bleiben gültig
+*   Neue Rechnungen erfolgen über TARDOC
+*   Viele TARDOC-Codes entsprechen TARMED-Codes (aber nicht alle!)
+*   Nutzen Sie den LKAAT plus Browser für Vergleiche
+
+**Gibt es noch Übergangsfristen?**
+
+Die Übergangsfrist ist abgelaufen:
+
+*   TARDOC und Ambulante Pauschalen sind seit 2025 vollständig in Kraft
+*   Schulungen und Anlaufstellen stehen weiterhin zur Verfügung
+*   Bei Fragen: Fachverbände und Trustcenter kontaktieren
+
+---
+
 ## Ende der Content-Datei
