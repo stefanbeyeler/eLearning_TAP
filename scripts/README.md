@@ -4,13 +4,11 @@ Dieser Ordner enthält alle Python-Skripte zur Generierung und Verwaltung der HT
 
 ## Übersicht
 
-### Hauptskript (empfohlen)
-
-`**build_html.py**` - Vollständiger Markdown zu HTML Konverter
+### build\_html.py - Vollständiger Markdown zu HTML Konverter
 
 *   **Funktion:** Konvertiert `content/content.md` zu `eLearning.html`
 *   **Status:** ✅ Produktiv, vollständig funktional
-*   **Verwendung:**
+*   **Verwendung:** `python3 scripts/build_html.py`
 *   **Features:**
     *   Parst alle 13 Kapitel (Vorwort + 10 Kapitel + Abschlusstest + FAQ)
     *   Konvertiert Markdown-Elemente zu HTML:
@@ -22,23 +20,6 @@ Dieser Ordner enthält alle Python-Skripte zur Generierung und Verwaltung der HT
         *   Listen und Paragraphen
     *   Generiert vollständiges HTML mit CSS und JavaScript
     *   Ausgabe: `eLearning.html` (bereit für Deployment)
-
-### Legacy-Skripte
-
-`**convert_content_to_html.py**`
-
-*   **Status:** ⚠️ Legacy, möglicherweise veraltet
-*   **Hinweis:** Wurde durch `build_html.py` ersetzt
-
-`**update_html.py**`
-
-*   **Status:** ⚠️ Legacy, möglicherweise veraltet
-*   **Hinweis:** Wurde durch `build_html.py` ersetzt
-
-`**generate_html.py**`
-
-*   **Status:** ⚠️ Unvollständig
-*   **Hinweis:** Prototyp, wurde durch `build_html.py` ersetzt
 
 ## Empfohlener Workflow
 
