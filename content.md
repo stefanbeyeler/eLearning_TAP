@@ -21,6 +21,109 @@ Diese Markdown-Datei enthält alle Inhalte der eLearning-Schulung in strukturier
 
 ---
 
+## KAPITEL 0: Vorwort
+
+### Willkommen zur eLearning-Schulung
+
+Herzlich willkommen zu dieser umfassenden Schulung zum ambulanten Gesamt-Tarifsystem der Schweiz. Diese Schulung wurde entwickelt, um Ihnen ein fundiertes Verständnis der komplexen Strukturen und Prozesse der ambulanten Abrechnung zu vermitteln.
+
+**INFO-BOX: Zielgruppe dieser Schulung**
+- Medizinisches Fachpersonal in Arztpraxen und ambulanten Einrichtungen
+- Mitarbeitende in der Abrechnung und Kodierung
+- Praxismanager:innen und Verwaltungspersonal
+- Alle, die mit der ambulanten Leistungserfassung und -abrechnung befasst sind
+
+### Aufbau und Struktur
+
+Diese Schulung ist in 9 Kapitel gegliedert, die aufeinander aufbauen und Sie Schritt für Schritt durch das Tarifsystem führen:
+
+**ACCORDION:**
+
+**Grundlagen (Kapitel 1-3)**
+
+Sie lernen zunächst die Komponenten des Systems kennen, verstehen was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.
+
+**Diagnosen und Abrechnungssysteme (Kapitel 4-6)**
+
+Hier vertiefen Sie Ihr Wissen über die Diagnosecodierung mit ICD-10-GM, den TARDOC-Einzelleistungstarif und die Ambulanten Pauschalen.
+
+**Vergleich und Praxis (Kapitel 7-8)**
+
+Sie lernen die Unterschiede zwischen TARDOC und Pauschalen kennen und erhalten praxisnahe Anleitungen für den Arbeitsalltag.
+
+**Abschlusstest (Kapitel 9)**
+
+Ein umfassender Test überprüft Ihr erworbenes Wissen über alle Kapitel hinweg.
+
+### Wie Sie diese Schulung nutzen
+
+**INFO-BOX SUCCESS: Lernempfehlungen**
+- Arbeiten Sie die Kapitel nacheinander durch
+- Nutzen Sie die INFO-Boxen für wichtige Hinweise
+- Öffnen Sie die Accordion-Bereiche für zusätzliche Details
+- Bearbeiten Sie die Quiz-Fragen am Ende jedes Kapitels
+- Machen Sie sich Notizen zu Unklarheiten
+- Nehmen Sie sich Zeit für den Abschlusstest
+
+### Interaktive Elemente
+
+In dieser Schulung finden Sie verschiedene didaktische Elemente:
+
+**INFO-BOX: Verwendete Elemente**
+- **INFO-BOX:** Wichtige Informationen und Zusammenfassungen
+- **INFO-BOX WARNUNG:** Hinweise auf häufige Fehler und kritische Punkte
+- **INFO-BOX SUCCESS:** Best Practices und Erfolgstipps
+- **ACCORDION:** Zusätzliche Details, die Sie bei Bedarf ausklappen können
+- **TABELLE:** Übersichtliche Gegenüberstellungen
+- **QUIZ:** Wissensfragen zur Selbstkontrolle
+
+### Zeitaufwand
+
+Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **3-4 Stunden**. Sie können die Schulung jederzeit unterbrechen und später fortsetzen. Ihr Fortschritt wird automatisch gespeichert.
+
+**INFO-BOX: Geschätzter Zeitaufwand pro Kapitel**
+- Kapitel 0 (Vorwort): 5 Minuten
+- Kapitel 1 (Einführung): 20 Minuten
+- Kapitel 2 (Ambulante Behandlung): 25 Minuten
+- Kapitel 3 (LKAAT): 25 Minuten
+- Kapitel 4 (ICD-10 Diagnosen): 30 Minuten
+- Kapitel 5 (TARDOC): 20 Minuten
+- Kapitel 6 (Ambulante Pauschalen): 20 Minuten
+- Kapitel 7 (Vergleich): 20 Minuten
+- Kapitel 8 (Praxisanwendung): 25 Minuten
+- Kapitel 9 (Abschlusstest): 15 Minuten
+
+### Lernziele der Gesamtschulung
+
+Nach erfolgreichem Abschluss dieser Schulung sind Sie in der Lage:
+
+- Die Struktur und Komponenten des ambulanten Gesamt-Tarifsystems zu erklären
+- Ambulante von stationären Behandlungen abzugrenzen
+- Den LKAAT zur korrekten Leistungserfassung zu nutzen
+- Diagnosen korrekt nach ICD-10-GM zu codieren
+- TARDOC-Leistungen zu identifizieren und abzurechnen
+- Ambulante Pauschalen zu erkennen und anzuwenden
+- Das richtige Abrechnungssystem für verschiedene Behandlungssituationen auszuwählen
+- Häufige Fehlerquellen zu vermeiden und Best Practices anzuwenden
+
+### Technische Voraussetzungen
+
+**INFO-BOX: Was Sie benötigen**
+- Einen modernen Webbrowser (Chrome, Firefox, Safari, Edge)
+- Eine stabile Internetverbindung
+- Etwa 3-4 Stunden ungestörte Lernzeit
+- Optional: Notizblock für eigene Anmerkungen
+
+### Support und Fragen
+
+Bei Fragen oder technischen Problemen wenden Sie sich bitte an Ihre Schulungsverantwortlichen oder nutzen Sie die bereitgestellten Support-Kanäle.
+
+**INFO-BOX SUCCESS: Bereit zu starten?**
+
+Klicken Sie auf "Weiter", um mit Kapitel 1 zu beginnen. Wir wünschen Ihnen viel Erfolg beim Lernen!
+
+---
+
 ## KAPITEL 1: Einführung in das ambulante Gesamt-Tarifsystem
 
 ### Was ist das ambulante Gesamt-Tarifsystem?

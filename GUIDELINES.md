@@ -675,168 +675,26 @@ const chapters = [
 
 ### Inhaltliche Vorgaben pro Kapitel
 
-#### Kapitel 1: Einführung
-**Lernziele:**
-- Überblick über das Gesamt-Tarifsystem
-- Die drei Komponenten vorstellen
-- Notwendigkeit und Vorteile erklären
+**Wichtig:** Die detaillierten inhaltlichen Vorgaben für alle Kapitel sind jetzt zentral in [content.md](content.md) definiert.
 
-**Inhalte:**
-1. Was ist das ambulante Gesamt-Tarifsystem?
-2. Komponenten des Systems (LKAAT, TARDOC, Pauschalen)
-3. Warum verschiedene Komponenten?
-4. Lernziele des Moduls
+**Kapitelübersicht:**
+- Kapitel 0: Vorwort (NEU - einführende Informationen zur Schulung)
+- Kapitel 1: Einführung in das ambulante Gesamt-Tarifsystem
+- Kapitel 2: Ambulante Behandlung
+- Kapitel 3: LKAAT - Der Leistungskatalog
+- Kapitel 4: Diagnosen als ICD-10 Code
+- Kapitel 5: TARDOC - Der Einzelleistungstarif
+- Kapitel 6: Ambulante Pauschalen (AP)
+- Kapitel 7: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich
+- Kapitel 8: Praxisanwendung und Best Practices
+- Kapitel 9: Abschlusstest
 
-**Quiz:** 2 Fragen
+**Für inhaltliche Änderungen:**
+1. Bearbeiten Sie [content.md](content.md) in Markdown
+2. Beauftragen Sie Claude, die Änderungen nach [eLearning.html](eLearning.html) zu übertragen
+3. Siehe [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md) für Details
 
----
-
-#### Kapitel 2: Ambulante Behandlung
-**Lernziele:**
-- Definition ambulanter Behandlungen verstehen
-- Abgrenzung zu stationären Behandlungen kennen
-- Typische Anwendungsbereiche identifizieren
-
-**Inhalte:**
-1. Was ist eine ambulante Behandlung?
-2. Abgrenzung: Ambulant vs. Stationär (Vergleichstabelle)
-3. Wichtige Abgrenzungsfälle
-4. Typische ambulante Behandlungen (Akkordeon)
-5. Vorteile ambulanter Behandlungen
-6. Trend zur Ambulantisierung
-7. Besonderheiten bei der Abrechnung
-8. Praktisches Beispiel (Fallbeispiel)
-
-**Quiz:** 4 Fragen
-
----
-
-#### Kapitel 3: LKAAT
-**Lernziele:**
-- Funktion des LKAAT verstehen
-- Leistungstypen unterscheiden können
-- Triggerpositionen erkennen
-
-**Inhalte:**
-1. Was ist der LKAAT?
-2. Struktur und Aufbau (Tabelle: Typen E, EZ, P, PZ)
-3. Entscheidung TARDOC vs. Pauschale (Akkordeon mit 3 Schritten)
-4. LKN-Nummern verstehen (8-stellig vs 9-stellig)
-5. Triggerpositionen - Das Herzstück des Systems
-6. Praktisches Beispiel (Fallbeispiel: Zwei Behandlungen)
-7. Tools für die Arbeit mit dem LKAAT
-8. Häufige Fehler beim LKAAT
-
-**Quiz:** 4 Fragen
-
----
-
-#### Kapitel 4: Diagnosen als ICD-10 Code
-**Lernziele:**
-- ICD-10-GM System verstehen
-- Korrekte Diagnosecodierung durchführen
-- Verwendungsregeln kennen
-- Besondere Situationen meistern
-
-**Inhalte:**
-1. Was ist ICD-10-GM? (Definition und Bedeutung)
-2. Warum ist Diagnosecodierung wichtig? (Abrechnung, Qualitätssicherung, Dokumentation)
-3. Wann wird ICD-10-GM verwendet? (Verpflichtende Verwendung, Alternative Tessinercode)
-4. Aufbau eines ICD-10-Codes (Hierarchie-Gliederung, Beispiele)
-5. Richtlinien für die Diagnoseerfassung (Zeitpunkt, Hauptanlass, häufige Fehler)
-6. Besondere Situationen (Akkordeon):
-   - Mehrere Leistungen in einer Sitzung
-   - Verdachtsdiagnosen
-   - Symptomcodes
-   - Akut vs. Chronisch
-   - Erkrankungen nach medizinischen Massnahmen
-7. Diagnosen und Rechnungsstellung (TARDOC vs. Ambulante Pauschalen, Datenschutz)
-8. Praktische Übung (2 Fallbeispiele: Kniearthroskopie, COPD)
-9. Zusammenfassung und Checkliste (8 Punkte)
-
-**Quiz:** 4 Fragen
-
-**Quellendokumente:**
-- Anhang C: Richtlinien für die ambulante Leistungserfassung
-- Anhang H: Rechnungsstellung und Datenaustausch
-- FAQ ambulantes Gesamt-Tarifsystem
-
----
-
-#### Kapitel 5: TARDOC
-**Lernziele:**
-- TARDOC als Einzelleistungstarif verstehen
-- Berechnungsformel anwenden können
-- Wichtige Regelungen kennen
-
-**Inhalte:**
-1. Was ist TARDOC?
-2. Hauptmerkmale (Info-Box)
-3. Struktur des TARDOC-Tarifs (Akkordeon)
-4. Berechnung der Vergütung (Formel + Beispiel)
-5. Wichtige Regelungen (Kumulation, Zuschläge, Limitationen, Dignität)
-6. Häufige Fehlerquellen
-
-**Quiz:** 3 Fragen
-
----
-
-#### Kapitel 6: Ambulante Pauschalen
-**Lernziele:**
-- Prinzip der Pauschalen verstehen
-- Anwendungsbereiche kennen
-- Vor- und Nachteile beurteilen können
-
-**Inhalte:**
-1. Was sind Ambulante Pauschalen?
-2. Kernprinzip (Info-Box)
-3. Anwendungsbereiche
-4. Struktur (Akkordeon: AP-Gruppen, Inkludierte Leistungen, Zusatzentgelte)
-5. Vorteile für Leistungserbringer und Kostenträger
-6. Praktisches Beispiel: Kataraktoperation
-7. Wichtige Abgrenzungen
-
-**Quiz:** 3 Fragen
-
----
-
-#### Kapitel 7: Vergleich
-**Lernziele:**
-- TARDOC und Pauschalen gegenüberstellen
-- Entscheidungskriterien anwenden
-- Kombinationsmöglichkeiten kennen
-
-**Inhalte:**
-1. Gegenüberstellung der Systeme (Vergleichstabelle)
-2. Wann welches System? (Info-Box mit Entscheidungshilfe)
-3. Kombinationsmöglichkeiten (Akkordeon)
-4. Praktische Fallbeispiele (3 Beispiele)
-
-**Quiz:** 3 Fragen
-
----
-
-#### Kapitel 8: Praxisanwendung
-**Lernziele:**
-- Workflow in der Praxis kennen
-- Fehlerquellen vermeiden
-- Effizient arbeiten können
-
-**Inhalte:**
-1. Der Workflow in der Praxis (Akkordeon: 3 Schritte)
-2. Häufige Fehlerquellen und deren Vermeidung (Top 5)
-3. Tipps für effizientes Arbeiten
-4. Rechtliche und ethische Aspekte
-5. Zukunftsperspektiven
-
-**Quiz:** 3 Fragen
-
----
-
-#### Kapitel 9: Abschlusstest
-**Format:** 12 Multiple-Choice-Fragen aus allen Kapiteln
-**Bestehensgrenze:** 10 von 12 richtigen Antworten (83%)
-**Feedback:** Detailliertes Ergebnis mit Bestanden/Nicht bestanden
+**Content-Quelle:** [content.md](content.md)
 
 ---
 
@@ -1221,7 +1079,56 @@ function resetTraining() {
 
 ## 🔄 Entwicklungsworkflow
 
-### 1. Neues Kapitel hinzufügen
+### Übersicht: Content-Workflow vs. Direkter HTML-Workflow
+
+**⭐ NEU: Content-Workflow (empfohlen für Inhaltsänderungen)**
+
+Seit Version 1.2 gibt es einen vereinfachten Content-Workflow:
+- Inhalte werden in [content.md](content.md) in Markdown bearbeitet
+- Claude konvertiert Markdown automatisch zu HTML
+- Keine HTML-Kenntnisse erforderlich
+
+**Detaillierte Anleitung:** Siehe [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md)
+
+**Direkter HTML-Workflow (für technische Änderungen)**
+
+Für Design-Anpassungen, JavaScript-Funktionen und strukturelle Änderungen:
+- Direkte Bearbeitung von [eLearning.html](eLearning.html)
+- CSS und JavaScript anpassen
+- Volle Kontrolle über das HTML
+
+---
+
+### 1. Content-Workflow: Neues Kapitel hinzufügen (empfohlen)
+
+**Workflow:**
+
+1. **In [content.md](content.md):**
+   - Neues Kapitel im Markdown-Format erstellen
+   - Siehe [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md) für Syntax
+
+2. **Claude beauftragen:**
+   ```
+   Neues Kapitel 10 wurde in @content.md erstellt.
+   Bitte füge es in @eLearning.html ein und aktualisiere:
+   - Navigation
+   - Kapitelnummerierung
+   - Quiz-System
+   ```
+
+3. **Testen:**
+   - [eLearning.html](eLearning.html) im Browser öffnen
+   - Alle Funktionen prüfen
+
+**Vorteile:**
+- ✅ Einfache Markdown-Syntax
+- ✅ Schnelle Content-Updates
+- ✅ Automatische Konvertierung
+- ✅ Keine HTML-Kenntnisse nötig
+
+---
+
+### 2. Direkter HTML-Workflow: Neues Kapitel hinzufügen
 
 **Schritt-für-Schritt-Anleitung:**
 
@@ -1297,22 +1204,36 @@ git commit -m "feat: Kapitel X - [Titel] hinzugefügt"
 git push
 ```
 
-### 2. Content-Update durchführen
+### 3. Content-Update durchführen
+
+**⭐ Empfohlen: Content-Workflow**
+
+1. [content.md](content.md) öffnen und bearbeiten
+2. Claude beauftragen: "Kapitel X in @content.md wurde geändert, bitte aktualisiere @eLearning.html"
+3. Testing und Git-Commit
+
+**Detailliert:** Siehe [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md)
+
+---
+
+**Alternativ: Direkter HTML-Workflow**
 
 **Für Textänderungen:**
-1. Entsprechendes Kapitel-`<div>` lokalisieren
+1. Entsprechendes Kapitel-`<div>` in [eLearning.html](eLearning.html) lokalisieren
 2. Text anpassen
 3. Speichern und im Browser testen
-4. Committen mit: `content: Kapitel X - [Beschreibung] aktualisiert`
+4. [content.md](content.md) manuell synchronisieren (wichtig!)
+5. Committen mit: `content: Kapitel X - [Beschreibung] aktualisiert`
 
 **Für Quiz-Änderungen:**
-1. HTML-Fragentext anpassen
+1. HTML-Fragentext in [eLearning.html](eLearning.html) anpassen
 2. JavaScript `answers` Objekt aktualisieren
 3. JavaScript `feedbackTexts` aktualisieren
-4. Testen (alle Antwortoptionen durchgehen)
-5. Committen mit: `fix: Kapitel X Quiz korrigiert`
+4. Quiz in [content.md](content.md) aktualisieren (wichtig!)
+5. Testen (alle Antwortoptionen durchgehen)
+6. Committen mit: `fix: Kapitel X Quiz korrigiert`
 
-### 3. Design-Anpassungen
+### 4. Design-Anpassungen
 
 **Farben ändern:**
 ```css
@@ -1337,7 +1258,7 @@ body, p, h4, h5, h6 {
 }
 ```
 
-### 4. Git-Workflow
+### 5. Git-Workflow
 
 ```bash
 # Status prüfen
@@ -1699,12 +1620,19 @@ git checkout HEAD -- datei.html
 
 ---
 
-**Version:** 2.1
+**Version:** 2.2
 **Erstellt:** 2025-10-21
 **Letzte Aktualisierung:** 2025-10-25
 **Nächste Review:** 2026-01-21
 
 ### Changelog
+
+**Version 2.2 (2025-10-25):**
+- ✅ **NEU:** Content-Workflow dokumentiert (Verweis auf CONTENT_WORKFLOW.md)
+- ✅ **NEU:** Unterscheidung zwischen Content-Workflow und direktem HTML-Workflow
+- ✅ Entwicklungsworkflow-Sektion erweitert und neu strukturiert
+- ✅ Projekt-Struktur nicht aktualisiert (bleibt bei alter Struktur ohne content.md)
+- ✅ Hinweise auf [content.md](content.md) und [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md) ergänzt
 
 **Version 2.1 (2025-10-25):**
 - ✅ Kapitel 4 "Diagnosen als ICD-10 Code" hinzugefügt

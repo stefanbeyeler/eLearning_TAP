@@ -18,8 +18,10 @@ Dieses Projekt enthält Single-File HTML-Schulungsunterlagen für medizinisches 
 eLearning_TAP/
 ├── README.md                                      # Diese Datei
 ├── GUIDELINES.md                                  # ⭐ Haupt-Vorgabedatei (Design, Entwicklung, Content)
-├── DEVELOPMENT.md                                 # Entwicklungsdokumentation
-├── eLearning.html                                 # Hauptschulungsunterlage (aktive Version)
+├── DEVELOPMENT.md                                 # Entwicklungsdokumentation (technisch)
+├── CONTENT_WORKFLOW.md                            # ⭐ NEU: Content-Workflow (MD → HTML)
+├── content.md                                     # ⭐ NEU: Content-Quelle (Markdown, editierbar)
+├── eLearning.html                                 # Hauptschulungsunterlage (generiert aus content.md)
 ├── ambulantes-tarifsystem-schulung-komplett.html # Legacy-Version (deprecated)
 ├── PROMPT-Schulungsunterlage-Vorgaben.md         # KI-Prompt-Vorgaben (veraltet, siehe GUIDELINES.md)
 ├── specification_documents/                       # Offizielle OAAT-Tarifdokumente
@@ -36,29 +38,54 @@ eLearning_TAP/
 
 ## 🚀 Quick Start
 
-### Für Entwickler
+### Für Content-Ersteller (⭐ Empfohlen)
 
-1. **Neue Inhalte hinzufügen:**
-   - Öffne [GUIDELINES.md](GUIDELINES.md)
-   - Folge dem Abschnitt "Entwicklungsworkflow"
-   - Bearbeite [eLearning.html](eLearning.html)
+**Neuer vereinfachter Workflow:**
 
-2. **Design-Anpassungen:**
+1. **Inhalte bearbeiten:**
+   - Öffne [content.md](content.md) in einem Texteditor
+   - Bearbeite Texte, Info-Boxen, Quiz-Fragen in Markdown
+   - Speichern
+
+2. **HTML aktualisieren:**
+   - Beauftrage Claude: "Kapitel X in @content.md wurde geändert, bitte aktualisiere @eLearning.html"
+   - Claude konvertiert Markdown → HTML automatisch
+
+3. **Testing:**
+   - Öffne [eLearning.html](eLearning.html) im Browser
+
+**Detaillierte Anleitung:** [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md)
+
+**Vorteile:**
+- ✅ Einfache Markdown-Syntax (kein HTML nötig)
+- ✅ Schnelle Content-Updates
+- ✅ Automatische HTML-Konvertierung
+- ✅ Konsistente Formatierung
+
+### Für Entwickler (Technische Änderungen)
+
+1. **Design-Anpassungen:**
    - Siehe [GUIDELINES.md](GUIDELINES.md) → "Typography-System" und "Design-System"
    - Alle Farben, Schriftarten und Komponenten sind dort dokumentiert
+   - Direkte Bearbeitung von [eLearning.html](eLearning.html)
+
+2. **Neue Features entwickeln:**
+   - Folge dem Abschnitt "Entwicklungsworkflow" in [DEVELOPMENT.md](DEVELOPMENT.md)
+   - Bearbeite HTML, CSS oder JavaScript in [eLearning.html](eLearning.html)
 
 3. **Testing:**
    - Verwende die Test-Checkliste in [GUIDELINES.md](GUIDELINES.md)
    - Öffne HTML-Datei direkt im Browser
 
-### Für Content-Ersteller
-
-- Alle inhaltlichen Vorgaben und Kapitel-Strukturen: [GUIDELINES.md](GUIDELINES.md) → "Content-Struktur"
-- Quiz-Erstellung: [GUIDELINES.md](GUIDELINES.md) → "Interaktive Komponenten"
-
 ## 📖 Dokumentation
 
 ### Haupt-Dokumentation
+- **[CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md)** - ⭐ NEU: Content-Workflow (MD → HTML)
+  - Anleitung zur Bearbeitung von [content.md](content.md)
+  - Wie Claude die HTML-Konvertierung durchführt
+  - Struktur-Konventionen und Markdown-Syntax
+  - Praktische Beispiele und Troubleshooting
+
 - **[GUIDELINES.md](GUIDELINES.md)** - Konsolidierte Vorgaben für Design, Entwicklung und Inhalt
   - Typography-System (Schriftarten, Größen, Hierarchie)
   - Design-System (Farben, Layout, Komponenten)
@@ -68,9 +95,16 @@ eLearning_TAP/
   - Entwicklungsworkflow
   - Testing & Deployment
 
-### Ergänzende Dokumentation (veraltet - siehe GUIDELINES.md)
-- [DEVELOPMENT.md](DEVELOPMENT.md) - Entwicklungsdokumentation
-- [PROMPT-Schulungsunterlage-Vorgaben.md](PROMPT-Schulungsunterlage-Vorgaben.md) - KI-Prompt-Vorgaben
+- **[DEVELOPMENT.md](DEVELOPMENT.md)** - Technische Entwicklungsdokumentation
+  - Entwicklungsworkflow (Content vs. Direkter HTML-Workflow)
+  - Coding Standards
+  - Testing & Qualitätssicherung
+  - Deployment & Wartung
+  - Troubleshooting
+
+### Ergänzende Dokumentation
+- [content.md](content.md) - Content-Quelle (Markdown, manuell editierbar)
+- [PROMPT-Schulungsunterlage-Vorgaben.md](PROMPT-Schulungsunterlage-Vorgaben.md) - KI-Prompt-Vorgaben (veraltet)
 
 ## 🎨 Design-System
 
@@ -122,11 +156,18 @@ cp eLearning.html \
 
 ## 📝 Version
 
-- **Aktuelle Version:** 1.1
+- **Aktuelle Version:** 1.2
 - **Letzte Aktualisierung:** 2025-10-25
 - **Versionierung:** MAJOR.MINOR.PATCH
 
 ### Changelog
+
+**Version 1.2 (2025-10-25):**
+- ✅ **NEU:** Content-Workflow eingeführt (content.md + CONTENT_WORKFLOW.md)
+- ✅ **NEU:** Markdown-basierte Content-Verwaltung
+- ✅ Automatische HTML-Konvertierung durch Claude
+- ✅ Projekt-Struktur erweitert und dokumentiert
+- ✅ README.md, DEVELOPMENT.md, GUIDELINES.md aktualisiert
 
 **Version 1.1 (2025-10-25):**
 - ✅ Kapitel 4 "Diagnosen als ICD-10 Code" vollständig entwickelt

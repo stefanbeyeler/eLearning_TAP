@@ -90,10 +90,13 @@ Medizinisches Personal, Verwaltungsmitarbeitende, Codierer/innen in Schweizer Sp
 ```
 eLearning_TAP/
 ├── README.md                                      # Projekt-Beschreibung
-├── DEVELOPMENT.md                                 # Diese Datei
-├── PROMPT-Schulungsunterlage-Vorgaben.md         # Inhaltliche Vorgaben für AI-Generierung
-├── eLearning.html                                 # Hauptdatei (Schulungsunterlage) - NEU
-├── ambulantes-tarifsystem-schulung-komplett.html # Legacy-Version (wird nicht mehr verwendet)
+├── GUIDELINES.md                                  # ⭐ Haupt-Vorgabedatei (Design, Entwicklung, Content)
+├── DEVELOPMENT.md                                 # Diese Datei (Technische Dokumentation)
+├── CONTENT_WORKFLOW.md                            # ⭐ NEU: Workflow für Content-Verwaltung (MD → HTML)
+├── content.md                                     # ⭐ NEU: Content-Quelle (Markdown, manuell editierbar)
+├── eLearning.html                                 # Hauptschulungsunterlage (generiert aus content.md)
+├── ambulantes-tarifsystem-schulung-komplett.html # Legacy-Version (deprecated)
+├── PROMPT-Schulungsunterlage-Vorgaben.md         # KI-Prompt-Vorgaben (veraltet, siehe GUIDELINES.md)
 ├── specification_documents/                       # Offizielle Tarifdokumente (OAAT)
 │   ├── 250430_AnhangH_Rechnungsstellung.pdf
 │   ├── 250430_AnhangC_Richtlinien_fuer_die_ambulante_Leistungserfassung.pdf
@@ -102,6 +105,11 @@ eLearning_TAP/
 │   ├── Schulungsunterlagen.pdf
 │   ├── Webinar Schulungsfolien_09.09.2025.pdf
 │   └── [weitere Anhänge A-I]
+├── Vorgaben/                                      # Design-Referenzmaterialien
+│   ├── Typography-Fonts.pdf
+│   ├── Typography-Headings.pdf
+│   ├── Typography-Hyperlinks.pdf
+│   └── *.pdf (weitere Vorgabedokumente)
 └── .git/                                          # Git-Repository
 ```
 
@@ -109,27 +117,88 @@ eLearning_TAP/
 
 | Datei | Zweck | Bearbeitung |
 |-------|-------|-------------|
-| `eLearning.html` | **Aktuelle Hauptschulungsunterlage** | Bei Content-Updates |
+| `content.md` | **⭐ Content-Quelle (Markdown)** | Manuelle Content-Updates |
+| `eLearning.html` | **Hauptschulungsunterlage (HTML)** | Automatische Generierung aus content.md |
+| `CONTENT_WORKFLOW.md` | **Workflow-Dokumentation MD→HTML** | Anleitung für Content-Verwaltung |
+| `GUIDELINES.md` | Konsolidierte Vorgaben (Design, Dev, Content) | Bei Design-/Struktur-Änderungen |
+| `DEVELOPMENT.md` | Technische Entwicklungsdokumentation | Bei Prozess-Änderungen |
 | `ambulantes-tarifsystem-schulung-komplett.html` | Legacy-Version (deprecated) | Nur für Referenz |
-| `PROMPT-Schulungsunterlage-Vorgaben.md` | Vorgaben für KI-generierte Inhalte | Bei strukturellen Änderungen |
-| `DEVELOPMENT.md` | Entwicklungsdokumentation | Bei Prozess-Änderungen |
 | `specification_documents/*` | Offizielle OAAT-Dokumente | Read-only, Basis für Inhalte |
+| `Vorgaben/*` | Design-Referenzmaterialien | Read-only, Basis für Design |
 
 ---
 
 ## 🔄 Entwicklungsworkflow
 
-### 1. Neues Feature entwickeln
+### Übersicht: Zwei Workflows
+
+**Es gibt zwei Haupt-Workflows:**
+
+1. **Content-Workflow (empfohlen):** Inhalte in `content.md` bearbeiten → Claude konvertiert zu HTML
+2. **Direkter Workflow:** Direkte Bearbeitung von `eLearning.html` (nur für technische Änderungen)
+
+---
+
+### Workflow 1: Content-Updates (empfohlen für Inhaltsänderungen)
+
+**Dieser Workflow ist dokumentiert in:** [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md)
+
+**Kurzübersicht:**
+
+```bash
+# 1. content.md in Texteditor öffnen und bearbeiten
+open content.md
+
+# 2. Änderungen speichern
+
+# 3. Claude beauftragen (im Chat):
+# "Kapitel 4 wurde in @content.md geändert, bitte aktualisiere @eLearning.html"
+
+# 4. Testing
+open eLearning.html
+
+# 5. Änderungen committen
+git add content.md eLearning.html
+git commit -m "content: Kapitel 4 erweitert"
+git push origin main
+```
+
+**Vorteile:**
+- ✅ Einfache Markdown-Syntax (kein HTML nötig)
+- ✅ Schnelle Content-Updates
+- ✅ Automatische HTML-Konvertierung
+- ✅ Konsistente Formatierung
+- ✅ Backup in `content.md`
+
+**Verwendung für:**
+- Texte ändern/erweitern
+- Neue Abschnitte hinzufügen
+- Info-Boxen einfügen
+- Akkordeons erstellen
+- Quiz-Fragen ändern
+- Tabellen aktualisieren
+
+**Detaillierte Anleitung:** Siehe [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md)
+
+---
+
+### Workflow 2: Direkter HTML-Workflow (für technische Änderungen)
+
+**Verwendung für:**
+- Design-Anpassungen (CSS)
+- JavaScript-Funktionen ändern
+- Strukturelle HTML-Änderungen
+- Performance-Optimierungen
 
 ```bash
 # Repository Status prüfen
 git status
 
-# Änderungen vornehmen
-# -> HTML-Datei bearbeiten
+# Änderungen direkt in eLearning.html vornehmen
+# Bearbeite HTML, CSS oder JavaScript
 
 # Lokales Testing
-# -> HTML-Datei im Browser öffnen
+open eLearning.html
 
 # Änderungen committen
 git add eLearning.html
@@ -138,6 +207,8 @@ git commit -m "feat: Beschreibung der Änderung"
 # Optional: Push zu Remote
 git push origin main
 ```
+
+**⚠️ Wichtig:** Bei direkten HTML-Änderungen von Inhalten sollten Sie auch `content.md` manuell synchronisieren, um die Dateien im Einklang zu halten!
 
 ### 2. Neues Kapitel hinzufügen
 
@@ -988,12 +1059,13 @@ git restore datei.html
 
 ---
 
-**Version:** 1.1
+**Version:** 1.2
 **Erstellt:** 2025-10-21
 **Letzte Aktualisierung:** 2025-10-25
 **Nächste Review:** 2025-11-25
 
 **Änderungshistorie:**
+- **v1.2** (2025-10-25): Neuer Content-Workflow eingeführt (content.md + CONTENT_WORKFLOW.md), Projekt-Struktur aktualisiert
 - **v1.1** (2025-10-25): Aktualisierung nach Kapitel 4 Integration, neue Dateistruktur, Quellendokumente ergänzt
 - **v1.0** (2025-10-21): Initial Release
 
