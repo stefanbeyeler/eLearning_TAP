@@ -94,8 +94,15 @@ eLearning_TAP/
 ├── DEVELOPMENT.md                                 # Diese Datei (Technische Dokumentation)
 ├── CONTENT_WORKFLOW.md                            # ⭐ NEU: Workflow für Content-Verwaltung (MD → HTML)
 ├── CHANGELOG.md                                   # Versionshistorie
-├── content.md                                     # ⭐ NEU: Content-Quelle (Markdown, manuell editierbar)
+├── content/
+│   └── content.md                                 # ⭐ Content-Quelle (Markdown, manuell editierbar)
 ├── eLearning.html                                 # Hauptschulungsunterlage (generiert aus content.md)
+├── scripts/                                       # ⭐ Python-Skripte für HTML-Generierung
+│   ├── README.md                                  # Dokumentation aller Skripte
+│   ├── build_html.py                              # Hauptskript: MD → HTML Konverter
+│   ├── convert_content_to_html.py                 # Legacy-Skript
+│   ├── update_html.py                             # Legacy-Skript
+│   └── generate_html.py                           # Prototyp
 ├── documents/                                     # Offizielle Tarifdokumente (OAAT)
 │   ├── 20250214_FAQ_Gesamtsystem_final.pdf
 │   ├── 250430_AnhangA-I_*.pdf                    # Anhänge A bis I
@@ -120,8 +127,10 @@ eLearning_TAP/
 
 | Datei | Zweck | Bearbeitung |
 |-------|-------|-------------|
-| `content.md` | **⭐ Content-Quelle (Markdown)** | Manuelle Content-Updates |
+| `content/content.md` | **⭐ Content-Quelle (Markdown)** | Manuelle Content-Updates |
 | `eLearning.html` | **Hauptschulungsunterlage (HTML)** | Automatische Generierung aus content.md |
+| `scripts/build_html.py` | **⭐ MD→HTML Konverter** | Automatische HTML-Generierung |
+| `scripts/README.md` | **Skript-Dokumentation** | Detaillierte Anleitung für alle Scripts |
 | `CONTENT_WORKFLOW.md` | **Workflow-Dokumentation MD→HTML** | Anleitung für Content-Verwaltung |
 | `GUIDELINES.md` | Konsolidierte Vorgaben (Design, Dev, Content) | Bei Design-/Struktur-Änderungen |
 | `DEVELOPMENT.md` | Technische Entwicklungsdokumentation | Bei Prozess-Änderungen |
@@ -148,22 +157,24 @@ eLearning_TAP/
 
 **Dieser Workflow ist dokumentiert in:** [CONTENT_WORKFLOW.md](CONTENT_WORKFLOW.md)
 
+**Detaillierte Skript-Dokumentation:** [scripts/README.md](scripts/README.md)
+
 **Kurzübersicht:**
 
 ```bash
 # 1. content.md in Texteditor öffnen und bearbeiten
-open content.md
+open content/content.md
 
 # 2. Änderungen speichern
 
-# 3. Claude beauftragen (im Chat):
-# "Kapitel 4 wurde in @content.md geändert, bitte aktualisiere @eLearning.html"
+# 3. HTML neu generieren mit Python-Skript:
+python3 scripts/build_html.py
 
 # 4. Testing
 open eLearning.html
 
 # 5. Änderungen committen
-git add content.md eLearning.html
+git add content/content.md eLearning.html
 git commit -m "content: Kapitel 4 erweitert"
 git push origin main
 ```
@@ -213,7 +224,7 @@ git commit -m "feat: Beschreibung der Änderung"
 git push origin main
 ```
 
-**⚠️ Wichtig:** Bei direkten HTML-Änderungen von Inhalten sollten Sie auch `content.md` manuell synchronisieren, um die Dateien im Einklang zu halten!
+**⚠️ Wichtig:** Bei direkten HTML-Änderungen von Inhalten sollten Sie auch `content/content.md` manuell synchronisieren, um die Dateien im Einklang zu halten!
 
 ### 2. Neues Kapitel hinzufügen
 
@@ -1245,6 +1256,11 @@ git restore datei.html
 - **v1.2** (2025-10-25):
   - Neuer Content-Workflow eingeführt (content.md + CONTENT_WORKFLOW.md)
   - Projekt-Struktur aktualisiert
+  - **Python-Skripte organisiert:**
+    - Alle Skripte in `scripts/` Ordner verschoben
+    - `scripts/README.md` mit vollständiger Dokumentation erstellt
+    - Hauptskript: `scripts/build_html.py` für MD→HTML Konvertierung
+    - Workflow aktualisiert auf `python3 scripts/build_html.py`
   - **Grafische Anpassungen:**
     - Info-Box Titel: margin-top: 0 (reduzierter Abstand zum oberen Rand)
     - Listen-Einrückung: margin-left und padding-left jeweils 20px
