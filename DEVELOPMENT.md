@@ -367,9 +367,112 @@ ul, ol {
 li {
     margin-bottom: 8px;      /* Abstand zwischen Listenpunkten */
 }
+
+/* Tabellen-Darstellung */
+table.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.comparison-table th {
+    background: #667eea;     /* Lila Header */
+    color: white;
+    font-weight: bold;
+}
+
+.comparison-table tr:hover {
+    background: #f5f5f5;     /* Hover-Effekt für Zeilen */
+}
 ```
 
-**Wichtige JavaScript-Korrekturen:**
+**Quiz-Darstellung (Stand: v1.2):**
+
+```css
+/* Fragetitel */
+.question-text {
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Antwortoptionen - Container */
+.answers {
+    margin: 15px 0;
+}
+
+/* Antwortoptionen - Einzelne Antwort */
+.answers label {
+    display: block;
+    padding: 12px;
+    margin: 8px 0;
+    background: #f8f9fa;           /* Grauer Hintergrund */
+    border: 2px solid #ddd;         /* Grauer Rahmen */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.answers label:hover {
+    border-color: #667eea;          /* Lila Rahmen beim Hover */
+    background: #e8f4f8;            /* Hellblauer Hintergrund beim Hover */
+}
+
+.answers input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Prüfen-Button */
+.check-btn {
+    background: #28a745;            /* Grüner Button */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.check-btn:hover {
+    background: #218838;            /* Dunkleres Grün beim Hover */
+    transform: translateY(-2px);    /* Leichter Lift-Effekt */
+}
+
+/* Feedback-Boxen */
+.feedback {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.feedback.correct {
+    display: block;
+    background: #d4edda;            /* Grüner Hintergrund */
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback.incorrect {
+    display: block;
+    background: #f8d7da;            /* Roter Hintergrund */
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+```
+
+**Wichtige JavaScript-Funktionen:**
 
 ```javascript
 // Accordion Toggle - Korrigierte Version
@@ -381,6 +484,30 @@ function toggleAccordion(element) {
     if (header && content) {
         header.classList.toggle('active');
         content.classList.toggle('active');
+    }
+}
+
+// Quiz-Antwort prüfen
+function checkAnswer(chapter, questionNum, correctAnswer) {
+    const feedbackId = `feedback${chapter}_${questionNum}`;
+    const feedback = document.getElementById(feedbackId);
+    const questionName = `q${chapter}_${questionNum}`;
+    const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+
+    if (!selectedAnswer) {
+        feedback.className = 'feedback incorrect';
+        feedback.textContent = 'Bitte wählen Sie eine Antwort aus.';
+        return;
+    }
+
+    const isCorrect = selectedAnswer.value === correctAnswer;
+
+    if (isCorrect) {
+        feedback.className = 'feedback correct';
+        feedback.textContent = '✓ Richtig! Sehr gut.';
+    } else {
+        feedback.className = 'feedback incorrect';
+        feedback.textContent = '✗ Leider falsch. Die richtige Antwort ist: ' + correctAnswer + ')';
     }
 }
 ```
@@ -1034,42 +1161,50 @@ function showChapter(index) {
         <tr>
             <th>Spalte 1</th>
             <th>Spalte 2</th>
+            <th>Spalte 3</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Wert 1</td>
             <td>Wert 2</td>
+            <td>Wert 3</td>
+        </tr>
+        <tr>
+            <td>Wert A</td>
+            <td>Wert B</td>
+            <td>Wert C</td>
         </tr>
     </tbody>
 </table>
 ```
 
-**Neue Quiz-Frage:**
+**Wichtig:**
+- Immer die Klasse `comparison-table` verwenden
+- `<thead>` für Spaltenüberschriften (wird lila mit weißer Schrift dargestellt)
+- `<tbody>` für Datenzeilen (Hover-Effekt aktiviert)
+- Keine Markdown-Tabellen (`| ... |`) verwenden - diese werden nicht korrekt dargestellt
+
+**Neue Quiz-Frage (aktuelle Struktur v1.2):**
 ```html
-<div class="quiz-question" data-chapter="3" data-question="1">
-    <h4>Frage 1: Fragetext?</h4>
-    <div class="quiz-options">
-        <label class="quiz-option">
-            <input type="radio" name="q3_1" value="a">
-            Antwort A
-        </label>
-        <label class="quiz-option">
-            <input type="radio" name="q3_1" value="b">
-            Antwort B
-        </label>
-        <label class="quiz-option">
-            <input type="radio" name="q3_1" value="c">
-            Antwort C
-        </label>
-        <label class="quiz-option">
-            <input type="radio" name="q3_1" value="d">
-            Antwort D
-        </label>
+<div class="quiz-question">
+    <p class="question-text">Frage 1: Fragetext?</p>
+    <div class="answers">
+        <label><input type="radio" name="q3_0" value="a"> a) Antwort A</label>
+        <label><input type="radio" name="q3_0" value="b"> b) Antwort B</label>
+        <label><input type="radio" name="q3_0" value="c"> c) Antwort C</label>
+        <label><input type="radio" name="q3_0" value="d"> d) Antwort D</label>
     </div>
-    <div class="quiz-feedback"></div>
+    <button class="check-btn" onclick="checkAnswer(3, 0, 'c')">Antwort prüfen</button>
+    <div class="feedback" id="feedback3_0"></div>
 </div>
 ```
+
+**Hinweise:**
+- Kapitel 3, Frage 0 (erste Frage): `name="q3_0"`, `id="feedback3_0"`
+- Korrekte Antwort ist `c` → `onclick="checkAnswer(3, 0, 'c')"`
+- Fragetitel verwendet `<p class="question-text">` (nicht `<h4>`)
+- Labels haben keine spezielle Klasse (Styling erfolgt über `.answers label`)
 
 ### Git-Befehle Cheat Sheet
 
@@ -1115,11 +1250,24 @@ git restore datei.html
     - Listen-Einrückung: margin-left und padding-left jeweils 20px
     - Listenpunkte: margin-bottom 8px für bessere Lesbarkeit
     - Accordion-Funktion korrigiert (toggleAccordion nimmt jetzt das accordion-div als Parameter)
+    - **Quiz-Darstellung neu gestaltet:**
+      - Antwortoptionen mit grauem Hintergrund und Rahmen
+      - Hover-Effekt: Lila Rahmen und hellblauer Hintergrund
+      - Grüner "Antwort prüfen"-Button mit Lift-Effekt
+      - Feedback-Boxen: Grün für richtig, rot für falsch
+      - Fragetitel blau und fettgedruckt
+  - **JavaScript-Funktionen:**
+    - checkAnswer() Funktion hinzugefügt für einzelne Quiz-Fragen
+    - Unterstützt dynamisches Feedback basierend auf Antwort
   - **Bugfixes:**
     - Kapitel 9 (Abschlusstest) Einrückung korrigiert
     - Div-Balance korrigiert (309 opening/closing divs)
     - Horizontale Linie (---) in Info-Boxen entfernt
     - Listen in Info-Boxen und Accordions korrekt als <ul>/<li> formatiert
+    - **Tabellen korrigiert:** 3 Tabellen von Markdown-Format (<p>|...|</p>) zu HTML-Tabellen konvertiert:
+      - "Vergleich Ambulant vs. Stationär" (Kapitel 2)
+      - "Leistungstypen im LKAAT" (Kapitel 3)
+      - "TARDOC vs. Ambulante Pauschalen" (Kapitel 7)
 - **v1.1** (2025-10-25): Aktualisierung nach Kapitel 4 Integration, neue Dateistruktur, Quellendokumente ergänzt
 - **v1.0** (2025-10-21): Initial Release
 

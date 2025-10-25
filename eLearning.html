@@ -403,6 +403,77 @@
             transform: translateY(-2px);
         }
 
+        /* Anpassung für aktuelle HTML-Struktur */
+        .question-text {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .answers {
+            margin: 15px 0;
+        }
+
+        .answers label {
+            display: block;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .answers label:hover {
+            border-color: #667eea;
+            background: #e8f4f8;
+        }
+
+        .answers input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .check-btn {
+            background: #28a745;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .check-btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        .feedback {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .feedback.correct {
+            display: block;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .feedback.incorrect {
+            display: block;
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
         .quiz-result {
             display: none;
             margin-top: 20px;
@@ -808,16 +879,52 @@
 </div>
 <h3>Abgrenzung: Ambulant vs. Stationär</h3>
 <p>Die Unterscheidung zwischen ambulant und stationär ist entscheidend für die Abrechnung und die Zuständigkeiten:</p>
-<p><strong>TABELLE: Vergleich Ambulant vs. Stationär</strong></p>
-<p>| Kriterium | Ambulant | Stationär |</p>
-<p>| --- | --- | --- |</p>
-<p>| Aufenthaltsdauer | Wenige Stunden, keine Übernachtung | Mindestens eine Übernachtung |</p>
-<p>| Tarifsystem | TARDOC / Ambulante Pauschalen | SwissDRG |</p>
-<p>| Behandlungsort | Praxis, Ambulatorium, Spitalambulanz | Spital mit Bettenbelegung |</p>
-<p>| Überwachung | Keine oder kurze Nachbeobachtung | 24-Stunden-Überwachung |</p>
-<p>| Komplexität | Einfach bis mittel | Mittel bis hoch |</p>
-<p>| Kostenträger-Anteil | OKP zahlt ca. 42.6% | OKP zahlt 55% |</p>
-<p>| Kantonsanteil | Ca. 55% (variiert je nach Kanton) | 45% (fixiert durch KVG) |</p>
+<table class="comparison-table">
+    <thead>
+        <tr>
+            <th>Kriterium</th>
+            <th>Ambulant</th>
+            <th>Stationär</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Aufenthaltsdauer</td>
+            <td>Wenige Stunden, keine Übernachtung</td>
+            <td>Mindestens eine Übernachtung</td>
+        </tr>
+        <tr>
+            <td>Tarifsystem</td>
+            <td>TARDOC / Ambulante Pauschalen</td>
+            <td>SwissDRG</td>
+        </tr>
+        <tr>
+            <td>Behandlungsort</td>
+            <td>Praxis, Ambulatorium, Spitalambulanz</td>
+            <td>Spital mit Bettenbelegung</td>
+        </tr>
+        <tr>
+            <td>Überwachung</td>
+            <td>Keine oder kurze Nachbeobachtung</td>
+            <td>24-Stunden-Überwachung</td>
+        </tr>
+        <tr>
+            <td>Komplexität</td>
+            <td>Einfach bis mittel</td>
+            <td>Mittel bis hoch</td>
+        </tr>
+        <tr>
+            <td>Kostenträger-Anteil</td>
+            <td>OKP zahlt ca. 42.6%</td>
+            <td>OKP zahlt 55%</td>
+        </tr>
+        <tr>
+            <td>Kantonsanteil</td>
+            <td>Ca. 55% (variiert je nach Kanton)</td>
+            <td>45% (fixiert durch KVG)</td>
+        </tr>
+    </tbody>
+</table>
 <div class="info-box warning">
     <h4>Wichtige Abgrenzungsfälle</h4>
     <p>In der Praxis gibt es Grenzfälle, die eine klare Zuordnung erfordern:</p>
@@ -1016,13 +1123,42 @@
     </ul>
 </div>
 <h3>Struktur und Aufbau des LKAAT</h3>
-<p><strong>TABELLE: Leistungstypen im LKAAT</strong></p>
-<p>| Typ | Bedeutung | Beispiel | LKN-Nummer |</p>
-<p>| --- | --- | --- | --- |</p>
-<p>| E | Einzelleistungstarif-Position | Ärztliche Konsultation, erste 5 Min. | AA.00.0010 (8-stellig) |</p>
-<p>| EZ | Zusatzleistung für Einzelleistungs-Position | \+ Ärztliche Konsultation, jede weitere 1 Min. | AA.00.0020 (8-stellig) |</p>
-<p>| P | Pauschalen-Position (Triggerposition) | Stripping der Stammvene | C05.GB.0080 (9-stellig) |</p>
-<p>| PZ | Zusatzleistung für Pauschalen-Position | Rechtsherzkatheter unter Belastung | C05.KC.Z001 (9-stellig) |</p>
+<table class="comparison-table">
+    <thead>
+        <tr>
+            <th>Typ</th>
+            <th>Bedeutung</th>
+            <th>Beispiel</th>
+            <th>LKN-Nummer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>E</td>
+            <td>Einzelleistungstarif-Position</td>
+            <td>Ärztliche Konsultation, erste 5 Min.</td>
+            <td>AA.00.0010 (8-stellig)</td>
+        </tr>
+        <tr>
+            <td>EZ</td>
+            <td>Zusatzleistung für Einzelleistungs-Position</td>
+            <td>+ Ärztliche Konsultation, jede weitere 1 Min.</td>
+            <td>AA.00.0020 (8-stellig)</td>
+        </tr>
+        <tr>
+            <td>P</td>
+            <td>Pauschalen-Position (Triggerposition)</td>
+            <td>Stripping der Stammvene</td>
+            <td>C05.GB.0080 (9-stellig)</td>
+        </tr>
+        <tr>
+            <td>PZ</td>
+            <td>Zusatzleistung für Pauschalen-Position</td>
+            <td>Rechtsherzkatheter unter Belastung</td>
+            <td>C05.KC.Z001 (9-stellig)</td>
+        </tr>
+    </tbody>
+</table>
 <h3>Wie funktioniert die Entscheidung TARDOC vs. Pauschale?</h3>
 <div class="accordion" onclick="toggleAccordion(this)">
     <div class="accordion-header">Schritt 1: Leistung erfassen</div>
@@ -1691,19 +1827,67 @@
             <div class="chapter" id="chapter7"><h2>Kapitel 7: TARDOC vs. Ambulante Pauschalen - Der direkte Vergleich</h2>
 
                 <h3>Gegenüberstellung der Systeme</h3>
-<p><strong>TABELLE: TARDOC vs. Ambulante Pauschalen</strong></p>
-<p>| Kriterium | TARDOC | Ambulante Pauschalen |</p>
-<p>| --- | --- | --- |</p>
-<p>| Abrechnungsprinzip | Einzelleistung | Fallpauschale |</p>
-<p>| Vergütungseinheit | Taxpunkte pro Leistung | Pauschalbetrag pro Fall |</p>
-<p>| Typische Anwendung | Konsultationen, einfache Behandlungen | Komplexe Eingriffe, Behandlungsserien |</p>
-<p>| Infrastruktur | Einfach (Sprechzimmer, Ultraschall, Röntgen) | Aufwändig (OP, Nuklearmedizin, Endoskopien) |</p>
-<p>| Dokumentationsaufwand | Hoch (jede Leistung) | Moderat (Gesamtbehandlung) |</p>
-<p>| Planbarkeit | Variable Kosten | Fixe Kosten |</p>
-<p>| Flexibilität | Sehr hoch | Begrenzt |</p>
-<p>| Transparenz | Detailliert | Pauschal |</p>
-<p>| Effizienzanreiz | Gering | Hoch |</p>
-<p>| Tariftyp | 007 | 005 |</p>
+<table class="comparison-table">
+    <thead>
+        <tr>
+            <th>Kriterium</th>
+            <th>TARDOC</th>
+            <th>Ambulante Pauschalen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Abrechnungsprinzip</td>
+            <td>Einzelleistung</td>
+            <td>Fallpauschale</td>
+        </tr>
+        <tr>
+            <td>Vergütungseinheit</td>
+            <td>Taxpunkte pro Leistung</td>
+            <td>Pauschalbetrag pro Fall</td>
+        </tr>
+        <tr>
+            <td>Typische Anwendung</td>
+            <td>Konsultationen, einfache Behandlungen</td>
+            <td>Komplexe Eingriffe, Behandlungsserien</td>
+        </tr>
+        <tr>
+            <td>Infrastruktur</td>
+            <td>Einfach (Sprechzimmer, Ultraschall, Röntgen)</td>
+            <td>Aufwändig (OP, Nuklearmedizin, Endoskopien)</td>
+        </tr>
+        <tr>
+            <td>Dokumentationsaufwand</td>
+            <td>Hoch (jede Leistung)</td>
+            <td>Moderat (Gesamtbehandlung)</td>
+        </tr>
+        <tr>
+            <td>Planbarkeit</td>
+            <td>Variable Kosten</td>
+            <td>Fixe Kosten</td>
+        </tr>
+        <tr>
+            <td>Flexibilität</td>
+            <td>Sehr hoch</td>
+            <td>Begrenzt</td>
+        </tr>
+        <tr>
+            <td>Transparenz</td>
+            <td>Detailliert</td>
+            <td>Pauschal</td>
+        </tr>
+        <tr>
+            <td>Effizienzanreiz</td>
+            <td>Gering</td>
+            <td>Hoch</td>
+        </tr>
+        <tr>
+            <td>Tariftyp</td>
+            <td>007</td>
+            <td>005</td>
+        </tr>
+    </tbody>
+</table>
 <h3>Wann welches System?</h3>
 <div class="info-box">
     <h4>Entscheidungshilfe</h4>
@@ -2346,6 +2530,30 @@
                 // Toggle active class
                 header.classList.toggle('active');
                 content.classList.toggle('active');
+            }
+        }
+
+        // Einzelne Quiz-Antwort überprüfen
+        function checkAnswer(chapter, questionNum, correctAnswer) {
+            const feedbackId = `feedback${chapter}_${questionNum}`;
+            const feedback = document.getElementById(feedbackId);
+            const questionName = `q${chapter}_${questionNum}`;
+            const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+
+            if (!selectedAnswer) {
+                feedback.className = 'feedback incorrect';
+                feedback.textContent = 'Bitte wählen Sie eine Antwort aus.';
+                return;
+            }
+
+            const isCorrect = selectedAnswer.value === correctAnswer;
+
+            if (isCorrect) {
+                feedback.className = 'feedback correct';
+                feedback.textContent = '✓ Richtig! Sehr gut.';
+            } else {
+                feedback.className = 'feedback incorrect';
+                feedback.textContent = '✗ Leider falsch. Die richtige Antwort ist: ' + correctAnswer + ')';
             }
         }
 
