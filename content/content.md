@@ -38,8 +38,6 @@ Herzlich willkommen zu dieser umfassenden Schulung zum ambulanten Gesamt-Tarifsy
 
 Diese Schulung ist in 9 Kapitel gegliedert, die aufeinander aufbauen und Sie Schritt für Schritt durch das Tarifsystem führen:
 
-**ACCORDION:**
-
 **Grundlagen (Kapitel 1-3)**
 
 Sie lernen zunächst die Komponenten des Systems kennen, verstehen was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.
