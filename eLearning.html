@@ -1407,9 +1407,413 @@
             <div class="chapter" id="chapter3">
                 <h2>Kapitel 4: Diagnosen als ICD-10 Code</h2>
 
+                <h3>Was ist ICD-10-GM?</h3>
                 <p>
-                    Inhalt für dieses Kapitel folgt.
+                    Die <span class="highlight">ICD-10-GM</span> (Internationale statistische Klassifikation der
+                    Krankheiten und verwandter Gesundheitsprobleme, 10. Revision, German Modification) ist ein
+                    weltweit anerkanntes System zur Kodierung von Diagnosen im Gesundheitswesen. Im ambulanten
+                    Tarifsystem der Schweiz spielt die korrekte Diagnosecodierung eine zentrale Rolle für die
+                    Abrechnung und Dokumentation.
                 </p>
+
+                <div class="info-box">
+                    <h4>📋 Definition ICD-10-GM</h4>
+                    <ul class="list-styled">
+                        <li>Standardisiertes Klassifikationssystem für medizinische Diagnosen</li>
+                        <li>Wird jährlich vom Bundesamt für Statistik (BfS) aktualisiert</li>
+                        <li>Verpflichtend für die Abrechnung ambulanter Pauschalen</li>
+                        <li>Ermöglicht einheitliche statistische Auswertungen</li>
+                    </ul>
+                </div>
+
+                <h3>Warum ist die Diagnosecodierung wichtig?</h3>
+
+                <div class="info-box success">
+                    <h4>✅ Für die Abrechnung</h4>
+                    <ul class="list-styled">
+                        <li>Bestimmt die Eingruppierung in eine Fallgruppe bei Ambulanten Pauschalen</li>
+                        <li>Führt zur Zuordnung ins richtige Capitulum (Diagnosegruppe)</li>
+                        <li>Beeinflusst die korrekte Vergütung der erbrachten Leistungen</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>🔍 Für die Qualitätssicherung</h4>
+                    <ul class="list-styled">
+                        <li>Ermöglicht statistische Auswertungen</li>
+                        <li>Unterstützt das Monitoring von Behandlungsqualität</li>
+                        <li>Schafft Transparenz über erbrachte Leistungen</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>📝 Für die Dokumentation</h4>
+                    <ul class="list-styled">
+                        <li>Sichert die lückenlose Patientendokumentation</li>
+                        <li>Gewährleistet Nachvollziehbarkeit der Behandlung</li>
+                        <li>Erfüllt gesetzliche Dokumentationspflichten</li>
+                    </ul>
+                </div>
+
+                <h3>Wann wird ICD-10-GM verwendet?</h3>
+
+                <div class="info-box warning">
+                    <h4>⚠️ Verpflichtende Verwendung von ICD-10-GM</h4>
+                    <ul class="list-styled">
+                        <li>Bei Sitzungen mit <strong>Triggerposition</strong> (Ambulante Pauschalen)</li>
+                        <li>Bei mehreren Sitzungen am gleichen Tag, wenn mindestens eine Sitzung eine Triggerposition enthält</li>
+                        <li>In bestimmten Fachbereichen (siehe Dokumentation zur Datenerhebung der OAAT)</li>
+                    </ul>
+
+                    <h4 style="margin-top: 15px;">💡 Alternative: Tessinercode</h4>
+                    <ul class="list-styled">
+                        <li>Bei Sitzungen <strong>ohne</strong> Triggerposition kann alternativ der Tessinercode verwendet werden</li>
+                        <li>Der Tessinercode wird von der OAAT nicht weiterentwickelt</li>
+                        <li><strong>Empfehlung:</strong> Konsequente Verwendung von ICD-10-GM für alle Sitzungen</li>
+                    </ul>
+                </div>
+
+                <h3>Aufbau eines ICD-10-Codes</h3>
+
+                <div class="info-box">
+                    <h4>🔢 Beispiel: J45.0</h4>
+                    <p><strong>Struktur:</strong></p>
+                    <ul class="list-styled">
+                        <li><strong>J</strong> = Kapitel (Krankheiten des Atmungssystems, J00-J99)</li>
+                        <li><strong>45</strong> = Kategorie (Asthma bronchiale)</li>
+                        <li><strong>.0</strong> = Unterkategorie (vorwiegend allergisches Asthma)</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;"><strong>Weitere Beispiele:</strong></p>
+                    <ul class="list-styled">
+                        <li><strong>I10:</strong> Essentielle (primäre) Hypertonie</li>
+                        <li><strong>M54.5:</strong> Kreuzschmerz</li>
+                        <li><strong>K35.80:</strong> Akute Appendizitis</li>
+                        <li><strong>E11.90:</strong> Diabetes mellitus Typ 2</li>
+                    </ul>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Hierarchie-Gliederung der ICD-10-GM</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p><strong>Ebene 1: Kapitel</strong> (Buchstabe + 2 Ziffern)</p>
+                            <ul class="list-styled">
+                                <li>A00-B99: Bestimmte infektiöse und parasitäre Krankheiten</li>
+                                <li>C00-D48: Neubildungen</li>
+                                <li>I00-I99: Krankheiten des Kreislaufsystems</li>
+                                <li>J00-J99: Krankheiten des Atmungssystems</li>
+                                <li>M00-M99: Krankheiten des Muskel-Skelett-Systems</li>
+                            </ul>
+
+                            <p style="margin-top: 15px;"><strong>Ebene 2: Kategorie</strong> (3-stellig)</p>
+                            <p>Beispiel: J45 = Asthma bronchiale</p>
+
+                            <p style="margin-top: 15px;"><strong>Ebene 3: Unterkategorie</strong> (4-5-stellig)</p>
+                            <p>Beispiel: J45.0 = Vorwiegend allergisches Asthma</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Richtlinien für die Diagnoseerfassung</h3>
+
+                <div class="info-box success">
+                    <h4>⏰ Zeitpunkt der Erfassung</h4>
+                    <ul class="list-styled">
+                        <li>Während oder unmittelbar nach der Sitzung</li>
+                        <li>Basierend auf dem aktuellen Wissensstand zum Zeitpunkt der Behandlung</li>
+                        <li>Ausstehende Untersuchungsresultate (Pathologie, Labor etc.) müssen nicht abgewartet werden</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>🎯 Welche Diagnose erfassen?</h4>
+                    <p>Die Diagnose erfasst denjenigen Zustand, der:</p>
+                    <ul class="list-styled">
+                        <li><strong>Hauptanlass</strong> für die Sitzung war</li>
+                        <li>Den <strong>grössten Aufwand</strong> an medizinischen Mitteln verursachte (ärztliche & pflegerische Leistungen, Operationen, medizinische Produkte)</li>
+                        <li>Der erfolgten Behandlung in <strong>Organbezogenheit</strong> bzw. Körperregion am nächsten steht</li>
+                    </ul>
+                </div>
+
+                <div class="info-box warning">
+                    <h4>⚠️ Häufige Fehler vermeiden</h4>
+                    <ul class="list-styled">
+                        <li>❌ Zu unspezifische Symptomcodes statt Organdiagnosen</li>
+                        <li>❌ Veraltete Diagnosestände statt aktuellem Wissensstand</li>
+                        <li>❌ Mehrere Diagnosen bei einer Sitzung (nur die Hauptdiagnose!)</li>
+                        <li>❌ Verwendung nicht-endständiger Codes ohne Begründung</li>
+                    </ul>
+                </div>
+
+                <h3>Besondere Situationen in der Diagnosecodierung</h3>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Mehrere Leistungen in einer Sitzung</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Werden mehrere Leistungen durchgeführt, wird die Diagnose erfasst, aus welcher der <strong>grösste Behandlungsaufwand</strong> entsteht.</p>
+
+                            <div class="info-box">
+                                <h4>💡 Fallbeispiel: Hausarztbesuch</h4>
+                                <p><strong>Situation:</strong> Patient kommt zur Medikamenteneinstellung bei Bluthochdruck und lässt zusätzlich ein Muttermal kontrollieren.</p>
+
+                                <p style="margin-top: 10px;"><strong>Hauptaufwand:</strong></p>
+                                <ul class="list-styled">
+                                    <li>Blutdruckmessung: 5 Minuten</li>
+                                    <li>Medikamentenanpassung und Beratung: 10 Minuten</li>
+                                    <li>Muttermalkontrolle: 2 Minuten</li>
+                                </ul>
+
+                                <p style="margin-top: 10px;"><strong>Zu erfassende Diagnose:</strong> I10 (Essentielle Hypertonie)</p>
+                                <p><strong>Begründung:</strong> Grösster Zeitaufwand und medizinischer Aufwand</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Verdachtsdiagnosen</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p><strong>Szenario 1 - Verdacht bestätigt sich:</strong></p>
+                            <p>Die Diagnose wird entsprechend dem aktuellen Wissensstand erfasst.</p>
+
+                            <p style="margin-top: 15px;"><strong>Szenario 2 - Verdacht wird ausgeschlossen:</strong></p>
+                            <p>Es wird die Diagnose erfasst, welche Anlass für die Sitzung war (die Verdachtsdiagnose).</p>
+
+                            <div class="info-box" style="margin-top: 15px;">
+                                <h4>Beispiel:</h4>
+                                <p>Verdacht auf Appendizitis → nach Untersuchung ausgeschlossen</p>
+                                <p><strong>Zu erfassen:</strong> Dennoch Verdachtsdiagnose, da diese Anlass für die Untersuchung war</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Symptomcodes</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Diagnosen werden organspezifisch erfasst. Symptomcodes werden nur dann erfasst, wenn zum Zeitpunkt der Leistungserbringung <strong>keine organbezogene Diagnose</strong> zur Verfügung steht.</p>
+
+                            <div class="info-box warning" style="margin-top: 15px;">
+                                <p><strong>Beispiel:</strong></p>
+                                <ul class="list-styled">
+                                    <li>✅ Besser: J45.0 (Allergisches Asthma)</li>
+                                    <li>❌ Vermeiden: R06.0 (Dyspnoe) - nur wenn keine Organdiagnose möglich</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Akut vs. Chronisch</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Leidet ein Patient gleichzeitig an der chronischen und akuten Form derselben Krankheit (z.B. eine akute Exazerbation einer chronischen Krankheit), so wird die <strong>akute Diagnose</strong> erfasst.</p>
+
+                            <p style="margin-top: 10px;">Wenn ein Kombinationscode beide Formen abbildet, so wird dieser erfasst.</p>
+
+                            <div class="info-box" style="margin-top: 15px;">
+                                <h4>Beispiel: COPD mit akuter Verschlechterung</h4>
+                                <p><strong>Regelung:</strong> Akute Form hat Vorrang</p>
+                                <p><strong>Korrekte Wahl:</strong> J44.1 (COPD mit akuter Exazerbation)</p>
+                                <p>Statt: J44.9 (COPD, nicht näher bezeichnet)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <strong>Erkrankungen nach medizinischen Massnahmen</strong>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Erkrankungen und Komplikationen nach medizinischen Massnahmen werden dann erfasst, wenn sie vom behandelnden Arzt / der behandelnden Ärztin als solche beschrieben werden.</p>
+
+                            <p style="margin-top: 10px;">Es wird die Diagnose erfasst, welche den Anlass für die Sitzung in Organbezogenheit, Pathologie und Körperregion am spezifischsten beschreibt.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Diagnosen und Rechnungsstellung</h3>
+
+                <div class="info-box">
+                    <h4>📄 Übermittlung an Versicherer</h4>
+
+                    <p><strong>Bei TARDOC-Abrechnung:</strong></p>
+                    <ul class="list-styled">
+                        <li>Vollständige Diagnose nach Tessinercode (endständig) ODER</li>
+                        <li>ICD-10-GM gemäss Anhang C</li>
+                        <li>Mindestens der 1. Buchstabe der Diagnose bei Datenschutzgründen</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;"><strong>Bei Ambulanten Pauschalen:</strong></p>
+                    <ul class="list-styled">
+                        <li>Vollständige Diagnose anhand ICD-10-GM</li>
+                        <li>Endständige Lieferung angestrebt</li>
+                        <li>Bei Datenschutzgründen: Mindestens 1. Buchstabe + Kapitelzuordnungen (Capitulum)</li>
+                    </ul>
+                </div>
+
+                <div class="info-box success">
+                    <h4>🔒 Datenschutz</h4>
+                    <p>Die Übermittlung erfolgt über gesicherte und verschlüsselte Kanäle. Bei Datenschutzbedenken können verkürzte Codes übermittelt werden, wobei mindestens der erste Buchstabe angegeben werden muss.</p>
+                </div>
+
+                <h3>Praktische Übung: Diagnosecodierung</h3>
+
+                <div class="info-box">
+                    <h4>💡 Fallbeispiel 1: Kniearthroskopie</h4>
+
+                    <p><strong>Situation:</strong> Patient mit Meniskusschaden</p>
+
+                    <p style="margin-top: 10px;"><strong>Ablauf:</strong></p>
+                    <ul class="list-styled">
+                        <li>8:00 Uhr: Ankunft und Vorbereitung</li>
+                        <li>9:00 Uhr: Operation (ca. 45 Minuten)</li>
+                        <li>10:00 Uhr: Aufwachraum (2-3 Stunden Überwachung)</li>
+                        <li>13:00 Uhr: Kontrolle und Entlassung</li>
+                    </ul>
+
+                    <p style="margin-top: 10px;"><strong>Korrekte Diagnose:</strong> M23.3 (Sonstige Meniskusschädigungen)</p>
+                    <p><strong>Abrechnung:</strong> Ambulante Pauschale</p>
+                </div>
+
+                <div class="info-box" style="margin-top: 20px;">
+                    <h4>💡 Fallbeispiel 2: Kombination chronisch/akut</h4>
+
+                    <p><strong>Situation:</strong> Patient mit COPD kommt wegen akuter Verschlechterung</p>
+
+                    <p style="margin-top: 10px;"><strong>Diagnoseoptionen:</strong></p>
+                    <ul class="list-styled">
+                        <li>J44.0: COPD mit akuter Infektion der unteren Atemwege</li>
+                        <li>J44.1: COPD mit akuter Exazerbation, nicht näher bezeichnet</li>
+                    </ul>
+
+                    <p style="margin-top: 10px;"><strong>Regelung:</strong> Akute Form hat Vorrang</p>
+                    <p><strong>Korrekte Wahl:</strong> J44.1 (akute Exazerbation)</p>
+                </div>
+
+                <h3>Zusammenfassung und Checkliste</h3>
+
+                <div class="info-box success">
+                    <h4>✅ Checkliste Diagnosecodierung</h4>
+                    <ul class="list-styled">
+                        <li>☐ ICD-10-GM Version des aktuellen Jahres verwenden</li>
+                        <li>☐ Diagnose während oder unmittelbar nach der Sitzung erfassen</li>
+                        <li>☐ Hauptanlass der Behandlung identifizieren</li>
+                        <li>☐ Organspezifische Diagnose bevorzugen</li>
+                        <li>☐ Bei Triggerposition immer ICD-10-GM verwenden</li>
+                        <li>☐ Endständigen Code anstreben</li>
+                        <li>☐ Bei Akut/Chronisch: Akute Form wählen</li>
+                        <li>☐ Dokumentation lückenlos führen</li>
+                    </ul>
+                </div>
+
+                <div class="quiz-section">
+                    <h3>Verständnisfragen Kapitel 4</h3>
+
+                    <div class="quiz-question" data-chapter="4" data-question="1">
+                        <h4>Frage 1: Wofür steht die Abkürzung ICD-10-GM?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_1" value="a">
+                                Internationale Codierung Diagnosen - 10. Generation Medizin
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_1" value="b">
+                                Internationale statistische Klassifikation der Krankheiten, 10. Revision, German Modification
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_1" value="c">
+                                International Clinical Diagnosis - 10th Grade Medicine
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_1" value="d">
+                                Interne Codierung deutscher medizinischer Diagnosen
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="4" data-question="2">
+                        <h4>Frage 2: Wann MUSS ICD-10-GM zwingend verwendet werden?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_2" value="a">
+                                Bei allen ambulanten Behandlungen
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_2" value="b">
+                                Nur im stationären Bereich
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_2" value="c">
+                                Bei Sitzungen mit Triggerposition
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_2" value="d">
+                                Nur bei chirurgischen Eingriffen
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="4" data-question="3">
+                        <h4>Frage 3: Welche Diagnose wird bei mehreren Leistungen in einer Sitzung erfasst?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_3" value="a">
+                                Die erste durchgeführte Leistung
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_3" value="b">
+                                Die Diagnose mit dem höchsten ICD-Code
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_3" value="c">
+                                Alle Diagnosen werden erfasst
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_3" value="d">
+                                Die Diagnose mit dem grössten Behandlungsaufwand
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-chapter="4" data-question="4">
+                        <h4>Frage 4: Was gilt bei chronischen Erkrankungen mit akuter Exazerbation?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_4" value="a">
+                                Nur die chronische Form wird codiert
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_4" value="b">
+                                Die akute Form hat Vorrang
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_4" value="c">
+                                Beide Formen werden separat erfasst
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4_4" value="d">
+                                Es wird ein Mittelwert gebildet
+                            </label>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <button class="submit-quiz" onclick="checkChapterQuiz(4)">Antworten überprüfen</button>
+                    <div class="quiz-result" id="result-chapter4"></div>
+                </div>
 
                 <div class="navigation-footer">
                     <button class="nav-footer-btn" onclick="showChapter(2)">◄ Vorheriges Kapitel</button>
@@ -2648,7 +3052,7 @@
             1: { 1: 'c', 2: 'c' },
             2: { 1: 'b', 2: 'b', 3: 'b', 4: 'b' },
             3: { 1: 'b', 2: 'b', 3: 'c', 4: 'b' },
-            4: { 1: 'b', 2: 'b', 3: 'b' },
+            4: { 1: 'b', 2: 'c', 3: 'd', 4: 'b' },
             5: { 1: 'b', 2: 'b', 3: 'b' },
             6: { 1: 'b', 2: 'b', 3: 'b' },
             7: { 1: 'b', 2: 'b', 3: 'b' },
@@ -2706,21 +3110,25 @@
                     incorrect: "Falsch. Triggerpositionen lösen automatisch die Abrechnung über Ambulante Pauschalen aus."
                 }
             },
-            3: {
+            4: {
                 1: {
-                    correct: "Richtig! TARDOC steht für Tarif ambulanter Arztleistungen in Arztpraxis und ambulantem Spitalbereich.",
-                    incorrect: "Falsch. TARDOC steht für Tarif ambulanter Arztleistungen in Arztpraxis und ambulantem Spitalbereich."
+                    correct: "Richtig! ICD-10-GM steht für Internationale statistische Klassifikation der Krankheiten, 10. Revision, German Modification.",
+                    incorrect: "Falsch. ICD-10-GM steht für Internationale statistische Klassifikation der Krankheiten, 10. Revision, German Modification."
                 },
                 2: {
-                    correct: "Richtig! 180 × 0.95 = CHF 171.00",
-                    incorrect: "Falsch. Die Rechnung lautet: 180 Taxpunkte × CHF 0.95 = CHF 171.00"
+                    correct: "Richtig! ICD-10-GM muss zwingend bei Sitzungen mit Triggerposition verwendet werden.",
+                    incorrect: "Falsch. ICD-10-GM ist verpflichtend bei Sitzungen mit Triggerposition (Ambulante Pauschalen)."
                 },
                 3: {
-                    correct: "Richtig! Dignität bezeichnet die Berechtigung zur Abrechnung bestimmter Leistungen.",
-                    incorrect: "Falsch. Dignität bedeutet die Berechtigung zur Abrechnung bestimmter Leistungen."
+                    correct: "Richtig! Es wird die Diagnose mit dem grössten Behandlungsaufwand erfasst.",
+                    incorrect: "Falsch. Bei mehreren Leistungen wird diejenige Diagnose erfasst, aus welcher der grösste Behandlungsaufwand entsteht."
+                },
+                4: {
+                    correct: "Richtig! Die akute Form hat Vorrang bei chronischen Erkrankungen mit akuter Exazerbation.",
+                    incorrect: "Falsch. Bei gleichzeitigem Auftreten von chronischer und akuter Form wird die akute Diagnose erfasst."
                 }
             },
-            4: {
+            5: {
                 1: {
                     correct: "Richtig! Pauschalen rechnen alle Leistungen als Gesamtpaket ab.",
                     incorrect: "Falsch. Das Kernprinzip ist die Abrechnung aller Leistungen als Gesamtpaket."
