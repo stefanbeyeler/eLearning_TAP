@@ -232,6 +232,7 @@
 
         .info-box h4 {
             color: #667eea;
+            margin-top: 0;
             margin-bottom: 10px;
         }
 
@@ -697,7 +698,6 @@
 <div class="info-box success">
     <h4>Bereit zu starten?</h4>
     <p>Klicken Sie auf "Weiter", um mit Kapitel 1 zu beginnen. Wir wünschen Ihnen viel Erfolg beim Lernen!</p>
-    <p>---</p>
 </div>
 
                 <div class="navigation-footer">
@@ -2327,13 +2327,16 @@
         }
 
         // Accordion Toggle
-        function toggleAccordion(header) {
-            const content = header.nextElementSibling;
-            const item = header.parentElement;
-            
-            // Toggle active class
-            header.classList.toggle('active');
-            content.classList.toggle('active');
+        function toggleAccordion(element) {
+            // Wenn das accordion-div übergeben wurde, finde header und content
+            const header = element.querySelector('.accordion-header');
+            const content = element.querySelector('.accordion-content');
+
+            if (header && content) {
+                // Toggle active class
+                header.classList.toggle('active');
+                content.classList.toggle('active');
+            }
         }
 
         // Kapitel-Quiz überprüfen

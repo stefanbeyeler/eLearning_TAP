@@ -80,9 +80,9 @@ In dieser Schulung finden Sie verschiedene didaktische Elemente:
 *   **TABELLE:** Übersichtliche Gegenüberstellungen
 *   **QUIZ:** Wissensfragen zur Selbstkontrolle
 
-### Zeitaufwand
+### Zeitaufwand und Lernziele
 
-Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **3-4 Stunden**. Sie können die Schulung jederzeit unterbrechen und später fortsetzen. Ihr Fortschritt wird automatisch gespeichert.
+Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stunde**. Sie können die Schulung jederzeit unterbrechen und später fortsetzen. Ihr Fortschritt wird automatisch gespeichert.
 
 **INFO-BOX: Geschätzter Zeitaufwand pro Kapitel**
 
