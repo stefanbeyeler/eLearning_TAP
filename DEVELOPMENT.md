@@ -1,7 +1,7 @@
 # Entwicklungsdokumentation - eLearning TAP
 
 **Projekt:** eLearning für TARDOC und ambulante Pauschalen
-**Version:** 1.1
+**Version:** 1.2
 **Letzte Aktualisierung:** 2025-10-25
 
 ---
@@ -93,23 +93,26 @@ eLearning_TAP/
 ├── GUIDELINES.md                                  # ⭐ Haupt-Vorgabedatei (Design, Entwicklung, Content)
 ├── DEVELOPMENT.md                                 # Diese Datei (Technische Dokumentation)
 ├── CONTENT_WORKFLOW.md                            # ⭐ NEU: Workflow für Content-Verwaltung (MD → HTML)
+├── CHANGELOG.md                                   # Versionshistorie
 ├── content.md                                     # ⭐ NEU: Content-Quelle (Markdown, manuell editierbar)
 ├── eLearning.html                                 # Hauptschulungsunterlage (generiert aus content.md)
-├── ambulantes-tarifsystem-schulung-komplett.html # Legacy-Version (deprecated)
-├── PROMPT-Schulungsunterlage-Vorgaben.md         # KI-Prompt-Vorgaben (veraltet, siehe GUIDELINES.md)
-├── specification_documents/                       # Offizielle Tarifdokumente (OAAT)
-│   ├── 250430_AnhangH_Rechnungsstellung.pdf
-│   ├── 250430_AnhangC_Richtlinien_fuer_die_ambulante_Leistungserfassung.pdf
+├── documents/                                     # Offizielle Tarifdokumente (OAAT)
 │   ├── 20250214_FAQ_Gesamtsystem_final.pdf
+│   ├── 250430_AnhangA-I_*.pdf                    # Anhänge A bis I
+│   ├── 250808_LKAAT_1.0c_Leistungskatalog_ambulante_Arzttarife.xlsx
+│   ├── 250808_Anhang_A1_Katalog_der_Ambulanten_Pauschalen_v1.1c.xlsx
+│   ├── 250808_Anhang_A2_Katalog_des_TARDOC_1.4c.xlsx
 │   ├── Anwenderschulung_Basis_H__final.pdf
 │   ├── Schulungsunterlagen.pdf
 │   ├── Webinar Schulungsfolien_09.09.2025.pdf
-│   └── [weitere Anhänge A-I]
-├── Vorgaben/                                      # Design-Referenzmaterialien
+│   ├── Klarstellungen_und_Beispiele_*.pdf
+│   └── [weitere OAAT-Dokumente]
+├── specification/                                 # Design-Vorgaben (Typography)
 │   ├── Typography-Fonts.pdf
 │   ├── Typography-Headings.pdf
-│   ├── Typography-Hyperlinks.pdf
-│   └── *.pdf (weitere Vorgabedokumente)
+│   └── Typography-Hyperlinks.pdf
+├── pictures/                                      # Bilder und Grafiken
+├── .github/                                       # GitHub Workflows
 └── .git/                                          # Git-Repository
 ```
 
@@ -122,9 +125,11 @@ eLearning_TAP/
 | `CONTENT_WORKFLOW.md` | **Workflow-Dokumentation MD→HTML** | Anleitung für Content-Verwaltung |
 | `GUIDELINES.md` | Konsolidierte Vorgaben (Design, Dev, Content) | Bei Design-/Struktur-Änderungen |
 | `DEVELOPMENT.md` | Technische Entwicklungsdokumentation | Bei Prozess-Änderungen |
-| `ambulantes-tarifsystem-schulung-komplett.html` | Legacy-Version (deprecated) | Nur für Referenz |
-| `specification_documents/*` | Offizielle OAAT-Dokumente | Read-only, Basis für Inhalte |
-| `Vorgaben/*` | Design-Referenzmaterialien | Read-only, Basis für Design |
+| `README.md` | Projekt-Übersicht und Quick Start | Bei Projektänderungen |
+| `CHANGELOG.md` | Versionshistorie | Bei jedem Release |
+| `documents/*` | Offizielle OAAT-Dokumente | Read-only, Basis für Inhalte |
+| `specification/*` | Design-Vorgaben (Typography) | Read-only, Basis für Design |
+| `pictures/*` | Bilder und Grafiken | Nach Bedarf |
 
 ---
 
@@ -594,8 +599,8 @@ console.log(currentChapter);
 1. **Datei vorbereiten**
    ```bash
    # Version in Dateinamen aufnehmen
-   cp ambulantes-tarifsystem-schulung-komplett.html \
-      ambulantes-tarifsystem-schulung-v1.0.html
+   cp eLearning.html \
+      eLearning-v1.2.html
    ```
 
 2. **Upload zum Server**
@@ -634,7 +639,7 @@ Bei Problemen:
 ```bash
 # 1. Alte Version wiederherstellen
 git log                    # Commit-ID finden
-git checkout <commit-id> ambulantes-tarifsystem-schulung-komplett.html
+git checkout <commit-id> eLearning.html
 
 # 2. Neu deployen
 # 3. Nutzer informieren
@@ -689,7 +694,7 @@ Version 1.0.0 - 2025-10-21
 
 ### Quellendokumente für Kapitel-Entwicklung
 
-**Offizielle OAAT-Dokumente (specification_documents/):**
+**Offizielle OAAT-Dokumente (documents/):**
 
 | Dokument | Verwendung für Kapitel | Relevante Abschnitte |
 |----------|------------------------|----------------------|
@@ -740,8 +745,8 @@ git push
 **Lokale Backups:**
 ```bash
 # Vor Major-Updates
-cp ambulantes-tarifsystem-schulung-komplett.html \
-   backups/ambulantes-tarifsystem-schulung-v1.0-backup-$(date +%Y%m%d).html
+cp eLearning.html \
+   backups/eLearning-v1.2-backup-$(date +%Y%m%d).html
 ```
 
 ---
