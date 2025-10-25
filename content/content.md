@@ -1,6 +1,6 @@
 # eLearning TAP - Content Source
 
-**Version:** 1.1  
+**Version:** 1.2  
 **Letzte Aktualisierung:** 2025-10-25  
 **Zweck:** Diese Datei dient als zentrale Content-Quelle für eLearning.html
 
@@ -36,21 +36,21 @@ Herzlich willkommen zu dieser umfassenden Schulung zum ambulanten Gesamt-Tarifsy
 
 ### Aufbau und Struktur
 
-Diese Schulung ist in 9 Kapitel gegliedert, die aufeinander aufbauen und Sie Schritt für Schritt durch das Tarifsystem führen:
+Diese Schulung ist in 8 Kapitel gegliedert, die aufeinander aufbauen und Sie Schritt für Schritt durch das Tarifsystem führen:
 
-**Grundlagen (Kapitel 1-3)**
+**Grundlagen (Kapitel 1-2)**
 
-Sie lernen zunächst die Komponenten des Systems kennen, verstehen was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.
+Sie lernen zunächst die Komponenten des Systems kennen und verstehen was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.
 
-**Diagnosen und Abrechnungssysteme (Kapitel 4-6)**
+**Leistungserfassung und Abrechnungssysteme (Kapitel 3-6)**
 
-Hier vertiefen Sie Ihr Wissen über die Diagnosecodierung mit ICD-10-GM, den TARDOC-Einzelleistungstarif und die Ambulanten Pauschalen.
+Hier vertiefen Sie Ihr Wissen über den LKAAT als zentrales Erfassungsinstrument, die Diagnosecodierung mit ICD-10-GM, den TARDOC-Einzelleistungstarif und die Ambulanten Pauschalen.
 
 **Vergleich und Praxis (Kapitel 7-8)**
 
 Sie lernen die Unterschiede zwischen TARDOC und Pauschalen kennen und erhalten praxisnahe Anleitungen für den Arbeitsalltag.
 
-**Abschlusstest (Kapitel 9)**
+**Abschlusstest**
 
 Ein umfassender Test überprüft Ihr erworbenes Wissen über alle Kapitel hinweg.
 
@@ -97,7 +97,7 @@ Die gesamte Schulung dauert je nach Vorkenntnissen und Lerntempo etwa **eine Stu
 *   Kapitel 6 (Ambulante Pauschalen): 5-10 Minuten
 *   Kapitel 7 (Vergleich): 5-10 Minuten
 *   Kapitel 8 (Praxisanwendung): 5-10 Minuten
-*   Kapitel 9 (Abschlusstest): 10 Minuten
+*   Abschlusstest: 10 Minuten
 *   FAQ: 5-10 Minuten
 
 ### Lernziele der Gesamtschulung

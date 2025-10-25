@@ -660,7 +660,7 @@
                 <button class="nav-btn" onclick="showChapter(1)">Kapitel 1: Einführung</button>
                 <button class="nav-btn" onclick="showChapter(2)">Kapitel 2: Ambulante Behandlung</button>
                 <button class="nav-btn" onclick="showChapter(3)">Kapitel 3: LKAAT</button>
-                <button class="nav-btn" onclick="showChapter(4)">Kapitel 4: Diagnosen als ICD-10 Code</button>
+                <button class="nav-btn" onclick="showChapter(4)">Kapitel 4: Diagnosen/ICD-10</button>
                 <button class="nav-btn" onclick="showChapter(5)">Kapitel 5: TARDOC</button>
                 <button class="nav-btn" onclick="showChapter(6)">Kapitel 6: Ambulante Pauschalen</button>
                 <button class="nav-btn" onclick="showChapter(7)">Kapitel 7: Vergleich</button>
@@ -686,17 +686,17 @@
     </ul>
 </div>
 <h3>Aufbau und Struktur</h3>
-<p>Diese Schulung ist in 10 Kapitel gegliedert, die aufeinander aufbauen und Sie Schritt für Schritt durch das Tarifsystem führen:</p>
+<p>Diese Schulung ist in 8 Kapitel gegliedert, die aufeinander aufbauen und Sie Schritt für Schritt durch das Tarifsystem führen:</p>
 <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Grundlagen (Kapitel 1-3)</div>
+    <div class="accordion-header">Grundlagen (Kapitel 1-2)</div>
     <div class="accordion-content">
-        <p>Sie lernen zunächst die Komponenten des Systems kennen, verstehen was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.</p>
+        <p>Sie lernen zunächst die Komponenten des Systems kennen und verstehen was ambulante Behandlungen sind und wie der LKAAT als zentrales Erfassungsinstrument funktioniert.</p>
     </div>
 </div>
 <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Diagnosen und Abrechnungssysteme (Kapitel 4-6)</div>
+    <div class="accordion-header">Leistungserfassung und Abrechnungssysteme (Kapitel 3-6)</div>
     <div class="accordion-content">
-        <p>Hier vertiefen Sie Ihr Wissen über die Diagnosecodierung mit ICD-10-GM, den TARDOC-Einzelleistungstarif und die Ambulanten Pauschalen.</p>
+        <p>Hier vertiefen Sie Ihr Wissen über den LKAAT als zentrales Erfassungsinstrument, die Diagnosecodierung mit ICD-10-GM, den TARDOC-Einzelleistungstarif und die Ambulanten Pauschalen.</p>
     </div>
 </div>
 <div class="accordion" onclick="toggleAccordion(this)">
@@ -706,7 +706,7 @@
     </div>
 </div>
 <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Abschlusstest (Kapitel 9)</div>
+    <div class="accordion-header">Abschlusstest</div>
     <div class="accordion-content">
         <p>Ein umfassender Test überprüft Ihr erworbenes Wissen über alle Kapitel hinweg.</p>
     </div>
@@ -756,7 +756,7 @@
         <li>Kapitel 6 (Ambulante Pauschalen): 5-10 Minuten</li>
         <li>Kapitel 7 (Vergleich): 5-10 Minuten</li>
         <li>Kapitel 8 (Praxisanwendung): 5-10 Minuten</li>
-        <li>Kapitel 9 (Abschlusstest): 10 Minuten</li>
+        <li>Abschlusstest: 10 Minuten</li>
         <li>FAQ: 5-10 Minuten</li>
     </ul>
 </div>
@@ -2812,7 +2812,7 @@
     <script>
         // Globale Variablen
         let currentChapter = 0;
-        const totalChapters = 10;
+        const totalChapters = 11;
 
         // Quiz-Antworten (richtige Antworten)
         const answers = {
