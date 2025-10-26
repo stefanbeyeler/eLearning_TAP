@@ -228,9 +228,460 @@ Nach Abschluss dieser Schulung kannst du:
 BUTTON: Kapitel 2: Dignitäten  
 TITEL: Kapitel 2: Dignitäten und Besitzstände
 
-### Was sind Dignitäten?
+### 2.1 Was sind Dignitäten?
 
-**Dignitäten** bezeichnen im Schweizer Gesundheitswesen die Berechtigung von Ärztinnen und Ärzten, bestimmte medizinische Leistungen abzurechnen.
+**Dignitäten** bezeichnen im Schweizer Gesundheitswesen die qualitative Berechtigung von Ärztinnen und Ärzten, bestimmte medizinische Leistungen abzurechnen. Sie stellen ein zentrales Steuerungsinstrument im ambulanten Tarifsystem dar und gewährleisten, dass nur entsprechend qualifizierte Leistungserbringer bestimmte Tarifpositionen verrechnen können.
+
+**INFO-BOX: Definition Dignitäten**
+
+*   **Qualitative Dignitäten** berechtigen zur Verrechnung spezifischer Tarifpositionen
+*   Basieren auf nachgewiesenen Weiterbildungstiteln und Qualifikationen
+*   Werden in der MEDREG-Datenbank zentral verwaltet
+*   Sind unabdingbare Voraussetzung für die Leistungsabrechnung
+*   Gewährleisten die Qualitätssicherung im Gesundheitswesen
+
+### 2.2 Funktion der Dignitäten im Tarifsystem
+
+Dignitäten erfüllen mehrere wichtige Funktionen:
+
+1.  **Qualitätssicherung**: Nur entsprechend ausgebildete Fachpersonen dürfen spezifische Leistungen erbringen
+2.  **Tarifsteuerung**: Verhinderung der Abrechnung von Leistungen ohne entsprechende Qualifikation
+3.  **Transparenz**: Klare Zuordnung zwischen Qualifikation und abrechnungsfähigen Leistungen
+4.  **Patientensicherheit**: Gewährleistung der fachgerechten medizinischen Versorgung
+
+**INFO-BOX: Wichtig**
+
+Die Dignitäten sind im Anhang F der Allgemeinen Bestimmungen Ambulante Pauschalen (ABAP) sowie in Anhang I des LKAAT detailliert geregelt. Jede Tarifposition im LKAAT definiert, welche Dignität für deren Verrechnung erforderlich ist.
+
+### 2.3 Arten von qualitativen Dignitäten
+
+Das Schweizer Tarifsystem unterscheidet drei Hauptkategorien von Dignitäten:
+
+**ACCORDION: 2.3.1 Inhaberinnen und Inhaber von Weiterbildungstiteln**
+
+Diese Kategorie umfasst Ärztinnen und Ärzte mit folgenden anerkannten Titeln:
+
+**a) Facharzttitel**
+
+*   Von der Medizinalberufekommission (MEBEKO) anerkannte Facharztausbildungen
+*   Beispiele: Facharzt für Allgemeine Innere Medizin, Facharzt für Chirurgie, Facharzt für Pädiatrie
+*   Berechtigen zur Abrechnung aller Leistungen des entsprechenden Fachgebiets
+
+**b) Schwerpunkte**
+
+*   Spezialisierungen innerhalb eines Facharzttitels
+*   Beispiele: Schwerpunkt Neuropädiatrie, Schwerpunkt Kinderkardiologie
+*   Erweitern die Abrechnungsberechtigung innerhalb des Fachgebiets
+
+**c) Fähigkeitsausweise**
+
+*   Zusatzqualifikationen für spezifische Behandlungsmethoden oder Techniken
+*   Beispiele: Manualmedizin SAMM, Akupunktur ASA, Sportmedizin SGSM
+*   Berechtigen zur Abrechnung der entsprechenden Spezialleistungen
+
+**d) Interdisziplinäre Schwerpunkte**
+
+*   Fachübergreifende Spezialisierungen
+*   Beispiel: Schwerpunkt Geriatrie
+*   Können von Ärzten verschiedener Fachrichtungen erworben werden
+
+**Wichtig**: Alle diese Titel müssen im Weiterbildungstitelregister MEDREG eingetragen sein, damit die entsprechende Dignität für die Tarifabrechnung gültig ist.
+
+**ACCORDION: 2.3.2 Ärztinnen und Ärzte in Weiterbildung**
+
+Diese Kategorie regelt die Abrechnungsberechtigung während der fachärztlichen Ausbildung:
+
+**Voraussetzungen für Ärzte in Weiterbildung:**
+
+*   Gültiges eidgenössisches Arztdiplom
+*   Anstellung in einer anerkannten Weiterbildungsstätte
+*   Supervision durch einen Weiterbildner mit entsprechendem Facharzttitel
+*   Eintragung der Weiterbildungssituation in MEDREG
+
+**Abrechnungsberechtigung:**
+
+*   Grundsätzlich können Leistungen unter Supervision abgerechnet werden
+*   Die Dignität wird über die Weiterbildungsstätte und den supervisionierenden Facharzt gewährleistet
+*   Einschränkungen können je nach Tarifposition und Weiterbildungsjahr bestehen
+
+**Verantwortlichkeit:**
+
+*   Die fachliche Verantwortung liegt beim supervisionierenden Facharzt
+*   Die Weiterbildungsstätte trägt die organisatorische Verantwortung
+*   Dokumentationspflicht der Supervision
+
+**ACCORDION: 2.3.3 Inhaberinnen und Inhaber von Besitzständen**
+
+Besitzstände sind Übergangsregelungen für Ärzte, die zum Zeitpunkt der Tarifeinführung bestimmte Leistungen bereits erbracht haben, ohne über den formal erforderlichen Weiterbildungstitel zu verfügen.
+
+**Grundprinzip des Besitzstands:**
+
+*   Schutz der bisher ausgeübten ärztlichen Tätigkeit
+*   Vermeidung von abrupten Einschränkungen der Behandlungsmöglichkeiten
+*   Zeitlich befristete Übergangslösung
+*   Gilt nur für bereits vor Tarifeinführung erbrachte Leistungen
+
+**Arten von Besitzständen:**
+
+1.  **Vollständiger Besitzstand**: Berechtigung zur vollumfänglichen Leistungsabrechnung wie bei Titelinhabern
+2.  **Eingeschränkter Besitzstand**: Berechtigung nur für spezifische Teilleistungen
+3.  **Befristeter Besitzstand**: Zeitlich limitierte Übergangsregelung mit festem Ablaufdatum
+
+**Wichtig**: Besitzstände werden im Abschnitt 2.4 detailliert behandelt.
+
+### 2.4 Besitzstände im Detail
+
+#### 2.4.1 Definition und Rechtsgrundlage
+
+Ein **Besitzstand** ist eine qualitative Dignität, die Ärztinnen und Ärzten ohne formalen Weiterbildungstitel die Abrechnung bestimmter Leistungen ermöglicht, sofern sie diese Leistungen bereits vor Inkrafttreten der neuen Tarifstruktur nachweislich erbracht haben.
+
+**INFO-BOX WARNUNG: Rechtliche Grundlagen**
+
+*   Besitzstände sind im Anhang F der ABAP sowie im OAAT geregelt
+*   Sie gelten als Übergangsrecht und unterliegen strengen Nachweispflichten
+*   Falsche Deklaration kann zu Rückforderungen und rechtlichen Konsequenzen führen
+*   Die Beweislast liegt beim Leistungserbringer
+
+#### 2.4.2 Deklaration von Besitzständen
+
+**Deklarationsprozess:**
+
+**Fristgerechte Anmeldung**
+
+*   Deklaration innerhalb der vorgegebenen Frist nach Tarifeinführung
+*   Schriftliche Einreichung mit vollständiger Dokumentation
+*   Nutzung der offiziellen Deklarationsformulare
+
+**Erforderliche Nachweise**
+
+*   Nachweis der tatsächlich erbrachten Leistungen (z.B. Abrechnungsstatistiken)
+*   Zeitraum: Mindestens 2 Jahre vor Tarifeinführung
+*   Dokumentation der fachlichen Qualifikation (Kurse, Fortbildungen)
+*   Bestätigung der Praxistätigkeit
+
+**Prüfung durch die zuständige Stelle**
+
+*   Formelle Prüfung der Vollständigkeit
+*   Inhaltliche Validierung der Nachweise
+*   Entscheid über Anerkennung oder Ablehnung
+
+**INFO-BOX: Deklarationsfristen**
+
+*   Deklarationsfristen sind verbindlich und können in der Regel nicht verlängert werden
+*   Versäumte Fristen führen zum Verlust des Besitzstandsanspruchs
+*   Rechtzeitige Vorbereitung der Dokumentation ist essentiell
+*   Bei Unklarheiten: Frühzeitige Kontaktaufnahme mit der zuständigen Stelle
+
+#### 2.4.3 Validierung von Besitzständen
+
+Nach erfolgreicher Deklaration erfolgt eine Validierung des Besitzstands:
+
+**Validierungskriterien:**
+
+**Quantitativer Nachweis**
+
+*   Mindestanzahl erbrachter Leistungen im Referenzzeitraum
+*   Kontinuität der Leistungserbringung
+*   Relevantes Leistungsvolumen
+
+**Qualitativer Nachweis**
+
+*   Dokumentation der fachlichen Kompetenz
+*   Nachweis von Fortbildungen und Kursen
+*   Gegebenenfalls Fallbeispiele oder Referenzen
+
+**Zeitlicher Nachweis**
+
+*   Belegbare Leistungserbringung im festgelegten Referenzzeitraum
+*   Lückenlose Dokumentation
+
+**Ergebnis der Validierung:**
+
+*   **Volle Anerkennung**: Besitzstand wird uneingeschränkt gewährt
+*   **Teilweise Anerkennung**: Besitzstand wird mit Einschränkungen gewährt
+*   **Ablehnung**: Besitzstand wird nicht anerkannt (Widerspruchsmöglichkeit)
+
+**Eintragung in MEDREG:**
+
+Nach erfolgreicher Validierung wird der Besitzstand im MEDREG-Register eingetragen und ist damit für die Tarifabrechnung wirksam.
+
+#### 2.4.4 Revalidierung von Besitzständen
+
+Viele Besitzstände sind nicht unbefristet gültig und erfordern eine **Revalidierung**:
+
+**Revalidierungspflicht:**
+
+*   Periodische Überprüfung der Fortbildungsaktivitäten
+*   Nachweis der kontinuierlichen Leistungserbringung
+*   Aktualisierung der Dokumentation
+
+**Revalidierungsfristen:**
+
+*   In der Regel alle 3-5 Jahre (je nach spezifischer Regelung)
+*   Rechtzeitige Benachrichtigung durch die zuständige Stelle
+*   Fristversäumnis führt zum Erlöschen des Besitzstands
+
+**Revalidierungsanforderungen:**
+
+**Fortbildungsnachweis**
+
+*   Teilnahme an fachspezifischen Fortbildungen
+*   Mindestanzahl an Fortbildungsstunden
+*   Anerkennung durch entsprechende Fachgesellschaften
+
+**Praxisnachweis**
+
+*   Kontinuierliche Ausübung der betreffenden Leistungen
+*   Dokumentation des Leistungsvolumens
+*   Qualitätsnachweise
+
+**Aktualität der Kenntnisse**
+
+*   Nachweis der Kenntnis aktueller Leitlinien
+*   Eventuell praktische Prüfungen oder Audits
+
+**INFO-BOX SUCCESS: Praxistipp Revalidierung**
+
+Führen Sie ein systematisches Fortbildungsportfolio:
+
+*   Dokumentieren Sie alle besuchten Fortbildungen fortlaufend
+*   Sammeln Sie Teilnahmebestätigungen und Zertifikate
+*   Erstellen Sie jährliche Statistiken Ihrer Leistungserbringung
+*   Bereiten Sie die Revalidierung frühzeitig vor (6 Monate im Voraus)
+
+#### 2.4.5 Auslaufen von Besitzständen
+
+Besitzstände sind grundsätzlich Übergangsregelungen und können auslaufen:
+
+**Gründe für das Erlöschen eines Besitzstands:**
+
+**Zeitliche Befristung**
+
+*   Festgelegtes Ablaufdatum erreicht
+*   Keine weitere Verlängerung möglich
+*   Übergang zu regulären Weiterbildungstiteln erforderlich
+
+**Nicht erfolgte Revalidierung**
+
+*   Versäumte Revalidierungsfristen
+*   Unzureichende Fortbildungsnachweise
+*   Einstellung der Leistungserbringung
+
+**Erwerb des regulären Titels**
+
+*   Besitzstand wird durch Facharzttitel ersetzt
+*   Automatische Umstellung in MEDREG
+
+**Übergangsregelungen beim Auslaufen:**
+
+*   In der Regel Vorankündigungsfrist von mindestens 1 Jahr
+*   Möglichkeit zum Erwerb des regulären Weiterbildungstitels
+*   Eventuell vereinfachte Anerkennungsverfahren
+
+### 2.5 Verwaltung der Dignitäten in MEDREG
+
+Die **MEDREG-Datenbank** ist das zentrale Register für alle medizinischen Berufe in der Schweiz und verwaltet auch die Dignitäten:
+
+#### 2.5.1 MEDREG als zentrale Datenbank
+
+**Funktionen von MEDREG:**
+
+*   Registrierung aller Ärztinnen und Ärzte mit Berufsausübungsbewilligung
+*   Verwaltung aller Weiterbildungstitel, Schwerpunkte und Fähigkeitsausweise
+*   Dokumentation der Besitzstände
+*   Schnittstelle zu den Tarifierungs- und Abrechnungssystemen
+*   Verifizierung der Abrechnungsberechtigungen
+
+#### 2.5.2 Eintragung und Aktualisierung
+
+**Prozess der Eintragung:**
+
+1.  Beantragung durch den Titelinhaber oder die zuständige Institution
+2.  Prüfung der Nachweise durch die kantonale Gesundheitsdirektion
+3.  Eintragung in MEDREG nach erfolgreicher Prüfung
+4.  Automatische Übernahme in die Tarifierungs-/Abrechnungssysteme
+
+**Aktualisierungspflicht:**
+
+*   Meldung aller Änderungen (neue Titel, Besitzstände)
+*   Aktualität der Kontaktdaten
+*   Meldung bei Beendigung der Berufstätigkeit
+
+#### 2.5.3 Schnittstellen zu Abrechnungssystemen
+
+**INFO-BOX: Technische Integration**
+
+*   MEDREG-Daten werden täglich mit Abrechnungssystemen synchronisiert
+*   Automatische Prüfung der Dignitäten bei jeder Leistungsabrechnung
+*   Fehlende oder abgelaufene Dignitäten führen zu Abrechnungsfehlern
+*   Wichtig: Rechtzeitige Aktualisierung vor Ablaufdaten
+
+### 2.6 Praktische Anwendung
+
+#### Beispiel 1: Facharzttitel
+
+**Szenario**: Dr. med. Anna Müller hat ihre Facharztausbildung in Allgemeiner Innerer Medizin abgeschlossen und möchte eine Praxis eröffnen.
+
+**Vorgehen:**
+
+1.  Beantragung des Facharzttitels bei der MEBEKO
+2.  Nach Erhalt des Titels: Eintragung in MEDREG über die kantonale Gesundheitsdirektion
+3.  Erhalt der Berufsausübungsbewilligung (BAB)
+4.  Automatische Freischaltung aller Tarifpositionen, die die Dignität "Facharzt Allgemeine Innere Medizin" erfordern
+5.  Start der Praxistätigkeit mit vollständiger Abrechnungsberechtigung
+
+#### Beispiel 2: Besitzstand
+
+**Szenario**: Dr. med. Peter Schmidt ist seit 15 Jahren als praktischer Arzt tätig und führt regelmässig kleinere chirurgische Eingriffe durch, verfügt aber nicht über einen Facharzttitel Chirurgie.
+
+**Vorgehen:**
+
+1.  Fristgerechte Deklaration des Besitzstands für chirurgische Leistungen
+2.  Einreichung der Nachweise:
+    *   Abrechnungsstatistiken der letzten 3 Jahre
+    *   Dokumentation besuchter chirurgischer Fortbildungen
+    *   Beschreibung der regelmässig durchgeführten Eingriffe
+3.  Validierung durch die zuständige Stelle
+4.  Bei positiver Validierung: Eintragung des Besitzstands in MEDREG
+5.  Regelmässige Revalidierung gemäss Vorgaben (z.B. alle 3 Jahre)
+6.  Fortlaufende Dokumentation der Fortbildungen und Leistungserbringung
+
+#### Beispiel 3: Arzt in Weiterbildung
+
+**Szenario**: Dr. med. Lisa Weber befindet sich im 3. Jahr ihrer Weiterbildung zur Fachärztin für Pädiatrie in einem Kinderspital.
+
+**Vorgehen:**
+
+1.  Das Kinderspital meldet die Weiterbildungssituation an MEDREG
+2.  Dr. Weber wird als "Ärztin in Weiterbildung Pädiatrie" registriert
+3.  Die erbrachten Leistungen werden unter der Supervision des Weiterbildners über die Dignität der Weiterbildungsstätte abgerechnet
+4.  Nach Abschluss der Weiterbildung: Beantragung des Facharzttitels
+5.  Aktualisierung in MEDREG: Wechsel von "in Weiterbildung" zu "Fachärztin Pädiatrie"
+
+### 2.7 Häufige Fehler und wie Sie sie vermeiden
+
+**INFO-BOX WARNUNG: Häufige Fehlerquellen**
+
+**Verspätete Aktualisierung in MEDREG**
+
+*   Problem: Neue Titel werden nicht rechtzeitig eingetragen
+*   Folge: Abrechnungen werden abgelehnt
+*   Lösung: Titel sofort nach Erhalt bei der Gesundheitsdirektion anmelden
+
+**Verpasste Revalidierungsfristen**
+
+*   Problem: Besitzstände werden nicht rechtzeitig revalidiert
+*   Folge: Verlust der Abrechnungsberechtigung
+*   Lösung: Revalidierungsfristen im Kalender vormerken, 6 Monate vorher vorbereiten
+
+**Unzureichende Dokumentation**
+
+*   Problem: Nachweise für Besitzstände sind lückenhaft
+*   Folge: Ablehnung der Deklaration
+*   Lösung: Kontinuierliche Dokumentation aller Leistungen und Fortbildungen
+
+**Abrechnung ohne gültige Dignität**
+
+*   Problem: Leistungen werden ohne entsprechende Berechtigung verrechnet
+*   Folge: Rückforderungen, evtl. rechtliche Konsequenzen
+*   Lösung: Systematische Prüfung der eigenen Dignitäten vor Leistungserbringung
+
+**Fehlende Kenntnis der Dignitätsanforderungen**
+
+*   Problem: Unklare Zuordnung zwischen Leistung und erforderlicher Dignität
+*   Folge: Falsche Abrechnungen
+*   Lösung: Regelmässige Konsultation des LKAAT und der Anhänge F/I
+
+### 2.8 Rechtliche Aspekte und Compliance
+
+**Rechtliche Grundlagen:**
+
+*   Bundesgesetz über die universitären Medizinalberufe (MedBG)
+*   Verordnung über die beruflichen Qualifikationen medizinischer Fachpersonen (VSMED)
+*   Allgemeine Bestimmungen Ambulante Pauschalen (ABAP)
+*   Organisation ambulante Arzttarife (OAAT)
+
+**Compliance-Anforderungen:**
+
+**Wahrheitspflicht bei Deklarationen**
+
+*   Alle Angaben müssen wahrheitsgemäss und vollständig sein
+*   Falsche Angaben können strafrechtliche Konsequenzen haben
+
+**Dokumentationspflicht**
+
+*   Nachweise müssen während der gesetzlichen Aufbewahrungsfrist verfügbar sein
+*   Mindestens 10 Jahre Aufbewahrung
+
+**Meldepflicht bei Änderungen**
+
+*   Alle Änderungen der Dignitätssituation müssen zeitnah gemeldet werden
+*   Versäumnis kann zu Sanktionen führen
+
+**INFO-BOX WARNUNG: Konsequenzen bei Verstössen**
+
+*   Rückforderung zu Unrecht bezogener Leistungen
+*   Vertragsstrafen durch Versicherer
+*   Meldung an die kantonale Aufsichtsbehörde
+*   Im Extremfall: Entzug der Berufsausübungsbewilligung
+*   Strafrechtliche Verfolgung bei vorsätzlichem Betrug
+
+### 2.9 Zusammenfassung
+
+**Wichtigste Erkenntnisse zu Dignitäten:**
+
+1.  Dignitäten sind qualitative Berechtigungen zur Leistungsabrechnung
+2.  Drei Hauptkategorien: Titelinhaber, Ärzte in Weiterbildung, Besitzstandsinhaber
+3.  MEDREG ist die zentrale Verwaltungsplattform
+4.  Besitzstände sind Übergangsregelungen mit strengen Anforderungen
+5.  Revalidierung von Besitzständen ist regelmässig erforderlich
+6.  Falsche Deklarationen haben ernsthafte rechtliche Konsequenzen
+
+**INFO-BOX SUCCESS: Best Practices**
+
+*   Führen Sie ein persönliches Dignitätsportfolio
+*   Dokumentieren Sie alle Fortbildungen systematisch
+*   Prüfen Sie regelmässig Ihre MEDREG-Einträge auf Aktualität
+*   Setzen Sie sich frühzeitig mit Revalidierungsfristen auseinander
+*   Konsultieren Sie bei Unklarheiten die zuständigen Stellen
+*   Bleiben Sie über Änderungen in den Tarifbestimmungen informiert
+
+### QUIZ: Kapitel 2 - Dignitäten und Besitzstände
+
+**Frage 1**: Welche der folgenden Aussagen zu Dignitäten ist korrekt?
+
+*   a) Dignitäten sind optional und dienen nur der Qualitätssicherung
+*   b) Dignitäten sind unabdingbare Voraussetzung für die Abrechnung bestimmter Leistungen
+*   c) Nur Fachärzte benötigen Dignitäten, praktische Ärzte nicht
+*   d) Dignitäten werden direkt von den Fachgesellschaften vergeben ✓
+
+**Frage 2**: Was ist ein Besitzstand im Kontext des Tarifsystems?
+
+*   a) Ein dauerhaft garantiertes Recht zur Leistungsabrechnung
+*   b) Eine Übergangslösung für Ärzte ohne formalen Titel, die Leistungen bereits vor Tarifeinführung erbracht haben ✓
+*   c) Eine neue Form von Facharzttitel
+*   d) Ein Fortbildungszertifikat
+
+**Frage 3**: Welche Datenbank verwaltet die Dignitäten in der Schweiz zentral?
+
+*   a) TARMED
+*   b) LKAAT
+*   c) MEDREG ✓
+*   d) ICD-10-GM
+
+**Frage 4**: Was ist bei der Revalidierung von Besitzständen erforderlich?
+
+*   a) Nur die Zahlung einer Verwaltungsgebühr
+*   b) Nachweis von Fortbildungen und kontinuierlicher Leistungserbringung ✓
+*   c) Eine neue Prüfung wie beim Facharzttitel
+*   d) Nichts, Besitzstände sind unbefristet gültig
+
+**Frage 5**: Welche drei Hauptkategorien von qualitativen Dignitäten gibt es?
+
+*   a) Fachärzte, Allgemeinärzte und Spezialisten
+*   b) Titelinhaber, Ärzte in Weiterbildung und Besitzstandsinhaber ✓
+*   c) Schweizer Ärzte, EU-Ärzte und Drittstaaten-Ärzte
+*   d) Praxisärzte, Spitalärzte und Notfallärzte
 
 ---
 
