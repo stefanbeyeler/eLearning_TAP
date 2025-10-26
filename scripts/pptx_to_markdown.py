@@ -27,10 +27,13 @@ def extract_text_from_shape(shape):
 
     return "\n".join(text_parts)
 
-def extract_images_from_slide(slide, slide_num, images_dir, use_html_syntax=True):
+def extract_images_from_slide(slide, slide_num, images_dir, images_md_path=None, use_html_syntax=True):
     """Extract images from a slide and return markdown references"""
     image_refs = []
     image_counter = 1
+
+    # Use images_md_path for markdown references, or fall back to images_dir
+    md_path = images_md_path if images_md_path is not None else images_dir
 
     for shape in slide.shapes:
         if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
@@ -60,9 +63,9 @@ def extract_images_from_slide(slide, slide_num, images_dir, use_html_syntax=True
 
                 # Create markdown reference with HTML build syntax or standard markdown
                 if use_html_syntax:
-                    image_refs.append(f"**BILD: {images_dir}/{filename}**")
+                    image_refs.append(f"**BILD: {md_path}/{filename}**")
                 else:
-                    image_refs.append(f"![Bild {image_counter}]({images_dir}/{filename})")
+                    image_refs.append(f"![Bild {image_counter}]({md_path}/{filename})")
                 image_counter += 1
 
             except Exception as e:
@@ -94,9 +97,9 @@ def extract_images_from_slide(slide, slide_num, images_dir, use_html_syntax=True
                         img.save(filepath, 'WEBP', quality=85)
 
                         if use_html_syntax:
-                            image_refs.append(f"**BILD: {images_dir}/{filename}**")
+                            image_refs.append(f"**BILD: {md_path}/{filename}**")
                         else:
-                            image_refs.append(f"![Bild {image_counter}]({images_dir}/{filename})")
+                            image_refs.append(f"![Bild {image_counter}]({md_path}/{filename})")
                         image_counter += 1
 
                     except Exception as e:
@@ -104,8 +107,15 @@ def extract_images_from_slide(slide, slide_num, images_dir, use_html_syntax=True
 
     return image_refs
 
-def pptx_to_markdown(pptx_path, images_dir="pictures", use_html_syntax=True):
-    """Convert PowerPoint presentation to Markdown format"""
+def pptx_to_markdown(pptx_path, images_dir="pictures", images_md_path=None, use_html_syntax=True):
+    """Convert PowerPoint presentation to Markdown format
+
+    Args:
+        pptx_path: Path to PowerPoint file
+        images_dir: Physical directory to save images
+        images_md_path: Path to use in markdown references (defaults to images_dir)
+        use_html_syntax: Use **BILD:** syntax if True, else use ![alt](path)
+    """
     prs = Presentation(pptx_path)
     markdown_content = []
 
@@ -129,7 +139,7 @@ def pptx_to_markdown(pptx_path, images_dir="pictures", use_html_syntax=True):
             markdown_content.append(f"\n## Folie {slide_num}\n")
 
         # Extract images first
-        image_refs = extract_images_from_slide(slide, slide_num, images_dir, use_html_syntax)
+        image_refs = extract_images_from_slide(slide, slide_num, images_dir, images_md_path, use_html_syntax)
         if image_refs:
             for img_ref in image_refs:
                 markdown_content.append(img_ref)

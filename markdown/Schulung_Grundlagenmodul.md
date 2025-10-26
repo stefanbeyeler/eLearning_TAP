@@ -23,7 +23,7 @@ Nachkontrolle
 
 ## Folie 3: Abrechnung Patientenbeispiel in der alten Welt
 
-**BILD: pictures/slide03\_img1.webp**
+**BILD: ../pictures/slide03\_img1.webp**
 
 Beispielpatientenpfad einfügen  
 Sprechstunde  
@@ -75,7 +75,7 @@ TARMED
 
 ## Folie 6: Abrechnung in der neuen Welt nach TARDOC & ambulanten Pauschalen
 
-**BILD: pictures/slide06\_img1.webp**
+**BILD: ../pictures/slide06\_img1.webp**
 
 6
 
@@ -83,8 +83,8 @@ TARMED
 
 ## Folie 7: Die neuen Tarifkataloge
 
-**BILD: pictures/slide07\_img1.webp**  
-**BILD: pictures/slide07\_img2.webp**
+**BILD: ../pictures/slide07\_img1.webp**  
+**BILD: ../pictures/slide07\_img2.webp**
 
 7
 
@@ -111,7 +111,7 @@ Orientiert sich in Aufbau und Funktionsweise am stationären Model nach SwissDRG
 
 ## Folie 9: Abgrenzung Anwendungsbereich TARDOC vs. ambulante Pauschalen
 
-**BILD: pictures/slide09\_img1.webp**
+**BILD: ../pictures/slide09\_img1.webp**
 
 9
 
@@ -131,8 +131,8 @@ ambulante Spezialversorgung
 
 ## Folie 10: Was ist alles in einer Pauschale enthalten
 
-**BILD: pictures/slide10\_img1.webp**  
-**BILD: pictures/slide10\_img2.webp**
+**BILD: ../pictures/slide10\_img1.webp**  
+**BILD: ../pictures/slide10\_img2.webp**
 
 Textlich beschreiben
 
@@ -142,7 +142,7 @@ Textlich beschreiben
 
 ## Folie 11: Funktionsweise Pauschale: was ist alles darin enthalten?
 
-**BILD: pictures/slide11\_img1.webp**
+**BILD: ../pictures/slide11\_img1.webp**
 
 11
 
@@ -150,7 +150,7 @@ Textlich beschreiben
 
 ## Folie 12: Abrechnung in der neuen Welt nach TARDOC & ambulante Pauschalen
 
-**BILD: pictures/slide12\_img1.webp**
+**BILD: ../pictures/slide12\_img1.webp**
 
 12
 
@@ -170,8 +170,8 @@ Triggerleistung: JA
 
 ## Folie 13: Der komplexe Weg zum richtigen Tarif
 
-**BILD: pictures/slide13\_img1.webp**  
-**BILD: pictures/slide13\_img2.webp**
+**BILD: ../pictures/slide13\_img1.webp**  
+**BILD: ../pictures/slide13\_img2.webp**
 
 Patientenpfad nochmals einfügen mit neuer Abrechnungsart vs alt
 
@@ -241,8 +241,8 @@ Triggerleistung: JA
 
 ## Folie 16: Abrechnung in der neuen Welt nach TARDOC & ambulante Pauschalen
 
-**BILD: pictures/slide16\_img1.webp**  
-**BILD: pictures/slide16\_img2.webp**
+**BILD: ../pictures/slide16\_img1.webp**  
+**BILD: ../pictures/slide16\_img2.webp**
 
 16
 
@@ -494,7 +494,7 @@ Textlich beschreiben
 
 ## Folie 26: Funktionsweise Tarifmatcher
 
-**BILD: pictures/slide26\_img1.webp**
+**BILD: ../pictures/slide26\_img1.webp**
 
 26
 
@@ -514,7 +514,7 @@ Triggerleistung: JA
 
 ## Folie 27: TARMED → TARDOC & ambulante Pauschalen
 
-**BILD: pictures/slide27\_img1.webp**
+**BILD: ../pictures/slide27\_img1.webp**
 
 27
 

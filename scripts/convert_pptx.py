@@ -23,9 +23,15 @@ if __name__ == "__main__":
         os.makedirs(output_dir)
         print(f"Created directory: {output_dir}")
 
+    # Physical images directory
+    images_physical_dir = os.path.join(project_root, "pictures")
+    # Relative path from markdown/ to pictures/
+    images_relative_path = "../pictures"
+
     # Create version with HTML build syntax
     print("Creating version for build_html.py...")
-    markdown_html = pptx_to_markdown(pptx_path, images_dir="pictures", use_html_syntax=True)
+    markdown_html = pptx_to_markdown(pptx_path, images_dir=images_physical_dir,
+                                      images_md_path=images_relative_path, use_html_syntax=True)
     output_path_html = os.path.join(output_dir, "Schulung_Grundlagenmodul.md")
     with open(output_path_html, 'w', encoding='utf-8') as f:
         f.write(markdown_html)
@@ -33,7 +39,8 @@ if __name__ == "__main__":
 
     # Create version with standard Markdown syntax for viewing
     print("\nCreating version for Markdown viewers...")
-    markdown_std = pptx_to_markdown(pptx_path, images_dir="pictures", use_html_syntax=False)
+    markdown_std = pptx_to_markdown(pptx_path, images_dir=images_physical_dir,
+                                     images_md_path=images_relative_path, use_html_syntax=False)
     output_path_preview = os.path.join(output_dir, "Schulung_Grundlagenmodul_preview.md")
     with open(output_path_preview, 'w', encoding='utf-8') as f:
         f.write(markdown_std)
