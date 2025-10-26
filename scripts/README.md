@@ -10,6 +10,7 @@ Dieser Ordner enthält alle Python-Skripte zur Generierung und Verwaltung der HT
 *   **Status:** ✅ Produktiv, vollständig funktional
 *   **Verwendung:** `python3 scripts/build_html.py`
 *   **Features:**
+    *   **NEU:** Metadaten-Parsing für Titel und Untertitel
     *   Parst alle 13 Kapitel (Vorwort + 10 Kapitel + Abschlusstest + FAQ)
     *   Konvertiert Markdown-Elemente zu HTML:
         *   INFO-Boxen (Standard, Warning, Success)
@@ -17,6 +18,7 @@ Dieser Ordner enthält alle Python-Skripte zur Generierung und Verwaltung der HT
         *   Tabellen
         *   Quiz-Sektionen
         *   Code-Beispiele
+        *   Bilder mit Bildunterschriften
         *   Listen und Paragraphen
     *   Generiert vollständiges HTML mit CSS und JavaScript
     *   Ausgabe: `eLearning.html` (bereit für Deployment)
@@ -39,13 +41,14 @@ Dieser Ordner enthält alle Python-Skripte zur Generierung und Verwaltung der HT
 
 **Hauptfunktionen:**
 
+*   `parse_metadata(content)` - **NEU:** Extrahiert Metadaten (Titel, Untertitel) aus content.md
 *   `parse_content_md(content)` - Extrahiert Kapitel aus Markdown
 *   `process_markdown_content(md_text, chapter_num)` - Konvertiert Markdown zu HTML
 *   `process_accordion_content(content)` - Verarbeitet Accordion-Inhalte mit Sub-Headings
 *   `process_list_content(content)` - Verarbeitet Listen in Info-Boxen
 *   `process_table(lines)` - Konvertiert Markdown-Tabellen zu HTML
 *   `convert_inline_md(text)` - Konvertiert Inline-Markdown (Bold, Italic)
-*   `generate_html(chapters)` - Generiert vollständiges HTML-Dokument
+*   `generate_html(chapters, metadata)` - Generiert vollständiges HTML-Dokument mit Metadaten
 
 **HTML-Template:**
 
@@ -59,6 +62,13 @@ Dieser Ordner enthält alle Python-Skripte zur Generierung und Verwaltung der HT
 Die Skripte erwarten folgende Markdown-Struktur in `content/content.md`:
 
 ```
+# eLearning TAP - Content Source
+
+ELEARNING_TITEL: Dein Titel
+ELEARNING_UNTERTITEL: Dein Untertitel
+
+---
+
 ## KAPITEL 1: Titel
 
 ### Unterüberschrift
@@ -98,8 +108,10 @@ Inhalt des zweiten Accordions.
 
 **Wichtig:**
 
+*   **Metadaten:** `ELEARNING_TITEL:` und `ELEARNING_UNTERTITEL:` am Anfang der Datei (vor `---`)
 *   `✓` markiert die korrekte Antwort im Quiz
 *   INFO-BOX Typen: `INFO-BOX:`, `INFO-BOX WARNUNG:`, `INFO-BOX SUCCESS:`
+*   Bilder: `**BILD: pfad/bild.jpg**` mit optionaler Bildunterschrift in der nächsten Zeile
 *   Tabellen verwenden Markdown-Syntax mit `|`
 *   Accordions müssen nach `**ACCORDION:**` starten
 *   Quiz-Sektionen beginnen mit `### QUIZ`
@@ -147,14 +159,19 @@ Falls neue Markdown-Features hinzugefügt werden sollen:
 
 ### Version History
 
+*   **v1.1** (2025-10-26): Metadaten-Unterstützung hinzugefügt
+    *   `parse_metadata()` Funktion für Titel/Untertitel
+    *   `ELEARNING_TITEL:` und `ELEARNING_UNTERTITEL:` werden aus content.md gelesen
+    *   Dynamische HTML-Generierung mit Metadaten
+    *   Unterstützt escaped Unterstriche (`ELEARNING\_TITEL:`)
 *   **v1.0** (2025-10-25): Initial `build_html.py` mit vollständiger MD→HTML Konvertierung
-*   Ersetzt alle Legacy-Skripte
-*   Unterstützt alle 13 Kapitel
-*   Vollständige Unterstützung für INFO-Boxen, Accordions, Tabellen, Quiz
+    *   Ersetzt alle Legacy-Skripte
+    *   Unterstützt alle 13 Kapitel
+    *   Vollständige Unterstützung für INFO-Boxen, Accordions, Tabellen, Quiz, Bilder
 
 ---
 
-**Zuletzt aktualisiert:** 2025-10-25  
+**Zuletzt aktualisiert:** 2025-10-26
 **Maintainer:** Claude (via @DEVELOPMENT.md Workflow)
 
 ```

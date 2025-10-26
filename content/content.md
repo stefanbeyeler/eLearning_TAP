@@ -1,14 +1,35 @@
-# eLearning TAP - Content Source
+# eLearning - Content Source
 
-**Version:** 1.2  
-**Letzte Aktualisierung:** 2025-10-25  
+**Version:** 1.3  
+**Letzte Aktualisierung:** 2025-10-26  
 **Zweck:** Diese Datei dient als zentrale Content-Quelle für eLearning.html
+
+ELEARNING\_TITEL: Ambulantes Gesamt-Tarifsystem  
+ELEARNING\_UNTERTITEL: Basiswissen für Anwender:innen
 
 ---
 
 ## Hinweise zur Nutzung
 
 Diese Markdown-Datei enthält alle Inhalte der eLearning-Schulung in strukturierter Form. Du kannst diese Datei manuell bearbeiten, um Inhalte zu erweitern oder anzupassen. Claude kann dann die `eLearning.html` Datei basierend auf deinen Änderungen aktualisieren.
+
+### Metadaten-Konfiguration:
+
+Du kannst den Titel und Untertitel des eLearnings anpassen, indem du folgende Zeilen am Anfang der Datei hinzufügst:
+
+```
+ELEARNING_TITEL: Dein Titel hier
+ELEARNING_UNTERTITEL: Dein Untertitel hier
+```
+
+**Beispiel:**
+
+```
+ELEARNING_TITEL: Ambulantes Gesamt-Tarifsystem
+ELEARNING_UNTERTITEL: Basiswissen für Anwender:innen
+```
+
+Falls diese Zeilen nicht definiert sind, werden die oben genannten Standardwerte verwendet.
 
 ### Struktur-Konventionen:
 

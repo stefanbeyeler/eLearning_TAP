@@ -43,13 +43,15 @@ eLearning_TAP/
 **Neuer vereinfachter Workflow:**
 
 1. **Inhalte bearbeiten:**
-   - Öffne [content.md](content.md) in einem Texteditor
+   - Öffne [content/content.md](content/content.md) in einem Texteditor
    - Bearbeite Texte, Info-Boxen, Quiz-Fragen in Markdown
+   - Optional: Passe Titel und Untertitel mit `ELEARNING_TITEL:` und `ELEARNING_UNTERTITEL:` an
    - Speichern
 
 2. **HTML aktualisieren:**
-   - Beauftrage Claude: "Kapitel X in @content.md wurde geändert, bitte aktualisiere @eLearning.html"
-   - Claude konvertiert Markdown → HTML automatisch
+   - Beauftrage Claude: "Kapitel X in @content/content.md wurde geändert, bitte aktualisiere @eLearning.html"
+   - Oder führe das Build-Script aus: `python3 scripts/build_html.py`
+   - Markdown wird automatisch zu HTML konvertiert
 
 3. **Testing:**
    - Öffne [eLearning.html](eLearning.html) im Browser
@@ -61,6 +63,7 @@ eLearning_TAP/
 - ✅ Schnelle Content-Updates
 - ✅ Automatische HTML-Konvertierung
 - ✅ Konsistente Formatierung
+- ✅ Anpassbare Titel und Untertitel via Metadaten
 
 ### Für Entwickler (Technische Änderungen)
 
@@ -103,7 +106,9 @@ eLearning_TAP/
   - Troubleshooting
 
 ### Ergänzende Dokumentation
-- [content.md](content.md) - Content-Quelle (Markdown, manuell editierbar)
+- [content/content.md](content/content.md) - Content-Quelle (Markdown, manuell editierbar)
+  - Unterstützt Metadaten für Titel/Untertitel (`ELEARNING_TITEL:`, `ELEARNING_UNTERTITEL:`)
+- [scripts/README.md](scripts/README.md) - Dokumentation der Build-Scripts
 - [PROMPT-Schulungsunterlage-Vorgaben.md](PROMPT-Schulungsunterlage-Vorgaben.md) - KI-Prompt-Vorgaben (veraltet)
 
 ## 🎨 Design-System
@@ -156,11 +161,17 @@ cp eLearning.html \
 
 ## 📝 Version
 
-- **Aktuelle Version:** 1.2
-- **Letzte Aktualisierung:** 2025-10-25
+- **Aktuelle Version:** 1.3
+- **Letzte Aktualisierung:** 2025-10-26
 - **Versionierung:** MAJOR.MINOR.PATCH
 
 ### Changelog
+
+**Version 1.3 (2025-10-26):**
+- ✅ **NEU:** Metadaten-Unterstützung in content/content.md
+- ✅ **NEU:** Anpassbare Titel und Untertitel via `ELEARNING_TITEL:` und `ELEARNING_UNTERTITEL:`
+- ✅ Build-Script (build_html.py) erweitert für Metadaten-Parsing
+- ✅ Dokumentation aktualisiert (README, scripts/README, CONTENT_WORKFLOW)
 
 **Version 1.2 (2025-10-25):**
 - ✅ **NEU:** Content-Workflow eingeführt (content.md + CONTENT_WORKFLOW.md)

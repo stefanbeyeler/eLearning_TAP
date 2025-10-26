@@ -11,7 +11,7 @@ HTML_HEADER = '''<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambulantes Gesamt-Tarifsystem - Basiswissen für Anwender:innen</title>
+    <title>{{TITLE}} - {{SUBTITLE}}</title>
     <style>
         * {
             margin: 0;
@@ -478,8 +478,8 @@ HTML_HEADER = '''<!DOCTYPE html>
 <body>
     <div class="container">
         <header>
-            <h1>Ambulantes Gesamt-Tarifsystem</h1>
-            <p class="subtitle">Basiswissen für Anwender:innen</p>
+            <h1>{{TITLE}}</h1>
+            <p class="subtitle">{{SUBTITLE}}</p>
             <div class="progress-bar">
                 <div class="progress-fill" id="progressBar"></div>
             </div>
@@ -583,6 +583,48 @@ HTML_FOOTER = '''
     </script>
 </body>
 </html>'''
+
+
+def parse_metadata(content):
+    """Parse metadata from content.md header"""
+    metadata = {
+        'title': 'Ambulantes Gesamt-Tarifsystem',  # Standardwert
+        'subtitle': 'Basiswissen für Anwender:innen'  # Standardwert
+    }
+
+    # Look for metadata at the start of the file (before any --- separator)
+    lines = content.split('\n')
+    found_title = False
+    found_subtitle = False
+
+    for i, line in enumerate(lines[:20]):  # Check only first 20 lines (before documentation)
+        line = line.strip()
+
+        # Stop when we hit the separator (before documentation starts)
+        if line == '---':
+            break
+
+        # Support both normal and escaped underscores (ELEARNING_TITEL and ELEARNING\_TITEL)
+        if not found_title and (line.startswith('ELEARNING_TITEL:') or line.startswith('ELEARNING\\_TITEL:')):
+            # Remove prefix (handle both variants)
+            if line.startswith('ELEARNING_TITEL:'):
+                metadata['title'] = line[16:].strip()
+            else:
+                metadata['title'] = line[17:].strip()  # One char longer due to backslash
+            found_title = True
+        elif not found_subtitle and (line.startswith('ELEARNING_UNTERTITEL:') or line.startswith('ELEARNING\\_UNTERTITEL:')):
+            # Remove prefix (handle both variants)
+            if line.startswith('ELEARNING_UNTERTITEL:'):
+                metadata['subtitle'] = line[21:].strip()
+            else:
+                metadata['subtitle'] = line[22:].strip()  # One char longer due to backslash
+            found_subtitle = True
+
+        # Stop early if both found
+        if found_title and found_subtitle:
+            break
+
+    return metadata
 
 
 def convert_inline_md(text):
@@ -1099,10 +1141,13 @@ def generate_navigation(chapters):
     return nav_html
 
 
-def generate_html(chapters):
+def generate_html(chapters, metadata):
     """Generate complete HTML file with dynamic navigation"""
-    # Split HTML_HEADER at navigation insertion point
-    header_parts = HTML_HEADER.split('<nav>')
+    # Replace placeholders in HTML_HEADER with metadata
+    formatted_header = HTML_HEADER.replace('{{TITLE}}', metadata['title']).replace('{{SUBTITLE}}', metadata['subtitle'])
+
+    # Split formatted header at navigation insertion point
+    header_parts = formatted_header.split('<nav>')
     if len(header_parts) == 2:
         # Remove old hardcoded navigation and content div opening
         header_before_nav = header_parts[0]
@@ -1110,7 +1155,7 @@ def generate_html(chapters):
         navigation = generate_navigation(chapters)
         html = header_before_nav + navigation
     else:
-        html = HTML_HEADER
+        html = formatted_header
 
     for ch_num, content_title, button_title, ch_content in chapters:
         active = ' active' if ch_num == 0 else ''
@@ -1142,12 +1187,17 @@ def main():
     with open('content/content.md', 'r', encoding='utf-8') as f:
         content = f.read()
 
+    print("Parsing metadata...")
+    metadata = parse_metadata(content)
+    print(f"Title: {metadata['title']}")
+    print(f"Subtitle: {metadata['subtitle']}")
+
     print("Parsing chapters...")
     chapters = parse_content_md(content)
     print(f"Found {len(chapters)} chapters")
 
     print("Generating HTML...")
-    html = generate_html(chapters)
+    html = generate_html(chapters, metadata)
 
     print("Writing eLearning.html...")
     with open('eLearning.html', 'w', encoding='utf-8') as f:

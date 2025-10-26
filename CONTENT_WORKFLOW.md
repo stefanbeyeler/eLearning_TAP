@@ -1,13 +1,16 @@
 # Content Workflow - MD → HTML
 
-**Version:** 1.0  
+**Version:** 1.1
 **Erstellt:** 2025-10-25
+**Aktualisiert:** 2025-10-26
 
 ---
 
 ## Übersicht
 
-Dieses Dokument beschreibt den Workflow für die Content-Verwaltung des eLearning TAP Projekts. Der Content wird zentral in der Datei [content.md](content.md) verwaltet und kann von dort in [eLearning.html](eLearning.html) übertragen werden.
+Dieses Dokument beschreibt den Workflow für die Content-Verwaltung des eLearning TAP Projekts. Der Content wird zentral in der Datei [content/content.md](content/content.md) verwaltet und kann von dort in [eLearning.html](eLearning.html) übertragen werden.
+
+**NEU in v1.1:** Metadaten-Unterstützung für anpassbare Titel und Untertitel.
 
 ---
 
@@ -41,7 +44,23 @@ Dieses Dokument beschreibt den Workflow für die Content-Verwaltung des eLearnin
 
 ### Datei öffnen
 
-Öffnen Sie [content.md](content.md) in einem Texteditor Ihrer Wahl (VS Code, Sublime Text, etc.)
+Öffnen Sie [content/content.md](content/content.md) in einem Texteditor Ihrer Wahl (VS Code, Sublime Text, etc.)
+
+### Metadaten konfigurieren (Optional)
+
+**NEU:** Sie können den Titel und Untertitel des eLearnings anpassen:
+
+```
+ELEARNING_TITEL: Ihr individueller Titel
+ELEARNING_UNTERTITEL: Ihr Untertitel
+```
+
+Diese Zeilen sollten am Anfang der Datei stehen (vor dem ersten `---` Separator).
+
+**Wichtig:**
+- Beide Zeilen sind optional
+- Falls nicht definiert, werden Standardwerte verwendet
+- Unterstützt auch escaped Unterstriche (`ELEARNING\_TITEL:`)
 
 ### Inhalte anpassen
 
@@ -110,55 +129,79 @@ Inhalt des zweiten Akkordeon-Eintrags...
 
 **Wichtig:** Die korrekte Antwort wird mit ✓ markiert!
 
----
-
-## 2\. Änderungen an Claude übergeben
-
-### Einfache Änderung (ein Kapitel)
-
-Wenn Sie nur ein Kapitel geändert haben:
+**Bilder einfügen:**
 
 ```
-@content.md wurde aktualisiert.
+**BILD: pfad/zum/bild.jpg**
+Optionale Bildunterschrift hier
+```
+
+**Wichtig:**
+- Pfad relativ zur HTML-Datei
+- Bildunterschrift in der nächsten Zeile (optional)
+
+---
+
+## 2\. Änderungen an Claude übergeben oder Script ausführen
+
+### Option A: Claude beauftragen (Empfohlen)
+
+**Einfache Änderung (ein Kapitel):**
+
+```
+@content/content.md wurde aktualisiert.
 Bitte übertrage die Änderungen von Kapitel 3 in @eLearning.html
 ```
 
-### Mehrere Kapitel geändert
-
-Wenn Sie mehrere Kapitel geändert haben:
+**Metadaten geändert:**
 
 ```
-@content.md wurde aktualisiert.
-Bitte übertrage die Änderungen folgender Kapitel in @eLearning.html:
-- Kapitel 2
-- Kapitel 5
-- Kapitel 7
+Der Titel in @content/content.md wurde angepasst.
+Bitte aktualisiere @eLearning.html
 ```
 
-### Vollständige Aktualisierung
-
-Wenn Sie viele Änderungen vorgenommen haben:
+**Vollständige Aktualisierung:**
 
 ```
-@content.md wurde vollständig überarbeitet.
+@content/content.md wurde vollständig überarbeitet.
 Bitte synchronisiere alle Kapitel mit @eLearning.html
 ```
 
+### Option B: Build-Script ausführen
+
+Alternativ können Sie das Python-Script direkt ausführen:
+
+```bash
+# Von der Projekt-Root ausführen
+python3 scripts/build_html.py
+```
+
+Das Script:
+- Liest automatisch die Metadaten aus content/content.md
+- Parst alle Kapitel
+- Generiert ein komplettes eLearning.html
+- Zeigt Titel und Untertitel in der Console an
+
 ---
 
-## 3\. Claude's Konvertierungsprozess
+## 3\. Konvertierungsprozess
 
-Claude wird dann:
+Das Build-Script (`build_html.py`) oder Claude wird:
 
-1.  **content.md lesen** und die geänderten Kapitel identifizieren
-2.  **Markdown → HTML konvertieren:**
+1.  **Metadaten parsen:**
+    *   `ELEARNING_TITEL:` und `ELEARNING_UNTERTITEL:` extrahieren
+    *   Standardwerte verwenden, falls nicht definiert
+2.  **content/content.md lesen** und die geänderten Kapitel identifizieren
+3.  **Markdown → HTML konvertieren:**
     *   `**INFO-BOX:**` → `<div class="info-box">`
     *   `**INFO-BOX WARNUNG:**` → `<div class="info-box warning">`
     *   `**ACCORDION:**` → `<div class="accordion">`
+    *   `**BILD: pfad**` → `<img src="pfad">`
     *   Markdown-Tabellen → HTML `<table>`
     *   Quiz-Fragen → HTML-Quiz-Struktur
-3.  **eLearning.html aktualisieren:**
-    *   Alte Kapitelinhalte ersetzen
+4.  **eLearning.html generieren:**
+    *   Titel und Untertitel in `<title>` und `<h1>` einsetzen
+    *   Alle Kapitelinhalte rendern
     *   Quiz-Antworten im JavaScript aktualisieren
     *   Feedback-Texte anpassen
 
@@ -168,9 +211,16 @@ Claude wird dann:
 
 ### Kapitel-Struktur
 
-Jedes Kapitel in [content.md](content.md) hat folgende Struktur:
+Jedes Kapitel in [content/content.md](content/content.md) hat folgende Struktur:
 
 ```
+# eLearning TAP - Content Source
+
+ELEARNING_TITEL: Ihr Titel (optional)
+ELEARNING_UNTERTITEL: Ihr Untertitel (optional)
+
+---
+
 ## KAPITEL X: Titel
 
 ### Abschnitt 1
@@ -196,6 +246,8 @@ Text...
 
 | Markdown-Element | HTML-Output |
 | --- | --- |
+| `ELEARNING_TITEL:` | `<title>` und `<h1>` |
+| `ELEARNING_UNTERTITEL:` | `<p class="subtitle">` |
 | `## KAPITEL X:` | `<div class="chapter" id="chapterY">` |
 | `### Überschrift` | `<h3>Überschrift</h3>` |
 | `**fett**` | `<strong>fett</strong>` |
@@ -203,6 +255,7 @@ Text...
 | `**INFO-BOX WARNUNG:**` | `<div class="info-box warning">` |
 | `**INFO-BOX SUCCESS:**` | `<div class="info-box success">` |
 | `**ACCORDION:**` | `<div class="accordion">` |
+| `**BILD: pfad**` | `<img src="pfad">` mit Container |
 | Markdown-Tabelle | HTML `<table class="comparison-table">` |
 | Quiz-Frage mit ✓ | Korrekte Antwort in JavaScript |
 
@@ -463,8 +516,19 @@ Ich habe eine Frage zum Content-Workflow...
 
 ---
 
-**Version:** 1.0  
-**Letzte Aktualisierung:** 2025-10-25
+**Version:** 1.1
+**Letzte Aktualisierung:** 2025-10-26
+
+## Changelog
+
+**v1.1 (2025-10-26):**
+- ✅ Metadaten-Unterstützung hinzugefügt (ELEARNING_TITEL, ELEARNING_UNTERTITEL)
+- ✅ Build-Script Option dokumentiert
+- ✅ Bild-Unterstützung dokumentiert
+- ✅ HTML-Mapping Tabelle erweitert
+
+**v1.0 (2025-10-25):**
+- ✅ Initiale Version
 
 ```
 In Kapitel X wird die Info-Box nicht korrekt angezeigt.
