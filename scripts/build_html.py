@@ -543,7 +543,7 @@ HTML_FOOTER = '''
             }
         }
 
-        function checkAnswer(chapter, questionNum, correctAnswer) {
+        function checkAnswer(chapter, questionNum, correctAnswer, correctAnswerText) {
             const feedbackId = `feedback${chapter}_${questionNum}`;
             const feedback = document.getElementById(feedbackId);
             const questionName = `q${chapter}_${questionNum}`;
@@ -561,7 +561,7 @@ HTML_FOOTER = '''
                 feedback.textContent = '✓ Richtig! Sehr gut.';
             } else {
                 feedback.className = 'feedback incorrect';
-                feedback.textContent = '✗ Leider falsch. Die richtige Antwort ist: ' + correctAnswer + ')';
+                feedback.textContent = '✗ Leider falsch. Die richtige Antwort ist: ' + correctAnswerText;
             }
         }
 
@@ -876,6 +876,7 @@ def process_markdown_content(md_text, chapter_num):
                     q_text = q_match.group(2)
                     answers = []
                     correct = 'a'
+                    correct_text = ''
                     i += 1
                     while i < len(lines):
                         ans_line = lines[i].strip()
@@ -884,6 +885,7 @@ def process_markdown_content(md_text, chapter_num):
                             if '✓' in ans_text:
                                 ans_text = ans_text.replace('✓', '').strip()
                                 correct = ans_text[0].lower()
+                                correct_text = ans_text
                             answers.append(ans_text)
                             i += 1
                         elif ans_line.startswith('**Frage') or ans_line == '---' or ans_line.startswith('##'):
@@ -893,6 +895,9 @@ def process_markdown_content(md_text, chapter_num):
                             if i < len(lines) and (lines[i].startswith('**Frage') or lines[i] == '---'):
                                 break
 
+                    # Escape single quotes in correct_text for JavaScript
+                    correct_text_escaped = correct_text.replace("'", "\\'")
+
                     html += f'    <div class="quiz-question">\n'
                     html += f'        <div class="question-text">Frage {q_num}: {q_text}</div>\n'
                     html += f'        <div class="answers">\n'
@@ -900,7 +905,7 @@ def process_markdown_content(md_text, chapter_num):
                         ans_val = ans[0].lower()
                         html += f'            <label><input type="radio" name="q{chapter_num}_{q_num}" value="{ans_val}"> {ans}</label>\n'
                     html += f'        </div>\n'
-                    html += f'        <button class="check-btn" onclick="checkAnswer({chapter_num}, {q_num}, \'{correct}\')">Antwort überprüfen</button>\n'
+                    html += f'        <button class="check-btn" onclick="checkAnswer({chapter_num}, {q_num}, \'{correct}\', \'{correct_text_escaped}\')">Antwort überprüfen</button>\n'
                     html += f'        <div class="feedback" id="feedback{chapter_num}_{q_num}"></div>\n'
                     html += f'    </div>\n'
                     continue
